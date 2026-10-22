@@ -1,0 +1,59 @@
+{
+  "checkpoints": [
+    "/mnt/raid/asr-lab/runs/qwen-smoke-v3-20261022/checkpoint-4",
+    "/mnt/raid/asr-lab/runs/qwen-smoke-resume-20261022/checkpoint-4"
+  ],
+  "started_unix": 1792677591.0867157,
+  "tensors": 707,
+  "elements": 2038052480,
+  "max_abs_diff": 8.89599323272705e-06,
+  "different_tensors": 707,
+  "all_finite": true,
+  "files": {
+    "/mnt/raid/asr-lab/runs/qwen-smoke-v3-20261022/checkpoint-4": {
+      "training_args.bin": 5905,
+      "checkpoint.json": 3012,
+      "model-00002-of-00002.safetensors": 3171200384,
+      "vocab.json": 2776833,
+      "model-00001-of-00002.safetensors": 4981095680,
+      "model.safetensors.index.json": 64802,
+      "trainer_state.json": 1353,
+      "tokenizer_config.json": 12517,
+      "added_tokens.json": 1566,
+      "config.json": 5916,
+      "scheduler.pt": 1465,
+      "optimizer.pt": 16305044668,
+      "generation_config.json": 125,
+      "tokenizer.json": 11429499,
+      "special_tokens_map.json": 1008,
+      "rng_state_1.pth": 14917,
+      "rng_state_0.pth": 14917,
+      "merges.txt": 1671853,
+      "chat_template.jinja": 1099,
+      "preprocessor_config.json": 357
+    },
+    "/mnt/raid/asr-lab/runs/qwen-smoke-resume-20261022/checkpoint-4": {
+      "training_args.bin": 5905,
+      "checkpoint.json": 3012,
+      "model-00002-of-00002.safetensors": 3171200384,
+      "vocab.json": 2776833,
+      "model-00001-of-00002.safetensors": 4981095680,
+      "model.safetensors.index.json": 64802,
+      "trainer_state.json": 1353,
+      "tokenizer_config.json": 12517,
+      "added_tokens.json": 1566,
+      "config.json": 5916,
+      "scheduler.pt": 1465,
+      "optimizer.pt": 16305044668,
+      "generation_config.json": 125,
+      "tokenizer.json": 11429499,
+      "special_tokens_map.json": 1008,
+      "rng_state_1.pth": 14917,
+      "rng_state_0.pth": 14917,
+      "merges.txt": 1671853,
+      "chat_template.jinja": 1099,
+      "preprocessor_config.json": 357
+    }
+  },
+  "completed_unix": 1792677622.9935124
+}

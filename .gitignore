@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.DS_Store
+runs/
+data/
+cache/
+.env
+.env.*
+*.pt
+*.safetensors
+*.flac
+*.tar.gz

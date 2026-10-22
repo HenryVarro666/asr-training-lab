@@ -1,0 +1,27 @@
+sn4622126358
+2026-10-22T02:57:45-05:00
+index, name, uuid, memory.total [MiB], memory.used [MiB], utilization.gpu [%], driver_version
+0, NVIDIA H100 NVL, GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c, 95830 MiB, 22697 MiB, 0 %, 580.82.07
+1, NVIDIA H100 NVL, GPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c, 95830 MiB, 14 MiB, 0 %, 580.82.07
+	[4mGPU0	GPU1	CPU Affinity	NUMA Affinity	GPU NUMA ID[0m
+GPU0	 X 	NODE	24-47,72-95	1		N/A
+GPU1	NODE	 X 	24-47,72-95	1		N/A
+
+Legend:
+
+  X    = Self
+  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)
+  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node
+  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)
+  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)
+  PIX  = Connection traversing at most a single PCIe bridge
+  NV#  = Connection traversing a bonded set of # NVLinks
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/md0p1      7.0T  6.0T  608G  91% /data
+/dev/nvme0n1p4  3.6T  3.4T  572M 100% /
+               total        used        free      shared  buff/cache   available
+Mem:           251Gi        10Gi        41Gi        28Mi       199Gi       239Gi
+Swap:            9Gi       4.0Gi       6.0Gi
+Python 3.10.12
+    PID                  STARTED COMMAND
+2154793 Tue Oct 20 17:08:26 2026 .venv/bin/python -u -m moshi.server_prefix_paced --host 127.0.0.1 --port 8998 --static none
