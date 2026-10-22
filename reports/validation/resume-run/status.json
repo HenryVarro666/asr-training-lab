@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "completion_reason": "max_steps",
+  "epoch": 1.0,
+  "target_epochs": 1.0,
+  "step": 4,
+  "elapsed_seconds": 228.09869081154466,
+  "metrics": {
+    "train_runtime": 33.2595,
+    "train_samples_per_second": 3.849,
+    "train_steps_per_second": 0.12,
+    "total_flos": 358667635392512.0,
+    "train_loss": 0.2164245992898941,
+    "epoch": 1.0
+  },
+  "latest_checkpoint": "/mnt/raid/asr-lab/runs/qwen-smoke-resume-20261022/checkpoint-4"
+}

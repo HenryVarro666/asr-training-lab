@@ -1,0 +1,17 @@
+{
+  "run_dir": "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/E1-single-b2",
+  "world_size": 1,
+  "effective_batch_size": 32,
+  "warmup_steps": 10,
+  "measured_steps": 30,
+  "measured_first_step": 11,
+  "measured_last_step": 40,
+  "step_seconds_p50": 4.502774492371827,
+  "step_seconds_p95": 4.92793604293838,
+  "total_measured_step_seconds": 132.86134953144938,
+  "total_measured_audio_seconds": 12277.489687500003,
+  "audio_seconds_per_wall_second": 92.40828676509733,
+  "cuda_peak_memory_gb": 35.637484550476074,
+  "scope": "Training updates only; generation evaluation, checkpoint I/O, model loading excluded",
+  "schedule": null
+}

@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "completion_reason": "max_steps",
+  "epoch": 0.625,
+  "target_epochs": 1.0,
+  "step": 40,
+  "elapsed_seconds": 125.913753840141,
+  "metrics": {
+    "train_runtime": 123.7699,
+    "train_samples_per_second": 10.342,
+    "train_steps_per_second": 0.323,
+    "total_flos": 3611812943626240.0,
+    "train_loss": 0.20975239584222435,
+    "epoch": 0.625
+  },
+  "latest_checkpoint": "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/E2-dual-b2/checkpoint-40"
+}

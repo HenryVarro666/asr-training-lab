@@ -1,0 +1,29 @@
+{
+  "name": "E1-single-b2",
+  "command": [
+    "/mnt/raid/asr-lab/venv/bin/python",
+    "-m",
+    "torch.distributed.run",
+    "--standalone",
+    "--nproc_per_node=1",
+    "-m",
+    "asr_lab.qwen_train",
+    "--config",
+    "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/configs/E1-single-b2.yaml",
+    "--run-dir",
+    "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/E1-single-b2",
+    "--max-steps",
+    "40",
+    "--limit-train",
+    "2048",
+    "--limit-eval",
+    "8"
+  ],
+  "physical_gpus": "1",
+  "run_dir": "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/E1-single-b2",
+  "fingerprint": "9ddc393a1cc9008297d60e66a05d20083ce3587ad6683c05c3db116b9b3580c7",
+  "started_unix": 1792677699.6153674,
+  "status": "complete",
+  "exit_code": 0,
+  "ended_unix": 1792677943.09621
+}

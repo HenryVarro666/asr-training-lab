@@ -1,0 +1,26 @@
+{
+  "name": "evaluate-final-dev_clean",
+  "command": [
+    "/mnt/raid/asr-lab/venv/bin/python",
+    "-m",
+    "asr_lab.qwen_evaluate",
+    "--model",
+    "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/main-epoch1/checkpoint-892",
+    "--revision",
+    "7278e1e70fe206f11671096ffdd38061171dd6e5",
+    "--manifest",
+    "/mnt/raid/asr-lab/data/manifests/dev-clean.jsonl",
+    "--output",
+    "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/evaluation/final-dev_clean/predictions.jsonl",
+    "--all",
+    "--batch-size",
+    "16"
+  ],
+  "physical_gpus": "1",
+  "run_dir": "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/evaluation/final-dev_clean",
+  "fingerprint": "09555b4749fea800e0ad3c56bc3961f44f8b8ebce7756d8fe1e10c6c0cff7cc7",
+  "started_unix": 1792680450.901789,
+  "status": "complete",
+  "exit_code": 0,
+  "ended_unix": 1792680691.346022
+}

@@ -1,0 +1,72 @@
+{
+  "source_sha256": {
+    "src/asr_lab/qwen_data.py": "769aed8478da4a6e9dcd33ed3bf87aaa6b846eede3d677c9ae4dc88469dc89b0",
+    "src/asr_lab/qwen_evaluate.py": "0a2012eb016cddadee7b3c0f0ca5ad9f3f94b502faad780392788a8ccf9e30d6",
+    "src/asr_lab/qwen_train.py": "97951994468a14b10ce57b7c5c864dcef6ffb6af4ee9c75e621b48c01e9de961",
+    "src/asr_lab/training_utils.py": "5b8eba6aab98e97080baace995e6acc8aca619b5da89e3bbfa7a2209ea6d2ad4",
+    "src/asr_lab/prepare_data.py": "489c613f44bc0054fea1db49453eeec4a1c6f9e9b1cb64478d901cba70f8f752"
+  },
+  "package_source_sha256": {
+    "model": "2fb5d98da1933748f5117ee05ce4e7150c9ead8154fb8e25f7af3968b853adc7",
+    "processor": "a61f1fbfc06e3dfc63a2b8d15e3b29e98b032792c3fb7d0e01c04ca9c2181ffb"
+  },
+  "config_file_sha256": "d2a570e44b9e447a45f53dd633e82b9f4f8780558da111780f27424e87e8f573",
+  "git_commit": "cf30f45e0beb005f43520c33e2ddad73ad67a01e",
+  "git_dirty": false,
+  "model_id": "Qwen/Qwen3-ASR-1.7B",
+  "revision": "7278e1e70fe206f11671096ffdd38061171dd6e5",
+  "official_code_revision": "7c6daf77a2421100f5fb066495372c00129d39ff",
+  "model_path": "/mnt/raid/asr-lab/cache/huggingface/hub/models--Qwen--Qwen3-ASR-1.7B/snapshots/7278e1e70fe206f11671096ffdd38061171dd6e5",
+  "world_size": 2,
+  "effective_batch_size": 32,
+  "config": {
+    "model_id": "Qwen/Qwen3-ASR-1.7B",
+    "revision": "7278e1e70fe206f11671096ffdd38061171dd6e5",
+    "project_root": "/mnt/raid/asr-lab",
+    "train_manifest": "/mnt/raid/asr-lab/data/manifests/train-clean-100.jsonl",
+    "eval_manifest": "/mnt/raid/asr-lab/data/manifests/dev-clean-fixed128.jsonl",
+    "seed": 42,
+    "batch_size": 2,
+    "gradient_accumulation_steps": 8,
+    "eval_batch_size": 2,
+    "num_workers": 4,
+    "epochs": 1,
+    "learning_rate": 1e-05,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.25,
+    "max_grad_norm": 1.0,
+    "gradient_checkpointing": true,
+    "eval_steps": 1000,
+    "save_steps": 1000,
+    "log_steps": 1,
+    "eval_limit": 8,
+    "max_wall_seconds": 42922,
+    "quota_gib": 300,
+    "reserve_gib": 500,
+    "max_steps": 40,
+    "limit_train": 2048
+  },
+  "train_manifest_sha256": "5b8155f7daa57a2f2c039b96800c2d9d16b620deaa57bc4e187a0b84e8867d9e",
+  "eval_manifest_sha256": "1c657340c27cdc1f4b025ba5731da07fc7fd2f505e9dddbfc8fffc9cc59df999",
+  "train_ids_sha256": "eaf3dd5b5ddbcf2018cac57f4fd6863ebbc0436aa1990fa6676d8d1bc3df1d99",
+  "eval_ids": [
+    "174-168635-0006",
+    "2086-149220-0043",
+    "2277-149874-0002",
+    "2412-153954-0021",
+    "5338-284437-0025",
+    "5536-43359-0001",
+    "6313-76958-0029",
+    "7976-110523-0012"
+  ],
+  "parameters": 2038052480,
+  "precision": "FP32 weights/gradients/Adam moments; BF16 autocast",
+  "attention": "sdpa",
+  "loss_reduction": "mean token CE within each microbatch; arithmetic mean over accumulation microbatches and DDP ranks",
+  "packages": {
+    "torch": "2.8.0+cu128",
+    "transformers": "4.57.6",
+    "accelerate": "1.12.0",
+    "qwen-asr": "0.0.6"
+  }
+}

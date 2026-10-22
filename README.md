@@ -1,6 +1,6 @@
 # ASR training lab
 
-The primary experiment trains the official **Qwen3-ASR-1.7B** architecture on LibriSpeech `train-clean-100` with both H100 GPUs. The loaded model contains about 2.349 billion parameters, including its acoustic components. Whisper-small remains a separately measured reference. This is supervised finetuning of pretrained ASR models; source code alone does not establish a completed training run or improved WER.
+The primary experiment trains the official **Qwen3-ASR-1.7B** architecture on LibriSpeech `train-clean-100` with both H100 GPUs. The loaded model contains about 2.038 billion unique parameters, measured after loading (2,038,052,480), including its acoustic components. Whisper-small remains a separately measured reference. This is supervised finetuning of pretrained ASR models; source code alone does not establish a completed training run or improved WER.
 
 Model weights are pinned to `7278e1e70fe206f11671096ffdd38061171dd6e5`. The prompt, collator and forward adaptation follow official Qwen source `7c6daf77a2421100f5fb066495372c00129d39ff`. See the [Qwen implementation and experiment contract](docs/QWEN_EXPERIMENT.md), [training plan](ASR_TRAINING_PLAN.md), and [upstream license](docs/QWEN_UPSTREAM_LICENSE.txt).
 

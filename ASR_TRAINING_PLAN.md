@@ -270,7 +270,7 @@ Base 模型不是经过对话对齐的 instruct 模型。采用明确的纯文�
 
 | 候选 | 固定模型 revision | 官方 Hub safetensors 总参数 | 选择 |
 |---|---|---:|---|
-| `Qwen/Qwen3-ASR-1.7B` | `7278e1e70fe206f11671096ffdd38061171dd6e5` | 2,349,217,408 | 主实验；命名中的1.7B不能误当完整语音模型总参数 |
+| `Qwen/Qwen3-ASR-1.7B` | `7278e1e70fe206f11671096ffdd38061171dd6e5` | 2,038,052,480（加载后唯一参数实测） | 主实验；命名中的1.7B不能误当完整语音模型总参数 |
 | `Qwen/Qwen3-ASR-0.6B` | `5eb144179a02acc5e5ba31e748d22b0cf3e303b0` | 938,008,576 | 显存/吞吐备选及效率消融；不是默认悄悄降级 |
 | `openai/whisper-large-v3-turbo` | `41f01f3fe87f28c78e2fbf8b568835947dd65ed9` | 808,878,080 | 更强encoder-decoder的零样本精度/速度对照，暂不增加一条完整训练线 |
 | `openai/whisper-small` | 以现有配置的固定revision为准 | 约244M | 工程与历史基线 |
@@ -330,7 +330,7 @@ torchrun --standalone --nproc_per_node=2 vendor/Qwen3-ASR/finetuning/qwen3_asr_s
 | TP张量并行 | 每层tensor分片，频繁collective | 官方训练脚本没有现成TP合同；本机跨NODE通信可能抵消收益，除非实测优于DDP且数值正确，否则不选 |
 | Pipeline并行 | 层分到不同GPU，需调度microbatch消除bubble | 两卡容量已够且模型不大时没有首轮必要 |
 
-以HF元数据的总参数2.349B估算，FP32参数、梯度、Adam一二阶矩合计约`16P=37.59GB≈35.0GiB/卡`。这还**不包括**DDP bucket、临时转换、attention/logits、激活和CUDA workspace；启动前按GPU0剩余空间实测。先microbatch2，必要时activation checkpointing；最低batch仍不适配时明确记录后采用0.6B或经验证分片，不能动现有服务。
+以run.json加载后实测唯一参数2.038B估算，FP32参数、梯度、Adam一二阶矩合计约`16P=32.61GB≈30.37GiB/卡`（修正早期HF元数据2.349B估算）。这还**不包括**DDP bucket、临时转换、attention/logits、激活和CUDA workspace；启动前按GPU0剩余空间实测。先microbatch2，必要时activation checkpointing；最低batch仍不适配时明确记录后采用0.6B或经验证分片，不能动现有服务。
 
 恢复checkpoint一般不保存梯度，因此FP32模型+Adam状态约`12P=28.19GB≈26.3GiB/份`，还要加元数据。保留2份加一次原子写临时副本，单run峰值约84.6GB；两条run可超过原120GB预算。必须另计预训练snapshot、最终export重复权重、环境和数据。当前campaign采用300GiB上限、挂载盘500GiB保留线；每次保存前按实际文件大小预留临时空间，不能先删唯一可恢复点再保存新文件。可复用同一checkpoint作为最终模型，避免无意义复制整份export。
 

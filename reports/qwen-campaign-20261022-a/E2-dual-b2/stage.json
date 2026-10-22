@@ -1,0 +1,29 @@
+{
+  "name": "E2-dual-b2",
+  "command": [
+    "/mnt/raid/asr-lab/venv/bin/python",
+    "-m",
+    "torch.distributed.run",
+    "--standalone",
+    "--nproc_per_node=2",
+    "-m",
+    "asr_lab.qwen_train",
+    "--config",
+    "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/configs/E2-dual-b2.yaml",
+    "--run-dir",
+    "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/E2-dual-b2",
+    "--max-steps",
+    "40",
+    "--limit-train",
+    "2048",
+    "--limit-eval",
+    "8"
+  ],
+  "physical_gpus": "0,1",
+  "run_dir": "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/E2-dual-b2",
+  "fingerprint": "52963a5c4656a16d3cb509cd5832776276f032a0815e4b1550a68480bbad22e0",
+  "started_unix": 1792677946.6050978,
+  "status": "complete",
+  "exit_code": 0,
+  "ended_unix": 1792678113.5870116
+}

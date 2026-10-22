@@ -1,0 +1,29 @@
+{
+  "name": "E3-dual-b4",
+  "command": [
+    "/mnt/raid/asr-lab/venv/bin/python",
+    "-m",
+    "torch.distributed.run",
+    "--standalone",
+    "--nproc_per_node=2",
+    "-m",
+    "asr_lab.qwen_train",
+    "--config",
+    "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/configs/E3-dual-b4.yaml",
+    "--run-dir",
+    "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/E3-dual-b4",
+    "--max-steps",
+    "40",
+    "--limit-train",
+    "2048",
+    "--limit-eval",
+    "8"
+  ],
+  "physical_gpus": "0,1",
+  "run_dir": "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/E3-dual-b4",
+  "fingerprint": "01e9069ea1de82df85cfa18a0ee8d67dcdcd3f5a8fd3d25401cc3ef0853c88fe",
+  "started_unix": 1792678120.4816692,
+  "status": "complete",
+  "exit_code": 0,
+  "ended_unix": 1792678261.9406626
+}

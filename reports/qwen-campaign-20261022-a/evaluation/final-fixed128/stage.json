@@ -1,0 +1,26 @@
+{
+  "name": "evaluate-final-fixed128",
+  "command": [
+    "/mnt/raid/asr-lab/venv/bin/python",
+    "-m",
+    "asr_lab.qwen_evaluate",
+    "--model",
+    "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/main-epoch1/checkpoint-892",
+    "--revision",
+    "7278e1e70fe206f11671096ffdd38061171dd6e5",
+    "--manifest",
+    "/mnt/raid/asr-lab/data/manifests/dev-clean-fixed128.jsonl",
+    "--output",
+    "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/evaluation/final-fixed128/predictions.jsonl",
+    "--all",
+    "--batch-size",
+    "16"
+  ],
+  "physical_gpus": "1",
+  "run_dir": "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/evaluation/final-fixed128",
+  "fingerprint": "e9929cf8b764ae155b903501659a9b1df145718089c92d6b64a1d77b83899d9a",
+  "started_unix": 1792680425.6049461,
+  "status": "complete",
+  "exit_code": 0,
+  "ended_unix": 1792680449.1116278
+}

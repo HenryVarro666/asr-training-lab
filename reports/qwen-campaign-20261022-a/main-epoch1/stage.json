@@ -1,0 +1,23 @@
+{
+  "name": "main-epoch1",
+  "command": [
+    "/mnt/raid/asr-lab/venv/bin/python",
+    "-m",
+    "torch.distributed.run",
+    "--standalone",
+    "--nproc_per_node=2",
+    "-m",
+    "asr_lab.qwen_train",
+    "--config",
+    "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/configs/main-epoch1.yaml",
+    "--run-dir",
+    "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/main-epoch1"
+  ],
+  "physical_gpus": "0,1",
+  "run_dir": "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/main-epoch1",
+  "fingerprint": "9bc6810c2d330c4575d3ba20cd9f054242e6ebf109ea8068e43807c330df5ba1",
+  "started_unix": 1792678828.8329675,
+  "status": "complete",
+  "exit_code": 0,
+  "ended_unix": 1792680423.6160815
+}

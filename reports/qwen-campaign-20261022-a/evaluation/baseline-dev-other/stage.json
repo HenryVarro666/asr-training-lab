@@ -1,0 +1,26 @@
+{
+  "name": "evaluate-baseline-dev-other",
+  "command": [
+    "/mnt/raid/asr-lab/venv/bin/python",
+    "-m",
+    "asr_lab.qwen_evaluate",
+    "--model",
+    "Qwen/Qwen3-ASR-1.7B",
+    "--revision",
+    "7278e1e70fe206f11671096ffdd38061171dd6e5",
+    "--manifest",
+    "/mnt/raid/asr-lab/data/manifests/dev-other.jsonl",
+    "--output",
+    "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/evaluation/baseline-dev-other/predictions.jsonl",
+    "--all",
+    "--batch-size",
+    "16"
+  ],
+  "physical_gpus": "1",
+  "run_dir": "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/evaluation/baseline-dev-other",
+  "fingerprint": "6f58e446fe357fd365850df0d76cff23dd8550e700cddf53d7171997e31029fd",
+  "started_unix": 1792678621.736468,
+  "status": "complete",
+  "exit_code": 0,
+  "ended_unix": 1792678827.173811
+}

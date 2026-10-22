@@ -1,0 +1,26 @@
+{
+  "name": "evaluate-final-dev_other",
+  "command": [
+    "/mnt/raid/asr-lab/venv/bin/python",
+    "-m",
+    "asr_lab.qwen_evaluate",
+    "--model",
+    "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/main-epoch1/checkpoint-892",
+    "--revision",
+    "7278e1e70fe206f11671096ffdd38061171dd6e5",
+    "--manifest",
+    "/mnt/raid/asr-lab/data/manifests/dev-other.jsonl",
+    "--output",
+    "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/evaluation/final-dev_other/predictions.jsonl",
+    "--all",
+    "--batch-size",
+    "16"
+  ],
+  "physical_gpus": "1",
+  "run_dir": "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/evaluation/final-dev_other",
+  "fingerprint": "6ebd672d9df9b3dfeab3e531d7c309e7febf497e97e7da19e9e7c993fecd8b56",
+  "started_unix": 1792680693.0810397,
+  "status": "complete",
+  "exit_code": 0,
+  "ended_unix": 1792680929.5263066
+}

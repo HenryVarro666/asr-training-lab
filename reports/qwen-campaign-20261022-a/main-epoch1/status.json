@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "completion_reason": "epochs",
+  "epoch": 1.0,
+  "target_epochs": 1.0,
+  "step": 892,
+  "elapsed_seconds": 1539.011838587001,
+  "metrics": {
+    "train_runtime": 1537.121,
+    "train_samples_per_second": 18.567,
+    "train_steps_per_second": 0.58,
+    "total_flos": 8.813998131852083e+16,
+    "train_loss": 0.06584528981261123,
+    "epoch": 1.0
+  },
+  "latest_checkpoint": "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/main-epoch1/checkpoint-892"
+}
