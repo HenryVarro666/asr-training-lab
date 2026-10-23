@@ -6,6 +6,8 @@
 
 ## 后续诊断进展
 
+**最新：[512-token截断探针已完成](reports/truncation-probe/README.md)**（2026-10-23）：固定checkpoint100与原生成规则，GPU1上原batch16两次、单句一次，共3次调用／33条消费／0次更新，用时130.69秒。三次目标raw token完全一致，均512个且无EOS；解码为170次`CULINARY`加`CUL`，随后官方parser压成`CULINARY CUL`。单句同样复现，原batch组成不是必要条件；训练根因尚未确定。raw tokens、EOS、解析前后文本、指纹、监控及独立审计已保存，旧Early100 failed状态不变，没有扩大训练。
+
 已完成第一阶段CPU诊断：5551条预测重新标准化和S/D/I复算全部一致，配对统计确认开发集上退化；独立模型链条审阅和两条不等长音频的CPU processor对照未发现已证实的标签/解码错误。详见[诊断报告](reports/diagnosis/README.md)。
 
 已完成一个零更新实验：现存checkpoint800的完整合格dev-clean/dev-other生成评测，仅GPU1，实际7.99分钟（上限20分钟）。WER分别为2.4192%和5.0418%，均差于原始模型，也略差于第892步。两集800→892的配对差值区间覆盖零；退化在第800步时已存在，未支持最后92步造成主要退化的假设。
@@ -75,4 +77,4 @@
 
 ## 未完成的后续工作
 
-生成错误、现存checkpoint诊断和零更新保存／重载控制均已完成，完整证据见[交付核对表](reports/DELIVERY_AUDIT.md)。Early100已保存早期退化和一条生成截断的证据，下一步先单独规划异常生成诊断，再决定是否补做other或改变lr/更新范围。`docs/ADAPTIVE_EXPERIMENT_POLICY.md`仍为历史策略草案，不恢复无限队列。新的完整训练轮次、中文/混合语料、流式评测、人工听音和独立test评测均未执行。
+生成错误、现存checkpoint诊断和零更新保存／重载控制均已完成，完整证据见[交付核对表](reports/DELIVERY_AUDIT.md)。Early100及新增截断探针已保存早期退化、生成重复至预算和parser压缩的证据；下一阶段仍需单独规划，尚未补做other、改变lr/更新范围或重训。`docs/ADAPTIVE_EXPERIMENT_POLICY.md`仍为历史策略草案，不恢复无限队列。新的完整训练轮次、中文/混合语料、流式评测、人工听音和独立test评测均未执行。

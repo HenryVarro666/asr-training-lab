@@ -1,0 +1,229 @@
+{
+  "status": "complete",
+  "stage": "three_preset_probes_complete",
+  "started_unix": 1792732968.4587853,
+  "max_wall_seconds": 1200.0,
+  "results": [],
+  "commands": [
+    {
+      "name": "batch16-first",
+      "command": [
+        "/mnt/raid/asr-lab/venv/bin/python",
+        "-m",
+        "asr_lab.qwen_truncation_probe",
+        "--identity",
+        "/mnt/raid/asr-lab/runs/qwen-truncation-probe-20261023-a/identity.json",
+        "--stage",
+        "batch16-first",
+        "--output",
+        "/mnt/raid/asr-lab/runs/qwen-truncation-probe-20261023-a/batch16-first"
+      ],
+      "physical_gpus": "1",
+      "run_dir": "/mnt/raid/asr-lab/runs/qwen-truncation-probe-20261023-a/batch16-first",
+      "fingerprint": "5ce4fb46ff03c23c6b19e49c9ea9a8f39cfa69cd78e6cfb31073558d672834fe",
+      "started_unix": 1792732992.491937,
+      "status": "complete",
+      "exit_code": 0,
+      "ended_unix": 1792733026.7250025
+    },
+    {
+      "name": "batch16-repeat",
+      "command": [
+        "/mnt/raid/asr-lab/venv/bin/python",
+        "-m",
+        "asr_lab.qwen_truncation_probe",
+        "--identity",
+        "/mnt/raid/asr-lab/runs/qwen-truncation-probe-20261023-a/identity.json",
+        "--stage",
+        "batch16-repeat",
+        "--output",
+        "/mnt/raid/asr-lab/runs/qwen-truncation-probe-20261023-a/batch16-repeat"
+      ],
+      "physical_gpus": "1",
+      "run_dir": "/mnt/raid/asr-lab/runs/qwen-truncation-probe-20261023-a/batch16-repeat",
+      "fingerprint": "5b039163c1b8c0fe7d689d3f5c239625209bf79bc27f007d2ae1d3531a9838e1",
+      "started_unix": 1792733033.3528197,
+      "status": "complete",
+      "exit_code": 0,
+      "ended_unix": 1792733063.201746
+    },
+    {
+      "name": "target-single",
+      "command": [
+        "/mnt/raid/asr-lab/venv/bin/python",
+        "-m",
+        "asr_lab.qwen_truncation_probe",
+        "--identity",
+        "/mnt/raid/asr-lab/runs/qwen-truncation-probe-20261023-a/identity.json",
+        "--stage",
+        "target-single",
+        "--output",
+        "/mnt/raid/asr-lab/runs/qwen-truncation-probe-20261023-a/target-single"
+      ],
+      "physical_gpus": "1",
+      "run_dir": "/mnt/raid/asr-lab/runs/qwen-truncation-probe-20261023-a/target-single",
+      "fingerprint": "a692dd9532fec8a74ccdd8131ad887c9c94bef207bb9f392438876017a90b06a",
+      "started_unix": 1792733069.9227371,
+      "status": "complete",
+      "exit_code": 0,
+      "ended_unix": 1792733098.947364
+    }
+  ],
+  "updated_unix": 1792733099.1516507,
+  "kind": "truncation_probe",
+  "optimizer_updates": 0,
+  "automatic_training": false,
+  "preset_stages": [
+    "batch16-first",
+    "batch16-repeat",
+    "target-single"
+  ],
+  "source_sha256": {
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/model-00002-of-00002.safetensors": "5fe3336852ed8c8366921ee44c643d655954669808f21b640128e40a3a36bf25",
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/model-00001-of-00002.safetensors": "5d88baf171bbdb3564211875768478aeae1cf57410bfc257d9813fe66ac8168f",
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/model.safetensors.index.json": "1f1d8ee445ca095a2e643e8ce1012b903df12fd906e64d1bf3025a30f03524b5",
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/tokenizer_config.json": "7f335cbd3b6f1036808e23613c1c1919f8d5570c11cb55420e5094e036f45669",
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/added_tokens.json": "de40784677cbd1843cabe5fbee078c7e042cd0b62155f0810af5a13842e5722a",
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/config.json": "90907b1e2b2d95ee310a38daefda306f95dfcf2df3c797e252afdc161127eb6a",
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/generation_config.json": "a275709a685826eaf1c763af663dc9ee3653c9353251f6eb3f859c3526652204",
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/tokenizer.json": "0499602714160467f2d68b910651d6216020689f1e016be87a2d0019ee3baeab",
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/special_tokens_map.json": "7b376c510ccf9d88bb9bbee41dfc5052122e16e0dec1124a8d8983c59259a9f3",
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/chat_template.jinja": "a103579066642f0e035873f12de6046a1bbc909a7a2833732fda9fd6bc7c528d",
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/preprocessor_config.json": "0443a40d411d3caad769e7b59971fa6eae75926ed4b7e337e60da909eb38c1f7",
+    "/mnt/raid/asr-lab/repo/src/asr_lab/qwen_data.py": "769aed8478da4a6e9dcd33ed3bf87aaa6b846eede3d677c9ae4dc88469dc89b0",
+    "/mnt/raid/asr-lab/repo/src/asr_lab/qwen_early100.py": "0d54a5472c4695019ebb935bab03c79509f0aab5f3633ea55cf384291eff8c46",
+    "/mnt/raid/asr-lab/repo/src/asr_lab/qwen_evaluate.py": "0a2012eb016cddadee7b3c0f0ca5ad9f3f94b502faad780392788a8ccf9e30d6",
+    "/mnt/raid/asr-lab/repo/src/asr_lab/qwen_roundtrip_control.py": "718fd41d61f0d89d2e6acaea67fd3df7f827ab66c7167d0bba359cfeac197d00",
+    "/mnt/raid/asr-lab/repo/src/asr_lab/qwen_train.py": "97951994468a14b10ce57b7c5c864dcef6ffb6af4ee9c75e621b48c01e9de961",
+    "/mnt/raid/asr-lab/repo/src/asr_lab/training_utils.py": "5b8eba6aab98e97080baace995e6acc8aca619b5da89e3bbfa7a2209ea6d2ad4",
+    "/mnt/raid/asr-lab/repo/src/asr_lab/prepare_data.py": "489c613f44bc0054fea1db49453eeec4a1c6f9e9b1cb64478d901cba70f8f752",
+    "/mnt/raid/asr-lab/repo/reports/truncation-probe/inputs/reference-batch.json": "b586b6c289ea97d78a9b3396a4718579949328ff9f9ec301b3c026ff83de18e5",
+    "/mnt/raid/asr-lab/data/manifests/dev-clean.jsonl": "fc6f7f048b571431d244a854b204a8e9ed34062796350359e10ee5635ff9ca9a",
+    "/mnt/raid/asr-lab/repo/reports/diagnosis/inputs/whisper-english-spelling-normalizer.json": "bf1c507dc8724ca9cf9903640dacfb69dae2f00edee4f21ceba106a7392f26dd",
+    "/mnt/raid/asr-lab/repo/reports/diagnosis/text-audit.json": "ac2c053ea4b3a19183fd2c2698dd5f8f96cf8149901be95f84b09a08bb2ee632",
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/prefix-complete.json": "b32e69488301d492bd3cffe6b957bf07dc20449726dadc0e2ca2bebbbae4eb80",
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/checkpoint.json": "bad241c06c02cfaf01d37eff1a3672c56ed2269ab10734346809c75d653567d7",
+    "/mnt/raid/asr-lab/repo/src/asr_lab/qwen_truncation_probe.py": "3c3c73d1e14f0f040b02893a5269747852558292c308507f87db5b85584fd74e",
+    "/mnt/raid/asr-lab/repo/scripts/run_truncation_probe.py": "a4be9be1860df9c2076d34893f96fe25f5d135885060c5990dc0795fd2927708",
+    "/mnt/raid/asr-lab/repo/scripts/run_qwen_campaign.py": "c72d49316a2b35ccddc6ef8f52e10060d79dfe607ee8efd9a12e91e76e966cdd",
+    "/mnt/raid/asr-lab/repo/scripts/monitor.py": "4e6a0d4f1fb9e44d98f419041f2f6ee2277b3ab65abb5b3a054256ef9440d96c",
+    "/mnt/raid/asr-lab/repo/reports/truncation-probe/inputs/upstream-generation-source.json": "0abe865b4c3a27cc3b964d02a0afe0b703796a96299c98b591a15384cd59a868",
+    "/mnt/raid/asr-lab/vendor/Qwen3-ASR/qwen_asr/inference/utils.py": "b37fb4140e6d9be85f2ecb1552ed16136eb98a57f44b402f8b0b213cb6df2a82",
+    "/mnt/raid/asr-lab/vendor/Qwen3-ASR/qwen_asr/inference/qwen3_asr.py": "0b1770f8e907b6c5a0a1e9ebce037cb63f48555f3cd15eaf6ea2078e9df41a7b",
+    "/mnt/raid/asr-lab/vendor/Qwen3-ASR/qwen_asr/core/transformers_backend/modeling_qwen3_asr.py": "2fb5d98da1933748f5117ee05ce4e7150c9ead8154fb8e25f7af3968b853adc7",
+    "/mnt/raid/asr-lab/repo/reports/truncation-probe/inputs/upstream-parser-source.json": "04c9662a338837df23b6c91ac35f9daade9e69c5b950cd7ec8b4296712c7eb30",
+    "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/6345/93306/6345-93306-0021.flac": "446c692048d06bd34043c0b905a2c397762f3a1a99eea8c14b311692dde7b8c2",
+    "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/6345/93306/6345-93306-0022.flac": "54e43ee4e0d63f30e96e06018ddff44237173b2a39765b0bbc3dbfe3aee61587",
+    "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/6345/93306/6345-93306-0023.flac": "29ccb7b6100fe1cc3f3946741fffcc452c89951459122510c2c5d0206e88cd6a",
+    "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/6345/93306/6345-93306-0024.flac": "1107f62cef790aa8ce487940859e28cdd51fb0fa4cb587091c86108479cd3eb3",
+    "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/6345/93306/6345-93306-0025.flac": "ed7521b626f9d318247899d1991cf0d6d138bac07eddf44dac32fe3551313ead",
+    "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0000.flac": "3b5a648b0f2d6fbeb66fc148991c4de2a83632ed81bbfdd632d47a501f749289",
+    "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0001.flac": "8ca172b174888ccd05192acb2398ef2b4703135153a37e0199f37205e352a6f6",
+    "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0002.flac": "65125efea2931a59c90a465ff974fb5e8169d5185ae943dcf98f4ca2120277c6",
+    "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0003.flac": "ca90f6d2b7eb54423bbb44abeaf0bd1c4911cf3b96b1bc30fd09004fdc224452",
+    "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0004.flac": "bdf6e0286dfc6b99dc1ad22142092ae20b6fb859842a79159c7f8204a40e7986",
+    "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0005.flac": "51dcaef73e305509b06521201659be0f6ad6785aa541005d8bb2f16e02800e5f",
+    "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0006.flac": "081f8aed018bb8324cf490f95df9efbeab37e002d81b4400a66e3166c4b6c21c",
+    "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0007.flac": "1ddf97392398293af0be1bccc26ec5c4a3c12caf56db713f1ecb3a37f2198427",
+    "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0008.flac": "e0e4b0ffd80083aa069b1e486e41a0d5ab7089468040719ef5938269f6c97b60",
+    "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0009.flac": "98175a8e4bc663c37bd0e4a183ac48f649044faac4940f9b137b834a856a81be",
+    "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0010.flac": "ec63c05858ca82542abafc816a5e5e6db23638a5981dd1cd485ecd0d89df60d4",
+    "/mnt/raid/asr-lab/runs/qwen-truncation-probe-20261023-a/identity.json": "11efebbcb097966f7af168a7c34625bd146ce004591f15d46a7bca54608bc444"
+  },
+  "gpu_preflight": {
+    "physical_gpu": 1,
+    "uuid": "GPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c",
+    "other_compute_apps": [],
+    "checked_unix": 1792733063.4517891,
+    "ignored_own_pid": null,
+    "limitation": "Point-in-time check cannot reserve a GPU against another scheduler."
+  },
+  "repeat_identity": {
+    "status": "passed",
+    "inputs_equal": true,
+    "effective_rules_equal": true,
+    "compared_generation_fields": [
+      "effective",
+      "special_tokens",
+      "logits_processor_types"
+    ],
+    "raw_generation_metadata_is_not_a_gate": true,
+    "tokens_and_parser_are_observations_not_identity_gates": true
+  },
+  "summary": {
+    "status": "three_preset_probes_complete",
+    "total_generate_calls": 3,
+    "total_consumed_examples": 33,
+    "optimizer_updates": 0,
+    "repeated_batch_inputs_equal": true,
+    "repeated_batch_effective_config_equal": true,
+    "repeated_batch_full_tokens_equal": true,
+    "repeated_batch_parser_equal": true,
+    "targets": {
+      "batch16-first": {
+        "legacy_generation_truncated": true,
+        "returned_continuation_width": 512,
+        "effective_eos_positions": [],
+        "parser_input": "CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CUL",
+        "parser_output": [
+          "English",
+          "CULINARY CUL"
+        ],
+        "repetition_fix_observation": {
+          "input": "CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CUL",
+          "output": "CULINARY CUL",
+          "input_characters": 1533,
+          "output_characters": 12,
+          "input_words": 171,
+          "output_words": 2,
+          "equals_actual_parser_hypothesis": true,
+          "method": "Original helper called after the unmodified parser for observation; never replaces parser output."
+        }
+      },
+      "batch16-repeat": {
+        "legacy_generation_truncated": true,
+        "returned_continuation_width": 512,
+        "effective_eos_positions": [],
+        "parser_input": "CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CUL",
+        "parser_output": [
+          "English",
+          "CULINARY CUL"
+        ],
+        "repetition_fix_observation": {
+          "input": "CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CUL",
+          "output": "CULINARY CUL",
+          "input_characters": 1533,
+          "output_characters": 12,
+          "input_words": 171,
+          "output_words": 2,
+          "equals_actual_parser_hypothesis": true,
+          "method": "Original helper called after the unmodified parser for observation; never replaces parser output."
+        }
+      },
+      "target-single": {
+        "legacy_generation_truncated": true,
+        "returned_continuation_width": 512,
+        "effective_eos_positions": [],
+        "parser_input": "CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CUL",
+        "parser_output": [
+          "English",
+          "CULINARY CUL"
+        ],
+        "repetition_fix_observation": {
+          "input": "CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CUL",
+          "output": "CULINARY CUL",
+          "input_characters": 1533,
+          "output_characters": 12,
+          "input_words": 171,
+          "output_words": 2,
+          "equals_actual_parser_hypothesis": true,
+          "method": "Original helper called after the unmodified parser for observation; never replaces parser output."
+        }
+      }
+    },
+    "interpretation": "Truncation is an observation, not a retry trigger. This does not pass or repair the prior failed campaign. Fresh workers did not replay the preceding137 batches. No logits were collected; numerical or training causes remain unproven."
+  },
+  "completed_unix": 1792733099.151647
+}

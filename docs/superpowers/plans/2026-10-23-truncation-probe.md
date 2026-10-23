@@ -52,10 +52,10 @@
 **Files:** reports/truncation-probe/run/, README.md, validation/; current project entry/status docs; Git bundle receipt.
 **Interfaces:** Use a fresh remote /mnt/raid/asr-lab/runs/qwen-truncation-probe-20261023-* directory; small artifacts mirror locally. Never upload or download large weights/audio as outputs.
 
-- [ ] Capture fresh GPU/process/disk/source preflight and verify checkpoint/manifest/audio identity within the total run budget.
-- [ ] Launch the single authorized supervisor; monitor actual stage progress and only its owned processes.
-- [ ] Sync raw evidence and compare same-batch inputs, effective settings, tokens/EOS, decoded text and parser output; distinguish repeat/single and historical comparisons.
-- [ ] Record observed mechanism and limitations; review results with Astra, update progress/entry docs, verify host cleanup and service preservation.
+- [x] Capture fresh GPU/process/disk/source preflight and verify checkpoint/manifest/audio identity within the total run budget.
+- [x] Launch the single authorized supervisor; monitor actual stage progress and only its owned processes.
+- [x] Sync raw evidence and compare same-batch inputs, effective settings, tokens/EOS, decoded text and parser output; distinguish repeat/single and historical comparisons.
+- [x] Record observed mechanism and limitations; review results with Astra, update progress/entry docs, verify host cleanup and service preservation.
 - [ ] Commit small evidence and verify a cross-host code/report bundle; finish the finite diagnostic without training or a new queue.
 
 ## Execution rulings

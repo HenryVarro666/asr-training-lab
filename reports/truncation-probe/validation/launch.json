@@ -1,0 +1,20 @@
+{
+  "preflight": {
+    "time_utc": "2026-10-23T05:22:43Z",
+    "gpu": "0, GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c, 72624, 0\n1, GPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c, 95306, 0\n",
+    "gpu_processes": "GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c, 2154793, 22674\n",
+    "disk": {
+      "total": 47808184197120,
+      "used": 42105222852608,
+      "free": 3302930370560
+    },
+    "project_bytes": 250827995416,
+    "global_lock_available": true,
+    "source_hashes_match": true
+  },
+  "launch_utc": "2026-10-23T05:22:43Z",
+  "session": "asr-truncation-probe",
+  "command": "cd /mnt/raid/asr-lab/repo && exec env CUDA_VISIBLE_DEVICES= PYTHONPATH=/mnt/raid/asr-lab/repo/src HF_HOME=/mnt/raid/asr-lab/cache/huggingface HF_HUB_CACHE=/mnt/raid/asr-lab/cache/huggingface/hub HF_DATASETS_CACHE=/mnt/raid/asr-lab/cache/huggingface/datasets XDG_CACHE_HOME=/mnt/raid/asr-lab/cache TMPDIR=/mnt/raid/asr-lab/tmp TORCH_HOME=/mnt/raid/asr-lab/cache/torch CUDA_CACHE_PATH=/mnt/raid/asr-lab/cache/cuda TRITON_CACHE_DIR=/mnt/raid/asr-lab/cache/triton TORCHINDUCTOR_CACHE_DIR=/mnt/raid/asr-lab/cache/torchinductor HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 HF_DATASETS_OFFLINE=1 TOKENIZERS_PARALLELISM=false HF_HUB_DISABLE_IMPLICIT_TOKEN=1 OMP_NUM_THREADS=1 /mnt/raid/asr-lab/venv/bin/python scripts/run_truncation_probe.py --run-dir /mnt/raid/asr-lab/runs/qwen-truncation-probe-20261023-a --reference-batch /mnt/raid/asr-lab/repo/reports/truncation-probe/inputs/reference-batch.json --checkpoint /mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100 --max-wall-seconds 1200 > /mnt/raid/asr-lab/logs/qwen-truncation-probe-20261023-a.log 2>&1",
+  "run_dir": "/mnt/raid/asr-lab/runs/qwen-truncation-probe-20261023-a",
+  "local_source_commit": "37eb2e8c3099a601768b4b76dafc52856ce340be"
+}

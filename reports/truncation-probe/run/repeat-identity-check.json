@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "inputs_equal": true,
+  "effective_rules_equal": true,
+  "compared_generation_fields": [
+    "effective",
+    "special_tokens",
+    "logits_processor_types"
+  ],
+  "raw_generation_metadata_is_not_a_gate": true,
+  "tokens_and_parser_are_observations_not_identity_gates": true
+}

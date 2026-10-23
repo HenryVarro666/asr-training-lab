@@ -1,0 +1,21 @@
+{
+  "name": "batch16-repeat",
+  "command": [
+    "/mnt/raid/asr-lab/venv/bin/python",
+    "-m",
+    "asr_lab.qwen_truncation_probe",
+    "--identity",
+    "/mnt/raid/asr-lab/runs/qwen-truncation-probe-20261023-a/identity.json",
+    "--stage",
+    "batch16-repeat",
+    "--output",
+    "/mnt/raid/asr-lab/runs/qwen-truncation-probe-20261023-a/batch16-repeat"
+  ],
+  "physical_gpus": "1",
+  "run_dir": "/mnt/raid/asr-lab/runs/qwen-truncation-probe-20261023-a/batch16-repeat",
+  "fingerprint": "5b039163c1b8c0fe7d689d3f5c239625209bf79bc27f007d2ae1d3531a9838e1",
+  "started_unix": 1792733033.3528197,
+  "status": "complete",
+  "exit_code": 0,
+  "ended_unix": 1792733063.201746
+}

@@ -4,6 +4,8 @@
 
 归档日期2026-10-23。Early100训练完成，完整clean有1条截断触发验收失败，other未执行；状态与证据见[本阶段报告](early100/README.md)。原三组图继续保持不变，新目录只展示已通过固定128结果和实际100步loss/LR。
 
+新增[截断探针](truncation-probe/README.md)已完成3次推理、0更新：完整token/EOS、两种decode、parser输入输出、16条batch邻居、输入tensor与指纹、运行配置、资源监控均保存在`truncation-probe/run/`及远端同名run。`.pt`取证tensor已镜像本地但由Git忽略；JSON/日志等小型证据纳入Git。该阶段没有新的模型权重或训练曲线，原图保持不变。代码与报告的跨机备份以[新收据](truncation-probe/final-backup.json)为准。
+
 | 种类 | 本地位置 | 保存内容与边界 |
 |---|---|---|
 | 代码、配置、测试 | `../src/asr_lab/`、`../scripts/`、`../configs/`、`../tests/` | Qwen与Whisper数据/训练/恢复/评测、有限runner、CPU契约测试；源码不等于GPU验证 |

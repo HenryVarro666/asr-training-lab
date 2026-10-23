@@ -1,0 +1,21 @@
+{
+  "name": "batch16-first",
+  "command": [
+    "/mnt/raid/asr-lab/venv/bin/python",
+    "-m",
+    "asr_lab.qwen_truncation_probe",
+    "--identity",
+    "/mnt/raid/asr-lab/runs/qwen-truncation-probe-20261023-a/identity.json",
+    "--stage",
+    "batch16-first",
+    "--output",
+    "/mnt/raid/asr-lab/runs/qwen-truncation-probe-20261023-a/batch16-first"
+  ],
+  "physical_gpus": "1",
+  "run_dir": "/mnt/raid/asr-lab/runs/qwen-truncation-probe-20261023-a/batch16-first",
+  "fingerprint": "5ce4fb46ff03c23c6b19e49c9ea9a8f39cfa69cd78e6cfb31073558d672834fe",
+  "started_unix": 1792732992.491937,
+  "status": "complete",
+  "exit_code": 0,
+  "ended_unix": 1792733026.7250025
+}

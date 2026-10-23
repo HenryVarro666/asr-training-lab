@@ -1,0 +1,1576 @@
+{
+  "status": "passed",
+  "final_conclusion": true,
+  "scope": "Independent CPU audit of three actual fixed-checkpoint generation probes; original failed campaign remains failed.",
+  "synthetic_evidence_used_as_real_token_evidence": false,
+  "total_generate_calls": 3,
+  "total_consumed_examples": 33,
+  "optimizer_updates": 0,
+  "campaign_wall_seconds": 130.69286179542542,
+  "stages": [
+    {
+      "stage": "batch16-first",
+      "examples": 16,
+      "artifact_count": 8,
+      "all_artifact_hashes_and_bytes_match": true,
+      "pt_json_tensor_and_sequence_slice_match": true,
+      "all_left_padding_and_tensor_fingerprints_valid": true,
+      "all_decode_tokenpiece_parser_remote_cpu_matches": true,
+      "all_local_parser_normalizer_and_sdi_match": true,
+      "effective_eos_ids": [
+        151643,
+        151645
+      ],
+      "effective_pad_id": 151645,
+      "logits_processor_types": [],
+      "target": {
+        "id": "652-129742-0006",
+        "prompt_padded_width": 200,
+        "continuation_width": 512,
+        "eos_positions": [],
+        "pad_positions": [],
+        "special_token_positions": [],
+        "token_sha256": "9bb16e367285e4dcd88a7d2788d0e14b3f295fa5ce86296bff3444a7fc44e49f",
+        "token_frequency": {
+          "34": 1,
+          "1094": 171,
+          "32593": 170,
+          "356": 170
+        },
+        "first_token": 34,
+        "tail_shortest_token_period": [
+          1094,
+          32593,
+          356
+        ],
+        "tail_full_periods": 170,
+        "tail_partial_period": [
+          1094
+        ],
+        "decoded_keep_equals_skip": true,
+        "preparse_characters": 1533,
+        "preparse_words": 171,
+        "preparse_word_frequency": {
+          "CULINARY": 170,
+          "CUL": 1
+        },
+        "preparse_text_sha256": "37dfe85ebabba698551d1c5ee5c475455fec4aaaed57d296793a3730df2c8289",
+        "preparse_prefix": "CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY C",
+        "preparse_suffix": "LINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CUL",
+        "helper_output": "CULINARY CUL",
+        "parser_output": [
+          "English",
+          "CULINARY CUL"
+        ],
+        "normalized_hypothesis": "culinary cul",
+        "recomputed_counts": {
+          "substitutions": 2,
+          "deletions": 14,
+          "insertions": 0,
+          "hits": 0,
+          "reference_words": 16
+        },
+        "preparse_recomputed_counts": {
+          "substitutions": 16,
+          "deletions": 0,
+          "insertions": 155,
+          "hits": 0,
+          "reference_words": 16
+        },
+        "original_saved_hypothesis": "CULINARY CUL",
+        "baseline_saved_hypothesis": "Cauliflower mayonnaise: Take cold boiled cauliflower, break into branches, adding salt, pepper, and vinegar to season.",
+        "baseline_counts": {
+          "substitutions": 0,
+          "deletions": 0,
+          "insertions": 0,
+          "hits": 16,
+          "reference_words": 16
+        }
+      },
+      "row_checks": [
+        {
+          "id": "6345-93306-0021",
+          "first_eos_position": 18,
+          "returned_width": 512,
+          "legacy_truncated": false,
+          "recomputed_counts": {
+            "substitutions": 0,
+            "deletions": 0,
+            "insertions": 0,
+            "hits": 12,
+            "reference_words": 12
+          },
+          "parsed_hypothesis_matches_original_saved": true
+        },
+        {
+          "id": "6345-93306-0022",
+          "first_eos_position": 50,
+          "returned_width": 512,
+          "legacy_truncated": false,
+          "recomputed_counts": {
+            "substitutions": 0,
+            "deletions": 0,
+            "insertions": 0,
+            "hits": 40,
+            "reference_words": 40
+          },
+          "parsed_hypothesis_matches_original_saved": true
+        },
+        {
+          "id": "6345-93306-0023",
+          "first_eos_position": 64,
+          "returned_width": 512,
+          "legacy_truncated": false,
+          "recomputed_counts": {
+            "substitutions": 1,
+            "deletions": 0,
+            "insertions": 1,
+            "hits": 42,
+            "reference_words": 43
+          },
+          "parsed_hypothesis_matches_original_saved": true
+        },
+        {
+          "id": "6345-93306-0024",
+          "first_eos_position": 57,
+          "returned_width": 512,
+          "legacy_truncated": false,
+          "recomputed_counts": {
+            "substitutions": 1,
+            "deletions": 0,
+            "insertions": 1,
+            "hits": 37,
+            "reference_words": 38
+          },
+          "parsed_hypothesis_matches_original_saved": true
+        },
+        {
+          "id": "6345-93306-0025",
+          "first_eos_position": 63,
+          "returned_width": 512,
+          "legacy_truncated": false,
+          "recomputed_counts": {
+            "substitutions": 0,
+            "deletions": 0,
+            "insertions": 0,
+            "hits": 38,
+            "reference_words": 38
+          },
+          "parsed_hypothesis_matches_original_saved": true
+        },
+        {
+          "id": "652-129742-0000",
+          "first_eos_position": 23,
+          "returned_width": 512,
+          "legacy_truncated": false,
+          "recomputed_counts": {
+            "substitutions": 0,
+            "deletions": 0,
+            "insertions": 0,
+            "hits": 11,
+            "reference_words": 11
+          },
+          "parsed_hypothesis_matches_original_saved": true
+        },
+        {
+          "id": "652-129742-0001",
+          "first_eos_position": 37,
+          "returned_width": 512,
+          "legacy_truncated": false,
+          "recomputed_counts": {
+            "substitutions": 1,
+            "deletions": 0,
+            "insertions": 1,
+            "hits": 23,
+            "reference_words": 24
+          },
+          "parsed_hypothesis_matches_original_saved": true
+        },
+        {
+          "id": "652-129742-0002",
+          "first_eos_position": 20,
+          "returned_width": 512,
+          "legacy_truncated": false,
+          "recomputed_counts": {
+            "substitutions": 0,
+            "deletions": 0,
+            "insertions": 0,
+            "hits": 11,
+            "reference_words": 11
+          },
+          "parsed_hypothesis_matches_original_saved": true
+        },
+        {
+          "id": "652-129742-0003",
+          "first_eos_position": 39,
+          "returned_width": 512,
+          "legacy_truncated": false,
+          "recomputed_counts": {
+            "substitutions": 1,
+            "deletions": 0,
+            "insertions": 0,
+            "hits": 23,
+            "reference_words": 24
+          },
+          "parsed_hypothesis_matches_original_saved": true
+        },
+        {
+          "id": "652-129742-0004",
+          "first_eos_position": 35,
+          "returned_width": 512,
+          "legacy_truncated": false,
+          "recomputed_counts": {
+            "substitutions": 0,
+            "deletions": 0,
+            "insertions": 0,
+            "hits": 18,
+            "reference_words": 18
+          },
+          "parsed_hypothesis_matches_original_saved": true
+        },
+        {
+          "id": "652-129742-0005",
+          "first_eos_position": 35,
+          "returned_width": 512,
+          "legacy_truncated": false,
+          "recomputed_counts": {
+            "substitutions": 2,
+            "deletions": 0,
+            "insertions": 0,
+            "hits": 12,
+            "reference_words": 14
+          },
+          "parsed_hypothesis_matches_original_saved": true
+        },
+        {
+          "id": "652-129742-0006",
+          "first_eos_position": null,
+          "returned_width": 512,
+          "legacy_truncated": true,
+          "recomputed_counts": {
+            "substitutions": 2,
+            "deletions": 14,
+            "insertions": 0,
+            "hits": 0,
+            "reference_words": 16
+          },
+          "parsed_hypothesis_matches_original_saved": true
+        },
+        {
+          "id": "652-129742-0007",
+          "first_eos_position": 22,
+          "returned_width": 512,
+          "legacy_truncated": false,
+          "recomputed_counts": {
+            "substitutions": 0,
+            "deletions": 0,
+            "insertions": 0,
+            "hits": 12,
+            "reference_words": 12
+          },
+          "parsed_hypothesis_matches_original_saved": true
+        },
+        {
+          "id": "652-129742-0008",
+          "first_eos_position": 13,
+          "returned_width": 512,
+          "legacy_truncated": false,
+          "recomputed_counts": {
+            "substitutions": 1,
+            "deletions": 1,
+            "insertions": 0,
+            "hits": 5,
+            "reference_words": 7
+          },
+          "parsed_hypothesis_matches_original_saved": true
+        },
+        {
+          "id": "652-129742-0009",
+          "first_eos_position": 60,
+          "returned_width": 512,
+          "legacy_truncated": false,
+          "recomputed_counts": {
+            "substitutions": 0,
+            "deletions": 0,
+            "insertions": 0,
+            "hits": 37,
+            "reference_words": 37
+          },
+          "parsed_hypothesis_matches_original_saved": true
+        },
+        {
+          "id": "652-129742-0010",
+          "first_eos_position": 19,
+          "returned_width": 512,
+          "legacy_truncated": false,
+          "recomputed_counts": {
+            "substitutions": 0,
+            "deletions": 0,
+            "insertions": 0,
+            "hits": 10,
+            "reference_words": 10
+          },
+          "parsed_hypothesis_matches_original_saved": true
+        }
+      ],
+      "monitor": {
+        "samples": 4,
+        "alerts": [],
+        "min_disk_free_gib": 3076.0822563171387,
+        "sampled_peak_gpu1_memory_mib": 6593.0,
+        "scope": "Discrete monitor samples, not a continuous resource trace or exact CUDA peak."
+      },
+      "stage_wall_seconds": 34.233065605163574
+    },
+    {
+      "stage": "batch16-repeat",
+      "examples": 16,
+      "artifact_count": 8,
+      "all_artifact_hashes_and_bytes_match": true,
+      "pt_json_tensor_and_sequence_slice_match": true,
+      "all_left_padding_and_tensor_fingerprints_valid": true,
+      "all_decode_tokenpiece_parser_remote_cpu_matches": true,
+      "all_local_parser_normalizer_and_sdi_match": true,
+      "effective_eos_ids": [
+        151643,
+        151645
+      ],
+      "effective_pad_id": 151645,
+      "logits_processor_types": [],
+      "target": {
+        "id": "652-129742-0006",
+        "prompt_padded_width": 200,
+        "continuation_width": 512,
+        "eos_positions": [],
+        "pad_positions": [],
+        "special_token_positions": [],
+        "token_sha256": "9bb16e367285e4dcd88a7d2788d0e14b3f295fa5ce86296bff3444a7fc44e49f",
+        "token_frequency": {
+          "34": 1,
+          "1094": 171,
+          "32593": 170,
+          "356": 170
+        },
+        "first_token": 34,
+        "tail_shortest_token_period": [
+          1094,
+          32593,
+          356
+        ],
+        "tail_full_periods": 170,
+        "tail_partial_period": [
+          1094
+        ],
+        "decoded_keep_equals_skip": true,
+        "preparse_characters": 1533,
+        "preparse_words": 171,
+        "preparse_word_frequency": {
+          "CULINARY": 170,
+          "CUL": 1
+        },
+        "preparse_text_sha256": "37dfe85ebabba698551d1c5ee5c475455fec4aaaed57d296793a3730df2c8289",
+        "preparse_prefix": "CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY C",
+        "preparse_suffix": "LINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CUL",
+        "helper_output": "CULINARY CUL",
+        "parser_output": [
+          "English",
+          "CULINARY CUL"
+        ],
+        "normalized_hypothesis": "culinary cul",
+        "recomputed_counts": {
+          "substitutions": 2,
+          "deletions": 14,
+          "insertions": 0,
+          "hits": 0,
+          "reference_words": 16
+        },
+        "preparse_recomputed_counts": {
+          "substitutions": 16,
+          "deletions": 0,
+          "insertions": 155,
+          "hits": 0,
+          "reference_words": 16
+        },
+        "original_saved_hypothesis": "CULINARY CUL",
+        "baseline_saved_hypothesis": "Cauliflower mayonnaise: Take cold boiled cauliflower, break into branches, adding salt, pepper, and vinegar to season.",
+        "baseline_counts": {
+          "substitutions": 0,
+          "deletions": 0,
+          "insertions": 0,
+          "hits": 16,
+          "reference_words": 16
+        }
+      },
+      "row_checks": [
+        {
+          "id": "6345-93306-0021",
+          "first_eos_position": 18,
+          "returned_width": 512,
+          "legacy_truncated": false,
+          "recomputed_counts": {
+            "substitutions": 0,
+            "deletions": 0,
+            "insertions": 0,
+            "hits": 12,
+            "reference_words": 12
+          },
+          "parsed_hypothesis_matches_original_saved": true
+        },
+        {
+          "id": "6345-93306-0022",
+          "first_eos_position": 50,
+          "returned_width": 512,
+          "legacy_truncated": false,
+          "recomputed_counts": {
+            "substitutions": 0,
+            "deletions": 0,
+            "insertions": 0,
+            "hits": 40,
+            "reference_words": 40
+          },
+          "parsed_hypothesis_matches_original_saved": true
+        },
+        {
+          "id": "6345-93306-0023",
+          "first_eos_position": 64,
+          "returned_width": 512,
+          "legacy_truncated": false,
+          "recomputed_counts": {
+            "substitutions": 1,
+            "deletions": 0,
+            "insertions": 1,
+            "hits": 42,
+            "reference_words": 43
+          },
+          "parsed_hypothesis_matches_original_saved": true
+        },
+        {
+          "id": "6345-93306-0024",
+          "first_eos_position": 57,
+          "returned_width": 512,
+          "legacy_truncated": false,
+          "recomputed_counts": {
+            "substitutions": 1,
+            "deletions": 0,
+            "insertions": 1,
+            "hits": 37,
+            "reference_words": 38
+          },
+          "parsed_hypothesis_matches_original_saved": true
+        },
+        {
+          "id": "6345-93306-0025",
+          "first_eos_position": 63,
+          "returned_width": 512,
+          "legacy_truncated": false,
+          "recomputed_counts": {
+            "substitutions": 0,
+            "deletions": 0,
+            "insertions": 0,
+            "hits": 38,
+            "reference_words": 38
+          },
+          "parsed_hypothesis_matches_original_saved": true
+        },
+        {
+          "id": "652-129742-0000",
+          "first_eos_position": 23,
+          "returned_width": 512,
+          "legacy_truncated": false,
+          "recomputed_counts": {
+            "substitutions": 0,
+            "deletions": 0,
+            "insertions": 0,
+            "hits": 11,
+            "reference_words": 11
+          },
+          "parsed_hypothesis_matches_original_saved": true
+        },
+        {
+          "id": "652-129742-0001",
+          "first_eos_position": 37,
+          "returned_width": 512,
+          "legacy_truncated": false,
+          "recomputed_counts": {
+            "substitutions": 1,
+            "deletions": 0,
+            "insertions": 1,
+            "hits": 23,
+            "reference_words": 24
+          },
+          "parsed_hypothesis_matches_original_saved": true
+        },
+        {
+          "id": "652-129742-0002",
+          "first_eos_position": 20,
+          "returned_width": 512,
+          "legacy_truncated": false,
+          "recomputed_counts": {
+            "substitutions": 0,
+            "deletions": 0,
+            "insertions": 0,
+            "hits": 11,
+            "reference_words": 11
+          },
+          "parsed_hypothesis_matches_original_saved": true
+        },
+        {
+          "id": "652-129742-0003",
+          "first_eos_position": 39,
+          "returned_width": 512,
+          "legacy_truncated": false,
+          "recomputed_counts": {
+            "substitutions": 1,
+            "deletions": 0,
+            "insertions": 0,
+            "hits": 23,
+            "reference_words": 24
+          },
+          "parsed_hypothesis_matches_original_saved": true
+        },
+        {
+          "id": "652-129742-0004",
+          "first_eos_position": 35,
+          "returned_width": 512,
+          "legacy_truncated": false,
+          "recomputed_counts": {
+            "substitutions": 0,
+            "deletions": 0,
+            "insertions": 0,
+            "hits": 18,
+            "reference_words": 18
+          },
+          "parsed_hypothesis_matches_original_saved": true
+        },
+        {
+          "id": "652-129742-0005",
+          "first_eos_position": 35,
+          "returned_width": 512,
+          "legacy_truncated": false,
+          "recomputed_counts": {
+            "substitutions": 2,
+            "deletions": 0,
+            "insertions": 0,
+            "hits": 12,
+            "reference_words": 14
+          },
+          "parsed_hypothesis_matches_original_saved": true
+        },
+        {
+          "id": "652-129742-0006",
+          "first_eos_position": null,
+          "returned_width": 512,
+          "legacy_truncated": true,
+          "recomputed_counts": {
+            "substitutions": 2,
+            "deletions": 14,
+            "insertions": 0,
+            "hits": 0,
+            "reference_words": 16
+          },
+          "parsed_hypothesis_matches_original_saved": true
+        },
+        {
+          "id": "652-129742-0007",
+          "first_eos_position": 22,
+          "returned_width": 512,
+          "legacy_truncated": false,
+          "recomputed_counts": {
+            "substitutions": 0,
+            "deletions": 0,
+            "insertions": 0,
+            "hits": 12,
+            "reference_words": 12
+          },
+          "parsed_hypothesis_matches_original_saved": true
+        },
+        {
+          "id": "652-129742-0008",
+          "first_eos_position": 13,
+          "returned_width": 512,
+          "legacy_truncated": false,
+          "recomputed_counts": {
+            "substitutions": 1,
+            "deletions": 1,
+            "insertions": 0,
+            "hits": 5,
+            "reference_words": 7
+          },
+          "parsed_hypothesis_matches_original_saved": true
+        },
+        {
+          "id": "652-129742-0009",
+          "first_eos_position": 60,
+          "returned_width": 512,
+          "legacy_truncated": false,
+          "recomputed_counts": {
+            "substitutions": 0,
+            "deletions": 0,
+            "insertions": 0,
+            "hits": 37,
+            "reference_words": 37
+          },
+          "parsed_hypothesis_matches_original_saved": true
+        },
+        {
+          "id": "652-129742-0010",
+          "first_eos_position": 19,
+          "returned_width": 512,
+          "legacy_truncated": false,
+          "recomputed_counts": {
+            "substitutions": 0,
+            "deletions": 0,
+            "insertions": 0,
+            "hits": 10,
+            "reference_words": 10
+          },
+          "parsed_hypothesis_matches_original_saved": true
+        }
+      ],
+      "monitor": {
+        "samples": 3,
+        "alerts": [],
+        "min_disk_free_gib": 3076.0764656066895,
+        "sampled_peak_gpu1_memory_mib": 6213.0,
+        "scope": "Discrete monitor samples, not a continuous resource trace or exact CUDA peak."
+      },
+      "stage_wall_seconds": 29.848926305770874
+    },
+    {
+      "stage": "target-single",
+      "examples": 1,
+      "artifact_count": 8,
+      "all_artifact_hashes_and_bytes_match": true,
+      "pt_json_tensor_and_sequence_slice_match": true,
+      "all_left_padding_and_tensor_fingerprints_valid": true,
+      "all_decode_tokenpiece_parser_remote_cpu_matches": true,
+      "all_local_parser_normalizer_and_sdi_match": true,
+      "effective_eos_ids": [
+        151643,
+        151645
+      ],
+      "effective_pad_id": 151645,
+      "logits_processor_types": [],
+      "target": {
+        "id": "652-129742-0006",
+        "prompt_padded_width": 137,
+        "continuation_width": 512,
+        "eos_positions": [],
+        "pad_positions": [],
+        "special_token_positions": [],
+        "token_sha256": "9bb16e367285e4dcd88a7d2788d0e14b3f295fa5ce86296bff3444a7fc44e49f",
+        "token_frequency": {
+          "34": 1,
+          "1094": 171,
+          "32593": 170,
+          "356": 170
+        },
+        "first_token": 34,
+        "tail_shortest_token_period": [
+          1094,
+          32593,
+          356
+        ],
+        "tail_full_periods": 170,
+        "tail_partial_period": [
+          1094
+        ],
+        "decoded_keep_equals_skip": true,
+        "preparse_characters": 1533,
+        "preparse_words": 171,
+        "preparse_word_frequency": {
+          "CULINARY": 170,
+          "CUL": 1
+        },
+        "preparse_text_sha256": "37dfe85ebabba698551d1c5ee5c475455fec4aaaed57d296793a3730df2c8289",
+        "preparse_prefix": "CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY C",
+        "preparse_suffix": "LINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CUL",
+        "helper_output": "CULINARY CUL",
+        "parser_output": [
+          "English",
+          "CULINARY CUL"
+        ],
+        "normalized_hypothesis": "culinary cul",
+        "recomputed_counts": {
+          "substitutions": 2,
+          "deletions": 14,
+          "insertions": 0,
+          "hits": 0,
+          "reference_words": 16
+        },
+        "preparse_recomputed_counts": {
+          "substitutions": 16,
+          "deletions": 0,
+          "insertions": 155,
+          "hits": 0,
+          "reference_words": 16
+        },
+        "original_saved_hypothesis": "CULINARY CUL",
+        "baseline_saved_hypothesis": "Cauliflower mayonnaise: Take cold boiled cauliflower, break into branches, adding salt, pepper, and vinegar to season.",
+        "baseline_counts": {
+          "substitutions": 0,
+          "deletions": 0,
+          "insertions": 0,
+          "hits": 16,
+          "reference_words": 16
+        }
+      },
+      "row_checks": [
+        {
+          "id": "652-129742-0006",
+          "first_eos_position": null,
+          "returned_width": 512,
+          "legacy_truncated": true,
+          "recomputed_counts": {
+            "substitutions": 2,
+            "deletions": 14,
+            "insertions": 0,
+            "hits": 0,
+            "reference_words": 16
+          },
+          "parsed_hypothesis_matches_original_saved": true
+        }
+      ],
+      "monitor": {
+        "samples": 3,
+        "alerts": [],
+        "min_disk_free_gib": 3076.074718475342,
+        "sampled_peak_gpu1_memory_mib": 4829.0,
+        "scope": "Discrete monitor samples, not a continuous resource trace or exact CUDA peak."
+      },
+      "stage_wall_seconds": 29.024626970291138
+    }
+  ],
+  "cross_stage_comparison": {
+    "batch_inputs_all_tensors_equal": true,
+    "batch_full_sequences_equal": true,
+    "batch_continuations_equal": true,
+    "batch_effective_config_equal": true,
+    "batch_parser_outputs_equal": true,
+    "single_target_continuation_equal_to_batch": true,
+    "single_target_parser_equal_to_batch": true,
+    "single_target_effective_prompt_tokens_equal_to_batch": true
+  },
+  "old_campaign_sha256_unchanged": true,
+  "original_reference_sources_unchanged": true,
+  "local_mirrored_identity_files_hash_checked": [],
+  "remote_only_identity_files_not_rehashed_locally": [
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/model-00002-of-00002.safetensors",
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/vocab.json",
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/model-00001-of-00002.safetensors",
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/model.safetensors.index.json",
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/tokenizer_config.json",
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/added_tokens.json",
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/config.json",
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/generation_config.json",
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/tokenizer.json",
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/special_tokens_map.json",
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/merges.txt",
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/chat_template.jinja",
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/preprocessor_config.json",
+    "/mnt/raid/asr-lab/repo/src/asr_lab/qwen_data.py",
+    "/mnt/raid/asr-lab/repo/src/asr_lab/qwen_early100.py",
+    "/mnt/raid/asr-lab/repo/src/asr_lab/qwen_evaluate.py",
+    "/mnt/raid/asr-lab/repo/src/asr_lab/qwen_roundtrip_control.py",
+    "/mnt/raid/asr-lab/repo/src/asr_lab/qwen_train.py",
+    "/mnt/raid/asr-lab/repo/src/asr_lab/training_utils.py",
+    "/mnt/raid/asr-lab/repo/src/asr_lab/prepare_data.py",
+    "/mnt/raid/asr-lab/repo/reports/truncation-probe/inputs/reference-batch.json",
+    "/mnt/raid/asr-lab/data/manifests/dev-clean.jsonl",
+    "/mnt/raid/asr-lab/repo/reports/diagnosis/inputs/whisper-english-spelling-normalizer.json",
+    "/mnt/raid/asr-lab/repo/reports/diagnosis/text-audit.json",
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/prefix-complete.json",
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/checkpoint.json",
+    "/mnt/raid/asr-lab/repo/src/asr_lab/qwen_truncation_probe.py",
+    "/mnt/raid/asr-lab/repo/scripts/run_truncation_probe.py",
+    "/mnt/raid/asr-lab/repo/scripts/run_qwen_campaign.py",
+    "/mnt/raid/asr-lab/repo/scripts/monitor.py",
+    "/mnt/raid/asr-lab/repo/reports/truncation-probe/inputs/upstream-generation-source.json",
+    "/mnt/raid/asr-lab/vendor/Qwen3-ASR/qwen_asr/inference/utils.py",
+    "/mnt/raid/asr-lab/vendor/Qwen3-ASR/qwen_asr/inference/qwen3_asr.py",
+    "/mnt/raid/asr-lab/vendor/Qwen3-ASR/qwen_asr/core/transformers_backend/modeling_qwen3_asr.py",
+    "/mnt/raid/asr-lab/repo/reports/truncation-probe/inputs/upstream-parser-source.json",
+    "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/6345/93306/6345-93306-0021.flac",
+    "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/6345/93306/6345-93306-0022.flac",
+    "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/6345/93306/6345-93306-0023.flac",
+    "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/6345/93306/6345-93306-0024.flac",
+    "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/6345/93306/6345-93306-0025.flac",
+    "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0000.flac",
+    "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0001.flac",
+    "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0002.flac",
+    "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0003.flac",
+    "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0004.flac",
+    "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0005.flac",
+    "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0006.flac",
+    "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0007.flac",
+    "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0008.flac",
+    "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0009.flac",
+    "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0010.flac"
+  ],
+  "remote_cpu_decoder_receipts": [
+    {
+      "status": "passed",
+      "mode": "CPU offline tokenizer/parser only",
+      "model_loaded": false,
+      "generate_calls": 0,
+      "CUDA_VISIBLE_DEVICES": "",
+      "cuda_available": false,
+      "cuda_device_count": 0,
+      "tokenizer_class": "<class 'transformers.models.qwen2.tokenization_qwen2_fast.Qwen2TokenizerFast'>",
+      "packages": {
+        "qwen-asr": "0.0.6",
+        "transformers": "4.57.6",
+        "torch": "2.8.0+cu128",
+        "tokenizers": "0.22.2"
+      },
+      "parser_source_sha256": "b37fb4140e6d9be85f2ecb1552ed16136eb98a57f44b402f8b0b213cb6df2a82",
+      "tokenizer_source_sha256": "1025a3b86526283bd86a447f0fe2d991d09775b32d3fdcc233c9e447b0611049",
+      "tokenizer_files": {
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+        "model.safetensors.index.json": "1f1d8ee445ca095a2e643e8ce1012b903df12fd906e64d1bf3025a30f03524b5",
+        "tokenizer_config.json": "7f335cbd3b6f1036808e23613c1c1919f8d5570c11cb55420e5094e036f45669",
+        "added_tokens.json": "de40784677cbd1843cabe5fbee078c7e042cd0b62155f0810af5a13842e5722a",
+        "config.json": "90907b1e2b2d95ee310a38daefda306f95dfcf2df3c797e252afdc161127eb6a",
+        "generation_config.json": "a275709a685826eaf1c763af663dc9ee3653c9353251f6eb3f859c3526652204",
+        "tokenizer.json": "0499602714160467f2d68b910651d6216020689f1e016be87a2d0019ee3baeab",
+        "special_tokens_map.json": "7b376c510ccf9d88bb9bbee41dfc5052122e16e0dec1124a8d8983c59259a9f3",
+        "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+        "preprocessor_config.json": "0443a40d411d3caad769e7b59971fa6eae75926ed4b7e337e60da909eb38c1f7"
+      },
+      "stages": [
+        {
+          "stage": "batch16-first",
+          "rows": [
+            {
+              "id": "6345-93306-0021",
+              "keep_special_sha256": "596073293df538bc6ab56a49be94e77923684a61ecb2c3f9d16677c4803328d9",
+              "skip_special_sha256": "4ce32f5467e12f5c915b3649dfbef6a2ed437cd75e97c3d08f80fb9a8b40b6f6",
+              "parser_output": [
+                "English",
+                "ALL THE SAME HE ADDED IRRELEVANTLY YOU SHALL HAVE THE LATCH KEY"
+              ],
+              "matches_saved_decode_and_token_pieces_and_parser": true
+            },
+            {
+              "id": "6345-93306-0022",
+              "keep_special_sha256": "7a29c8b6d36b46035fc9e8f986517ef5f50c3625f78410bd931ba5d9f2cebe42",
+              "skip_special_sha256": "b32599b540dfd4e1f73d11633b2bfe7c8fb8255c837bd84d21928848a323447e",
+              "parser_output": [
+                "English",
+                "YOU ARE KIND SHE SAID FOR THE THIRD TIME AND REACHED HER HAND OUT TO HIM HE DID NOT KISS IT THEN ONLY TOOK IT IN HIS AND FELT HOW SMALL AND COLD IT WAS THEN IT WAS TAKEN AWAY"
+              ],
+              "matches_saved_decode_and_token_pieces_and_parser": true
+            },
+            {
+              "id": "6345-93306-0023",
+              "keep_special_sha256": "90e76f020021f3e0eaa68d75286c8ec50ac0eb672b838abbb450aa15540d7528",
+              "skip_special_sha256": "926b1d3d9e19924d94400c5f4a40dba2d534274d013cd76a3946a4687ddb3c8d",
+              "parser_output": [
+                "English",
+                "THE LADY AND THE GUITAR CERTAINLY PASSED THE NIGHT AT HILL VIEW VILLA BUT WHEN HIS MOTHER VERY ANGRY AND VERY FRIGHTENED CAME UP WITH HIM AT ABOUT NOON THE HOUSE LOOKED JUST AS USUAL AND NO ONE WAS THERE BUT THE CHAR WOMAN"
+              ],
+              "matches_saved_decode_and_token_pieces_and_parser": true
+            },
+            {
+              "id": "6345-93306-0024",
+              "keep_special_sha256": "251736384e520245661abb54e2f02ceb35903ae26b78147823e47635550c766b",
+              "skip_special_sha256": "8b2e3fb8ae158121be708e07ed23a9d1699fd34f7a3a6834bb63c400adcc9c1a",
+              "parser_output": [
+                "English",
+                "THE SILVER IS ALL RIGHT THANK GOODNESS SHE SAID BUT YOUR BANJO GIRL HAS TAKEN A PAIR OF YOUR SISTER'S SILK STOCKINGS AND THOSE NEW SHOES OF HER'S WITH THE SILVER BUCKLES AND SHE'S LEFT THESE"
+              ],
+              "matches_saved_decode_and_token_pieces_and_parser": true
+            },
+            {
+              "id": "6345-93306-0025",
+              "keep_special_sha256": "e88715be2ef2fa5678eb268cdb011085e84d4dcd8e02f91c9251c14743ab49ca",
+              "skip_special_sha256": "9dbb4419753ea3f0720d83896a076352255446c919b663f436c735b61010e037",
+              "parser_output": [
+                "English",
+                "IT WAS PLAIN THAT HIS CASTANET GIRL HIS MOTHER AND SISTER TOOK A PLEASURE IN CREDITING HER DAILY WITH SOME FRESH AND UNPLEASING INSTRUMENT COULD HAVE HAD NEITHER TASTE MONEY NOR HONESTY TO SUCH A POINT AS THIS"
+              ],
+              "matches_saved_decode_and_token_pieces_and_parser": true
+            },
+            {
+              "id": "652-129742-0000",
+              "keep_special_sha256": "b42684591ab31c585fe5606dbe0edaabb62d4af43418767f7c0f838e9b6fdef3",
+              "skip_special_sha256": "87b2842f97d4be2ffad93b5457b8f73cc427c9b49c9d71b0a7efb3dbfbd381b3",
+              "parser_output": [
+                "English",
+                "ASPARAGUS SALAD COOK THE ASPARAGUS IN SALTED WATER DRAIN AND CHILL"
+              ],
+              "matches_saved_decode_and_token_pieces_and_parser": true
+            },
+            {
+              "id": "652-129742-0001",
+              "keep_special_sha256": "f12e75d951663fcc4dcd47c2c1e4fb4832c7c120ad394038f0ab7e315291c42d",
+              "skip_special_sha256": "89096591fe013b571c4d5e1fc7d00bc3b780503ce6f9d715ba776107cf63d3f8",
+              "parser_output": [
+                "English",
+                "BIRD'S NEST SALAD HAVE READY AS MANY CRISP LEAVES OF LETTUCE AS MAY BE REQUIRED TO MAKE A DAINTY LITTLE NEST FOR EACH PERSON"
+              ],
+              "matches_saved_decode_and_token_pieces_and_parser": true
+            },
+            {
+              "id": "652-129742-0002",
+              "keep_special_sha256": "1bcda9908eeeec353cfa805bee62dc0faa790d822520e071e4076fc1d9737b0f",
+              "skip_special_sha256": "4d05726cdffdea4b1b4b7607da1147ee5c368a4b8b31ae07f263752bfcfc5bde",
+              "parser_output": [
+                "English",
+                "SERVE WITH FRENCH DRESSING HIDDEN UNDER THE LEAVES OF THE NEST"
+              ],
+              "matches_saved_decode_and_token_pieces_and_parser": true
+            },
+            {
+              "id": "652-129742-0003",
+              "keep_special_sha256": "f3eab6deb003d546c0c3ced175e0a3298f4991dd0a5a5c5f1052cca09a4f87e1",
+              "skip_special_sha256": "987839f46b8106541e662e2c8d07d1294136cd6399cb12c799a9881d912c2f2b",
+              "parser_output": [
+                "English",
+                "CABBAGE SALAD CHOP OR SHAVE FINE HALF A MEDIUM SIZED HEAD OF CABBAGE THAT HAS BEEN LEFT IN COLD WATER UNTIL CRISP THEN DRAIN"
+              ],
+              "matches_saved_decode_and_token_pieces_and_parser": true
+            },
+            {
+              "id": "652-129742-0004",
+              "keep_special_sha256": "90f39f2b1de0b1c3daab4b9b7389f07f72fc543797f6a1abe3e30dbcf1e6bb32",
+              "skip_special_sha256": "40f946d60e02c8b1f8a48560cbfb0ce930cd7b98812537cbbb317c535e29f8e6",
+              "parser_output": [
+                "English",
+                "ADD TWO TABLESPOONS THICK SOUR CREAM TWO TABLESPOONS SUGAR A SPRINKLE OF MUSTARD AND HALF CUP OF VINEGAR"
+              ],
+              "matches_saved_decode_and_token_pieces_and_parser": true
+            },
+            {
+              "id": "652-129742-0005",
+              "keep_special_sha256": "08b1d4b9689651d75cf80a7dcb277a317e57ac4f5eb04cb630aa478e6f1d8cbe",
+              "skip_special_sha256": "bf023391566ae15a74712ca6a18a42e6bf170fda4879b006909ea56e1a1b285d",
+              "parser_output": [
+                "English",
+                "BEAT UNTIL THOROUGHLY MIXED POOR OVER THE CABBAGE AND TOSSE LIGHTLY UNTIL UNIFORMLY SEASONED"
+              ],
+              "matches_saved_decode_and_token_pieces_and_parser": true
+            },
+            {
+              "id": "652-129742-0006",
+              "keep_special_sha256": "37dfe85ebabba698551d1c5ee5c475455fec4aaaed57d296793a3730df2c8289",
+              "skip_special_sha256": "37dfe85ebabba698551d1c5ee5c475455fec4aaaed57d296793a3730df2c8289",
+              "parser_output": [
+                "English",
+                "CULINARY CUL"
+              ],
+              "matches_saved_decode_and_token_pieces_and_parser": true
+            },
+            {
+              "id": "652-129742-0007",
+              "keep_special_sha256": "df0921466e238986899dfa00b78d99c33c3e39f50523d7bfe5d5b13770587bac",
+              "skip_special_sha256": "826ce69b260ca6c59fb70cdc6b204eb50a1112c3fd05259dc0371b67aa3fe68c",
+              "parser_output": [
+                "English",
+                "SURROUND WITH A GARNISH OF COOKED AND DICED CARROTS TURNIPS GREEN PEAS"
+              ],
+              "matches_saved_decode_and_token_pieces_and_parser": true
+            },
+            {
+              "id": "652-129742-0008",
+              "keep_special_sha256": "56026b655f61534979e8231a29c3810f82cca629aa3fc10a667f13ef22aee472",
+              "skip_special_sha256": "39fbc43c24143c864c0405e61b076a6f6d6bfe34255cddb40c6fac32f8348fa1",
+              "parser_output": [
+                "English",
+                "POUR MAYONNAISE OVERALL CHILL AND SERVE"
+              ],
+              "matches_saved_decode_and_token_pieces_and_parser": true
+            },
+            {
+              "id": "652-129742-0009",
+              "keep_special_sha256": "0501f887dcb7ab0e4f2250059409456c6edc36be6aa2ce2618ddee89d5ac9a52",
+              "skip_special_sha256": "c2c9d6f7d32784b692bc948012fd6492abd10fcab778f25d796baff223252698",
+              "parser_output": [
+                "English",
+                "CELERY AND NUT SALAD CUT ENOUGH CELERY FINE TO MEASURE TWO CUPS ADD ONE CUP OF FINELY SHREDDED OR SHAVED CABBAGE AND ONE AND ONE HALF CUPS OF WALNUT MEATS BROKEN IN SMALL PIECES BUT NOT CHOPPED"
+              ],
+              "matches_saved_decode_and_token_pieces_and_parser": true
+            },
+            {
+              "id": "652-129742-0010",
+              "keep_special_sha256": "9b7e87f218c55bd4603eecc7e00433bf13e582bbd1a88165b85265e4c81162f7",
+              "skip_special_sha256": "39c3a3fa25dcbcdaeef3bea8e0e383a133639a63062251390ee1222db587f76a",
+              "parser_output": [
+                "English",
+                "STIR THE SOAKED GELATIN IN WHILE THE CUCUMBER IS HOT"
+              ],
+              "matches_saved_decode_and_token_pieces_and_parser": true
+            }
+          ],
+          "raw_tokens_sha256": "9604e28332820010505070255dbfc5357095b231b02f5a2fadcc591a6b3cbc5a",
+          "decoded_sha256": "f464b08e8b8dee01bedfaa2db74106c1d395440d823a102c7dd7a4536aa5a742"
+        }
+      ],
+      "command": [
+        "ssh",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=10",
+        "-o",
+        "ControlPath=/tmp/codex-asr-tensorboard-%C",
+        "exx@100.70.230.73",
+        "CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 /mnt/raid/asr-lab/venv/bin/python -"
+      ],
+      "stdin_python": "import os,json,hashlib,inspect,importlib.metadata,time,collections\nfrom pathlib import Path\nassert os.environ.get('CUDA_VISIBLE_DEVICES')==''\nimport torch\nfrom transformers import AutoTokenizer\nfrom qwen_asr.inference.utils import parse_asr_output,detect_and_fix_repetitions\nassert not torch.cuda.is_available() and torch.cuda.device_count()==0\nroot=Path('/mnt/raid/asr-lab/runs/qwen-truncation-probe-20261023-a')\ncheckpoint=Path('/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100')\ntokenizer=AutoTokenizer.from_pretrained(checkpoint,local_files_only=True)\nrecords=[]\nfor stage in ('batch16-first',):\n directory=root/stage\n raw=json.loads((directory/'raw-tokens.json').read_text());decoded=json.loads((directory/'decoded.json').read_text())\n keep=tokenizer.batch_decode(raw['continuation_token_ids'],skip_special_tokens=False,clean_up_tokenization_spaces=False)\n skip=tokenizer.batch_decode(raw['continuation_token_ids'],skip_special_tokens=True,clean_up_tokenization_spaces=False)\n rows=[]\n for i,(ids,d) in enumerate(zip(raw['continuation_token_ids'],decoded)):\n  pieces=tokenizer.convert_ids_to_tokens(ids);parsed=list(parse_asr_output(skip[i],user_language='English'));fixed=detect_and_fix_repetitions(skip[i].strip())\n  assert keep[i]==d['decoded_keep_special'] and skip[i]==d['decoded_skip_special'] and pieces==d['token_pieces'] and parsed==d['parser_output'] and fixed==d['repetition_fix_observation']['output']\n  rows.append({'id':d['id'],'keep_special_sha256':hashlib.sha256(keep[i].encode()).hexdigest(),'skip_special_sha256':hashlib.sha256(skip[i].encode()).hexdigest(),'parser_output':parsed,'matches_saved_decode_and_token_pieces_and_parser':True})\n records.append({'stage':stage,'rows':rows,'raw_tokens_sha256':hashlib.sha256((directory/'raw-tokens.json').read_bytes()).hexdigest(),'decoded_sha256':hashlib.sha256((directory/'decoded.json').read_bytes()).hexdigest()})\nresult={'status':'passed','mode':'CPU offline tokenizer/parser only','model_loaded':False,'generate_calls':0,'CUDA_VISIBLE_DEVICES':os.environ['CUDA_VISIBLE_DEVICES'],'cuda_available':torch.cuda.is_available(),'cuda_device_count':torch.cuda.device_count(),'tokenizer_class':str(type(tokenizer)),'packages':{n:importlib.metadata.version(n) for n in ('qwen-asr','transformers','torch','tokenizers')},'parser_source_sha256':hashlib.sha256(Path(inspect.getsourcefile(parse_asr_output)).read_bytes()).hexdigest(),'tokenizer_source_sha256':hashlib.sha256(Path(inspect.getsourcefile(type(tokenizer))).read_bytes()).hexdigest(),'tokenizer_files':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in checkpoint.iterdir() if p.suffix in ('.json','.txt','.model','.tiktoken') and p.name not in ('checkpoint.json','trainer_state.json','prefix-complete.json','rng-preservation.json')},'stages':records}\nprint('INDEPENDENT_CPU_JSON='+json.dumps(result,allow_nan=False))\n",
+      "stderr": ""
+    },
+    {
+      "status": "passed",
+      "mode": "CPU offline tokenizer/parser only",
+      "model_loaded": false,
+      "generate_calls": 0,
+      "CUDA_VISIBLE_DEVICES": "",
+      "cuda_available": false,
+      "cuda_device_count": 0,
+      "tokenizer_class": "<class 'transformers.models.qwen2.tokenization_qwen2_fast.Qwen2TokenizerFast'>",
+      "packages": {
+        "qwen-asr": "0.0.6",
+        "transformers": "4.57.6",
+        "torch": "2.8.0+cu128",
+        "tokenizers": "0.22.2"
+      },
+      "parser_source_sha256": "b37fb4140e6d9be85f2ecb1552ed16136eb98a57f44b402f8b0b213cb6df2a82",
+      "tokenizer_source_sha256": "1025a3b86526283bd86a447f0fe2d991d09775b32d3fdcc233c9e447b0611049",
+      "tokenizer_files": {
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+        "model.safetensors.index.json": "1f1d8ee445ca095a2e643e8ce1012b903df12fd906e64d1bf3025a30f03524b5",
+        "tokenizer_config.json": "7f335cbd3b6f1036808e23613c1c1919f8d5570c11cb55420e5094e036f45669",
+        "added_tokens.json": "de40784677cbd1843cabe5fbee078c7e042cd0b62155f0810af5a13842e5722a",
+        "config.json": "90907b1e2b2d95ee310a38daefda306f95dfcf2df3c797e252afdc161127eb6a",
+        "generation_config.json": "a275709a685826eaf1c763af663dc9ee3653c9353251f6eb3f859c3526652204",
+        "tokenizer.json": "0499602714160467f2d68b910651d6216020689f1e016be87a2d0019ee3baeab",
+        "special_tokens_map.json": "7b376c510ccf9d88bb9bbee41dfc5052122e16e0dec1124a8d8983c59259a9f3",
+        "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+        "preprocessor_config.json": "0443a40d411d3caad769e7b59971fa6eae75926ed4b7e337e60da909eb38c1f7"
+      },
+      "stages": [
+        {
+          "stage": "batch16-repeat",
+          "rows": [
+            {
+              "id": "6345-93306-0021",
+              "keep_special_sha256": "596073293df538bc6ab56a49be94e77923684a61ecb2c3f9d16677c4803328d9",
+              "skip_special_sha256": "4ce32f5467e12f5c915b3649dfbef6a2ed437cd75e97c3d08f80fb9a8b40b6f6",
+              "parser_output": [
+                "English",
+                "ALL THE SAME HE ADDED IRRELEVANTLY YOU SHALL HAVE THE LATCH KEY"
+              ],
+              "matches_saved_decode_and_token_pieces_and_parser": true
+            },
+            {
+              "id": "6345-93306-0022",
+              "keep_special_sha256": "7a29c8b6d36b46035fc9e8f986517ef5f50c3625f78410bd931ba5d9f2cebe42",
+              "skip_special_sha256": "b32599b540dfd4e1f73d11633b2bfe7c8fb8255c837bd84d21928848a323447e",
+              "parser_output": [
+                "English",
+                "YOU ARE KIND SHE SAID FOR THE THIRD TIME AND REACHED HER HAND OUT TO HIM HE DID NOT KISS IT THEN ONLY TOOK IT IN HIS AND FELT HOW SMALL AND COLD IT WAS THEN IT WAS TAKEN AWAY"
+              ],
+              "matches_saved_decode_and_token_pieces_and_parser": true
+            },
+            {
+              "id": "6345-93306-0023",
+              "keep_special_sha256": "90e76f020021f3e0eaa68d75286c8ec50ac0eb672b838abbb450aa15540d7528",
+              "skip_special_sha256": "926b1d3d9e19924d94400c5f4a40dba2d534274d013cd76a3946a4687ddb3c8d",
+              "parser_output": [
+                "English",
+                "THE LADY AND THE GUITAR CERTAINLY PASSED THE NIGHT AT HILL VIEW VILLA BUT WHEN HIS MOTHER VERY ANGRY AND VERY FRIGHTENED CAME UP WITH HIM AT ABOUT NOON THE HOUSE LOOKED JUST AS USUAL AND NO ONE WAS THERE BUT THE CHAR WOMAN"
+              ],
+              "matches_saved_decode_and_token_pieces_and_parser": true
+            },
+            {
+              "id": "6345-93306-0024",
+              "keep_special_sha256": "251736384e520245661abb54e2f02ceb35903ae26b78147823e47635550c766b",
+              "skip_special_sha256": "8b2e3fb8ae158121be708e07ed23a9d1699fd34f7a3a6834bb63c400adcc9c1a",
+              "parser_output": [
+                "English",
+                "THE SILVER IS ALL RIGHT THANK GOODNESS SHE SAID BUT YOUR BANJO GIRL HAS TAKEN A PAIR OF YOUR SISTER'S SILK STOCKINGS AND THOSE NEW SHOES OF HER'S WITH THE SILVER BUCKLES AND SHE'S LEFT THESE"
+              ],
+              "matches_saved_decode_and_token_pieces_and_parser": true
+            },
+            {
+              "id": "6345-93306-0025",
+              "keep_special_sha256": "e88715be2ef2fa5678eb268cdb011085e84d4dcd8e02f91c9251c14743ab49ca",
+              "skip_special_sha256": "9dbb4419753ea3f0720d83896a076352255446c919b663f436c735b61010e037",
+              "parser_output": [
+                "English",
+                "IT WAS PLAIN THAT HIS CASTANET GIRL HIS MOTHER AND SISTER TOOK A PLEASURE IN CREDITING HER DAILY WITH SOME FRESH AND UNPLEASING INSTRUMENT COULD HAVE HAD NEITHER TASTE MONEY NOR HONESTY TO SUCH A POINT AS THIS"
+              ],
+              "matches_saved_decode_and_token_pieces_and_parser": true
+            },
+            {
+              "id": "652-129742-0000",
+              "keep_special_sha256": "b42684591ab31c585fe5606dbe0edaabb62d4af43418767f7c0f838e9b6fdef3",
+              "skip_special_sha256": "87b2842f97d4be2ffad93b5457b8f73cc427c9b49c9d71b0a7efb3dbfbd381b3",
+              "parser_output": [
+                "English",
+                "ASPARAGUS SALAD COOK THE ASPARAGUS IN SALTED WATER DRAIN AND CHILL"
+              ],
+              "matches_saved_decode_and_token_pieces_and_parser": true
+            },
+            {
+              "id": "652-129742-0001",
+              "keep_special_sha256": "f12e75d951663fcc4dcd47c2c1e4fb4832c7c120ad394038f0ab7e315291c42d",
+              "skip_special_sha256": "89096591fe013b571c4d5e1fc7d00bc3b780503ce6f9d715ba776107cf63d3f8",
+              "parser_output": [
+                "English",
+                "BIRD'S NEST SALAD HAVE READY AS MANY CRISP LEAVES OF LETTUCE AS MAY BE REQUIRED TO MAKE A DAINTY LITTLE NEST FOR EACH PERSON"
+              ],
+              "matches_saved_decode_and_token_pieces_and_parser": true
+            },
+            {
+              "id": "652-129742-0002",
+              "keep_special_sha256": "1bcda9908eeeec353cfa805bee62dc0faa790d822520e071e4076fc1d9737b0f",
+              "skip_special_sha256": "4d05726cdffdea4b1b4b7607da1147ee5c368a4b8b31ae07f263752bfcfc5bde",
+              "parser_output": [
+                "English",
+                "SERVE WITH FRENCH DRESSING HIDDEN UNDER THE LEAVES OF THE NEST"
+              ],
+              "matches_saved_decode_and_token_pieces_and_parser": true
+            },
+            {
+              "id": "652-129742-0003",
+              "keep_special_sha256": "f3eab6deb003d546c0c3ced175e0a3298f4991dd0a5a5c5f1052cca09a4f87e1",
+              "skip_special_sha256": "987839f46b8106541e662e2c8d07d1294136cd6399cb12c799a9881d912c2f2b",
+              "parser_output": [
+                "English",
+                "CABBAGE SALAD CHOP OR SHAVE FINE HALF A MEDIUM SIZED HEAD OF CABBAGE THAT HAS BEEN LEFT IN COLD WATER UNTIL CRISP THEN DRAIN"
+              ],
+              "matches_saved_decode_and_token_pieces_and_parser": true
+            },
+            {
+              "id": "652-129742-0004",
+              "keep_special_sha256": "90f39f2b1de0b1c3daab4b9b7389f07f72fc543797f6a1abe3e30dbcf1e6bb32",
+              "skip_special_sha256": "40f946d60e02c8b1f8a48560cbfb0ce930cd7b98812537cbbb317c535e29f8e6",
+              "parser_output": [
+                "English",
+                "ADD TWO TABLESPOONS THICK SOUR CREAM TWO TABLESPOONS SUGAR A SPRINKLE OF MUSTARD AND HALF CUP OF VINEGAR"
+              ],
+              "matches_saved_decode_and_token_pieces_and_parser": true
+            },
+            {
+              "id": "652-129742-0005",
+              "keep_special_sha256": "08b1d4b9689651d75cf80a7dcb277a317e57ac4f5eb04cb630aa478e6f1d8cbe",
+              "skip_special_sha256": "bf023391566ae15a74712ca6a18a42e6bf170fda4879b006909ea56e1a1b285d",
+              "parser_output": [
+                "English",
+                "BEAT UNTIL THOROUGHLY MIXED POOR OVER THE CABBAGE AND TOSSE LIGHTLY UNTIL UNIFORMLY SEASONED"
+              ],
+              "matches_saved_decode_and_token_pieces_and_parser": true
+            },
+            {
+              "id": "652-129742-0006",
+              "keep_special_sha256": "37dfe85ebabba698551d1c5ee5c475455fec4aaaed57d296793a3730df2c8289",
+              "skip_special_sha256": "37dfe85ebabba698551d1c5ee5c475455fec4aaaed57d296793a3730df2c8289",
+              "parser_output": [
+                "English",
+                "CULINARY CUL"
+              ],
+              "matches_saved_decode_and_token_pieces_and_parser": true
+            },
+            {
+              "id": "652-129742-0007",
+              "keep_special_sha256": "df0921466e238986899dfa00b78d99c33c3e39f50523d7bfe5d5b13770587bac",
+              "skip_special_sha256": "826ce69b260ca6c59fb70cdc6b204eb50a1112c3fd05259dc0371b67aa3fe68c",
+              "parser_output": [
+                "English",
+                "SURROUND WITH A GARNISH OF COOKED AND DICED CARROTS TURNIPS GREEN PEAS"
+              ],
+              "matches_saved_decode_and_token_pieces_and_parser": true
+            },
+            {
+              "id": "652-129742-0008",
+              "keep_special_sha256": "56026b655f61534979e8231a29c3810f82cca629aa3fc10a667f13ef22aee472",
+              "skip_special_sha256": "39fbc43c24143c864c0405e61b076a6f6d6bfe34255cddb40c6fac32f8348fa1",
+              "parser_output": [
+                "English",
+                "POUR MAYONNAISE OVERALL CHILL AND SERVE"
+              ],
+              "matches_saved_decode_and_token_pieces_and_parser": true
+            },
+            {
+              "id": "652-129742-0009",
+              "keep_special_sha256": "0501f887dcb7ab0e4f2250059409456c6edc36be6aa2ce2618ddee89d5ac9a52",
+              "skip_special_sha256": "c2c9d6f7d32784b692bc948012fd6492abd10fcab778f25d796baff223252698",
+              "parser_output": [
+                "English",
+                "CELERY AND NUT SALAD CUT ENOUGH CELERY FINE TO MEASURE TWO CUPS ADD ONE CUP OF FINELY SHREDDED OR SHAVED CABBAGE AND ONE AND ONE HALF CUPS OF WALNUT MEATS BROKEN IN SMALL PIECES BUT NOT CHOPPED"
+              ],
+              "matches_saved_decode_and_token_pieces_and_parser": true
+            },
+            {
+              "id": "652-129742-0010",
+              "keep_special_sha256": "9b7e87f218c55bd4603eecc7e00433bf13e582bbd1a88165b85265e4c81162f7",
+              "skip_special_sha256": "39c3a3fa25dcbcdaeef3bea8e0e383a133639a63062251390ee1222db587f76a",
+              "parser_output": [
+                "English",
+                "STIR THE SOAKED GELATIN IN WHILE THE CUCUMBER IS HOT"
+              ],
+              "matches_saved_decode_and_token_pieces_and_parser": true
+            }
+          ],
+          "raw_tokens_sha256": "9604e28332820010505070255dbfc5357095b231b02f5a2fadcc591a6b3cbc5a",
+          "decoded_sha256": "f464b08e8b8dee01bedfaa2db74106c1d395440d823a102c7dd7a4536aa5a742"
+        },
+        {
+          "stage": "target-single",
+          "rows": [
+            {
+              "id": "652-129742-0006",
+              "keep_special_sha256": "37dfe85ebabba698551d1c5ee5c475455fec4aaaed57d296793a3730df2c8289",
+              "skip_special_sha256": "37dfe85ebabba698551d1c5ee5c475455fec4aaaed57d296793a3730df2c8289",
+              "parser_output": [
+                "English",
+                "CULINARY CUL"
+              ],
+              "matches_saved_decode_and_token_pieces_and_parser": true
+            }
+          ],
+          "raw_tokens_sha256": "12aa70ddc615403e0463128789ff2399ba1a750546a3ac041d46275e872f3dda",
+          "decoded_sha256": "f28c6838dfd18117aa4f0fdf235e8f01f44a15782d985d67825e7286a7ed8cf0"
+        }
+      ],
+      "command": [
+        "ssh",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=10",
+        "-o",
+        "ControlPath=/tmp/codex-asr-tensorboard-%C",
+        "exx@100.70.230.73",
+        "CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 /mnt/raid/asr-lab/venv/bin/python -"
+      ],
+      "stdin_python": "import os,json,hashlib,inspect,importlib.metadata,time,collections\nfrom pathlib import Path\nassert os.environ.get('CUDA_VISIBLE_DEVICES')==''\nimport torch\nfrom transformers import AutoTokenizer\nfrom qwen_asr.inference.utils import parse_asr_output,detect_and_fix_repetitions\nassert not torch.cuda.is_available() and torch.cuda.device_count()==0\nroot=Path('/mnt/raid/asr-lab/runs/qwen-truncation-probe-20261023-a')\ncheckpoint=Path('/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100')\ntokenizer=AutoTokenizer.from_pretrained(checkpoint,local_files_only=True)\nrecords=[]\nfor stage in ('batch16-repeat','target-single'):\n directory=root/stage\n raw=json.loads((directory/'raw-tokens.json').read_text());decoded=json.loads((directory/'decoded.json').read_text())\n keep=tokenizer.batch_decode(raw['continuation_token_ids'],skip_special_tokens=False,clean_up_tokenization_spaces=False)\n skip=tokenizer.batch_decode(raw['continuation_token_ids'],skip_special_tokens=True,clean_up_tokenization_spaces=False)\n rows=[]\n for i,(ids,d) in enumerate(zip(raw['continuation_token_ids'],decoded)):\n  pieces=tokenizer.convert_ids_to_tokens(ids);parsed=list(parse_asr_output(skip[i],user_language='English'));fixed=detect_and_fix_repetitions(skip[i].strip())\n  assert keep[i]==d['decoded_keep_special'] and skip[i]==d['decoded_skip_special'] and pieces==d['token_pieces'] and parsed==d['parser_output'] and fixed==d['repetition_fix_observation']['output']\n  rows.append({'id':d['id'],'keep_special_sha256':hashlib.sha256(keep[i].encode()).hexdigest(),'skip_special_sha256':hashlib.sha256(skip[i].encode()).hexdigest(),'parser_output':parsed,'matches_saved_decode_and_token_pieces_and_parser':True})\n records.append({'stage':stage,'rows':rows,'raw_tokens_sha256':hashlib.sha256((directory/'raw-tokens.json').read_bytes()).hexdigest(),'decoded_sha256':hashlib.sha256((directory/'decoded.json').read_bytes()).hexdigest()})\nresult={'status':'passed','mode':'CPU offline tokenizer/parser only','model_loaded':False,'generate_calls':0,'CUDA_VISIBLE_DEVICES':os.environ['CUDA_VISIBLE_DEVICES'],'cuda_available':torch.cuda.is_available(),'cuda_device_count':torch.cuda.device_count(),'tokenizer_class':str(type(tokenizer)),'packages':{n:importlib.metadata.version(n) for n in ('qwen-asr','transformers','torch','tokenizers')},'parser_source_sha256':hashlib.sha256(Path(inspect.getsourcefile(parse_asr_output)).read_bytes()).hexdigest(),'tokenizer_source_sha256':hashlib.sha256(Path(inspect.getsourcefile(type(tokenizer))).read_bytes()).hexdigest(),'tokenizer_files':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in checkpoint.iterdir() if p.suffix in ('.json','.txt','.model','.tiktoken') and p.name not in ('checkpoint.json','trainer_state.json','prefix-complete.json','rng-preservation.json')},'stages':records}\nprint('INDEPENDENT_CPU_JSON='+json.dumps(result,allow_nan=False))\n",
+      "stderr": ""
+    }
+  ],
+  "local_cpu_packages": {
+    "torch": "2.8.0",
+    "transformers": "4.57.6",
+    "jiwer": "4.0.0"
+  },
+  "findings": [
+    "Actual target continuation in all three probes has512 tokens and no configured EOS; the slice has an independently verified exact prompt prefix.",
+    "Actual preparse decode contains170 repetitions of CULINARY plus CUL, not an inferred synthetic string.",
+    "For this target keep-special and skip-special decodes match; official repetition repair, not special filtering, reduces actual text to CULINARY CUL.",
+    "Two fresh batch16 workers have identical input tensors, effective generation metadata and full output tokens; target-single continuation also matches despite smaller padded prompt width.",
+    "This establishes the observed generation/decoder/parser chain, not the training or numerical cause of repetition."
+  ],
+  "limitations": [
+    "The original early100 evaluator did not save raw tokens; matching fresh-worker parsed output and truncation does not prove original full token identity.",
+    "Earlier137 batches were not replayed; no logits, acoustic/human validation, or causal training diagnosis was performed.",
+    "Only three authorized probes ran; no budget/EOS/weights/prompt/quality-gate relaxation or repair of failed full-clean evaluation.",
+    "Remote snapshot is a timestamped receipt: GPU1 near idle, GPU0 PersonaPlex service retained, lock available; it is not a new live host check by this audit.",
+    "Monitor samples are sparse; they cannot prove absence of brief resource peaks."
+  ],
+  "final_host_receipt": {
+    "path": "reports/truncation-probe/validation/final-host.json",
+    "sha256": "7940472152adc13476d72ec100de85d72a658ac1c798700c04775d7f558d129e",
+    "bytes": 2603
+  },
+  "final_host_observed": {
+    "time_utc": "2026-10-23T05:25:33Z",
+    "global_lock_available": true,
+    "gpu": "index, name, memory.free [MiB], memory.used [MiB], utilization.gpu [%]\n0, NVIDIA H100 NVL, 72624 MiB, 22697 MiB, 0 %\n1, NVIDIA H100 NVL, 95306 MiB, 14 MiB, 0 %\n",
+    "gpu_processes": "gpu_uuid, pid, process_name, used_gpu_memory [MiB]\nGPU-eed83181-48a7-e9f3-cb49-e851dfaf647c, 2154793, .venv/bin/python, 22674 MiB\n"
+  },
+  "sources": [
+    {
+      "path": "reports/diagnosis/inputs/whisper-english-spelling-normalizer.json",
+      "sha256": "bf1c507dc8724ca9cf9903640dacfb69dae2f00edee4f21ceba106a7392f26dd",
+      "bytes": 52666
+    },
+    {
+      "path": "reports/truncation-probe/inputs/reference-batch.json",
+      "sha256": "b586b6c289ea97d78a9b3396a4718579949328ff9f9ec301b3c026ff83de18e5",
+      "bytes": 44835
+    },
+    {
+      "path": "reports/truncation-probe/inputs/upstream-parser-source.json",
+      "sha256": "04c9662a338837df23b6c91ac35f9daade9e69c5b950cd7ec8b4296712c7eb30",
+      "bytes": 5294
+    },
+    {
+      "path": "reports/truncation-probe/run/batch16-first/decoded.json",
+      "sha256": "f464b08e8b8dee01bedfaa2db74106c1d395440d823a102c7dd7a4536aa5a742",
+      "bytes": 1186190
+    },
+    {
+      "path": "reports/truncation-probe/run/batch16-first/effective-generation.json",
+      "sha256": "5736551c07f26dc448cdf7faa95155df02315ed0d1e35c1ea5710c4899ee445a",
+      "bytes": 4729
+    },
+    {
+      "path": "reports/truncation-probe/run/batch16-first/gpu-preflight.json",
+      "sha256": "08d8792884296d08b68fa403c09972d1f0064f77e28e3fd5e480aa63e9dc1d42",
+      "bytes": 260
+    },
+    {
+      "path": "reports/truncation-probe/run/batch16-first/inputs.json",
+      "sha256": "5958370c3e0c72112bbc6dfbf0d0a1b91cf06cde17da6c9240fda9eea217bfe1",
+      "bytes": 279112
+    },
+    {
+      "path": "reports/truncation-probe/run/batch16-first/inputs.pt",
+      "sha256": "03ad5a3dd77415c363d3d2b4204c4b2f6b89839cbdb160283ad9ad8929b038ec",
+      "bytes": 5865201
+    },
+    {
+      "path": "reports/truncation-probe/run/batch16-first/metadata.json",
+      "sha256": "710ce34676426fe7d40dd6c0d3e14a238cd1b0b616a2b669d2a65adfb341243a",
+      "bytes": 10012
+    },
+    {
+      "path": "reports/truncation-probe/run/batch16-first/monitor/resources.csv",
+      "sha256": "51c8608701f99562b5d8e5c23855def442518e124f30becea531a8baa17e7d54",
+      "bytes": 1454
+    },
+    {
+      "path": "reports/truncation-probe/run/batch16-first/monitor/samples.jsonl",
+      "sha256": "000ec57d5216c8cdd945920c221acf3d19fac7950596bc5bdf87cbddd4ceae14",
+      "bytes": 3646
+    },
+    {
+      "path": "reports/truncation-probe/run/batch16-first/monitor/status.json",
+      "sha256": "2d5afeab246bceee8f1fa588559ba7f16ad2d1b12627651a4825d901ffdac016",
+      "bytes": 1127
+    },
+    {
+      "path": "reports/truncation-probe/run/batch16-first/monitor.log",
+      "sha256": "e7b4f4af9e8965b4ea9f1087ba5dfa82a96470df373b733e07f8f9dbf2d81b5c",
+      "bytes": 639
+    },
+    {
+      "path": "reports/truncation-probe/run/batch16-first/raw-tokens.json",
+      "sha256": "9604e28332820010505070255dbfc5357095b231b02f5a2fadcc591a6b3cbc5a",
+      "bytes": 270245
+    },
+    {
+      "path": "reports/truncation-probe/run/batch16-first/raw-tokens.pt",
+      "sha256": "0bf9c682c3286707b3788a8840f5b8e1bd8e26ff4b1772594f60342013d4f544",
+      "bytes": 92883
+    },
+    {
+      "path": "reports/truncation-probe/run/batch16-first/result.json",
+      "sha256": "e2b7edc5bb44fd8118d090d505de3a701438466f58f86fd3ce31e8640070243c",
+      "bytes": 1555
+    },
+    {
+      "path": "reports/truncation-probe/run/batch16-first/stage.json",
+      "sha256": "6277036cfe55045a8f7b71be95a7d179a7d0cc0a42c14efd4bab24f9f9f8c755",
+      "bytes": 671
+    },
+    {
+      "path": "reports/truncation-probe/run/batch16-first/status.json",
+      "sha256": "c8e8df39969c8a3496d09c4a03b25dd10ab551eab18a0a4b94097d02636b1aee",
+      "bytes": 68
+    },
+    {
+      "path": "reports/truncation-probe/run/batch16-first/stdout.log",
+      "sha256": "c190c18ddb740902adb905ff9e8227d3c67c6a14e51ebb04f99b84cc1443423d",
+      "bytes": 408
+    },
+    {
+      "path": "reports/truncation-probe/run/batch16-repeat/decoded.json",
+      "sha256": "f464b08e8b8dee01bedfaa2db74106c1d395440d823a102c7dd7a4536aa5a742",
+      "bytes": 1186190
+    },
+    {
+      "path": "reports/truncation-probe/run/batch16-repeat/effective-generation.json",
+      "sha256": "5736551c07f26dc448cdf7faa95155df02315ed0d1e35c1ea5710c4899ee445a",
+      "bytes": 4729
+    },
+    {
+      "path": "reports/truncation-probe/run/batch16-repeat/gpu-preflight.json",
+      "sha256": "e153896bfecffbc8b4a16c349317afd94ec51e45e53f45ee562ec5259f4dd5b0",
+      "bytes": 260
+    },
+    {
+      "path": "reports/truncation-probe/run/batch16-repeat/inputs.json",
+      "sha256": "5958370c3e0c72112bbc6dfbf0d0a1b91cf06cde17da6c9240fda9eea217bfe1",
+      "bytes": 279112
+    },
+    {
+      "path": "reports/truncation-probe/run/batch16-repeat/inputs.pt",
+      "sha256": "03ad5a3dd77415c363d3d2b4204c4b2f6b89839cbdb160283ad9ad8929b038ec",
+      "bytes": 5865201
+    },
+    {
+      "path": "reports/truncation-probe/run/batch16-repeat/metadata.json",
+      "sha256": "9aa12b7829b67cac347cd5561d1d7a737641a8411f646b839d70a61fc9e3a985",
+      "bytes": 10013
+    },
+    {
+      "path": "reports/truncation-probe/run/batch16-repeat/monitor/resources.csv",
+      "sha256": "4901308a047c0bbddd5a59ded9bb0910bca98306b724e0510a24c77abbb254ef",
+      "bytes": 1129
+    },
+    {
+      "path": "reports/truncation-probe/run/batch16-repeat/monitor/samples.jsonl",
+      "sha256": "209118f60979566e6117dc9719214577ecc3d07be141bb24b4d7592a93f3c05b",
+      "bytes": 2677
+    },
+    {
+      "path": "reports/truncation-probe/run/batch16-repeat/monitor/status.json",
+      "sha256": "d8433d630a1c60cb9dd35a8a544bc9951926ea9b29d2fe47a6e842a402281e4e",
+      "bytes": 1127
+    },
+    {
+      "path": "reports/truncation-probe/run/batch16-repeat/monitor.log",
+      "sha256": "a51c3c6b0b1804a8b40a913abd6a4ac65825d9f0bb1e133b85c2327f05f2b886",
+      "bytes": 479
+    },
+    {
+      "path": "reports/truncation-probe/run/batch16-repeat/raw-tokens.json",
+      "sha256": "9604e28332820010505070255dbfc5357095b231b02f5a2fadcc591a6b3cbc5a",
+      "bytes": 270245
+    },
+    {
+      "path": "reports/truncation-probe/run/batch16-repeat/raw-tokens.pt",
+      "sha256": "0bf9c682c3286707b3788a8840f5b8e1bd8e26ff4b1772594f60342013d4f544",
+      "bytes": 92883
+    },
+    {
+      "path": "reports/truncation-probe/run/batch16-repeat/result.json",
+      "sha256": "4ec61ed7a6bacb87068955d637621a0234cab52b06aa6a128af03583eb47ab49",
+      "bytes": 1556
+    },
+    {
+      "path": "reports/truncation-probe/run/batch16-repeat/stage.json",
+      "sha256": "2a74a8f265f6ba93edf28008dc0d6de80ff6d1e55386606b49ff170f24e7fde3",
+      "bytes": 675
+    },
+    {
+      "path": "reports/truncation-probe/run/batch16-repeat/status.json",
+      "sha256": "fe53020f50d5aa955f1610767717be2f0a3d4fa33a3362648cfabe057737820a",
+      "bytes": 68
+    },
+    {
+      "path": "reports/truncation-probe/run/batch16-repeat/stdout.log",
+      "sha256": "a3937b310821c90607f1ed25fe011f2fa9512fff803e1f55c77a707ad3ea6813",
+      "bytes": 408
+    },
+    {
+      "path": "reports/truncation-probe/run/campaign.json",
+      "sha256": "2459da82a2d9754387fedf4ee62aff84b901a2253eecdeeff162ee52aceb89a3",
+      "bytes": 23132
+    },
+    {
+      "path": "reports/truncation-probe/run/identity.json",
+      "sha256": "11efebbcb097966f7af168a7c34625bd146ce004591f15d46a7bca54608bc444",
+      "bytes": 8686
+    },
+    {
+      "path": "reports/truncation-probe/run/repeat-identity-check.json",
+      "sha256": "b304a7392129a0d6f8849d9bd553c0a7dd063a74518cb4c1567a095bd796f500",
+      "bytes": 303
+    },
+    {
+      "path": "reports/truncation-probe/run/summary.json",
+      "sha256": "2953b97e45fc9c59592b7f061eeb71c300a8d8db6235b96f2025272c6e5fa480",
+      "bytes": 11713
+    },
+    {
+      "path": "reports/truncation-probe/run/target-single/decoded.json",
+      "sha256": "f28c6838dfd18117aa4f0fdf235e8f01f44a15782d985d67825e7286a7ed8cf0",
+      "bytes": 20756
+    },
+    {
+      "path": "reports/truncation-probe/run/target-single/effective-generation.json",
+      "sha256": "90d980511832f1378396ff132908c01b7f3b5b73423883473a6d9a2eb868e9bc",
+      "bytes": 4729
+    },
+    {
+      "path": "reports/truncation-probe/run/target-single/gpu-preflight.json",
+      "sha256": "95e6dcdba2fda2c6b48b6ce5b98bed68272c720b8ba85e1e2dec0249c6e6b830",
+      "bytes": 260
+    },
+    {
+      "path": "reports/truncation-probe/run/target-single/inputs.json",
+      "sha256": "8a1f22f38189bc92dae9aed37790d09e7f4f60119a3378ddadac6de2f864c21d",
+      "bytes": 12630
+    },
+    {
+      "path": "reports/truncation-probe/run/target-single/inputs.pt",
+      "sha256": "51d83aa165fe0da91d006fdedbe3e0deb0e90fba47cf8db2c8288f35df8e13ea",
+      "bytes": 241457
+    },
+    {
+      "path": "reports/truncation-probe/run/target-single/metadata.json",
+      "sha256": "6ef245297a5c59b433439da397036c6f4cfb2383aab628239ba5bad5254b3a6f",
+      "bytes": 6000
+    },
+    {
+      "path": "reports/truncation-probe/run/target-single/monitor/resources.csv",
+      "sha256": "636c6ff69269f333ddae949399dc365679d90f927ad07edb49d32340975a570f",
+      "bytes": 1127
+    },
+    {
+      "path": "reports/truncation-probe/run/target-single/monitor/samples.jsonl",
+      "sha256": "bb0a1d3e4c4d1fb063e136fa50402b6f95378c4521071c2442492993626a31a5",
+      "bytes": 2673
+    },
+    {
+      "path": "reports/truncation-probe/run/target-single/monitor/status.json",
+      "sha256": "1a965505748400e8cc5aad3a6a234ffa4e71ab6b5e451c58d2d5e1bf83026db9",
+      "bytes": 1124
+    },
+    {
+      "path": "reports/truncation-probe/run/target-single/monitor.log",
+      "sha256": "3a29f8a96187b3f3ef48ff657b3fd07d2ca642f587da6b455991c6c3bf80ba2c",
+      "bytes": 478
+    },
+    {
+      "path": "reports/truncation-probe/run/target-single/raw-tokens.json",
+      "sha256": "12aa70ddc615403e0463128789ff2399ba1a750546a3ac041d46275e872f3dda",
+      "bytes": 14327
+    },
+    {
+      "path": "reports/truncation-probe/run/target-single/raw-tokens.pt",
+      "sha256": "ba498e1957abe32e0336e786961b89870b283b65028ba9fd6e624a62766a3cbb",
+      "bytes": 6931
+    },
+    {
+      "path": "reports/truncation-probe/run/target-single/result.json",
+      "sha256": "1356f96b1cfe09e4e801c6a103dcc019e79a4d7f156c279ce6dbc4e448dd5a67",
+      "bytes": 1547
+    },
+    {
+      "path": "reports/truncation-probe/run/target-single/stage.json",
+      "sha256": "5806a5621931dee71b6b7541f21fcc591508326542fc7cef13bb5073b8b4101a",
+      "bytes": 671
+    },
+    {
+      "path": "reports/truncation-probe/run/target-single/status.json",
+      "sha256": "084d3436dcd208abb2f321e476c7ce2c4f9f0aa19056ef65646528e9337fc70b",
+      "bytes": 67
+    },
+    {
+      "path": "reports/truncation-probe/run/target-single/stdout.log",
+      "sha256": "0ae9862964c773b0e19ff84d38e4176e879ef4b54b3f7f32c5ad4d55453ddf18",
+      "bytes": 408
+    },
+    {
+      "path": "reports/truncation-probe/validation/final-host.json",
+      "sha256": "7940472152adc13476d72ec100de85d72a658ac1c798700c04775d7f558d129e",
+      "bytes": 2603
+    },
+    {
+      "path": "reports/truncation-probe/validation/parser-contract.json",
+      "sha256": "ac96a60b01c57472fedc3cfc501a07d25bf3677afcd7856bdfbfe04397f7c690",
+      "bytes": 17309
+    }
+  ],
+  "local_audit_stdin_python": "import json,hashlib,typing,collections,importlib.metadata\nfrom pathlib import Path\nimport torch,jiwer\nfrom transformers.models.whisper.english_normalizer import EnglishTextNormalizer\nROOT=Path.cwd();BASE=ROOT/'reports/truncation-probe';RUN=BASE/'run';STAGES=('batch16-first','batch16-repeat','target-single');TARGET='652-129742-0006'\ndef read(p):return json.loads(Path(p).read_text())\ndef digest(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()\ndef source(p):\n p=Path(p);return dict(path=str(p.relative_to(ROOT)),sha256=digest(p),bytes=p.stat().st_size)\ndef score(ref,hyp):\n s=jiwer.process_words(ref,hyp);return dict(substitutions=s.substitutions,deletions=s.deletions,insertions=s.insertions,hits=s.hits,reference_words=s.hits+s.substitutions+s.deletions)\ndef tensor_record(v):return dict(shape=list(v.shape),dtype=str(v.dtype),sha256=hashlib.sha256(v.contiguous().view(torch.uint8).numpy().tobytes()).hexdigest(),numel=v.numel())\nreference=read(BASE/'inputs/reference-batch.json');identity=read(RUN/'identity.json');campaign=read(RUN/'campaign.json');summary=read(RUN/'summary.json');prior=read(BASE/'independent-audit.json');capture=read(BASE/'inputs/upstream-parser-source.json');parser_contract=read(BASE/'validation/parser-contract.json');host=read(BASE/'validation/final-host.json')\nassert campaign['status']=='complete' and campaign['stage']=='three_preset_probes_complete';assert (summary['total_generate_calls'],summary['total_consumed_examples'],summary['optimizer_updates'])==(3,33,0)\nassert parser_contract['all_assertions_passed'] and parser_contract['full_source_sha256']==capture['sha256']\nns={'Optional':typing.Optional,'Tuple':typing.Tuple,'_ASR_TEXT_TAG':'<asr_text>','_LANG_PREFIX':'language '}\nfor section in capture['sections']:exec(compile(section['source'],capture['path'],'exec'),ns)\nnormalizer_path=ROOT/'reports/diagnosis/inputs/whisper-english-spelling-normalizer.json';normalizer=EnglishTextNormalizer(read(normalizer_path));assert digest(normalizer_path)==identity['files'][identity['spelling']]\nfor r in reference['sources']:assert digest(ROOT/r['path'])==r['sha256']\noriginal_unchanged=digest(ROOT/'reports/early100/run/campaign.json')==host['old_campaign_sha256'];assert original_unchanged\nassert identity['target_id']==TARGET and identity['checkpoint']==reference['checkpoint_path'];assert identity['files'][identity['reference']]==digest(BASE/'inputs/reference-batch.json')\nlocal_identity=[];remote_only_identity=[]\nfor path,expected in identity['files'].items():\n if path.startswith('/mnt/raid/asr-lab/'):\n  mapped=ROOT/path.removeprefix('/mnt/raid/asr-lab/')\n  if mapped.is_file():assert digest(mapped)==expected,path;local_identity.append(str(mapped.relative_to(ROOT)))\n  else:remote_only_identity.append(path)\nremote_rows={}\nfor receipt in prior['remote_cpu_decoder_receipts']:\n assert receipt['status']=='passed' and receipt['CUDA_VISIBLE_DEVICES']=='' and receipt['cuda_available'] is False and receipt['cuda_device_count']==0 and receipt['generate_calls']==0 and receipt['model_loaded'] is False\n assert receipt['parser_source_sha256']==capture['sha256']\n for name,actual in receipt['tokenizer_files'].items():assert identity['files'][identity['checkpoint']+'/'+name]==actual,name\n for stage in receipt['stages']:remote_rows[stage['stage']]=stage\nassert set(remote_rows)==set(STAGES)\nbyid={x['id']:x for x in reference['rows']};stage_results=[];loaded={};artifact_paths=[]\nfor stage in STAGES:\n directory=RUN/stage;result=read(directory/'result.json');status=read(directory/'status.json');receipt=read(directory/'stage.json');metadata=read(directory/'metadata.json');inputs=read(directory/'inputs.json');raw=read(directory/'raw-tokens.json');decoded=read(directory/'decoded.json');effective=read(directory/'effective-generation.json')\n assert result['status']==status['status']==receipt['status']=='complete' and receipt['exit_code']==0\n n=1 if stage=='target-single' else 16;expected_ids=[TARGET] if n==1 else reference['ordered_ids'];assert result['generate_calls']==1 and result['consumed_examples']==n and result['optimizer_updates']==0\n assert metadata['optimizer_updates']==metadata['backward_calls']==0 and metadata['train_called'] is False and metadata['model_training'] is False and metadata['inference_mode'] is True and metadata['runtime']['physical_gpu']=='1'\n assert metadata['generation_kwargs']==dict(max_new_tokens=512,do_sample=False,num_beams=1,use_cache=True);assert result['identity_sha256']==digest(RUN/'identity.json')\n assert inputs['ids']==metadata['ids']==[d['id'] for d in decoded]==expected_ids\n for name,frozen in result['artifacts'].items():\n  path=directory/name;assert digest(path)==frozen['sha256'] and path.stat().st_size==frozen['bytes'];artifact_paths.append(path)\n assert remote_rows[stage]['raw_tokens_sha256']==digest(directory/'raw-tokens.json') and remote_rows[stage]['decoded_sha256']==digest(directory/'decoded.json')\n ipt=torch.load(directory/'inputs.pt',map_location='cpu',weights_only=True);rpt=torch.load(directory/'raw-tokens.pt',map_location='cpu',weights_only=True)\n assert all(v.device.type=='cpu' for v in ipt.values())\n for key,t in ipt.items():\n  assert tensor_record(t)==inputs['tensors'][key]\n  if t.is_floating_point():assert bool(torch.isfinite(t).all())\n assert ipt['input_ids'].tolist()==inputs['input_ids'] and ipt['attention_mask'].tolist()==inputs['attention_mask']\n width=inputs['prompt_padded_width'];assert width==raw['prompt_padded_width']==ipt['input_ids'].shape[1]\n assert rpt['sequences'].tolist()==raw['full_sequences'] and rpt['continuation'].tolist()==raw['continuation_token_ids']\n assert torch.equal(rpt['sequences'][:,:width],ipt['input_ids']) and torch.equal(rpt['sequences'][:,width:],rpt['continuation'])\n assert rpt['sequences'].shape[0]==n and rpt['continuation'].shape[1]==512\n assert ipt['attention_mask'].sum(-1).tolist()==inputs['effective_prompt_tokens']\n for mask in inputs['attention_mask']:assert mask==sorted(mask) and set(mask)<={0,1} and sum(mask)>0\n assert len(effective)==1;actual_config=effective[0];config=actual_config['effective'];special=actual_config['special_tokens'];eos=set(special['_eos_token_tensor']);pad=special['_pad_token_tensor'];assert eos=={151643,151645}\n for k,v in metadata['generation_kwargs'].items():assert config[k]==v\n assert config['max_length']==width+512 and actual_config['logits_processor_types']==[]\n row_checks=[];target_facts=None\n for i,d in enumerate(decoded):\n  original=byid[d['id']];tokens=raw['continuation_token_ids'][i];assert tokens==d['token_ids'] and len(tokens)==512\n  eos_positions=[j for j,t in enumerate(tokens) if t in eos];pad_positions=[j for j,t in enumerate(tokens) if t==pad];special_positions=[dict(position=j,token_id=t) for j,t in enumerate(tokens) if t in metadata['tokenizer']['all_special_ids']]\n  first=eos_positions[0] if eos_positions else None\n  assert d['effective_eos_positions']==d['legacy_eos_positions']==eos_positions and d['first_effective_eos_position']==first and d['pad_id_positions']==pad_positions and d['special_token_positions']==special_positions and d['pad_id']==pad\n  assert d['positions_after_first_eos']==(list(range(first+1,len(tokens))) if first is not None else [])\n  assert d['legacy_generation_truncated']==d['effective_eos_generation_truncated']==(len(tokens)>=512 and not eos_positions)\n  assert d['returned_continuation_width']==len(tokens) and len(d['token_pieces'])==len(tokens)\n  assert d['parser_input']==d['decoded_skip_special'] and d['parser_kwargs']==dict(user_language='English')\n  parsed=list(ns['parse_asr_output'](d['parser_input'],user_language='English'));fixed=ns['detect_and_fix_repetitions'](d['parser_input'].strip());assert parsed==d['parser_output'] and fixed==d['repetition_fix_observation']['output']==parsed[1]\n  nr=normalizer(d['reference']).strip();nh=normalizer(parsed[1]).strip();assert nr==d['reference_normalized']==original['original_prediction']['reference_normalized']==original['baseline_prediction']['reference_normalized'] and nh==d['hypothesis_normalized']\n  counts=score(nr,nh);assert counts==d['counts'];assert d['reference']==original['manifest_row']['text']\n  audio=metadata['audio'][i];assert audio['id']==d['id'] and audio['pcm_sha256']==original['manifest_row']['sha256'] and audio['file_sha256']==identity['files'][original['manifest_row']['audio_filepath']]\n  row_checks.append(dict(id=d['id'],first_eos_position=first,returned_width=len(tokens),legacy_truncated=d['legacy_generation_truncated'],recomputed_counts=counts,parsed_hypothesis_matches_original_saved=parsed[1]==original['original_prediction']['hypothesis']))\n  if d['id']==TARGET:\n   text=d['parser_input'];words=text.split();wordcounts=collections.Counter(words);tail=tokens[1:];period=next((k for k in range(1,len(tail)+1) if all(tail[j]==tail[j%k] for j in range(len(tail)))),None)\n   target_facts=dict(id=TARGET,prompt_padded_width=width,continuation_width=len(tokens),eos_positions=eos_positions,pad_positions=pad_positions,special_token_positions=special_positions,token_sha256=hashlib.sha256(rpt['continuation'][i].contiguous().view(torch.uint8).numpy().tobytes()).hexdigest(),token_frequency={str(k):v for k,v in collections.Counter(tokens).items()},first_token=tokens[0],tail_shortest_token_period=tail[:period],tail_full_periods=len(tail)//period,tail_partial_period=tail[(len(tail)//period)*period:],decoded_keep_equals_skip=d['decoded_keep_special']==d['decoded_skip_special'],preparse_characters=len(text),preparse_words=len(words),preparse_word_frequency=dict(wordcounts),preparse_text_sha256=hashlib.sha256(text.encode()).hexdigest(),preparse_prefix=text[:100],preparse_suffix=text[-100:],helper_output=fixed,parser_output=parsed,normalized_hypothesis=nh,recomputed_counts=counts,preparse_recomputed_counts=score(nr,normalizer(text).strip()),original_saved_hypothesis=original['original_prediction']['hypothesis'],baseline_saved_hypothesis=original['baseline_prediction']['hypothesis'],baseline_counts=score(nr,original['baseline_prediction']['hypothesis_normalized']))\n   assert wordcounts=={'CULINARY':170,'CUL':1} and text==('CULINARY '*170)+'CUL' and parsed==['English','CULINARY CUL'] and not eos_positions and not special_positions\n assert target_facts is not None and sum(r['legacy_truncated'] for r in row_checks)==1\n samples=[json.loads(x) for x in (directory/'monitor/samples.jsonl').read_text().splitlines() if x.strip()];alerts=[dict(unix_time=s.get('unix_time'),alerts=s['alerts']) for s in samples if s.get('alerts')]\n monitor=dict(samples=len(samples),alerts=alerts,min_disk_free_gib=min(s['disk_free_gib'] for s in samples),sampled_peak_gpu1_memory_mib=max(g['memory_used_mib'] for s in samples for g in s['gpus'] if int(g['index'])==1),scope='Discrete monitor samples, not a continuous resource trace or exact CUDA peak.')\n stage_results.append(dict(stage=stage,examples=n,artifact_count=len(result['artifacts']),all_artifact_hashes_and_bytes_match=True,pt_json_tensor_and_sequence_slice_match=True,all_left_padding_and_tensor_fingerprints_valid=True,all_decode_tokenpiece_parser_remote_cpu_matches=True,all_local_parser_normalizer_and_sdi_match=True,effective_eos_ids=sorted(eos),effective_pad_id=pad,logits_processor_types=actual_config['logits_processor_types'],target=target_facts,row_checks=row_checks,monitor=monitor,stage_wall_seconds=receipt['ended_unix']-receipt['started_unix']))\n loaded[stage]=dict(inputs=ipt,raw=rpt,effective=effective,decoded=decoded)\nfirst,repeat,single=[loaded[s] for s in STAGES]\ncomparison=dict(batch_inputs_all_tensors_equal=set(first['inputs'])==set(repeat['inputs']) and all(torch.equal(first['inputs'][k],repeat['inputs'][k]) for k in first['inputs']),batch_full_sequences_equal=torch.equal(first['raw']['sequences'],repeat['raw']['sequences']),batch_continuations_equal=torch.equal(first['raw']['continuation'],repeat['raw']['continuation']),batch_effective_config_equal=first['effective']==repeat['effective'],batch_parser_outputs_equal=[d['parser_output'] for d in first['decoded']]==[d['parser_output'] for d in repeat['decoded']],single_target_continuation_equal_to_batch=torch.equal(first['raw']['continuation'][11],single['raw']['continuation'][0]),single_target_parser_equal_to_batch=first['decoded'][11]['parser_output']==single['decoded'][0]['parser_output'],single_target_effective_prompt_tokens_equal_to_batch=int(first['inputs']['attention_mask'][11].sum())==int(single['inputs']['attention_mask'][0].sum()))\nassert all(comparison.values())\nfor k in ('repeated_batch_inputs_equal','repeated_batch_effective_config_equal','repeated_batch_full_tokens_equal','repeated_batch_parser_equal'):assert summary[k]\nwall=campaign['completed_unix']-campaign['started_unix'];assert 0<wall<1200 and all(s['stage_wall_seconds']<240 for s in stage_results)\nall_sources=set(artifact_paths)|{RUN/'campaign.json',RUN/'identity.json',RUN/'summary.json',RUN/'repeat-identity-check.json',BASE/'inputs/reference-batch.json',BASE/'inputs/upstream-parser-source.json',BASE/'validation/parser-contract.json',BASE/'validation/final-host.json',normalizer_path}\nfor stage in STAGES:\n for name in ('result.json','status.json','stage.json','monitor/samples.jsonl','monitor/status.json','monitor/resources.csv','monitor.log','stdout.log'):\n  p=RUN/stage/name\n  if p.is_file():all_sources.add(p)\nR=dict(status='passed',final_conclusion=True,scope='Independent CPU audit of three actual fixed-checkpoint generation probes; original failed campaign remains failed.',synthetic_evidence_used_as_real_token_evidence=False,total_generate_calls=3,total_consumed_examples=33,optimizer_updates=0,campaign_wall_seconds=wall,stages=stage_results,cross_stage_comparison=comparison,old_campaign_sha256_unchanged=original_unchanged,original_reference_sources_unchanged=True,local_mirrored_identity_files_hash_checked=local_identity,remote_only_identity_files_not_rehashed_locally=remote_only_identity,remote_cpu_decoder_receipts=prior['remote_cpu_decoder_receipts'],local_cpu_packages={n:importlib.metadata.version(n) for n in ('torch','transformers','jiwer')},findings=['Actual target continuation in all three probes has512 tokens and no configured EOS; the slice has an independently verified exact prompt prefix.','Actual preparse decode contains170 repetitions of CULINARY plus CUL, not an inferred synthetic string.','For this target keep-special and skip-special decodes match; official repetition repair, not special filtering, reduces actual text to CULINARY CUL.','Two fresh batch16 workers have identical input tensors, effective generation metadata and full output tokens; target-single continuation also matches despite smaller padded prompt width.','This establishes the observed generation/decoder/parser chain, not the training or numerical cause of repetition.'],limitations=['The original early100 evaluator did not save raw tokens; matching fresh-worker parsed output and truncation does not prove original full token identity.','Earlier137 batches were not replayed; no logits, acoustic/human validation, or causal training diagnosis was performed.','Only three authorized probes ran; no budget/EOS/weights/prompt/quality-gate relaxation or repair of failed full-clean evaluation.','Remote snapshot is a timestamped receipt: GPU1 near idle, GPU0 PersonaPlex service retained, lock available; it is not a new live host check by this audit.','Monitor samples are sparse; they cannot prove absence of brief resource peaks.'],final_host_receipt=source(BASE/'validation/final-host.json'),final_host_observed=dict(time_utc=host['time_utc'],global_lock_available=host['global_lock_available'],gpu=host['gpu']['stdout'],gpu_processes=host['gpu_processes']['stdout']),sources=[source(p) for p in sorted(all_sources)])\n",
+  "local_audit_command": [
+    ".venv/bin/python",
+    "-c",
+    "import json; from pathlib import Path; r=json.loads(Path('reports/truncation-probe/independent-audit.json').read_text()); exec(compile(r['local_audit_stdin_python'],'<independent-local-cpu-audit>','exec')); print(R['status'])"
+  ]
+}

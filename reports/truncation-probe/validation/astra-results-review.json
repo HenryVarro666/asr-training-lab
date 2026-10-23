@@ -1,0 +1,12 @@
+{
+  "status": "approved_no_blockers",
+  "reviewer": "Astra 6",
+  "verified": [
+    "Per-stage artifact hashes",
+    "All3 target rawtoken equality;512/noEOS/no special tokens",
+    "170 CULINARY plus CUL before parser",
+    "Two batch16 input/effectiveconfig/raw/decoded equality",
+    "3calls33consumptions0updates and130.6928618seconds"
+  ],
+  "interpretation": "Generation output repeats to budget; parser repetition cleanup produces the short hypothesis. Skip-special decoding does not change these target texts. Original batch composition is not necessary in this probe; training cause, all implementation factors and original historical token equivalence are unproven."
+}

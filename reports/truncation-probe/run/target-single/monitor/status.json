@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-10-23T05:24:50.240759+00:00",
+  "unix_time": 1792733090.166388,
+  "training_pid": 510182,
+  "training_process": "running",
+  "gpu_target": "1",
+  "training_status": {
+    "status": "running",
+    "stage": "target-single"
+  },
+  "summary": null,
+  "run_metadata": null,
+  "gpus": [
+    {
+      "index": 0.0,
+      "uuid": "GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c",
+      "utilization_percent": 0.0,
+      "memory_used_mib": 22697.0,
+      "memory_total_mib": 95830.0,
+      "temperature_c": 36.0,
+      "power_w": 89.24
+    },
+    {
+      "index": 1.0,
+      "uuid": "GPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c",
+      "utilization_percent": 66.0,
+      "memory_used_mib": 4829.0,
+      "memory_total_mib": 95830.0,
+      "temperature_c": 35.0,
+      "power_w": 125.44
+    }
+  ],
+  "gpu_error": null,
+  "disk_free_gib": 3076.074718475342,
+  "disk_used_gib": 39213.56344985962,
+  "latest_metric": null,
+  "metric_age_seconds": null,
+  "latest_checkpoint": "/mnt/raid/asr-lab/runs/qwen-truncation-probe-20261023-a/target-single/inputs.pt",
+  "checkpoint_age_seconds": 5.5723793506622314,
+  "alerts": []
+}

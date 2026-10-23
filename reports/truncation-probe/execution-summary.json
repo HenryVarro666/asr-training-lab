@@ -1,0 +1,106 @@
+{
+  "status": "three_preset_probes_complete",
+  "local_source_commit": "37eb2e8c3099a601768b4b76dafc52856ce340be",
+  "remote_run": "/mnt/raid/asr-lab/runs/qwen-truncation-probe-20261023-a",
+  "wall_seconds": 130.69286179542542,
+  "wall_limit_seconds": 1200,
+  "worker_limit_seconds": 240,
+  "generate_calls": 3,
+  "consumed_examples": 33,
+  "unique_ids": 16,
+  "optimizer_updates": 0,
+  "run_bytes": 15823430,
+  "observed_project_byte_increment": 15823430,
+  "increment_limit_bytes": 1073741824,
+  "stage_targets": [
+    {
+      "stage": "batch16-first",
+      "samples": 16,
+      "elapsed_seconds": 28.813533805310726,
+      "continuation_width": 512,
+      "eos_positions": [],
+      "raw_words": {
+        "CULINARY": 170,
+        "CUL": 1
+      },
+      "raw_chars": 1533,
+      "parser_output": [
+        "English",
+        "CULINARY CUL"
+      ],
+      "parser_chars": 12,
+      "keep_equals_skip": true,
+      "counts": {
+        "substitutions": 2,
+        "deletions": 14,
+        "insertions": 0,
+        "hits": 0,
+        "reference_words": 16
+      },
+      "truncated_ids": [
+        "652-129742-0006"
+      ]
+    },
+    {
+      "stage": "batch16-repeat",
+      "samples": 16,
+      "elapsed_seconds": 25.275693830102682,
+      "continuation_width": 512,
+      "eos_positions": [],
+      "raw_words": {
+        "CULINARY": 170,
+        "CUL": 1
+      },
+      "raw_chars": 1533,
+      "parser_output": [
+        "English",
+        "CULINARY CUL"
+      ],
+      "parser_chars": 12,
+      "keep_equals_skip": true,
+      "counts": {
+        "substitutions": 2,
+        "deletions": 14,
+        "insertions": 0,
+        "hits": 0,
+        "reference_words": 16
+      },
+      "truncated_ids": [
+        "652-129742-0006"
+      ]
+    },
+    {
+      "stage": "target-single",
+      "samples": 1,
+      "elapsed_seconds": 23.12648818641901,
+      "continuation_width": 512,
+      "eos_positions": [],
+      "raw_words": {
+        "CULINARY": 170,
+        "CUL": 1
+      },
+      "raw_chars": 1533,
+      "parser_output": [
+        "English",
+        "CULINARY CUL"
+      ],
+      "parser_chars": 12,
+      "keep_equals_skip": true,
+      "counts": {
+        "substitutions": 2,
+        "deletions": 14,
+        "insertions": 0,
+        "hits": 0,
+        "reference_words": 16
+      },
+      "truncated_ids": [
+        "652-129742-0006"
+      ]
+    }
+  ],
+  "all_three_target_tokens_equal": true,
+  "historical_campaign_unchanged": true,
+  "protected_service_pid": 2154793,
+  "global_lock_released": true,
+  "evidence_scope": "Probe completed; historical failed Early100 quality gate remains failed. No logits collected or prior137 batches replayed."
+}

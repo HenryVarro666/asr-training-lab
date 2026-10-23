@@ -6,7 +6,9 @@
 
 用户授权的[Early100实验](EARLY100_EXPERIMENT.md)已执行并按质量门槛停止：双卡100次更新保留892/45调度；三个fixed128结果通过，最早观测25步已退化。完整clean出现1条512-token截断，campaign维持failed，other未执行。全部实际产物见[报告](../reports/early100/README.md)。本阶段不恢复、重试或扩预算。
 
-**当前目标：保留失败结果与检查点，下一阶段先定位异常样本的生成行为。** 候选诊断应固定权重/样本/512-token预算，保存解析前token、EOS和parser输入；必要时才用小batch对照区分生成与解析问题。该候选尚未启动，具体预算需在新实验单中固定；不自动补做other、改变LR或扩展训练。
+**当前阶段已完成：固定checkpoint100／512-token的异常取证。** 按[实验单](TRUNCATION_PROBE.md)完成原batch16两次和目标单句一次，共3次generate、33条消费、0更新、130.69秒。三次目标均生成相同512个token且无EOS，解码为170次`CULINARY`加末尾`CUL`；官方parser将它压成两词。原batch组成不是必要条件；模型为何产生重复尚未确定。见[完整证据](../reports/truncation-probe/README.md)。
+
+保留失败结果与检查点，本轮到此停止。后续如果继续，应针对训练机制另立单变量假设、预算和验收条件；不自动重试、补做other、改变LR/512-token预算或扩大训练。
 
 此前**CPU诊断、checkpoint800验证以及零更新保存／重载控制均已完成。** 控制实际用时136.79秒，原始与重载模型的参数、输入、有效生成规则和128条原始token完全一致，双方WER均为1.5835%。见 [控制报告](../reports/zero-update-control/README.md)。
 

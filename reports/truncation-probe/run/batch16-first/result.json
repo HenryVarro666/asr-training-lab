@@ -1,0 +1,55 @@
+{
+  "status": "complete",
+  "stage": "batch16-first",
+  "generate_calls": 1,
+  "consumed_examples": 16,
+  "optimizer_updates": 0,
+  "raw_generation_missing": false,
+  "legacy_truncated_ids": [
+    "652-129742-0006"
+  ],
+  "effective_eos_ids": [
+    151645,
+    151643
+  ],
+  "legacy_eos_ids": [
+    151645,
+    151643
+  ],
+  "eos_sets_equal": true,
+  "artifacts": {
+    "metadata.json": {
+      "sha256": "710ce34676426fe7d40dd6c0d3e14a238cd1b0b616a2b669d2a65adfb341243a",
+      "bytes": 10012
+    },
+    "raw-tokens.pt": {
+      "sha256": "0bf9c682c3286707b3788a8840f5b8e1bd8e26ff4b1772594f60342013d4f544",
+      "bytes": 92883
+    },
+    "inputs.json": {
+      "sha256": "5958370c3e0c72112bbc6dfbf0d0a1b91cf06cde17da6c9240fda9eea217bfe1",
+      "bytes": 279112
+    },
+    "raw-tokens.json": {
+      "sha256": "9604e28332820010505070255dbfc5357095b231b02f5a2fadcc591a6b3cbc5a",
+      "bytes": 270245
+    },
+    "decoded.json": {
+      "sha256": "f464b08e8b8dee01bedfaa2db74106c1d395440d823a102c7dd7a4536aa5a742",
+      "bytes": 1186190
+    },
+    "effective-generation.json": {
+      "sha256": "5736551c07f26dc448cdf7faa95155df02315ed0d1e35c1ea5710c4899ee445a",
+      "bytes": 4729
+    },
+    "gpu-preflight.json": {
+      "sha256": "08d8792884296d08b68fa403c09972d1f0064f77e28e3fd5e480aa63e9dc1d42",
+      "bytes": 260
+    },
+    "inputs.pt": {
+      "sha256": "03ad5a3dd77415c363d3d2b4204c4b2f6b89839cbdb160283ad9ad8929b038ec",
+      "bytes": 5865201
+    }
+  },
+  "identity_sha256": "11efebbcb097966f7af168a7c34625bd146ce004591f15d46a7bca54608bc444"
+}

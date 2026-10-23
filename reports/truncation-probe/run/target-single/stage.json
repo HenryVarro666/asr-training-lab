@@ -1,0 +1,21 @@
+{
+  "name": "target-single",
+  "command": [
+    "/mnt/raid/asr-lab/venv/bin/python",
+    "-m",
+    "asr_lab.qwen_truncation_probe",
+    "--identity",
+    "/mnt/raid/asr-lab/runs/qwen-truncation-probe-20261023-a/identity.json",
+    "--stage",
+    "target-single",
+    "--output",
+    "/mnt/raid/asr-lab/runs/qwen-truncation-probe-20261023-a/target-single"
+  ],
+  "physical_gpus": "1",
+  "run_dir": "/mnt/raid/asr-lab/runs/qwen-truncation-probe-20261023-a/target-single",
+  "fingerprint": "a692dd9532fec8a74ccdd8131ad887c9c94bef207bb9f392438876017a90b06a",
+  "started_unix": 1792733069.9227371,
+  "status": "complete",
+  "exit_code": 0,
+  "ended_unix": 1792733098.947364
+}
