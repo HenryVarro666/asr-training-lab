@@ -1,0 +1,115 @@
+[
+  {
+    "id": "652-129742-0006",
+    "reference": "CAULIFLOWER MAYONNAISE TAKE COLD BOILED CAULIFLOWER BREAK INTO BRANCHES ADDING SALT PEPPER AND VINEGAR TO SEASON",
+    "decoded_keep_special": "Cauliflower mayonnaise: Take cold boiled cauliflower, break into branches, adding salt, pepper, and vinegar to season.<|im_end|>",
+    "decoded_skip_special": "Cauliflower mayonnaise: Take cold boiled cauliflower, break into branches, adding salt, pepper, and vinegar to season.",
+    "parser_input": "Cauliflower mayonnaise: Take cold boiled cauliflower, break into branches, adding salt, pepper, and vinegar to season.",
+    "parser_kwargs": {
+      "user_language": "English"
+    },
+    "parser_output": [
+      "English",
+      "Cauliflower mayonnaise: Take cold boiled cauliflower, break into branches, adding salt, pepper, and vinegar to season."
+    ],
+    "reference_normalized": "cauliflower mayonnaise take cold boiled cauliflower break into branches adding salt pepper and vinegar to season",
+    "hypothesis_normalized": "cauliflower mayonnaise take cold boiled cauliflower break into branches adding salt pepper and vinegar to season",
+    "counts": {
+      "substitutions": 0,
+      "deletions": 0,
+      "insertions": 0,
+      "hits": 16,
+      "reference_words": 16
+    },
+    "token_pieces": [
+      "C",
+      "aul",
+      "iflower",
+      "Ġmay",
+      "onna",
+      "ise",
+      ":",
+      "ĠTake",
+      "Ġcold",
+      "Ġboiled",
+      "Ġcauliflower",
+      ",",
+      "Ġbreak",
+      "Ġinto",
+      "Ġbranches",
+      ",",
+      "Ġadding",
+      "Ġsalt",
+      ",",
+      "Ġpepper",
+      ",",
+      "Ġand",
+      "Ġvinegar",
+      "Ġto",
+      "Ġseason",
+      ".",
+      "<|im_end|>"
+    ],
+    "token_ids": [
+      34,
+      4943,
+      76773,
+      1231,
+      13459,
+      1064,
+      25,
+      11778,
+      9255,
+      65085,
+      95870,
+      11,
+      1438,
+      1119,
+      23091,
+      11,
+      7842,
+      12021,
+      11,
+      24353,
+      11,
+      323,
+      46105,
+      311,
+      3200,
+      13,
+      151645
+    ],
+    "returned_continuation_width": 27,
+    "effective_eos_positions": [
+      26
+    ],
+    "first_effective_eos_position": 26,
+    "legacy_eos_positions": [
+      26
+    ],
+    "pad_id": 151645,
+    "pad_id_positions": [
+      26
+    ],
+    "special_token_positions": [
+      {
+        "position": 26,
+        "token_id": 151645
+      }
+    ],
+    "positions_after_first_eos": [],
+    "legacy_generation_truncated": false,
+    "effective_eos_generation_truncated": false,
+    "interpretation": "Returned width includes batch padding. EOS/PAD overlap does not alone label any occurrence as padding; full tokens are retained.",
+    "repetition_fix_observation": {
+      "input": "Cauliflower mayonnaise: Take cold boiled cauliflower, break into branches, adding salt, pepper, and vinegar to season.",
+      "output": "Cauliflower mayonnaise: Take cold boiled cauliflower, break into branches, adding salt, pepper, and vinegar to season.",
+      "input_characters": 118,
+      "output_characters": 118,
+      "input_words": 16,
+      "output_words": 16,
+      "equals_actual_parser_hypothesis": true,
+      "method": "Original helper called after the unmodified parser for observation; never replaces parser output."
+    }
+  }
+]

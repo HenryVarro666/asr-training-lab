@@ -1,0 +1,480 @@
+{
+  "returned_width": 512,
+  "first_effective_eos_position": null,
+  "analysis_token_count": 512,
+  "token_periodic_run": {
+    "period": 3,
+    "start": 1,
+    "end_exclusive": 511,
+    "repeat_count": 170,
+    "span": 510,
+    "coverage": 0.99609375,
+    "unit": [
+      1094,
+      32593,
+      356
+    ],
+    "following_partial_period": [
+      1094
+    ],
+    "partial_period_counted_as_complete": false,
+    "sequence_length": 512,
+    "by_period": [
+      {
+        "period": 1,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 2,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 3,
+        "start": 1,
+        "end_exclusive": 511,
+        "repeat_count": 170,
+        "span": 510,
+        "coverage": 0.99609375,
+        "unit": [
+          1094,
+          32593,
+          356
+        ],
+        "following_partial_period": [
+          1094
+        ],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 4,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 5,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 6,
+        "start": 1,
+        "end_exclusive": 511,
+        "repeat_count": 85,
+        "span": 510,
+        "coverage": 0.99609375,
+        "unit": [
+          1094,
+          32593,
+          356,
+          1094,
+          32593,
+          356
+        ],
+        "following_partial_period": [
+          1094
+        ],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 7,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 8,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 9,
+        "start": 1,
+        "end_exclusive": 505,
+        "repeat_count": 56,
+        "span": 504,
+        "coverage": 0.984375,
+        "unit": [
+          1094,
+          32593,
+          356,
+          1094,
+          32593,
+          356,
+          1094,
+          32593,
+          356
+        ],
+        "following_partial_period": [
+          1094,
+          32593,
+          356,
+          1094,
+          32593,
+          356,
+          1094
+        ],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 10,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 11,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 12,
+        "start": 1,
+        "end_exclusive": 505,
+        "repeat_count": 42,
+        "span": 504,
+        "coverage": 0.984375,
+        "unit": [
+          1094,
+          32593,
+          356,
+          1094,
+          32593,
+          356,
+          1094,
+          32593,
+          356,
+          1094,
+          32593,
+          356
+        ],
+        "following_partial_period": [
+          1094,
+          32593,
+          356,
+          1094,
+          32593,
+          356,
+          1094
+        ],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 13,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 14,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 15,
+        "start": 1,
+        "end_exclusive": 511,
+        "repeat_count": 34,
+        "span": 510,
+        "coverage": 0.99609375,
+        "unit": [
+          1094,
+          32593,
+          356,
+          1094,
+          32593,
+          356,
+          1094,
+          32593,
+          356,
+          1094,
+          32593,
+          356,
+          1094,
+          32593,
+          356
+        ],
+        "following_partial_period": [
+          1094
+        ],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 16,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false
+      }
+    ]
+  },
+  "preparse_word_periodic_run": {
+    "period": 1,
+    "start": 0,
+    "end_exclusive": 170,
+    "repeat_count": 170,
+    "span": 170,
+    "coverage": 0.9941520467836257,
+    "unit": [
+      "CULINARY"
+    ],
+    "following_partial_period": [],
+    "partial_period_counted_as_complete": false,
+    "sequence_length": 171,
+    "by_period": [
+      {
+        "period": 1,
+        "start": 0,
+        "end_exclusive": 170,
+        "repeat_count": 170,
+        "span": 170,
+        "coverage": 0.9941520467836257,
+        "unit": [
+          "CULINARY"
+        ],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 2,
+        "start": 0,
+        "end_exclusive": 170,
+        "repeat_count": 85,
+        "span": 170,
+        "coverage": 0.9941520467836257,
+        "unit": [
+          "CULINARY",
+          "CULINARY"
+        ],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 3,
+        "start": 0,
+        "end_exclusive": 168,
+        "repeat_count": 56,
+        "span": 168,
+        "coverage": 0.9824561403508771,
+        "unit": [
+          "CULINARY",
+          "CULINARY",
+          "CULINARY"
+        ],
+        "following_partial_period": [
+          "CULINARY",
+          "CULINARY"
+        ],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 4,
+        "start": 0,
+        "end_exclusive": 168,
+        "repeat_count": 42,
+        "span": 168,
+        "coverage": 0.9824561403508771,
+        "unit": [
+          "CULINARY",
+          "CULINARY",
+          "CULINARY",
+          "CULINARY"
+        ],
+        "following_partial_period": [
+          "CULINARY",
+          "CULINARY"
+        ],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 5,
+        "start": 0,
+        "end_exclusive": 170,
+        "repeat_count": 34,
+        "span": 170,
+        "coverage": 0.9941520467836257,
+        "unit": [
+          "CULINARY",
+          "CULINARY",
+          "CULINARY",
+          "CULINARY",
+          "CULINARY"
+        ],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 6,
+        "start": 0,
+        "end_exclusive": 168,
+        "repeat_count": 28,
+        "span": 168,
+        "coverage": 0.9824561403508771,
+        "unit": [
+          "CULINARY",
+          "CULINARY",
+          "CULINARY",
+          "CULINARY",
+          "CULINARY",
+          "CULINARY"
+        ],
+        "following_partial_period": [
+          "CULINARY",
+          "CULINARY"
+        ],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 7,
+        "start": 0,
+        "end_exclusive": 168,
+        "repeat_count": 24,
+        "span": 168,
+        "coverage": 0.9824561403508771,
+        "unit": [
+          "CULINARY",
+          "CULINARY",
+          "CULINARY",
+          "CULINARY",
+          "CULINARY",
+          "CULINARY",
+          "CULINARY"
+        ],
+        "following_partial_period": [
+          "CULINARY",
+          "CULINARY"
+        ],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 8,
+        "start": 0,
+        "end_exclusive": 168,
+        "repeat_count": 21,
+        "span": 168,
+        "coverage": 0.9824561403508771,
+        "unit": [
+          "CULINARY",
+          "CULINARY",
+          "CULINARY",
+          "CULINARY",
+          "CULINARY",
+          "CULINARY",
+          "CULINARY",
+          "CULINARY"
+        ],
+        "following_partial_period": [
+          "CULINARY",
+          "CULINARY"
+        ],
+        "partial_period_counted_as_complete": false
+      }
+    ]
+  },
+  "strong_token_repetition": true,
+  "strong_word_repetition": true,
+  "strong_periodic_repetition": true,
+  "budget_exhausted": true,
+  "budget_loop": true,
+  "operational_category": "budget_exhausted_with_periodic_repetition",
+  "definition": {
+    "token_periods": [
+      1,
+      16
+    ],
+    "word_periods": [
+      1,
+      8
+    ],
+    "minimum_repeated_periods": 20,
+    "minimum_sequence_coverage": 0.5,
+    "words": "Whitespace-split raw skip-special decode before parser/repetition-fix; no lexical normalization.",
+    "tokens": "Effective EOS and everything after its first occurrence excluded from derived token statistics; raw evidence unchanged."
+  },
+  "stage": "step100",
+  "step": 100,
+  "parser_input": "CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CUL",
+  "parser_output": [
+    "English",
+    "CULINARY CUL"
+  ],
+  "counts": {
+    "substitutions": 2,
+    "deletions": 14,
+    "insertions": 0,
+    "hits": 0,
+    "reference_words": 16
+  },
+  "repetition_fix_observation": {
+    "input": "CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CUL",
+    "output": "CULINARY CUL",
+    "input_characters": 1533,
+    "output_characters": 12,
+    "input_words": 171,
+    "output_words": 2,
+    "equals_actual_parser_hypothesis": true,
+    "method": "Original helper called after the unmodified parser for observation; never replaces parser output."
+  }
+}

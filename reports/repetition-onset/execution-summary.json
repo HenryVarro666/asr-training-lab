@@ -1,0 +1,226 @@
+{
+  "status": "complete",
+  "source_commit": "a1d1c892906cd586f16d2403a5e12ad3fccef202",
+  "run_dir": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a",
+  "target_id": "652-129742-0006",
+  "actual_generate_calls": 4,
+  "actual_consumed_examples": 4,
+  "unique_sample_ids": 1,
+  "optimizer_updates": 0,
+  "total_runner_seconds": 99.16415476799011,
+  "wall_budget_seconds": 1200,
+  "per_stage_budget_seconds": 240,
+  "preprocessing": "Identical prior singleton input fingerprints and actual effective generation configuration; no settings rewritten.",
+  "rows": [
+    {
+      "stage": "base",
+      "step": 0,
+      "returned_width": 27,
+      "first_eos_position": 26,
+      "strong_repetition": false,
+      "budget_loop": false,
+      "parser_output": [
+        "English",
+        "Cauliflower mayonnaise: Take cold boiled cauliflower, break into branches, adding salt, pepper, and vinegar to season."
+      ],
+      "counts": {
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "hits": 16,
+        "reference_words": 16
+      },
+      "token_periodic_run": {
+        "period": null,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "sequence_length": 26
+      },
+      "word_periodic_run": {
+        "period": null,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "sequence_length": 16
+      },
+      "worker_seconds": 5.857632878236473,
+      "command_seconds": 11.033880949020386,
+      "model_file_sha_seconds": 5.2440504161641,
+      "model_identity_status": "passed_with_post_worker_stat_match"
+    },
+    {
+      "stage": "step025",
+      "step": 25,
+      "returned_width": 35,
+      "first_eos_position": 34,
+      "strong_repetition": false,
+      "budget_loop": false,
+      "parser_output": [
+        "English",
+        "Cauliflower Mayonnaise TAKE COLD BOILED CAULIFLOWER BREAK INTO BRANCHES ADDING SALT PEPPER AND VINEGAR TO SEASON"
+      ],
+      "counts": {
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "hits": 16,
+        "reference_words": 16
+      },
+      "token_periodic_run": {
+        "period": null,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "sequence_length": 34
+      },
+      "word_periodic_run": {
+        "period": null,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "sequence_length": 16
+      },
+      "worker_seconds": 6.1698362389579415,
+      "command_seconds": 10.343947172164917,
+      "model_file_sha_seconds": 9.545021466910839,
+      "model_identity_status": "passed_with_post_worker_stat_match"
+    },
+    {
+      "stage": "step050",
+      "step": 50,
+      "returned_width": 37,
+      "first_eos_position": 36,
+      "strong_repetition": false,
+      "budget_loop": false,
+      "parser_output": [
+        "English",
+        "CAULIFLOWER MAYONNAISE TAKE COLD BOILED CAULIFLOWER BREAK INTO BRANCHES ADDING SALT PEPPER AND VINEGAR TO SEASON"
+      ],
+      "counts": {
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "hits": 16,
+        "reference_words": 16
+      },
+      "token_periodic_run": {
+        "period": null,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "sequence_length": 36
+      },
+      "word_periodic_run": {
+        "period": null,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "sequence_length": 16
+      },
+      "worker_seconds": 6.111820398829877,
+      "command_seconds": 10.361989974975586,
+      "model_file_sha_seconds": 9.56997004058212,
+      "model_identity_status": "passed_with_post_worker_stat_match"
+    },
+    {
+      "stage": "step100",
+      "step": 100,
+      "returned_width": 512,
+      "first_eos_position": null,
+      "strong_repetition": true,
+      "budget_loop": true,
+      "parser_output": [
+        "English",
+        "CULINARY CUL"
+      ],
+      "counts": {
+        "substitutions": 2,
+        "deletions": 14,
+        "insertions": 0,
+        "hits": 0,
+        "reference_words": 16
+      },
+      "token_periodic_run": {
+        "period": 3,
+        "start": 1,
+        "end_exclusive": 511,
+        "repeat_count": 170,
+        "span": 510,
+        "coverage": 0.99609375,
+        "unit": [
+          1094,
+          32593,
+          356
+        ],
+        "following_partial_period": [
+          1094
+        ],
+        "partial_period_counted_as_complete": false,
+        "sequence_length": 512
+      },
+      "word_periodic_run": {
+        "period": 1,
+        "start": 0,
+        "end_exclusive": 170,
+        "repeat_count": 170,
+        "span": 170,
+        "coverage": 0.9941520467836257,
+        "unit": [
+          "CULINARY"
+        ],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false,
+        "sequence_length": 171
+      },
+      "worker_seconds": 13.213574340566993,
+      "command_seconds": 20.87809419631958,
+      "model_file_sha_seconds": 9.450301049277186,
+      "model_identity_status": "passed_with_post_worker_stat_match"
+    }
+  ],
+  "onset": {
+    "exact_first_update_identified": false,
+    "training_cause_identified": false,
+    "strong_periodic_repetition": {
+      "earliest_observed_stage": "step100",
+      "earliest_observed_step": 100,
+      "previous_sampled_negative_step": 50,
+      "observed_positive_then_negative": false,
+      "interpretation": "First observed saved point only. Earlier negative sampled endpoints do not prove exact first onset, monotonicity, persistence, or training cause; unsampled updates are unknown."
+    },
+    "budget_loop": {
+      "earliest_observed_stage": "step100",
+      "earliest_observed_step": 100,
+      "previous_sampled_negative_step": 50,
+      "observed_positive_then_negative": false,
+      "interpretation": "First observed saved point only. Earlier negative sampled endpoints do not prove exact first onset, monotonicity, persistence, or training cause; unsampled updates are unknown."
+    }
+  },
+  "run_bytes": 1549627,
+  "project_delta_observed_bytes": 1578979,
+  "final_project_bytes": 250854434084,
+  "final_free_bytes": 2777904705536,
+  "artifact_manifest": "artifact-manifest.json",
+  "old_early100_status": "failed",
+  "prior_campaign_sha_unchanged": true,
+  "automatic_next_stage": false
+}

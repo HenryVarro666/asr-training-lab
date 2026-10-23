@@ -48,9 +48,9 @@
 
 **Ownership:** Parent launches/monitors one freshrun and writes report/current status; Sol data ops independently audits saved evidence; Astra reviews interpretation.
 
-- [ ] Verify liveGPU1, lock, disk and source; run exactly4preset processes and save actual progress.
-- [ ] Mirror rawJSON/PT/config/resource traces; independently recompute tokens/EOS/decodes/parser/normalizer/repetition and verify all4input/settings match.
-- [ ] Report per-checkpoint findings, earliest observed repetition/loop and limitations; retain oldfailed states and verify cleanup/service preservation.
+- [x] Verify liveGPU1, lock, disk and source; run exactly4preset processes and save actual progress.
+- [x] Mirror rawJSON/PT/config/resource traces; independently recompute tokens/EOS/decodes/parser/normalizer/repetition and verify all4input/settings match.
+- [x] Report per-checkpoint findings, earliest observed repetition/loop and limitations; retain oldfailed states and verify cleanup/service preservation.
 - [ ] Commit allowlisted small artifacts; verify cross-hostGit bundle and receipt, no publicpush or automaticnextstage.
 
 ## Execution decisions

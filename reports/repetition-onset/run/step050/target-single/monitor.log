@@ -1,0 +1,2 @@
+{"timestamp": "2026-10-23T15:03:22.977237+00:00", "training_process": "running", "disk_free_gib": 2587.1261558532715, "metric_age_seconds": null, "alerts": []}
+{"timestamp": "2026-10-23T15:03:33.039333+00:00", "training_process": "zombie", "disk_free_gib": 2587.1258544921875, "metric_age_seconds": null, "alerts": []}

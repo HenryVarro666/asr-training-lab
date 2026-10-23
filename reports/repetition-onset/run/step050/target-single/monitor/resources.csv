@@ -1,0 +1,5 @@
+timestamp,training_pid,training_process,gpu_index,gpu_uuid,gpu_utilization_percent,gpu_memory_used_mib,gpu_memory_total_mib,gpu_temperature_c,gpu_power_w,disk_free_gib,metric_age_seconds,checkpoint_age_seconds,alerts
+2026-10-23T15:03:22.977237+00:00,965270,running,0.0,GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c,0.0,22697.0,95830.0,35.0,88.97,2587.1261558532715,,,
+2026-10-23T15:03:22.977237+00:00,965270,running,1.0,GPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c,0.0,14.0,95830.0,28.0,56.93,2587.1261558532715,,,
+2026-10-23T15:03:33.039333+00:00,965270,zombie,0.0,GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c,0.0,22697.0,95830.0,35.0,88.91,2587.1258544921875,,1.3724350929260254,
+2026-10-23T15:03:33.039333+00:00,965270,zombie,1.0,GPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c,1.0,14.0,95830.0,29.0,84.57,2587.1258544921875,,1.3724350929260254,

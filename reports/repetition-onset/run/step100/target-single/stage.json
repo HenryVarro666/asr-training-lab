@@ -1,0 +1,19 @@
+{
+  "name": "step100",
+  "command": [
+    "/mnt/raid/asr-lab/venv/bin/python",
+    "/mnt/raid/asr-lab/repo/scripts/run_repetition_onset.py",
+    "--worker",
+    "--identity",
+    "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step100/identity.json",
+    "--output",
+    "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step100/target-single"
+  ],
+  "physical_gpus": "1",
+  "run_dir": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step100/target-single",
+  "fingerprint": "2bdc9d3f309f94fac91620d2650b29f4c2febb579495d078e2fabac492ba5bec",
+  "started_unix": 1792767824.7546372,
+  "status": "complete",
+  "exit_code": 0,
+  "ended_unix": 1792767845.6327314
+}

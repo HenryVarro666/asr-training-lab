@@ -1,0 +1,12 @@
+{
+  "captured_utc": "2026-10-23T15:05:13.624067+00:00",
+  "gpu": "0, GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c, 22697, 72624, 0\n1, GPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c, 14, 95306, 0\n",
+  "compute_apps": "GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c, 2154793, .venv/bin/python\n",
+  "global_lock_available": true,
+  "free_bytes": 2777904705536,
+  "project_bytes": 250854434084,
+  "run_bytes": 1549627,
+  "tmux": "0: 1 windows (created Mon Oct  5 18:21:25 2026) (attached)\nasr-tensorboard: 1 windows (created Thu Oct 22 03:05:28 2026)\n",
+  "old_early100_campaign_sha256": "f6be4d5322fba1fb03d89b311017220506fff83ffa238d22614fb1e97ea1c279",
+  "old_early100_status": "failed"
+}

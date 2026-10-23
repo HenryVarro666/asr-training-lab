@@ -1,0 +1,23 @@
+{
+  "command": [
+    "ssh",
+    "-o",
+    "BatchMode=yes",
+    "-o",
+    "ConnectTimeout=10",
+    "-o",
+    "ControlPath=/tmp/codex-asr-tensorboard-%C",
+    "exx@100.70.230.73",
+    "CUDA_VISIBLE_DEVICES= TMPDIR=/mnt/raid/asr-lab/tmp TMP=/mnt/raid/asr-lab/tmp TEMP=/mnt/raid/asr-lab/tmp HF_HOME=/mnt/raid/asr-lab/cache/huggingface HF_HUB_CACHE=/mnt/raid/asr-lab/cache/huggingface/hub HF_DATASETS_CACHE=/mnt/raid/asr-lab/cache/datasets XDG_CACHE_HOME=/mnt/raid/asr-lab/cache TORCH_HOME=/mnt/raid/asr-lab/cache/torch HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 HF_DATASETS_OFFLINE=1 HF_HUB_DISABLE_IMPLICIT_TOKEN=1 HF_HUB_DISABLE_TELEMETRY=1 OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 /mnt/raid/asr-lab/venv/bin/python /mnt/raid/asr-lab/repo/reports/repetition-onset/validation/audit_saved_evidence.py --run-dir /mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a"
+  ],
+  "script_sha256": "de5aec384aeceb9598d3ad752196b5c6927ece4fa163a0794931061a75ea4056",
+  "exit_code": 0
+}
+STDOUT:
+{
+  "status": "passed",
+  "output_json": "/mnt/raid/asr-lab/repo/reports/repetition-onset/independent-audit.json",
+  "output_md": "/mnt/raid/asr-lab/repo/reports/repetition-onset/independent-audit.md"
+}
+
+STDERR:

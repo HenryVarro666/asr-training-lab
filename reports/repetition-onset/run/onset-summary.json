@@ -1,0 +1,18 @@
+{
+  "exact_first_update_identified": false,
+  "training_cause_identified": false,
+  "strong_periodic_repetition": {
+    "earliest_observed_stage": "step100",
+    "earliest_observed_step": 100,
+    "previous_sampled_negative_step": 50,
+    "observed_positive_then_negative": false,
+    "interpretation": "First observed saved point only. Earlier negative sampled endpoints do not prove exact first onset, monotonicity, persistence, or training cause; unsampled updates are unknown."
+  },
+  "budget_loop": {
+    "earliest_observed_stage": "step100",
+    "earliest_observed_step": 100,
+    "previous_sampled_negative_step": 50,
+    "observed_positive_then_negative": false,
+    "interpretation": "First observed saved point only. Earlier negative sampled endpoints do not prove exact first onset, monotonicity, persistence, or training cause; unsampled updates are unknown."
+  }
+}

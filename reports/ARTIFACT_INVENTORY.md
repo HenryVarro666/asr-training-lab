@@ -6,6 +6,8 @@
 
 新增[截断探针](truncation-probe/README.md)已完成3次推理、0更新：完整token/EOS、两种decode、parser输入输出、16条batch邻居、输入tensor与指纹、运行配置、资源监控均保存在`truncation-probe/run/`及远端同名run。`.pt`取证tensor已镜像本地但由Git忽略；JSON/日志等小型证据纳入Git。该阶段没有新的模型权重或训练曲线，原图保持不变。代码与报告的跨机备份以[新收据](truncation-probe/final-backup.json)为准。
 
+新增[四检查点重复对照](repetition-onset/README.md)已完成：4次单句推理／0更新／99.16秒，base/25/50正常、100强循环且512无EOS。85份run文件（含输入与raw token取证tensor）跨机逐字节一致，路径`repetition-onset/run/`；[产物清单](repetition-onset/artifact-manifest.json)、[独立审计](repetition-onset/independent-audit.md)、[结束快照](repetition-onset/validation/final-host.json)可复核。仅新增推理对照，无新训练权重/曲线，既有图保持原样；代码与小型报告备份见[本阶段收据](repetition-onset/final-backup.json)。
+
 | 种类 | 本地位置 | 保存内容与边界 |
 |---|---|---|
 | 代码、配置、测试 | `../src/asr_lab/`、`../scripts/`、`../configs/`、`../tests/` | Qwen与Whisper数据/训练/恢复/评测、有限runner、CPU契约测试；源码不等于GPU验证 |

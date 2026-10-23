@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-10-23T15:04:05.076194+00:00",
+  "unix_time": 1792767845.0032053,
+  "training_pid": 965766,
+  "training_process": "zombie",
+  "gpu_target": "1",
+  "training_status": {
+    "status": "complete",
+    "elapsed_seconds": 13.213574340566993
+  },
+  "summary": null,
+  "run_metadata": null,
+  "gpus": [
+    {
+      "index": 0.0,
+      "uuid": "GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c",
+      "utilization_percent": 0.0,
+      "memory_used_mib": 22697.0,
+      "memory_total_mib": 95830.0,
+      "temperature_c": 35.0,
+      "power_w": 88.88
+    },
+    {
+      "index": 1.0,
+      "uuid": "GPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c",
+      "utilization_percent": 0.0,
+      "memory_used_mib": 14.0,
+      "memory_total_mib": 95830.0,
+      "temperature_c": 29.0,
+      "power_w": 57.32
+    }
+  ],
+  "gpu_error": null,
+  "disk_free_gib": 2587.125419616699,
+  "disk_used_gib": 39702.51274871826,
+  "latest_metric": null,
+  "metric_age_seconds": null,
+  "latest_checkpoint": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step100/target-single/raw-tokens.pt",
+  "checkpoint_age_seconds": 4.243571758270264,
+  "alerts": []
+}

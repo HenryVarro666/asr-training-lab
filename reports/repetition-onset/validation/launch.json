@@ -1,0 +1,30 @@
+{
+  "checked_at": "2026-10-23T15:02:22.245314+00:00",
+  "status": "launched_once",
+  "gpus": "0, GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c, 22697, 72624, 0\n1, GPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c, 14, 95306, 0\n",
+  "compute_apps": "GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c, 2154793, .venv/bin/python\n",
+  "disk_free_bytes": 2777906520064,
+  "project_bytes": 250852855105,
+  "global_lock_available": true,
+  "verified_source_sha256": {
+    "scripts/run_repetition_onset.py": "688955c31abc04448a9b577010f9369ae35e59896dd5d38153e61b87a0b080db",
+    "src/asr_lab/repetition_metrics.py": "95f232d3e46b258ce07096d08ef4fcfc8201003635aa49f9ec609496035c1596",
+    "tests/test_repetition_onset.py": "eba120fd35f309ab6018525f55f3e5d66745903a146b683e93fec9020b925aaa",
+    "reports/repetition-onset/inputs/model-reference.json": "812ec7ed461720455e2cd192cc6ff97e227a1a703c5e2af4e4d9678d8e9e893a",
+    "reports/repetition-onset/validation/launch-command.sh": "b3cdccfabb5888be7d41204f0f66dd567fbf44eeefcc317a0703dc0bfab6aebd",
+    "src/asr_lab/qwen_truncation_probe.py": "3c3c73d1e14f0f040b02893a5269747852558292c308507f87db5b85584fd74e",
+    "scripts/run_truncation_probe.py": "a4be9be1860df9c2076d34893f96fe25f5d135885060c5990dc0795fd2927708",
+    "src/asr_lab/qwen_train.py": "97951994468a14b10ce57b7c5c864dcef6ffb6af4ee9c75e621b48c01e9de961",
+    "src/asr_lab/qwen_data.py": "769aed8478da4a6e9dcd33ed3bf87aaa6b846eede3d677c9ae4dc88469dc89b0",
+    "src/asr_lab/qwen_evaluate.py": "0a2012eb016cddadee7b3c0f0ca5ad9f3f94b502faad780392788a8ccf9e30d6",
+    "src/asr_lab/benchmark.py": "382b9faa741d36153e847796b518494cf31821e9ca65e2391e25fb79c1f828b5"
+  },
+  "local_source_commit": "a1d1c892906cd586f16d2403a5e12ad3fccef202",
+  "remote_git_head": "cf30f45e0beb005f43520c33e2ddad73ad67a01e",
+  "run_dir": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a",
+  "optimizer_updates_authorized": 0,
+  "generate_calls_authorized": 4,
+  "per_stage_seconds": 240,
+  "total_seconds": 1200,
+  "launch_unix": 1792767742.259558
+}

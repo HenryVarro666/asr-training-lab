@@ -4,9 +4,11 @@
 
 ## 当前目标（已更新）
 
+**最新阶段已完成：[原始／25／50／100步单句重复对照](../reports/repetition-onset/README.md)。** 按[合同](REPETITION_ONSET_PROBE.md)以相同512预算完成4次生成、0更新、99.16秒。base/25/50均正常EOS且该句16词全对；100复现512无EOS的170次`CULINARY`加`CUL`。最早已测阳性为100，不能推断精确首次异常更新或训练机制；fixed128总体退化在25步已观察到，与单句循环起点分开。完整raw token/EOS/解码/解析/监控和独立审计已归档。到此停止，无后续自动队列，不恢复或扩大训练。
+
 用户授权的[Early100实验](EARLY100_EXPERIMENT.md)已执行并按质量门槛停止：双卡100次更新保留892/45调度；三个fixed128结果通过，最早观测25步已退化。完整clean出现1条512-token截断，campaign维持failed，other未执行。全部实际产物见[报告](../reports/early100/README.md)。本阶段不恢复、重试或扩预算。
 
-**当前阶段已完成：固定checkpoint100／512-token的异常取证。** 按[实验单](TRUNCATION_PROBE.md)完成原batch16两次和目标单句一次，共3次generate、33条消费、0更新、130.69秒。三次目标均生成相同512个token且无EOS，解码为170次`CULINARY`加末尾`CUL`；官方parser将它压成两词。原batch组成不是必要条件；模型为何产生重复尚未确定。见[完整证据](../reports/truncation-probe/README.md)。
+**此前阶段已完成：固定checkpoint100／512-token的异常取证。** 按[实验单](TRUNCATION_PROBE.md)完成原batch16两次和目标单句一次，共3次generate、33条消费、0更新、130.69秒。三次目标均生成相同512个token且无EOS，解码为170次`CULINARY`加末尾`CUL`；官方parser将它压成两词。原batch组成不是必要条件；模型为何产生重复尚未确定。见[完整证据](../reports/truncation-probe/README.md)。
 
 保留失败结果与检查点，本轮到此停止。后续如果继续，应针对训练机制另立单变量假设、预算和验收条件；不自动重试、补做other、改变LR/512-token预算或扩大训练。
 
@@ -51,4 +53,4 @@ checkpoint800在clean/other的WER为2.4192%/5.0418%，均差于原始模型，�
 
 保留原始模型及失败结果。开发集选型结束后再冻结唯一候选和评测方法，使用独立test作最终验证；test不返回指导同轮调参。若没有微调收益，选择原始模型也是有效结论。
 
-此前CPU诊断、两项有界GPU验证均已完成，代码、数据校验、Whisper参考、两卡效率、恢复和监控证据均已整理至 [交付核对表](../reports/DELIVERY_AUDIT.md)。本次Early100以部分完成且质量门槛失败结案，未执行项明确保留，历史实测见 [EXPERIMENT_STATUS.md](../EXPERIMENT_STATUS.md)。
+此前CPU诊断与有界GPU验证均已完成，代码、数据校验、Whisper参考、两卡效率、恢复和监控证据均已整理至 [交付核对表](../reports/DELIVERY_AUDIT.md)。本次Early100以部分完成且质量门槛失败结案，未执行项明确保留，历史实测见 [EXPERIMENT_STATUS.md](../EXPERIMENT_STATUS.md)。

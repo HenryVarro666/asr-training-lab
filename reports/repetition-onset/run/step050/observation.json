@@ -1,0 +1,337 @@
+{
+  "returned_width": 37,
+  "first_effective_eos_position": 36,
+  "analysis_token_count": 36,
+  "token_periodic_run": {
+    "period": null,
+    "start": null,
+    "end_exclusive": null,
+    "repeat_count": 0,
+    "span": 0,
+    "coverage": 0.0,
+    "unit": [],
+    "sequence_length": 36,
+    "by_period": [
+      {
+        "period": 1,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 2,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 3,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 4,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 5,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 6,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 7,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 8,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 9,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 10,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 11,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 12,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 13,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 14,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 15,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 16,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false
+      }
+    ]
+  },
+  "preparse_word_periodic_run": {
+    "period": null,
+    "start": null,
+    "end_exclusive": null,
+    "repeat_count": 0,
+    "span": 0,
+    "coverage": 0.0,
+    "unit": [],
+    "sequence_length": 16,
+    "by_period": [
+      {
+        "period": 1,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 2,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 3,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 4,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 5,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 6,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 7,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false
+      },
+      {
+        "period": 8,
+        "start": null,
+        "end_exclusive": null,
+        "repeat_count": 0,
+        "span": 0,
+        "coverage": 0.0,
+        "unit": [],
+        "following_partial_period": [],
+        "partial_period_counted_as_complete": false
+      }
+    ]
+  },
+  "strong_token_repetition": false,
+  "strong_word_repetition": false,
+  "strong_periodic_repetition": false,
+  "budget_exhausted": false,
+  "budget_loop": false,
+  "operational_category": "eos_terminated",
+  "definition": {
+    "token_periods": [
+      1,
+      16
+    ],
+    "word_periods": [
+      1,
+      8
+    ],
+    "minimum_repeated_periods": 20,
+    "minimum_sequence_coverage": 0.5,
+    "words": "Whitespace-split raw skip-special decode before parser/repetition-fix; no lexical normalization.",
+    "tokens": "Effective EOS and everything after its first occurrence excluded from derived token statistics; raw evidence unchanged."
+  },
+  "stage": "step050",
+  "step": 50,
+  "parser_input": "CAULIFLOWER MAYONNAISE TAKE COLD BOILED CAULIFLOWER BREAK INTO BRANCHES ADDING SALT PEPPER AND VINEGAR TO SEASON",
+  "parser_output": [
+    "English",
+    "CAULIFLOWER MAYONNAISE TAKE COLD BOILED CAULIFLOWER BREAK INTO BRANCHES ADDING SALT PEPPER AND VINEGAR TO SEASON"
+  ],
+  "counts": {
+    "substitutions": 0,
+    "deletions": 0,
+    "insertions": 0,
+    "hits": 16,
+    "reference_words": 16
+  },
+  "repetition_fix_observation": {
+    "input": "CAULIFLOWER MAYONNAISE TAKE COLD BOILED CAULIFLOWER BREAK INTO BRANCHES ADDING SALT PEPPER AND VINEGAR TO SEASON",
+    "output": "CAULIFLOWER MAYONNAISE TAKE COLD BOILED CAULIFLOWER BREAK INTO BRANCHES ADDING SALT PEPPER AND VINEGAR TO SEASON",
+    "input_characters": 112,
+    "output_characters": 112,
+    "input_words": 16,
+    "output_words": 16,
+    "equals_actual_parser_hypothesis": true,
+    "method": "Original helper called after the unmodified parser for observation; never replaces parser output."
+  }
+}

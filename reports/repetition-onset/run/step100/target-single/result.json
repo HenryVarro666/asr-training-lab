@@ -1,0 +1,59 @@
+{
+  "status": "complete",
+  "stage": "target-single",
+  "generate_calls": 1,
+  "consumed_examples": 1,
+  "optimizer_updates": 0,
+  "raw_generation_missing": false,
+  "legacy_truncated_ids": [
+    "652-129742-0006"
+  ],
+  "effective_eos_ids": [
+    151645,
+    151643
+  ],
+  "legacy_eos_ids": [
+    151645,
+    151643
+  ],
+  "eos_sets_equal": true,
+  "artifacts": {
+    "metadata.json": {
+      "sha256": "6ef245297a5c59b433439da397036c6f4cfb2383aab628239ba5bad5254b3a6f",
+      "bytes": 6000
+    },
+    "raw-tokens.pt": {
+      "sha256": "ba498e1957abe32e0336e786961b89870b283b65028ba9fd6e624a62766a3cbb",
+      "bytes": 6931
+    },
+    "input-guard.json": {
+      "sha256": "72840471c78f74a2eaa4acb4c574f7e30a1cdd95cc2ae1659315ddeaa6113132",
+      "bytes": 161
+    },
+    "inputs.json": {
+      "sha256": "8a1f22f38189bc92dae9aed37790d09e7f4f60119a3378ddadac6de2f864c21d",
+      "bytes": 12630
+    },
+    "raw-tokens.json": {
+      "sha256": "12aa70ddc615403e0463128789ff2399ba1a750546a3ac041d46275e872f3dda",
+      "bytes": 14327
+    },
+    "decoded.json": {
+      "sha256": "f28c6838dfd18117aa4f0fdf235e8f01f44a15782d985d67825e7286a7ed8cf0",
+      "bytes": 20756
+    },
+    "effective-generation.json": {
+      "sha256": "90d980511832f1378396ff132908c01b7f3b5b73423883473a6d9a2eb868e9bc",
+      "bytes": 4729
+    },
+    "gpu-preflight.json": {
+      "sha256": "2307febd8183e203895996c58a02c2e6104d84ac2fc9f162dcdddc472a5f3fcc",
+      "bytes": 260
+    },
+    "inputs.pt": {
+      "sha256": "51d83aa165fe0da91d006fdedbe3e0deb0e90fba47cf8db2c8288f35df8e13ea",
+      "bytes": 241457
+    }
+  },
+  "identity_sha256": "b5073af3926ea8f5a515d9b8ed20e3619df8242cc17542d43685c11c3467bc41"
+}

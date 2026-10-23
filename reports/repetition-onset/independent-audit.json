@@ -1,0 +1,2190 @@
+{
+  "status": "passed",
+  "audited_utc": "2026-10-23T15:05:24.158250+00:00",
+  "audit_mode": "Independent CPU-only saved-evidence audit; no new generation or weight-content rehash.",
+  "source_script": {
+    "path": "/mnt/raid/asr-lab/repo/reports/repetition-onset/validation/audit_saved_evidence.py",
+    "sha256": "de5aec384aeceb9598d3ad752196b5c6927ece4fa163a0794931061a75ea4056",
+    "bytes": 27335
+  },
+  "command": "/mnt/raid/asr-lab/venv/bin/python /mnt/raid/asr-lab/repo/reports/repetition-onset/validation/audit_saved_evidence.py --run-dir /mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a",
+  "CPU_VISIBLE_DEVICE_CONTRACT": "",
+  "package_versions": {
+    "torch": "2.8.0+cu128",
+    "transformers": "4.57.6",
+    "tokenizers": "0.22.2",
+    "qwen-asr": "0.0.6",
+    "jiwer": "4.0.0"
+  },
+  "parser_source": {
+    "path": "/mnt/raid/asr-lab/vendor/Qwen3-ASR/qwen_asr/inference/utils.py",
+    "sha256": "b37fb4140e6d9be85f2ecb1552ed16136eb98a57f44b402f8b0b213cb6df2a82",
+    "bytes": 13915
+  },
+  "normalizer_source": {
+    "path": "/mnt/raid/asr-lab/venv/lib/python3.10/site-packages/transformers/models/whisper/english_normalizer.py",
+    "sha256": "1a6a81b72bc69eccf61d7a24b16015bb6c31249254725abe092747e348cfe758",
+    "bytes": 22857
+  },
+  "jiwer_source": {
+    "path": "/mnt/raid/asr-lab/venv/lib/python3.10/site-packages/jiwer/process.py",
+    "sha256": "47ec0046008d434c78d4c9fba370959b0150029b466a20938f7218c717ee0436",
+    "bytes": 13647
+  },
+  "helper_source": {
+    "path": "/mnt/raid/asr-lab/repo/src/asr_lab/repetition_metrics.py",
+    "sha256": "95f232d3e46b258ce07096d08ef4fcfc8201003635aa49f9ec609496035c1596",
+    "bytes": 4534
+  },
+  "audited_generate_calls": 4,
+  "audited_consumed_examples": 4,
+  "optimizer_updates": 0,
+  "stages": [
+    {
+      "stage": "base",
+      "step": 0,
+      "all_assertions_passed": true,
+      "tokenizer_class": "<class 'transformers.models.qwen2.tokenization_qwen2_fast.Qwen2TokenizerFast'>",
+      "tokenizer_source": {
+        "path": "/mnt/raid/asr-lab/venv/lib/python3.10/site-packages/transformers/models/qwen2/tokenization_qwen2_fast.py",
+        "sha256": "1025a3b86526283bd86a447f0fe2d991d09775b32d3fdcc233c9e447b0611049",
+        "bytes": 5210
+      },
+      "artifacts_hash_checked": 9,
+      "inference_calls": 1,
+      "optimizer_updates": 0,
+      "raw_pt_json_prefix_and_slice_match": true,
+      "all_inputs_equal_prior_singleton": true,
+      "runtime_and_effective_equal_prior_singleton": true,
+      "eos_positions": [
+        26
+      ],
+      "pad_id": 151645,
+      "preparse_word_frequency": {
+        "Cauliflower": 1,
+        "mayonnaise:": 1,
+        "Take": 1,
+        "cold": 1,
+        "boiled": 1,
+        "cauliflower,": 1,
+        "break": 1,
+        "into": 1,
+        "branches,": 1,
+        "adding": 1,
+        "salt,": 1,
+        "pepper,": 1,
+        "and": 1,
+        "vinegar": 1,
+        "to": 1,
+        "season.": 1
+      },
+      "parser_output": [
+        "English",
+        "Cauliflower mayonnaise: Take cold boiled cauliflower, break into branches, adding salt, pepper, and vinegar to season."
+      ],
+      "normalized_hypothesis": "cauliflower mayonnaise take cold boiled cauliflower break into branches adding salt pepper and vinegar to season",
+      "counts": {
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "hits": 16,
+        "reference_words": 16
+      },
+      "preparse_counts": {
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "hits": 16,
+        "reference_words": 16
+      },
+      "independent_periodicity": {
+        "returned_width": 27,
+        "first_effective_eos_position": 26,
+        "analysis_token_count": 26,
+        "token_periodic_run": {
+          "period": null,
+          "start": null,
+          "end_exclusive": null,
+          "repeat_count": 0,
+          "span": 0,
+          "coverage": 0.0,
+          "unit": [],
+          "sequence_length": 26,
+          "by_period": [
+            {
+              "period": 1,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 2,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 3,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 4,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 5,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 6,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 7,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 8,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 9,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 10,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 11,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 12,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 13,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            }
+          ]
+        },
+        "preparse_word_periodic_run": {
+          "period": null,
+          "start": null,
+          "end_exclusive": null,
+          "repeat_count": 0,
+          "span": 0,
+          "coverage": 0.0,
+          "unit": [],
+          "sequence_length": 16,
+          "by_period": [
+            {
+              "period": 1,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 2,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 3,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 4,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 5,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 6,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 7,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 8,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            }
+          ]
+        },
+        "strong_token_repetition": false,
+        "strong_word_repetition": false,
+        "strong_periodic_repetition": false,
+        "budget_exhausted": false,
+        "budget_loop": false,
+        "operational_category": "eos_terminated"
+      },
+      "source_helper_and_saved_periodicity_match": true,
+      "base_shards_newly_captured_without_historical_sha": [
+        "model-00001-of-00002.safetensors",
+        "model-00002-of-00002.safetensors"
+      ],
+      "model_hash_policy": "Compared saved single-stage content hashes and stable before/after/post-worker stat; no weight content rehash during audit."
+    },
+    {
+      "stage": "step025",
+      "step": 25,
+      "all_assertions_passed": true,
+      "tokenizer_class": "<class 'transformers.models.qwen2.tokenization_qwen2_fast.Qwen2TokenizerFast'>",
+      "tokenizer_source": {
+        "path": "/mnt/raid/asr-lab/venv/lib/python3.10/site-packages/transformers/models/qwen2/tokenization_qwen2_fast.py",
+        "sha256": "1025a3b86526283bd86a447f0fe2d991d09775b32d3fdcc233c9e447b0611049",
+        "bytes": 5210
+      },
+      "artifacts_hash_checked": 9,
+      "inference_calls": 1,
+      "optimizer_updates": 0,
+      "raw_pt_json_prefix_and_slice_match": true,
+      "all_inputs_equal_prior_singleton": true,
+      "runtime_and_effective_equal_prior_singleton": true,
+      "eos_positions": [
+        34
+      ],
+      "pad_id": 151645,
+      "preparse_word_frequency": {
+        "Cauliflower": 1,
+        "Mayonnaise": 1,
+        "TAKE": 1,
+        "COLD": 1,
+        "BOILED": 1,
+        "CAULIFLOWER": 1,
+        "BREAK": 1,
+        "INTO": 1,
+        "BRANCHES": 1,
+        "ADDING": 1,
+        "SALT": 1,
+        "PEPPER": 1,
+        "AND": 1,
+        "VINEGAR": 1,
+        "TO": 1,
+        "SEASON": 1
+      },
+      "parser_output": [
+        "English",
+        "Cauliflower Mayonnaise TAKE COLD BOILED CAULIFLOWER BREAK INTO BRANCHES ADDING SALT PEPPER AND VINEGAR TO SEASON"
+      ],
+      "normalized_hypothesis": "cauliflower mayonnaise take cold boiled cauliflower break into branches adding salt pepper and vinegar to season",
+      "counts": {
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "hits": 16,
+        "reference_words": 16
+      },
+      "preparse_counts": {
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "hits": 16,
+        "reference_words": 16
+      },
+      "independent_periodicity": {
+        "returned_width": 35,
+        "first_effective_eos_position": 34,
+        "analysis_token_count": 34,
+        "token_periodic_run": {
+          "period": null,
+          "start": null,
+          "end_exclusive": null,
+          "repeat_count": 0,
+          "span": 0,
+          "coverage": 0.0,
+          "unit": [],
+          "sequence_length": 34,
+          "by_period": [
+            {
+              "period": 1,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 2,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 3,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 4,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 5,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 6,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 7,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 8,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 9,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 10,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 11,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 12,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 13,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 14,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 15,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 16,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            }
+          ]
+        },
+        "preparse_word_periodic_run": {
+          "period": null,
+          "start": null,
+          "end_exclusive": null,
+          "repeat_count": 0,
+          "span": 0,
+          "coverage": 0.0,
+          "unit": [],
+          "sequence_length": 16,
+          "by_period": [
+            {
+              "period": 1,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 2,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 3,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 4,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 5,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 6,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 7,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 8,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            }
+          ]
+        },
+        "strong_token_repetition": false,
+        "strong_word_repetition": false,
+        "strong_periodic_repetition": false,
+        "budget_exhausted": false,
+        "budget_loop": false,
+        "operational_category": "eos_terminated"
+      },
+      "source_helper_and_saved_periodicity_match": true,
+      "base_shards_newly_captured_without_historical_sha": [],
+      "model_hash_policy": "Compared saved single-stage content hashes and stable before/after/post-worker stat; no weight content rehash during audit."
+    },
+    {
+      "stage": "step050",
+      "step": 50,
+      "all_assertions_passed": true,
+      "tokenizer_class": "<class 'transformers.models.qwen2.tokenization_qwen2_fast.Qwen2TokenizerFast'>",
+      "tokenizer_source": {
+        "path": "/mnt/raid/asr-lab/venv/lib/python3.10/site-packages/transformers/models/qwen2/tokenization_qwen2_fast.py",
+        "sha256": "1025a3b86526283bd86a447f0fe2d991d09775b32d3fdcc233c9e447b0611049",
+        "bytes": 5210
+      },
+      "artifacts_hash_checked": 9,
+      "inference_calls": 1,
+      "optimizer_updates": 0,
+      "raw_pt_json_prefix_and_slice_match": true,
+      "all_inputs_equal_prior_singleton": true,
+      "runtime_and_effective_equal_prior_singleton": true,
+      "eos_positions": [
+        36
+      ],
+      "pad_id": 151645,
+      "preparse_word_frequency": {
+        "CAULIFLOWER": 2,
+        "MAYONNAISE": 1,
+        "TAKE": 1,
+        "COLD": 1,
+        "BOILED": 1,
+        "BREAK": 1,
+        "INTO": 1,
+        "BRANCHES": 1,
+        "ADDING": 1,
+        "SALT": 1,
+        "PEPPER": 1,
+        "AND": 1,
+        "VINEGAR": 1,
+        "TO": 1,
+        "SEASON": 1
+      },
+      "parser_output": [
+        "English",
+        "CAULIFLOWER MAYONNAISE TAKE COLD BOILED CAULIFLOWER BREAK INTO BRANCHES ADDING SALT PEPPER AND VINEGAR TO SEASON"
+      ],
+      "normalized_hypothesis": "cauliflower mayonnaise take cold boiled cauliflower break into branches adding salt pepper and vinegar to season",
+      "counts": {
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "hits": 16,
+        "reference_words": 16
+      },
+      "preparse_counts": {
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "hits": 16,
+        "reference_words": 16
+      },
+      "independent_periodicity": {
+        "returned_width": 37,
+        "first_effective_eos_position": 36,
+        "analysis_token_count": 36,
+        "token_periodic_run": {
+          "period": null,
+          "start": null,
+          "end_exclusive": null,
+          "repeat_count": 0,
+          "span": 0,
+          "coverage": 0.0,
+          "unit": [],
+          "sequence_length": 36,
+          "by_period": [
+            {
+              "period": 1,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 2,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 3,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 4,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 5,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 6,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 7,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 8,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 9,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 10,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 11,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 12,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 13,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 14,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 15,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 16,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            }
+          ]
+        },
+        "preparse_word_periodic_run": {
+          "period": null,
+          "start": null,
+          "end_exclusive": null,
+          "repeat_count": 0,
+          "span": 0,
+          "coverage": 0.0,
+          "unit": [],
+          "sequence_length": 16,
+          "by_period": [
+            {
+              "period": 1,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 2,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 3,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 4,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 5,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 6,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 7,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 8,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            }
+          ]
+        },
+        "strong_token_repetition": false,
+        "strong_word_repetition": false,
+        "strong_periodic_repetition": false,
+        "budget_exhausted": false,
+        "budget_loop": false,
+        "operational_category": "eos_terminated"
+      },
+      "source_helper_and_saved_periodicity_match": true,
+      "base_shards_newly_captured_without_historical_sha": [],
+      "model_hash_policy": "Compared saved single-stage content hashes and stable before/after/post-worker stat; no weight content rehash during audit."
+    },
+    {
+      "stage": "step100",
+      "step": 100,
+      "all_assertions_passed": true,
+      "tokenizer_class": "<class 'transformers.models.qwen2.tokenization_qwen2_fast.Qwen2TokenizerFast'>",
+      "tokenizer_source": {
+        "path": "/mnt/raid/asr-lab/venv/lib/python3.10/site-packages/transformers/models/qwen2/tokenization_qwen2_fast.py",
+        "sha256": "1025a3b86526283bd86a447f0fe2d991d09775b32d3fdcc233c9e447b0611049",
+        "bytes": 5210
+      },
+      "artifacts_hash_checked": 9,
+      "inference_calls": 1,
+      "optimizer_updates": 0,
+      "raw_pt_json_prefix_and_slice_match": true,
+      "all_inputs_equal_prior_singleton": true,
+      "runtime_and_effective_equal_prior_singleton": true,
+      "eos_positions": [],
+      "pad_id": 151645,
+      "preparse_word_frequency": {
+        "CULINARY": 170,
+        "CUL": 1
+      },
+      "parser_output": [
+        "English",
+        "CULINARY CUL"
+      ],
+      "normalized_hypothesis": "culinary cul",
+      "counts": {
+        "substitutions": 2,
+        "deletions": 14,
+        "insertions": 0,
+        "hits": 0,
+        "reference_words": 16
+      },
+      "preparse_counts": {
+        "substitutions": 16,
+        "deletions": 0,
+        "insertions": 155,
+        "hits": 0,
+        "reference_words": 16
+      },
+      "independent_periodicity": {
+        "returned_width": 512,
+        "first_effective_eos_position": null,
+        "analysis_token_count": 512,
+        "token_periodic_run": {
+          "period": 3,
+          "start": 1,
+          "end_exclusive": 511,
+          "repeat_count": 170,
+          "span": 510,
+          "coverage": 0.99609375,
+          "unit": [
+            1094,
+            32593,
+            356
+          ],
+          "following_partial_period": [
+            1094
+          ],
+          "partial_period_counted_as_complete": false,
+          "sequence_length": 512,
+          "by_period": [
+            {
+              "period": 1,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 2,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 3,
+              "start": 1,
+              "end_exclusive": 511,
+              "repeat_count": 170,
+              "span": 510,
+              "coverage": 0.99609375,
+              "unit": [
+                1094,
+                32593,
+                356
+              ],
+              "following_partial_period": [
+                1094
+              ],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 4,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 5,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 6,
+              "start": 1,
+              "end_exclusive": 511,
+              "repeat_count": 85,
+              "span": 510,
+              "coverage": 0.99609375,
+              "unit": [
+                1094,
+                32593,
+                356,
+                1094,
+                32593,
+                356
+              ],
+              "following_partial_period": [
+                1094
+              ],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 7,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 8,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 9,
+              "start": 1,
+              "end_exclusive": 505,
+              "repeat_count": 56,
+              "span": 504,
+              "coverage": 0.984375,
+              "unit": [
+                1094,
+                32593,
+                356,
+                1094,
+                32593,
+                356,
+                1094,
+                32593,
+                356
+              ],
+              "following_partial_period": [
+                1094,
+                32593,
+                356,
+                1094,
+                32593,
+                356,
+                1094
+              ],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 10,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 11,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 12,
+              "start": 1,
+              "end_exclusive": 505,
+              "repeat_count": 42,
+              "span": 504,
+              "coverage": 0.984375,
+              "unit": [
+                1094,
+                32593,
+                356,
+                1094,
+                32593,
+                356,
+                1094,
+                32593,
+                356,
+                1094,
+                32593,
+                356
+              ],
+              "following_partial_period": [
+                1094,
+                32593,
+                356,
+                1094,
+                32593,
+                356,
+                1094
+              ],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 13,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 14,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 15,
+              "start": 1,
+              "end_exclusive": 511,
+              "repeat_count": 34,
+              "span": 510,
+              "coverage": 0.99609375,
+              "unit": [
+                1094,
+                32593,
+                356,
+                1094,
+                32593,
+                356,
+                1094,
+                32593,
+                356,
+                1094,
+                32593,
+                356,
+                1094,
+                32593,
+                356
+              ],
+              "following_partial_period": [
+                1094
+              ],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 16,
+              "start": null,
+              "end_exclusive": null,
+              "repeat_count": 0,
+              "span": 0,
+              "coverage": 0.0,
+              "unit": [],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            }
+          ]
+        },
+        "preparse_word_periodic_run": {
+          "period": 1,
+          "start": 0,
+          "end_exclusive": 170,
+          "repeat_count": 170,
+          "span": 170,
+          "coverage": 0.9941520467836257,
+          "unit": [
+            "CULINARY"
+          ],
+          "following_partial_period": [],
+          "partial_period_counted_as_complete": false,
+          "sequence_length": 171,
+          "by_period": [
+            {
+              "period": 1,
+              "start": 0,
+              "end_exclusive": 170,
+              "repeat_count": 170,
+              "span": 170,
+              "coverage": 0.9941520467836257,
+              "unit": [
+                "CULINARY"
+              ],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 2,
+              "start": 0,
+              "end_exclusive": 170,
+              "repeat_count": 85,
+              "span": 170,
+              "coverage": 0.9941520467836257,
+              "unit": [
+                "CULINARY",
+                "CULINARY"
+              ],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 3,
+              "start": 0,
+              "end_exclusive": 168,
+              "repeat_count": 56,
+              "span": 168,
+              "coverage": 0.9824561403508771,
+              "unit": [
+                "CULINARY",
+                "CULINARY",
+                "CULINARY"
+              ],
+              "following_partial_period": [
+                "CULINARY",
+                "CULINARY"
+              ],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 4,
+              "start": 0,
+              "end_exclusive": 168,
+              "repeat_count": 42,
+              "span": 168,
+              "coverage": 0.9824561403508771,
+              "unit": [
+                "CULINARY",
+                "CULINARY",
+                "CULINARY",
+                "CULINARY"
+              ],
+              "following_partial_period": [
+                "CULINARY",
+                "CULINARY"
+              ],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 5,
+              "start": 0,
+              "end_exclusive": 170,
+              "repeat_count": 34,
+              "span": 170,
+              "coverage": 0.9941520467836257,
+              "unit": [
+                "CULINARY",
+                "CULINARY",
+                "CULINARY",
+                "CULINARY",
+                "CULINARY"
+              ],
+              "following_partial_period": [],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 6,
+              "start": 0,
+              "end_exclusive": 168,
+              "repeat_count": 28,
+              "span": 168,
+              "coverage": 0.9824561403508771,
+              "unit": [
+                "CULINARY",
+                "CULINARY",
+                "CULINARY",
+                "CULINARY",
+                "CULINARY",
+                "CULINARY"
+              ],
+              "following_partial_period": [
+                "CULINARY",
+                "CULINARY"
+              ],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 7,
+              "start": 0,
+              "end_exclusive": 168,
+              "repeat_count": 24,
+              "span": 168,
+              "coverage": 0.9824561403508771,
+              "unit": [
+                "CULINARY",
+                "CULINARY",
+                "CULINARY",
+                "CULINARY",
+                "CULINARY",
+                "CULINARY",
+                "CULINARY"
+              ],
+              "following_partial_period": [
+                "CULINARY",
+                "CULINARY"
+              ],
+              "partial_period_counted_as_complete": false
+            },
+            {
+              "period": 8,
+              "start": 0,
+              "end_exclusive": 168,
+              "repeat_count": 21,
+              "span": 168,
+              "coverage": 0.9824561403508771,
+              "unit": [
+                "CULINARY",
+                "CULINARY",
+                "CULINARY",
+                "CULINARY",
+                "CULINARY",
+                "CULINARY",
+                "CULINARY",
+                "CULINARY"
+              ],
+              "following_partial_period": [
+                "CULINARY",
+                "CULINARY"
+              ],
+              "partial_period_counted_as_complete": false
+            }
+          ]
+        },
+        "strong_token_repetition": true,
+        "strong_word_repetition": true,
+        "strong_periodic_repetition": true,
+        "budget_exhausted": true,
+        "budget_loop": true,
+        "operational_category": "budget_exhausted_with_periodic_repetition"
+      },
+      "source_helper_and_saved_periodicity_match": true,
+      "base_shards_newly_captured_without_historical_sha": [],
+      "model_hash_policy": "Compared saved single-stage content hashes and stable before/after/post-worker stat; no weight content rehash during audit."
+    }
+  ],
+  "independently_recomputed_onset": {
+    "strong_periodic_repetition": {
+      "earliest_observed_stage": "step100",
+      "earliest_observed_step": 100,
+      "previous_sampled_negative_step": 50,
+      "observed_positive_then_negative": false
+    },
+    "budget_loop": {
+      "earliest_observed_stage": "step100",
+      "earliest_observed_step": 100,
+      "previous_sampled_negative_step": 50,
+      "observed_positive_then_negative": false
+    }
+  },
+  "step100_full_sequences_equal_old_singleton": true,
+  "step100_continuation_equal_old_singleton": true,
+  "sources": [
+    {
+      "path": "/mnt/raid/asr-lab/data/manifests/dev-clean.jsonl",
+      "sha256": "fc6f7f048b571431d244a854b204a8e9ed34062796350359e10ee5635ff9ca9a",
+      "bytes": 1196607
+    },
+    {
+      "path": "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/6345/93306/6345-93306-0021.flac",
+      "sha256": "446c692048d06bd34043c0b905a2c397762f3a1a99eea8c14b311692dde7b8c2",
+      "bytes": 68619
+    },
+    {
+      "path": "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/6345/93306/6345-93306-0022.flac",
+      "sha256": "54e43ee4e0d63f30e96e06018ddff44237173b2a39765b0bbc3dbfe3aee61587",
+      "bytes": 169512
+    },
+    {
+      "path": "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/6345/93306/6345-93306-0023.flac",
+      "sha256": "29ccb7b6100fe1cc3f3946741fffcc452c89951459122510c2c5d0206e88cd6a",
+      "bytes": 198567
+    },
+    {
+      "path": "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/6345/93306/6345-93306-0024.flac",
+      "sha256": "1107f62cef790aa8ce487940859e28cdd51fb0fa4cb587091c86108479cd3eb3",
+      "bytes": 174607
+    },
+    {
+      "path": "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/6345/93306/6345-93306-0025.flac",
+      "sha256": "ed7521b626f9d318247899d1991cf0d6d138bac07eddf44dac32fe3551313ead",
+      "bytes": 204867
+    },
+    {
+      "path": "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0000.flac",
+      "sha256": "3b5a648b0f2d6fbeb66fc148991c4de2a83632ed81bbfdd632d47a501f749289",
+      "bytes": 107242
+    },
+    {
+      "path": "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0001.flac",
+      "sha256": "8ca172b174888ccd05192acb2398ef2b4703135153a37e0199f37205e352a6f6",
+      "bytes": 161795
+    },
+    {
+      "path": "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0002.flac",
+      "sha256": "65125efea2931a59c90a465ff974fb5e8169d5185ae943dcf98f4ca2120277c6",
+      "bytes": 74745
+    },
+    {
+      "path": "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0003.flac",
+      "sha256": "ca90f6d2b7eb54423bbb44abeaf0bd1c4911cf3b96b1bc30fd09004fdc224452",
+      "bytes": 171276
+    },
+    {
+      "path": "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0004.flac",
+      "sha256": "bdf6e0286dfc6b99dc1ad22142092ae20b6fb859842a79159c7f8204a40e7986",
+      "bytes": 137572
+    },
+    {
+      "path": "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0005.flac",
+      "sha256": "51dcaef73e305509b06521201659be0f6ad6785aa541005d8bb2f16e02800e5f",
+      "bytes": 117076
+    },
+    {
+      "path": "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0006.flac",
+      "sha256": "081f8aed018bb8324cf490f95df9efbeab37e002d81b4400a66e3166c4b6c21c",
+      "bytes": 165592
+    },
+    {
+      "path": "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0007.flac",
+      "sha256": "1ddf97392398293af0be1bccc26ec5c4a3c12caf56db713f1ecb3a37f2198427",
+      "bytes": 94706
+    },
+    {
+      "path": "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0008.flac",
+      "sha256": "e0e4b0ffd80083aa069b1e486e41a0d5ab7089468040719ef5938269f6c97b60",
+      "bytes": 67940
+    },
+    {
+      "path": "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0009.flac",
+      "sha256": "98175a8e4bc663c37bd0e4a183ac48f649044faac4940f9b137b834a856a81be",
+      "bytes": 255166
+    },
+    {
+      "path": "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0010.flac",
+      "sha256": "ec63c05858ca82542abafc816a5e5e6db23638a5981dd1cd485ecd0d89df60d4",
+      "bytes": 69722
+    },
+    {
+      "path": "/mnt/raid/asr-lab/repo/reports/diagnosis/inputs/whisper-english-spelling-normalizer.json",
+      "sha256": "bf1c507dc8724ca9cf9903640dacfb69dae2f00edee4f21ceba106a7392f26dd",
+      "bytes": 52666
+    },
+    {
+      "path": "/mnt/raid/asr-lab/repo/reports/diagnosis/text-audit.json",
+      "sha256": "ac2c053ea4b3a19183fd2c2698dd5f8f96cf8149901be95f84b09a08bb2ee632",
+      "bytes": 6540
+    },
+    {
+      "path": "/mnt/raid/asr-lab/repo/reports/repetition-onset/inputs/model-reference.json",
+      "sha256": "812ec7ed461720455e2cd192cc6ff97e227a1a703c5e2af4e4d9678d8e9e893a",
+      "bytes": 54256
+    },
+    {
+      "path": "/mnt/raid/asr-lab/repo/reports/truncation-probe/inputs/reference-batch.json",
+      "sha256": "b586b6c289ea97d78a9b3396a4718579949328ff9f9ec301b3c026ff83de18e5",
+      "bytes": 44835
+    },
+    {
+      "path": "/mnt/raid/asr-lab/repo/reports/truncation-probe/inputs/upstream-generation-source.json",
+      "sha256": "0abe865b4c3a27cc3b964d02a0afe0b703796a96299c98b591a15384cd59a868",
+      "bytes": 6131
+    },
+    {
+      "path": "/mnt/raid/asr-lab/repo/reports/truncation-probe/inputs/upstream-parser-source.json",
+      "sha256": "04c9662a338837df23b6c91ac35f9daade9e69c5b950cd7ec8b4296712c7eb30",
+      "bytes": 5294
+    },
+    {
+      "path": "/mnt/raid/asr-lab/repo/scripts/monitor.py",
+      "sha256": "4e6a0d4f1fb9e44d98f419041f2f6ee2277b3ab65abb5b3a054256ef9440d96c",
+      "bytes": 9353
+    },
+    {
+      "path": "/mnt/raid/asr-lab/repo/scripts/run_qwen_campaign.py",
+      "sha256": "c72d49316a2b35ccddc6ef8f52e10060d79dfe607ee8efd9a12e91e76e966cdd",
+      "bytes": 26036
+    },
+    {
+      "path": "/mnt/raid/asr-lab/repo/scripts/run_truncation_probe.py",
+      "sha256": "a4be9be1860df9c2076d34893f96fe25f5d135885060c5990dc0795fd2927708",
+      "bytes": 14256
+    },
+    {
+      "path": "/mnt/raid/asr-lab/repo/src/asr_lab/prepare_data.py",
+      "sha256": "489c613f44bc0054fea1db49453eeec4a1c6f9e9b1cb64478d901cba70f8f752",
+      "bytes": 15887
+    },
+    {
+      "path": "/mnt/raid/asr-lab/repo/src/asr_lab/qwen_data.py",
+      "sha256": "769aed8478da4a6e9dcd33ed3bf87aaa6b846eede3d677c9ae4dc88469dc89b0",
+      "bytes": 7139
+    },
+    {
+      "path": "/mnt/raid/asr-lab/repo/src/asr_lab/qwen_early100.py",
+      "sha256": "0d54a5472c4695019ebb935bab03c79509f0aab5f3633ea55cf384291eff8c46",
+      "bytes": 16753
+    },
+    {
+      "path": "/mnt/raid/asr-lab/repo/src/asr_lab/qwen_evaluate.py",
+      "sha256": "0a2012eb016cddadee7b3c0f0ca5ad9f3f94b502faad780392788a8ccf9e30d6",
+      "bytes": 4936
+    },
+    {
+      "path": "/mnt/raid/asr-lab/repo/src/asr_lab/qwen_roundtrip_control.py",
+      "sha256": "718fd41d61f0d89d2e6acaea67fd3df7f827ab66c7167d0bba359cfeac197d00",
+      "bytes": 20091
+    },
+    {
+      "path": "/mnt/raid/asr-lab/repo/src/asr_lab/qwen_train.py",
+      "sha256": "97951994468a14b10ce57b7c5c864dcef6ffb6af4ee9c75e621b48c01e9de961",
+      "bytes": 19921
+    },
+    {
+      "path": "/mnt/raid/asr-lab/repo/src/asr_lab/qwen_truncation_probe.py",
+      "sha256": "3c3c73d1e14f0f040b02893a5269747852558292c308507f87db5b85584fd74e",
+      "bytes": 14796
+    },
+    {
+      "path": "/mnt/raid/asr-lab/repo/src/asr_lab/repetition_metrics.py",
+      "sha256": "95f232d3e46b258ce07096d08ef4fcfc8201003635aa49f9ec609496035c1596",
+      "bytes": 4534
+    },
+    {
+      "path": "/mnt/raid/asr-lab/repo/src/asr_lab/training_utils.py",
+      "sha256": "5b8eba6aab98e97080baace995e6acc8aca619b5da89e3bbfa7a2209ea6d2ad4",
+      "bytes": 2937
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/checkpoint.json",
+      "sha256": "bad241c06c02cfaf01d37eff1a3672c56ed2269ab10734346809c75d653567d7",
+      "bytes": 6051
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/prefix-complete.json",
+      "sha256": "b32e69488301d492bd3cffe6b957bf07dc20449726dadc0e2ca2bebbbae4eb80",
+      "bytes": 3173
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-25/checkpoint.json",
+      "sha256": "75002c62b11b26929d58bd652d566d9a2ce0fb23627603a0239ee231d1e12f6a",
+      "bytes": 6053
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-25/prefix-complete.json",
+      "sha256": "31d212e3c5d768a51a00166c685279c13ffc398341ae2850ca8f2c770ad3be1d",
+      "bytes": 2624
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-50/checkpoint.json",
+      "sha256": "3a8315df2aab87e647fedc10798587b2ba5f0e5d6a2d9f8f567336ba144ce89c",
+      "bytes": 6052
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-50/prefix-complete.json",
+      "sha256": "43978f30a394480691c9b75da07d1842863a89254ffc9f7cd9600b721cb405a5",
+      "bytes": 2624
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/base/identity.json",
+      "sha256": "b402a4016ccdbeed1d4d939726d72a065ab473d03e554f1c909a22d9dd65d2de",
+      "bytes": 31141
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/base/model-verification.json",
+      "sha256": "750276b8d944a264e002d4225d8f07e82523d29a520957115d407a3232eafbe5",
+      "bytes": 29295
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/base/observation.json",
+      "sha256": "734ac59e7359aa79331b520776c64b44e0a312f468108c62a0e31069e24a8d9c",
+      "bytes": 8014
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/base/target-single/decoded.json",
+      "sha256": "307de5ca7581b6ae637078e08ddb8e13439e519c7b00bef9adaf8ff70afc450a",
+      "bytes": 3298
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/base/target-single/effective-generation.json",
+      "sha256": "90d980511832f1378396ff132908c01b7f3b5b73423883473a6d9a2eb868e9bc",
+      "bytes": 4729
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/base/target-single/gpu-preflight.json",
+      "sha256": "384d1be56f169c7226372ee001fe32ffbb4274d2b7cb3be57af1c5185fd2b18a",
+      "bytes": 260
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/base/target-single/input-guard.json",
+      "sha256": "72840471c78f74a2eaa4acb4c574f7e30a1cdd95cc2ae1659315ddeaa6113132",
+      "bytes": 161
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/base/target-single/inputs.json",
+      "sha256": "8a1f22f38189bc92dae9aed37790d09e7f4f60119a3378ddadac6de2f864c21d",
+      "bytes": 12630
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/base/target-single/inputs.pt",
+      "sha256": "51d83aa165fe0da91d006fdedbe3e0deb0e90fba47cf8db2c8288f35df8e13ea",
+      "bytes": 241457
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/base/target-single/metadata.json",
+      "sha256": "546b9c09433eff4f073b7aa9167178df8bee1c835fae775b1328391d896b893a",
+      "bytes": 5986
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/base/target-single/raw-tokens.json",
+      "sha256": "1adf3ececefdade08ca98abf239ae942418add48f4bb7e0f55e750944cae3bf5",
+      "bytes": 2681
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/base/target-single/raw-tokens.pt",
+      "sha256": "94fe55ad16d1f16fe6260f74f70a1091451fd16c685401e1a41ee6d7c245f42b",
+      "bytes": 2963
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/base/target-single/result.json",
+      "sha256": "16e61b69a0edf78b3641da7d483aca671328ce1f66770cab692543ceadb2b732",
+      "bytes": 1656
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/base/target-single/stage.json",
+      "sha256": "5960fb8893ece0473fa16e2b230e993626ea9de3623a563ea580b52178fe5555",
+      "bytes": 673
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/base/target-single/status.json",
+      "sha256": "7020a6ea0b8656a9fcc348fc94e4b2e59ce69b2bfc4ac84f4845edd2452428c8",
+      "bytes": 67
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/campaign.json",
+      "sha256": "46c9ac16cb971f37e8ca4cdc6c68b3454a2e1cc50f413eb63fcbcccc66d2928b",
+      "bytes": 60298
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/onset-summary.json",
+      "sha256": "95316295959a187afb21bf315e0b676918ad9dfa7d96d44bdb4266d58845d6cc",
+      "bytes": 878
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step025/identity.json",
+      "sha256": "e64fd272b03277a61dce5c44c15570527498482daa71a9661e32555f2c0814b6",
+      "bytes": 31230
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step025/model-verification.json",
+      "sha256": "a9164e68f3df7ff817596aacf4ea82a8b239447eba4f3e58005139d2e10f109d",
+      "bytes": 27375
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step025/observation.json",
+      "sha256": "adb5ba04fb9fb80d0f83e54c8995447ca614c8dd5ba1e94038120a02bc42025c",
+      "bytes": 8822
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step025/target-single/decoded.json",
+      "sha256": "5bf1638852c3efe461216e815855ed7f7b15be896db7f2b59fc45c5530e0ab1a",
+      "bytes": 3445
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step025/target-single/effective-generation.json",
+      "sha256": "90d980511832f1378396ff132908c01b7f3b5b73423883473a6d9a2eb868e9bc",
+      "bytes": 4729
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step025/target-single/gpu-preflight.json",
+      "sha256": "7ba3783f2eb79e45ca42b6bc0ee7a09776e0c6527f4b5a477bbe6758b5853f00",
+      "bytes": 259
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step025/target-single/input-guard.json",
+      "sha256": "72840471c78f74a2eaa4acb4c574f7e30a1cdd95cc2ae1659315ddeaa6113132",
+      "bytes": 161
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step025/target-single/inputs.json",
+      "sha256": "8a1f22f38189bc92dae9aed37790d09e7f4f60119a3378ddadac6de2f864c21d",
+      "bytes": 12630
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step025/target-single/inputs.pt",
+      "sha256": "51d83aa165fe0da91d006fdedbe3e0deb0e90fba47cf8db2c8288f35df8e13ea",
+      "bytes": 241457
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step025/target-single/metadata.json",
+      "sha256": "6ef245297a5c59b433439da397036c6f4cfb2383aab628239ba5bad5254b3a6f",
+      "bytes": 6000
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step025/target-single/raw-tokens.json",
+      "sha256": "1fb3d23da2b42c575ddab9e0c768df131c49600b37c17894aa1d9ea9fb7ebe16",
+      "bytes": 2899
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step025/target-single/raw-tokens.pt",
+      "sha256": "d1f68dfcdbddc283b7637cb5e82c3430483dc3f369487b79725ebd52b38ddeb5",
+      "bytes": 3027
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step025/target-single/result.json",
+      "sha256": "a220adca021740b58d78ec4d62b7b0c9e3511c1935f506a4cbfb2c7af628d077",
+      "bytes": 1656
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step025/target-single/stage.json",
+      "sha256": "10f4145abd15d10b373706639fa322f3eadd0057babb55d49c732a030c7dcb9e",
+      "bytes": 684
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step025/target-single/status.json",
+      "sha256": "6d8bfa64ec65467150bfb03560bb3b54d45d2da6608a2a7fb70e48ce104ce66e",
+      "bytes": 68
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step050/identity.json",
+      "sha256": "9c2839b448054d717df8056e1ef4f758c76fded7fb35eb062828878b14b02112",
+      "bytes": 31228
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step050/model-verification.json",
+      "sha256": "453a7e7c24db7ad20c078987644acc0ec2725f027cf48026d764427737b42468",
+      "bytes": 27373
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step050/observation.json",
+      "sha256": "8593e7d3d3bd8c6eee96bebf65ca84862858bec76fd4cf7a1515ca641758ee6e",
+      "bytes": 8822
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step050/target-single/decoded.json",
+      "sha256": "63bdaf564933504fecc090927b9d733571376a26f78a62050f238e228658a663",
+      "bytes": 3490
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step050/target-single/effective-generation.json",
+      "sha256": "90d980511832f1378396ff132908c01b7f3b5b73423883473a6d9a2eb868e9bc",
+      "bytes": 4729
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step050/target-single/gpu-preflight.json",
+      "sha256": "d6b90cc113ea0aaf14c1eefc6731c73667efc7eac85f83ef4ed7e92e67e78b24",
+      "bytes": 258
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step050/target-single/input-guard.json",
+      "sha256": "72840471c78f74a2eaa4acb4c574f7e30a1cdd95cc2ae1659315ddeaa6113132",
+      "bytes": 161
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step050/target-single/inputs.json",
+      "sha256": "8a1f22f38189bc92dae9aed37790d09e7f4f60119a3378ddadac6de2f864c21d",
+      "bytes": 12630
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step050/target-single/inputs.pt",
+      "sha256": "51d83aa165fe0da91d006fdedbe3e0deb0e90fba47cf8db2c8288f35df8e13ea",
+      "bytes": 241457
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step050/target-single/metadata.json",
+      "sha256": "6ef245297a5c59b433439da397036c6f4cfb2383aab628239ba5bad5254b3a6f",
+      "bytes": 6000
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step050/target-single/raw-tokens.json",
+      "sha256": "41ccc502d9161561d1fa6f89b4f747423bfc7e9d264ccadd60e32c2d844f80ae",
+      "bytes": 2949
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step050/target-single/raw-tokens.pt",
+      "sha256": "531e52d4a4695203b793be17d3dd4ee67303e286ce42f491f17fb5085b86347d",
+      "bytes": 3027
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step050/target-single/result.json",
+      "sha256": "5e53ebdc2ba4c8650dd4ccf9864d85dc87832bc816367a6b9054339a1a5a2cc5",
+      "bytes": 1656
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step050/target-single/stage.json",
+      "sha256": "91b10d93659b94c78a107f19dacd68007f8ca394e26b96c93b749383a562bdc9",
+      "bytes": 685
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step050/target-single/status.json",
+      "sha256": "a7f7960c7b7d8ebcf79a0b9b0f1d6e7c742824997b1c50b645da0e881b08afb6",
+      "bytes": 67
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step100/identity.json",
+      "sha256": "b5073af3926ea8f5a515d9b8ed20e3619df8242cc17542d43685c11c3467bc41",
+      "bytes": 31292
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step100/model-verification.json",
+      "sha256": "a9708fbd135a86114edcdeb5b236525c47caf032b19680399ec0a5f3b5aec65b",
+      "bytes": 27451
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step100/observation.json",
+      "sha256": "104b817689933eb831319cc0583aebc0947fd0902ef7e3dd4d0e433ffb015ea0",
+      "bytes": 14085
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step100/target-single/decoded.json",
+      "sha256": "f28c6838dfd18117aa4f0fdf235e8f01f44a15782d985d67825e7286a7ed8cf0",
+      "bytes": 20756
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step100/target-single/effective-generation.json",
+      "sha256": "90d980511832f1378396ff132908c01b7f3b5b73423883473a6d9a2eb868e9bc",
+      "bytes": 4729
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step100/target-single/gpu-preflight.json",
+      "sha256": "2307febd8183e203895996c58a02c2e6104d84ac2fc9f162dcdddc472a5f3fcc",
+      "bytes": 260
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step100/target-single/input-guard.json",
+      "sha256": "72840471c78f74a2eaa4acb4c574f7e30a1cdd95cc2ae1659315ddeaa6113132",
+      "bytes": 161
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step100/target-single/inputs.json",
+      "sha256": "8a1f22f38189bc92dae9aed37790d09e7f4f60119a3378ddadac6de2f864c21d",
+      "bytes": 12630
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step100/target-single/inputs.pt",
+      "sha256": "51d83aa165fe0da91d006fdedbe3e0deb0e90fba47cf8db2c8288f35df8e13ea",
+      "bytes": 241457
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step100/target-single/metadata.json",
+      "sha256": "6ef245297a5c59b433439da397036c6f4cfb2383aab628239ba5bad5254b3a6f",
+      "bytes": 6000
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step100/target-single/raw-tokens.json",
+      "sha256": "12aa70ddc615403e0463128789ff2399ba1a750546a3ac041d46275e872f3dda",
+      "bytes": 14327
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step100/target-single/raw-tokens.pt",
+      "sha256": "ba498e1957abe32e0336e786961b89870b283b65028ba9fd6e624a62766a3cbb",
+      "bytes": 6931
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step100/target-single/result.json",
+      "sha256": "80cbc681a0823d725c4088157b87222ec4b6dd743a2e4c0bd22078e6025e1bfb",
+      "bytes": 1683
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step100/target-single/stage.json",
+      "sha256": "ec4ddb1ae8d5873edf723f5c43d00e137019d4b7cd1954bcbcc80bd3fd1db63f",
+      "bytes": 685
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-repetition-onset-20261023-a/step100/target-single/status.json",
+      "sha256": "b085a87219a23b85f73e88e940b1aca37b77558410bc320cea3a9a1735dd5634",
+      "bytes": 68
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-truncation-probe-20261023-a/identity.json",
+      "sha256": "11efebbcb097966f7af168a7c34625bd146ce004591f15d46a7bca54608bc444",
+      "bytes": 8686
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-truncation-probe-20261023-a/target-single/decoded.json",
+      "sha256": "f28c6838dfd18117aa4f0fdf235e8f01f44a15782d985d67825e7286a7ed8cf0",
+      "bytes": 20756
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-truncation-probe-20261023-a/target-single/effective-generation.json",
+      "sha256": "90d980511832f1378396ff132908c01b7f3b5b73423883473a6d9a2eb868e9bc",
+      "bytes": 4729
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-truncation-probe-20261023-a/target-single/inputs.json",
+      "sha256": "8a1f22f38189bc92dae9aed37790d09e7f4f60119a3378ddadac6de2f864c21d",
+      "bytes": 12630
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-truncation-probe-20261023-a/target-single/inputs.pt",
+      "sha256": "51d83aa165fe0da91d006fdedbe3e0deb0e90fba47cf8db2c8288f35df8e13ea",
+      "bytes": 241457
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-truncation-probe-20261023-a/target-single/metadata.json",
+      "sha256": "6ef245297a5c59b433439da397036c6f4cfb2383aab628239ba5bad5254b3a6f",
+      "bytes": 6000
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-truncation-probe-20261023-a/target-single/raw-tokens.json",
+      "sha256": "12aa70ddc615403e0463128789ff2399ba1a750546a3ac041d46275e872f3dda",
+      "bytes": 14327
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-truncation-probe-20261023-a/target-single/raw-tokens.pt",
+      "sha256": "ba498e1957abe32e0336e786961b89870b283b65028ba9fd6e624a62766a3cbb",
+      "bytes": 6931
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-truncation-probe-20261023-a/target-single/result.json",
+      "sha256": "1356f96b1cfe09e4e801c6a103dcc019e79a4d7f156c279ce6dbc4e448dd5a67",
+      "bytes": 1547
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-truncation-probe-20261023-a/target-single/stage.json",
+      "sha256": "5806a5621931dee71b6b7541f21fcc591508326542fc7cef13bb5073b8b4101a",
+      "bytes": 671
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-truncation-probe-20261023-a/target-single/status.json",
+      "sha256": "084d3436dcd208abb2f321e476c7ce2c4f9f0aa19056ef65646528e9337fc70b",
+      "bytes": 67
+    },
+    {
+      "path": "/mnt/raid/asr-lab/vendor/Qwen3-ASR/qwen_asr/core/transformers_backend/modeling_qwen3_asr.py",
+      "sha256": "2fb5d98da1933748f5117ee05ce4e7150c9ead8154fb8e25f7af3968b853adc7",
+      "bytes": 57850
+    },
+    {
+      "path": "/mnt/raid/asr-lab/vendor/Qwen3-ASR/qwen_asr/inference/qwen3_asr.py",
+      "sha256": "0b1770f8e907b6c5a0a1e9ebce037cb63f48555f3cd15eaf6ea2078e9df41a7b",
+      "bytes": 31163
+    },
+    {
+      "path": "/mnt/raid/asr-lab/vendor/Qwen3-ASR/qwen_asr/inference/utils.py",
+      "sha256": "b37fb4140e6d9be85f2ecb1552ed16136eb98a57f44b402f8b0b213cb6df2a82",
+      "bytes": 13915
+    }
+  ],
+  "limits": [
+    "Four saved sampled checkpoints only; exact first update, monotonicity and training cause remain unknown.",
+    "Base pin/path are historical; its shard SHA is a new stage capture, not a historical file hash.",
+    "Model-content hashes are checked against saved stage verification; audit does not repeat expensive weight scans.",
+    "Old target-single is an observed fresh-worker reference, not the original early100 full-dev token stream.",
+    "No GPU/model loading, decoding generation, training, or extra sample inference occurred in this audit."
+  ]
+}
