@@ -1,0 +1,22 @@
+{
+  "verified_utc": "2026-10-23T05:04:34.395054+00:00",
+  "payload_commit": "2b7e8b27beebe6143030d2ffb98bc978425857dc",
+  "branch": "experiment/early100",
+  "local_path": "/Users/caochao/Documents/ChatGPT/train/.git/asr-backups/asr-lab-early100-2b7e8b2.bundle",
+  "remote_host": "exx@100.70.230.73",
+  "remote_path": "/mnt/raid/asr-lab/backups/asr-lab-early100-2b7e8b2.bundle",
+  "bytes": 4874333,
+  "sha256": "2bccdd944fb9329826e781d2bc11682d43fb5919861033bfa34bac097388d2b2",
+  "remote_sha256": "2bccdd944fb9329826e781d2bc11682d43fb5919861033bfa34bac097388d2b2",
+  "git_bundle_verify_exit_code": 0,
+  "git_bundle_verify_output": "The bundle contains these 2 refs:\n2b7e8b27beebe6143030d2ffb98bc978425857dc HEAD\n2b7e8b27beebe6143030d2ffb98bc978425857dc refs/heads/experiment/early100\nThe bundle records a complete history.\nThe bundle uses this hash algorithm: sha1\n/Users/caochao/Documents/ChatGPT/train/.git/asr-backups/asr-lab-early100-2b7e8b2.bundle is okay\n",
+  "scope": "Committed code, plans, reports, raw saved predictions, metrics, status, TensorBoard events, image exports and source manifests through payload_commit; includes prior history of this branch. Verification receipt itself is added after the bundle and copied separately.",
+  "excludes": [
+    "raw audio",
+    "HF cache",
+    "large model and optimizer tensors",
+    "credentials",
+    "untracked unrelated from-scratch plans/specs"
+  ],
+  "weights_have_independent_offsite_backup": false
+}
