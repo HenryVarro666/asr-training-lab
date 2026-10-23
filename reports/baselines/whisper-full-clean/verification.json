@@ -1,0 +1,15 @@
+{
+  "source": "/mnt/raid/asr-lab/runs/pretrained-baseline",
+  "examples": 2694,
+  "exact_id_and_raw_reference_match": true,
+  "normalization_rerun_matches": true,
+  "stored_edit_counts_match": true,
+  "wer": 0.034057045551298425,
+  "reference_words": 54027,
+  "sha256": {
+    "reports/baselines/whisper-full-clean/dev-eligible-all.jsonl": "ef45d3d7632840c217d7bb6277761986ec174ab6273f8bf93448b4d816f20714",
+    "reports/baselines/whisper-full-clean/dev-eligible-all.metrics.json": "5ce29c4f3d0396b3326bf4df04660ee9583c1029f322f74d8471595557e79619",
+    "reports/diagnosis/inputs/dev-clean.jsonl": "fc6f7f048b571431d244a854b204a8e9ed34062796350359e10ee5635ff9ca9a"
+  },
+  "scope": "Pretrained Whisper-small reference; different architecture and generation budget from Qwen. Not a Whisper full-finetuning result."
+}

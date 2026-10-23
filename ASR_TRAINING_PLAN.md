@@ -4,7 +4,7 @@
 
 版本：2026-10-22，Astra 6 策略审阅第二版。已纳入用户新增“现代架构、充分利用两张 H100、比较数据/模型/张量并行”的要求。实施与真实训练由 GPT-6.1 Sol 接续。
 
-本文件是待执行和持续验收的方案，不代表模型已经训练完成、取得指标或上线。运行状态、实际命令及指标分别以仓库 README、运行目录和报告为准。原始输入为用户提供的 `deepinfer_speech_llm_asr_plan.md`；外部事实经过下述官方来源核查。
+本文件记录设计与验收合同；执行结果以仓库 README、运行目录和报告为准。首轮双卡训练、基线／结束评测及checkpoint800诊断已完成，但微调后WER退化；详见[实验状态](EXPERIMENT_STATUS.md)和[诊断报告](reports/diagnosis/README.md)。当前按阶段验证保存／重载路径，尚未开始第二轮训练。原始输入为用户提供的 `deepinfer_speech_llm_asr_plan.md`；外部事实经过下述官方来源核查。
 
 ## 1. 现在要做的决定
 
@@ -334,7 +334,7 @@ torchrun --standalone --nproc_per_node=2 vendor/Qwen3-ASR/finetuning/qwen3_asr_s
 
 以run.json加载后实测唯一参数2.038B估算，FP32参数、梯度、Adam一二阶矩合计约`16P=32.61GB≈30.37GiB/卡`（修正早期HF元数据2.349B估算）。这还**不包括**DDP bucket、临时转换、attention/logits、激活和CUDA workspace；启动前按GPU0剩余空间实测。先microbatch2，必要时activation checkpointing；最低batch仍不适配时明确记录后采用0.6B或经验证分片，不能动现有服务。
 
-恢复checkpoint一般不保存梯度，因此FP32模型+Adam状态约`12P=28.19GB≈26.3GiB/份`，还要加元数据。保留2份加一次原子写临时副本，单run峰值约84.6GB；两条run可超过原120GB预算。必须另计预训练snapshot、最终export重复权重、环境和数据。当前campaign采用300GiB上限、挂载盘500GiB保留线；每次保存前按实际文件大小预留临时空间，不能先删唯一可恢复点再保存新文件。可复用同一checkpoint作为最终模型，避免无意义复制整份export。
+恢复checkpoint一般不保存梯度。按实测唯一参数2,038,052,480计算，FP32模型+Adam状态约`12P=24.46GB≈22.78GiB/份`，还要加元数据；此前28.19GB来自已被修正的参数估算。当前supervisor每份另留1GiB后向上取整为24GiB，保留2份加一次临时副本，共预留72GiB写入峰值。必须另计预训练snapshot、最终export重复权重、环境和数据。当前campaign采用300GiB上限、挂载盘500GiB保留线；每次保存前按实际文件大小预留临时空间，不能先删唯一可恢复点再保存新文件。可复用同一checkpoint作为最终模型，避免无意义复制整份export。
 
 充分利用GPU的指标是有效音频吞吐、有效tokens吞吐、内存余量、训练质量和费用；不是让显存越满越好。若小batch通信占比高，优先增大每卡batch/梯度累积并保持实验有效batch口径，再考虑复杂并行。
 

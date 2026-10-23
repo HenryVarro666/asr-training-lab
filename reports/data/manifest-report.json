@@ -1,0 +1,41 @@
+{
+  "created_at": "2026-10-22T09:21:31.389793+00:00",
+  "source": "https://www.openslr.org/12",
+  "license": "CC BY 4.0",
+  "max_duration": 30,
+  "sha256_definition": "decoded mono float32 little-endian PCM,16kHz",
+  "leakage_checks": [
+    "utterance_id",
+    "speaker_id",
+    "decoded_pcm_sha256"
+  ],
+  "splits": {
+    "dev-clean": {
+      "accepted": 2694,
+      "rejected": 9,
+      "max_duration": 30,
+      "prepared_at": "2026-10-22T08:15:15.813069+00:00",
+      "hours": 5.3075918750000035,
+      "speakers": 40,
+      "manifest_sha256": "fc6f7f048b571431d244a854b204a8e9ed34062796350359e10ee5635ff9ca9a"
+    },
+    "train-clean-100": {
+      "accepted": 28539,
+      "rejected": 0,
+      "max_duration": 30,
+      "prepared_at": "2026-10-22T08:15:15.785434+00:00",
+      "hours": 100.59087965277813,
+      "speakers": 251,
+      "manifest_sha256": "5b8155f7daa57a2f2c039b96800c2d9d16b620deaa57bc4e187a0b84e8867d9e"
+    },
+    "dev-other": {
+      "accepted": 2857,
+      "rejected": 7,
+      "max_duration": 30,
+      "prepared_at": "2026-10-22T09:21:31.401043+00:00",
+      "hours": 5.05781953125,
+      "speakers": 33,
+      "manifest_sha256": "bcd2dbbc9f189cb550cba5d0a35203732a1425aad80e66e513276a627266b3fa"
+    }
+  }
+}

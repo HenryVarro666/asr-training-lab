@@ -1,6 +1,6 @@
-# 下一阶段候选：零更新保存／重载控制
+# 零更新保存／重载控制
 
-设计于2026-10-22，依据Astra 6审阅建议拟定。**尚未实现或启动；不代表新的训练队列。** checkpoint800两项开发集评测现已确认退化在第800步时存在，且未出现新的输入或计分异常。先完成该阶段报告，再安排本控制。
+设计于2026-10-22，依据Astra 6审阅建议拟定。Sol已实现独立控制脚本，Astra只读审阅未发现阻断项；11项专属契约测试及本地完整60项测试通过。**代码已具备启动条件，实际通过与否以run结果为准；不代表新的训练队列。** checkpoint800两项开发集评测已确认退化在第800步时存在，且未出现新的输入或计分异常。
 
 ## 问题与范围
 
@@ -34,3 +34,14 @@
 ## 实施验收
 
 由Sol实现独立控制脚本，复用首轮模型初始化和评测逻辑，避免复制逻辑造成另一套不一致的路径。先检查源代码与首轮指纹，完成必要的CPU契约测试和只读review，才启动一次有界控制。产物保留在独立run，并同步小型报告至`reports/`；大权重继续留在服务器。
+
+实际入口（使用新的run目录）：
+
+```bash
+/mnt/raid/asr-lab/venv/bin/python scripts/run_zero_update_control.py \
+  --run-dir /mnt/raid/asr-lab/runs/qwen-zero-update-control-20261022 \
+  --receipt /mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/campaign.json \
+  --training-receipt /mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/main-epoch1/run.json
+```
+
+准备、原始评测、重载评测为独立子进程，避免class-level forward patch污染对照。保存采用实际`SafeTrainer._align_special_tokens()`与`save_model()`；不调用`train()`。比较覆盖全部参数、持久buffer和共享别名，保存前后及生成前后状态、实际BF16值、输入tensors、最终thinker解码规则和生成token。EOS之后的batch padding从语义token比较中移除，原始token仍保存。若仅token不一致，最多再做一次base-repeat，仍标记控制未通过；完整logits因果定位另行规划。

@@ -6,6 +6,10 @@ __pycache__/
 .DS_Store
 runs/
 data/
+!reports/data/
+reports/data/*
+!reports/data/*.json
+!reports/data/README.md
 cache/
 .env
 .env.*

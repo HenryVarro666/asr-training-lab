@@ -20,6 +20,7 @@
 - 主模型 `Qwen/Qwen3-ASR-1.7B`，revision `7278e1e70fe206f11671096ffdd38061171dd6e5`；加载后唯一参数实测2,038,052,480。此前HF元数据估算2.349B不能作为实际训练参数数目。
 - 主训练双卡DDP、BF16 autocast、FP32权重/梯度/Adam状态、SDPA、activation checkpointing；microbatch8 × 2卡 × accumulation2，总batch32；lr1e-5，一轮。
 - 主训练完成892次optimizer更新、epoch=1.0，用时25.65分钟。含4个效率实验和完整评测的campaign总时长53.87分钟。
+- 覆盖口径：训练集有28,539条唯一音频/100.59088小时，日志累计28,544次样本消费/100.60493小时，多出的5次与双卡批次补齐一致；未记录逐条曝光ID，不声称每条恰好消费一次。见[覆盖记录](reports/data/training-coverage.json)。
 - 原有GPU0 PersonaPlex进程2154793仍在，未停止。最终检查只见其GPU占用，训练工作已退出；RAID仍约3.1TiB可用。
 
 ## 两张H100的实测利用
@@ -61,6 +62,8 @@
 - [固定环境](reports/environment/remote-pip-freeze.txt)
 
 原始逐句预测、指标、配置、训练曲线和GPU/磁盘采样已同步到本地 `reports/qwen-campaign-20261022-a/`。大权重留在服务器，不提交Git。TensorBoard文件保留，SSH转发存活时可通过 http://127.0.0.1:16006/ 查看。
+
+数据归档／manifest校验收据已补齐到[本地数据记录](reports/data/README.md)，Whisper完整合格clean预测已同步并逐句复算至[参考验证](reports/baselines/whisper-full-clean/verification.json)。TensorBoard事件文件也已同步，解析确认892条训练loss与8条dev loss，见[事件验证](reports/monitoring/tensorboard-verification.json)。
 
 首轮campaign结束后，15分钟自动化 `h100-asr` 已删除。当前诊断由独立runner监控并设置20分钟期限；没有恢复无限自动实验队列。监控不重启训练、扩大预算或停止其他服务。
 

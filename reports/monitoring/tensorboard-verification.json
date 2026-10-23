@@ -1,0 +1,117 @@
+{
+  "source": "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/main-epoch1/tensorboard",
+  "files": {
+    "events.out.tfevents.1792678843.sn4622126358.4002589.0": {
+      "bytes": 200626,
+      "sha256": "b94c503cd3b5a93ea0029e33fba0b42a1ec06562feddf5c6ebc5ceb8c2d5cd70"
+    }
+  },
+  "tags": {
+    "images": [],
+    "audio": [],
+    "histograms": [],
+    "scalars": [
+      "train/loss",
+      "train/grad_norm",
+      "train/learning_rate",
+      "train/epoch",
+      "eval/loss",
+      "eval/runtime",
+      "eval/samples_per_second",
+      "eval/steps_per_second",
+      "train/train_runtime",
+      "train/train_samples_per_second",
+      "train/train_steps_per_second",
+      "train/total_flos",
+      "train/train_loss"
+    ],
+    "distributions": [],
+    "tensors": [
+      "args/text_summary",
+      "model_config/text_summary"
+    ],
+    "graph": false,
+    "meta_graph": false,
+    "run_metadata": []
+  },
+  "scalars": {
+    "train/loss": {
+      "records": 892,
+      "first_step": 1,
+      "last_step": 892,
+      "last_value": 0.04410000145435333
+    },
+    "train/grad_norm": {
+      "records": 892,
+      "first_step": 1,
+      "last_step": 892,
+      "last_value": 1.718237042427063
+    },
+    "train/learning_rate": {
+      "records": 892,
+      "first_step": 1,
+      "last_step": 892,
+      "last_value": 1.1806375432854566e-08
+    },
+    "train/epoch": {
+      "records": 901,
+      "first_step": 1,
+      "last_step": 892,
+      "last_value": 1.0
+    },
+    "eval/loss": {
+      "records": 8,
+      "first_step": 100,
+      "last_step": 800,
+      "last_value": 0.060102708637714386
+    },
+    "eval/runtime": {
+      "records": 8,
+      "first_step": 100,
+      "last_step": 800,
+      "last_value": 1.8581000566482544
+    },
+    "eval/samples_per_second": {
+      "records": 8,
+      "first_step": 100,
+      "last_step": 800,
+      "last_value": 68.88700103759766
+    },
+    "eval/steps_per_second": {
+      "records": 8,
+      "first_step": 100,
+      "last_step": 800,
+      "last_value": 17.222000122070312
+    },
+    "train/train_runtime": {
+      "records": 1,
+      "first_step": 892,
+      "last_step": 892,
+      "last_value": 1537.1209716796875
+    },
+    "train/train_samples_per_second": {
+      "records": 1,
+      "first_step": 892,
+      "last_step": 892,
+      "last_value": 18.566999435424805
+    },
+    "train/train_steps_per_second": {
+      "records": 1,
+      "first_step": 892,
+      "last_step": 892,
+      "last_value": 0.5799999833106995
+    },
+    "train/total_flos": {
+      "records": 1,
+      "first_step": 892,
+      "last_step": 892,
+      "last_value": 8.813997881871565e+16
+    },
+    "train/train_loss": {
+      "records": 1,
+      "first_step": 892,
+      "last_step": 892,
+      "last_value": 0.06584528833627701
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "verified_at": "2026-10-22T09:21:31.268324+00:00",
+  "source": "https://www.openslr.org/12",
+  "checksum_source": "https://www.openslr.org/resources/12/md5sum.txt",
+  "archives": [
+    {
+      "split": "dev-clean",
+      "url": "https://openslr.trmal.net/resources/12/dev-clean.tar.gz",
+      "path": "/mnt/raid/asr-lab/data/raw/dev-clean.tar.gz",
+      "md5": "42e2234ba48799c1f50f24a7926300a1",
+      "sha256": "76f87d090650617fca0cac8f88b9416e0ebf80350acb97b343a85fa903728ab3",
+      "bytes": 337926286
+    },
+    {
+      "split": "train-clean-100",
+      "url": "https://openslr.trmal.net/resources/12/train-clean-100.tar.gz",
+      "path": "/mnt/raid/asr-lab/data/raw/train-clean-100.tar.gz",
+      "md5": "2a93770f6d5c6c964bc36631d331a522",
+      "sha256": "d4ddd1d5a6ab303066f14971d768ee43278a5f2a0aa43dc716b0e64ecbbbf6e2",
+      "bytes": 6387309499
+    },
+    {
+      "split": "dev-other",
+      "url": "https://openslr.trmal.net/resources/12/dev-other.tar.gz",
+      "path": "/mnt/raid/asr-lab/data/raw/dev-other.tar.gz",
+      "md5": "c8d0bcc9cca99d4f8b62fcc847357931",
+      "sha256": "12661c48e8c3fe1de2c1caa4c3e135193bfb1811584f11f569dd12645aa84365",
+      "bytes": 314305928
+    }
+  ]
+}
