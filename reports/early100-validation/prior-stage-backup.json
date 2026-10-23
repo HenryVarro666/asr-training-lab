@@ -1,0 +1,12 @@
+{
+  "created_utc": "2026-10-23T04:39:24.118117+00:00",
+  "committed_project_head": "7a085d3dcfd146b3f2cde284bc2107d5a91edd7c",
+  "local_path": "/Users/caochao/Documents/ChatGPT/train/.git/asr-backups/asr-lab-before-early100-7a085d3.bundle",
+  "remote_path": "/mnt/raid/asr-lab/backups/asr-lab-before-early100-7a085d3.bundle",
+  "bytes": 3877550,
+  "sha256": "a6fb2a11dd230c862ee53d23f60f7d4c59678dd6c9ecb8d23865fbe629b862d6",
+  "git_bundle_verify": "passed",
+  "scope": "Committed code, documentation, small reports and Git history before early100. Does not include raw audio or remote model weights.",
+  "remote_sha256": "a6fb2a11dd230c862ee53d23f60f7d4c59678dd6c9ecb8d23865fbe629b862d6",
+  "local_remote_sha256_match": true
+}

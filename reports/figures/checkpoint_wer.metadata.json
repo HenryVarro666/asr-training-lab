@@ -1,0 +1,99 @@
+{
+  "title": "Eligible-development generation WER by checkpoint",
+  "caption": "Eligible \u226430 s development data only: dev-clean 2,694/2,703; dev-other 2,857/2,864. Not the full unfiltered official benchmark or independent test.\nSame IDs, references, normalizer, greedy decoding, batch 16 and 512-token budget; zero truncation. Lines join measured points, not an observed continuous trajectory.",
+  "sources": [
+    {
+      "path": "reports/qwen-campaign-20261022-a/evaluation/baseline-dev-clean/predictions.metrics.json",
+      "sha256": "504a67be4f3f64393c0c49e36dc2a9c2994dc38bf5136b7c9d76fa9026d72fd7",
+      "bytes": 63805
+    },
+    {
+      "path": "reports/diagnosis/checkpoint800/dev-clean/predictions.metrics.json",
+      "sha256": "6b706d7ced282eb3ee0a7efd2ec3ce2c6d8939d9aaf18fc5aa89044744e4670e",
+      "bytes": 63823
+    },
+    {
+      "path": "reports/qwen-campaign-20261022-a/evaluation/final-dev_clean/predictions.metrics.json",
+      "sha256": "650a7b1b235cbdeec36568734dcae6f2cc36b13a2d6e10e48134e98ed5dfd203",
+      "bytes": 63823
+    },
+    {
+      "path": "reports/qwen-campaign-20261022-a/evaluation/baseline-dev-other/predictions.metrics.json",
+      "sha256": "d77df8e4454ca42ac65fd568df83d8f054f8c1fd46c128e03c7b10b176714b8c",
+      "bytes": 67460
+    },
+    {
+      "path": "reports/diagnosis/checkpoint800/dev-other/predictions.metrics.json",
+      "sha256": "7ddf4296eaf0877180d12905ba5cf9d34054122eaa6e38d3324b1aef7d585145",
+      "bytes": 67476
+    },
+    {
+      "path": "reports/qwen-campaign-20261022-a/evaluation/final-dev_other/predictions.metrics.json",
+      "sha256": "e120bcf8fe2beda540e7721ff1a4d2f545492f81fbcce0f36fb9de6103d28e11",
+      "bytes": 67476
+    }
+  ],
+  "derived_data": [
+    {
+      "split": "dev-clean",
+      "checkpoints": [
+        0,
+        800,
+        892
+      ],
+      "wer_percent": [
+        1.6121568845207026,
+        2.4191607899753826,
+        2.3728876302589446
+      ],
+      "reference_words": 54027,
+      "examples": 2694,
+      "edits": [
+        871,
+        1307,
+        1282
+      ],
+      "generation_batch": 16,
+      "max_new_tokens": 512
+    },
+    {
+      "split": "dev-other",
+      "checkpoints": [
+        0,
+        800,
+        892
+      ],
+      "wer_percent": [
+        3.085029283293832,
+        5.041819285840205,
+        4.985015572052573
+      ],
+      "reference_words": 51053,
+      "examples": 2857,
+      "edits": [
+        1575,
+        2574,
+        2545
+      ],
+      "generation_batch": 16,
+      "max_new_tokens": 512
+    }
+  ],
+  "outputs": {
+    "png": {
+      "path": "reports/figures/checkpoint_wer.png",
+      "sha256": "016f55d2d7675acce202bdff7d297ded0b70c5bf799e2b2d89837d8a0631b63d",
+      "bytes": 177068
+    },
+    "svg": {
+      "path": "reports/figures/checkpoint_wer.svg",
+      "sha256": "aea23bce15aee34040aa84ec277524886ccd8352430cf4874f47004bdd6f7fc4",
+      "bytes": 13745
+    },
+    "pdf": {
+      "path": "reports/figures/checkpoint_wer.pdf",
+      "sha256": "265fde45ba5ea68df9ea73e08b044a6d90c5d6be0672bc15e54c281f98a7eebf",
+      "bytes": 27985
+    }
+  }
+}

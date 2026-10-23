@@ -1,0 +1,322 @@
+{
+  "created_utc": "2026-10-23T04:40:26.800628+00:00",
+  "script": {
+    "path": "scripts/plot_experiment_results.py",
+    "sha256": "92ef304147aef6404247a07f038d00736c27579d0cf5fda7468892662c868400",
+    "bytes": 14676
+  },
+  "python_version": "3.12.15",
+  "matplotlib_version": "3.11.2",
+  "command": "/Users/caochao/Documents/ChatGPT/train/.venv/bin/python scripts/plot_experiment_results.py",
+  "defaults": {
+    "smoothing_window": 25,
+    "dpi": 220,
+    "additional_runs": []
+  },
+  "figures": {
+    "training_dynamics": {
+      "title": "Observed training loss, development loss and learning rate",
+      "caption": "Original run: 892 training records; its development loss is observed only at updates 100\u2013800. No endpoint dev-loss point is invented.\nLoss is not generation WER. Raw losses and explicitly labeled trailing means are both shown; learning-rate values are logged observations.",
+      "sources": [
+        {
+          "path": "reports/qwen-campaign-20261022-a/main-epoch1/metrics.jsonl",
+          "sha256": "a7163b884ddf50e99ead921b518c0218aa966ac8733875bc0a8aab2483d07572",
+          "bytes": 389844
+        },
+        {
+          "path": "reports/qwen-campaign-20261022-a/main-epoch1/run.json",
+          "sha256": "df89c47dd1273ce7872bced73c17e2a0b193aa32cea0d4918c428f837b22d758",
+          "bytes": 5706
+        }
+      ],
+      "derived_data": [
+        {
+          "label": "Original full epoch (892 updates)",
+          "train_records": 892,
+          "first_step": 1,
+          "last_step": 892,
+          "eval_records": 8,
+          "eval_points": [
+            {
+              "step": 100,
+              "eval_loss": 0.08050515502691269
+            },
+            {
+              "step": 200,
+              "eval_loss": 0.07796081900596619
+            },
+            {
+              "step": 300,
+              "eval_loss": 0.07430365681648254
+            },
+            {
+              "step": 400,
+              "eval_loss": 0.07128160446882248
+            },
+            {
+              "step": 500,
+              "eval_loss": 0.06453505158424377
+            },
+            {
+              "step": 600,
+              "eval_loss": 0.06281807273626328
+            },
+            {
+              "step": 700,
+              "eval_loss": 0.06261815875768661
+            },
+            {
+              "step": 800,
+              "eval_loss": 0.060102708637714386
+            }
+          ],
+          "smoothing": {
+            "method": "trailing arithmetic mean; partial window at the beginning",
+            "window": 25
+          }
+        }
+      ],
+      "outputs": {
+        "png": {
+          "path": "reports/figures/training_dynamics.png",
+          "sha256": "e2c71ff9f6dd280c6b9c312b417425a86a9080d32e913d882a3b36584e87c33e",
+          "bytes": 328830
+        },
+        "svg": {
+          "path": "reports/figures/training_dynamics.svg",
+          "sha256": "c5c5f807c5cbc83071590a20c4419fb9cb7c245f5cadda282931ab7b7e6bef13",
+          "bytes": 63137
+        },
+        "pdf": {
+          "path": "reports/figures/training_dynamics.pdf",
+          "sha256": "7f48a3836698c7242aa67c5e09002ec3c88f19cab0fd117aaa374cb66a5b7a09",
+          "bytes": 42088
+        }
+      },
+      "metadata": {
+        "path": "reports/figures/training_dynamics.metadata.json",
+        "sha256": "6bc4bae22f0ea33904f564306e6d62811b2d3917f8f8a5fdff2d410fec193f42",
+        "bytes": 2379
+      }
+    },
+    "checkpoint_wer": {
+      "title": "Eligible-development generation WER by checkpoint",
+      "caption": "Eligible \u226430 s development data only: dev-clean 2,694/2,703; dev-other 2,857/2,864. Not the full unfiltered official benchmark or independent test.\nSame IDs, references, normalizer, greedy decoding, batch 16 and 512-token budget; zero truncation. Lines join measured points, not an observed continuous trajectory.",
+      "sources": [
+        {
+          "path": "reports/qwen-campaign-20261022-a/evaluation/baseline-dev-clean/predictions.metrics.json",
+          "sha256": "504a67be4f3f64393c0c49e36dc2a9c2994dc38bf5136b7c9d76fa9026d72fd7",
+          "bytes": 63805
+        },
+        {
+          "path": "reports/diagnosis/checkpoint800/dev-clean/predictions.metrics.json",
+          "sha256": "6b706d7ced282eb3ee0a7efd2ec3ce2c6d8939d9aaf18fc5aa89044744e4670e",
+          "bytes": 63823
+        },
+        {
+          "path": "reports/qwen-campaign-20261022-a/evaluation/final-dev_clean/predictions.metrics.json",
+          "sha256": "650a7b1b235cbdeec36568734dcae6f2cc36b13a2d6e10e48134e98ed5dfd203",
+          "bytes": 63823
+        },
+        {
+          "path": "reports/qwen-campaign-20261022-a/evaluation/baseline-dev-other/predictions.metrics.json",
+          "sha256": "d77df8e4454ca42ac65fd568df83d8f054f8c1fd46c128e03c7b10b176714b8c",
+          "bytes": 67460
+        },
+        {
+          "path": "reports/diagnosis/checkpoint800/dev-other/predictions.metrics.json",
+          "sha256": "7ddf4296eaf0877180d12905ba5cf9d34054122eaa6e38d3324b1aef7d585145",
+          "bytes": 67476
+        },
+        {
+          "path": "reports/qwen-campaign-20261022-a/evaluation/final-dev_other/predictions.metrics.json",
+          "sha256": "e120bcf8fe2beda540e7721ff1a4d2f545492f81fbcce0f36fb9de6103d28e11",
+          "bytes": 67476
+        }
+      ],
+      "derived_data": [
+        {
+          "split": "dev-clean",
+          "checkpoints": [
+            0,
+            800,
+            892
+          ],
+          "wer_percent": [
+            1.6121568845207026,
+            2.4191607899753826,
+            2.3728876302589446
+          ],
+          "reference_words": 54027,
+          "examples": 2694,
+          "edits": [
+            871,
+            1307,
+            1282
+          ],
+          "generation_batch": 16,
+          "max_new_tokens": 512
+        },
+        {
+          "split": "dev-other",
+          "checkpoints": [
+            0,
+            800,
+            892
+          ],
+          "wer_percent": [
+            3.085029283293832,
+            5.041819285840205,
+            4.985015572052573
+          ],
+          "reference_words": 51053,
+          "examples": 2857,
+          "edits": [
+            1575,
+            2574,
+            2545
+          ],
+          "generation_batch": 16,
+          "max_new_tokens": 512
+        }
+      ],
+      "outputs": {
+        "png": {
+          "path": "reports/figures/checkpoint_wer.png",
+          "sha256": "016f55d2d7675acce202bdff7d297ded0b70c5bf799e2b2d89837d8a0631b63d",
+          "bytes": 177068
+        },
+        "svg": {
+          "path": "reports/figures/checkpoint_wer.svg",
+          "sha256": "aea23bce15aee34040aa84ec277524886ccd8352430cf4874f47004bdd6f7fc4",
+          "bytes": 13745
+        },
+        "pdf": {
+          "path": "reports/figures/checkpoint_wer.pdf",
+          "sha256": "265fde45ba5ea68df9ea73e08b044a6d90c5d6be0672bc15e54c281f98a7eebf",
+          "bytes": 27985
+        }
+      },
+      "metadata": {
+        "path": "reports/figures/checkpoint_wer.metadata.json",
+        "sha256": "d4db18de3e99d9aeaf00a3a810fa69a9ef34f9d54395fe0f60855ae9919b6af6",
+        "bytes": 3093
+      }
+    },
+    "gpu_throughput": {
+      "title": "Controlled H100 throughput measurements",
+      "caption": "Same pinned model, 2,048-example subset and global batch 32; updates 11\u201340 after 10 warmup updates.\nUpdate timing excludes model loading, checkpoint writes and generation evaluation. GPU0 also hosts PersonaPlex; NODE topology, no assumed NVLink.",
+      "sources": [
+        {
+          "path": "reports/qwen-campaign-20261022-a/experiment_results.json",
+          "sha256": "7b0985c4e0561d36c7a9378c4fa769db10a5c9ca3b1c955b5e1cb98f25b6e008",
+          "bytes": 3977
+        },
+        {
+          "path": "reports/qwen-campaign-20261022-a/E1-single-b2/run.json",
+          "sha256": "362f5ce14e334346eac158452051b9dc37888dc08ba52269a91634c11930d586",
+          "bytes": 2945
+        },
+        {
+          "path": "reports/qwen-campaign-20261022-a/E1-single-b2/benchmark_summary.json",
+          "sha256": "7619c0df12133677b6c7c5c45062b3c670d36cbee00837744ea8952c52d42ba8",
+          "bytes": 638
+        },
+        {
+          "path": "reports/qwen-campaign-20261022-a/E2-dual-b2/run.json",
+          "sha256": "8917f53fb725e20a7e70aef7ddeeb267456f87ec01fd0906bdbd55d9e724ce40",
+          "bytes": 2944
+        },
+        {
+          "path": "reports/qwen-campaign-20261022-a/E2-dual-b2/benchmark_summary.json",
+          "sha256": "2215e61d9496c145351582d7bbcb0b48882a5616fad14aea428488797fa53a51",
+          "bytes": 638
+        },
+        {
+          "path": "reports/qwen-campaign-20261022-a/E3-dual-b4/run.json",
+          "sha256": "acc176e2c933dcba1d7441162134b0498394a1dc389af82e23f670fdb8653172",
+          "bytes": 2944
+        },
+        {
+          "path": "reports/qwen-campaign-20261022-a/E3-dual-b4/benchmark_summary.json",
+          "sha256": "2bce7cf488e8740d3d3f046e4c86a9f416997bfe902e433ddea719820d88d11c",
+          "bytes": 639
+        },
+        {
+          "path": "reports/qwen-campaign-20261022-a/E4-dual-b8/run.json",
+          "sha256": "1a67f3c578d7a48a62cd178a98a28bb7d883a053905ee801d5948ce3bae5c4f6",
+          "bytes": 2944
+        },
+        {
+          "path": "reports/qwen-campaign-20261022-a/E4-dual-b8/benchmark_summary.json",
+          "sha256": "52fdb216d80ed85a8c3d9966ceb725d9deb6c663de342d8ec41e03adabe7064d",
+          "bytes": 635
+        }
+      ],
+      "derived_data": [
+        {
+          "name": "E1-single-b2",
+          "world_size": 1,
+          "microbatch": 2,
+          "accumulation": 16,
+          "effective_batch": 32,
+          "audio_seconds_per_wall_second": 92.40828676509733,
+          "project_peak_gib": 35.637484550476074,
+          "minimum_free_gib": 54.5576171875
+        },
+        {
+          "name": "E2-dual-b2",
+          "world_size": 2,
+          "microbatch": 2,
+          "accumulation": 8,
+          "effective_batch": 32,
+          "audio_seconds_per_wall_second": 177.82783941372216,
+          "project_peak_gib": 43.21487903594971,
+          "minimum_free_gib": 24.873046875
+        },
+        {
+          "name": "E3-dual-b4",
+          "world_size": 2,
+          "microbatch": 4,
+          "accumulation": 4,
+          "effective_batch": 32,
+          "audio_seconds_per_wall_second": 257.2953106723787,
+          "project_peak_gib": 44.511733531951904,
+          "minimum_free_gib": 24.0625
+        },
+        {
+          "name": "E4-dual-b8",
+          "world_size": 2,
+          "microbatch": 8,
+          "accumulation": 2,
+          "effective_batch": 32,
+          "audio_seconds_per_wall_second": 290.572487442234,
+          "project_peak_gib": 47.2247896194458,
+          "minimum_free_gib": 19.88671875
+        }
+      ],
+      "outputs": {
+        "png": {
+          "path": "reports/figures/gpu_throughput.png",
+          "sha256": "a4b55037c745e9cbb60e2407cd0faee38b332adae95646cda40736387dbaa10e",
+          "bytes": 145784
+        },
+        "svg": {
+          "path": "reports/figures/gpu_throughput.svg",
+          "sha256": "ed914039cac0bd35f94b0c717bfdfa3c5d10f5db90f6e6b0d491d91ad3e35401",
+          "bytes": 11656
+        },
+        "pdf": {
+          "path": "reports/figures/gpu_throughput.pdf",
+          "sha256": "ab6a54195f783a4bfeb59e9d92eb1d5e219211b2347e9e37327ad2b1670ed4ad",
+          "bytes": 27630
+        }
+      },
+      "metadata": {
+        "path": "reports/figures/gpu_throughput.metadata.json",
+        "sha256": "2005e06d6153373bbad7e188fa64db0ead26838b2d8ad4334ea5bc7a8dc29cb2",
+        "bytes": 3793
+      }
+    }
+  }
+}

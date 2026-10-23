@@ -1,0 +1,110 @@
+{
+  "title": "Controlled H100 throughput measurements",
+  "caption": "Same pinned model, 2,048-example subset and global batch 32; updates 11\u201340 after 10 warmup updates.\nUpdate timing excludes model loading, checkpoint writes and generation evaluation. GPU0 also hosts PersonaPlex; NODE topology, no assumed NVLink.",
+  "sources": [
+    {
+      "path": "reports/qwen-campaign-20261022-a/experiment_results.json",
+      "sha256": "7b0985c4e0561d36c7a9378c4fa769db10a5c9ca3b1c955b5e1cb98f25b6e008",
+      "bytes": 3977
+    },
+    {
+      "path": "reports/qwen-campaign-20261022-a/E1-single-b2/run.json",
+      "sha256": "362f5ce14e334346eac158452051b9dc37888dc08ba52269a91634c11930d586",
+      "bytes": 2945
+    },
+    {
+      "path": "reports/qwen-campaign-20261022-a/E1-single-b2/benchmark_summary.json",
+      "sha256": "7619c0df12133677b6c7c5c45062b3c670d36cbee00837744ea8952c52d42ba8",
+      "bytes": 638
+    },
+    {
+      "path": "reports/qwen-campaign-20261022-a/E2-dual-b2/run.json",
+      "sha256": "8917f53fb725e20a7e70aef7ddeeb267456f87ec01fd0906bdbd55d9e724ce40",
+      "bytes": 2944
+    },
+    {
+      "path": "reports/qwen-campaign-20261022-a/E2-dual-b2/benchmark_summary.json",
+      "sha256": "2215e61d9496c145351582d7bbcb0b48882a5616fad14aea428488797fa53a51",
+      "bytes": 638
+    },
+    {
+      "path": "reports/qwen-campaign-20261022-a/E3-dual-b4/run.json",
+      "sha256": "acc176e2c933dcba1d7441162134b0498394a1dc389af82e23f670fdb8653172",
+      "bytes": 2944
+    },
+    {
+      "path": "reports/qwen-campaign-20261022-a/E3-dual-b4/benchmark_summary.json",
+      "sha256": "2bce7cf488e8740d3d3f046e4c86a9f416997bfe902e433ddea719820d88d11c",
+      "bytes": 639
+    },
+    {
+      "path": "reports/qwen-campaign-20261022-a/E4-dual-b8/run.json",
+      "sha256": "1a67f3c578d7a48a62cd178a98a28bb7d883a053905ee801d5948ce3bae5c4f6",
+      "bytes": 2944
+    },
+    {
+      "path": "reports/qwen-campaign-20261022-a/E4-dual-b8/benchmark_summary.json",
+      "sha256": "52fdb216d80ed85a8c3d9966ceb725d9deb6c663de342d8ec41e03adabe7064d",
+      "bytes": 635
+    }
+  ],
+  "derived_data": [
+    {
+      "name": "E1-single-b2",
+      "world_size": 1,
+      "microbatch": 2,
+      "accumulation": 16,
+      "effective_batch": 32,
+      "audio_seconds_per_wall_second": 92.40828676509733,
+      "project_peak_gib": 35.637484550476074,
+      "minimum_free_gib": 54.5576171875
+    },
+    {
+      "name": "E2-dual-b2",
+      "world_size": 2,
+      "microbatch": 2,
+      "accumulation": 8,
+      "effective_batch": 32,
+      "audio_seconds_per_wall_second": 177.82783941372216,
+      "project_peak_gib": 43.21487903594971,
+      "minimum_free_gib": 24.873046875
+    },
+    {
+      "name": "E3-dual-b4",
+      "world_size": 2,
+      "microbatch": 4,
+      "accumulation": 4,
+      "effective_batch": 32,
+      "audio_seconds_per_wall_second": 257.2953106723787,
+      "project_peak_gib": 44.511733531951904,
+      "minimum_free_gib": 24.0625
+    },
+    {
+      "name": "E4-dual-b8",
+      "world_size": 2,
+      "microbatch": 8,
+      "accumulation": 2,
+      "effective_batch": 32,
+      "audio_seconds_per_wall_second": 290.572487442234,
+      "project_peak_gib": 47.2247896194458,
+      "minimum_free_gib": 19.88671875
+    }
+  ],
+  "outputs": {
+    "png": {
+      "path": "reports/figures/gpu_throughput.png",
+      "sha256": "a4b55037c745e9cbb60e2407cd0faee38b332adae95646cda40736387dbaa10e",
+      "bytes": 145784
+    },
+    "svg": {
+      "path": "reports/figures/gpu_throughput.svg",
+      "sha256": "ed914039cac0bd35f94b0c717bfdfa3c5d10f5db90f6e6b0d491d91ad3e35401",
+      "bytes": 11656
+    },
+    "pdf": {
+      "path": "reports/figures/gpu_throughput.pdf",
+      "sha256": "ab6a54195f783a4bfeb59e9d92eb1d5e219211b2347e9e37327ad2b1670ed4ad",
+      "bytes": 27630
+    }
+  }
+}

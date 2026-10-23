@@ -1,0 +1,80 @@
+{
+  "title": "Observed training loss, development loss and learning rate",
+  "caption": "Original run: 892 training records; its development loss is observed only at updates 100\u2013800. No endpoint dev-loss point is invented.\nLoss is not generation WER. Raw losses and explicitly labeled trailing means are both shown; learning-rate values are logged observations.",
+  "sources": [
+    {
+      "path": "reports/qwen-campaign-20261022-a/main-epoch1/metrics.jsonl",
+      "sha256": "a7163b884ddf50e99ead921b518c0218aa966ac8733875bc0a8aab2483d07572",
+      "bytes": 389844
+    },
+    {
+      "path": "reports/qwen-campaign-20261022-a/main-epoch1/run.json",
+      "sha256": "df89c47dd1273ce7872bced73c17e2a0b193aa32cea0d4918c428f837b22d758",
+      "bytes": 5706
+    }
+  ],
+  "derived_data": [
+    {
+      "label": "Original full epoch (892 updates)",
+      "train_records": 892,
+      "first_step": 1,
+      "last_step": 892,
+      "eval_records": 8,
+      "eval_points": [
+        {
+          "step": 100,
+          "eval_loss": 0.08050515502691269
+        },
+        {
+          "step": 200,
+          "eval_loss": 0.07796081900596619
+        },
+        {
+          "step": 300,
+          "eval_loss": 0.07430365681648254
+        },
+        {
+          "step": 400,
+          "eval_loss": 0.07128160446882248
+        },
+        {
+          "step": 500,
+          "eval_loss": 0.06453505158424377
+        },
+        {
+          "step": 600,
+          "eval_loss": 0.06281807273626328
+        },
+        {
+          "step": 700,
+          "eval_loss": 0.06261815875768661
+        },
+        {
+          "step": 800,
+          "eval_loss": 0.060102708637714386
+        }
+      ],
+      "smoothing": {
+        "method": "trailing arithmetic mean; partial window at the beginning",
+        "window": 25
+      }
+    }
+  ],
+  "outputs": {
+    "png": {
+      "path": "reports/figures/training_dynamics.png",
+      "sha256": "e2c71ff9f6dd280c6b9c312b417425a86a9080d32e913d882a3b36584e87c33e",
+      "bytes": 328830
+    },
+    "svg": {
+      "path": "reports/figures/training_dynamics.svg",
+      "sha256": "c5c5f807c5cbc83071590a20c4419fb9cb7c245f5cadda282931ab7b7e6bef13",
+      "bytes": 63137
+    },
+    "pdf": {
+      "path": "reports/figures/training_dynamics.pdf",
+      "sha256": "7f48a3836698c7242aa67c5e09002ec3c88f19cab0fd117aaa374cb66a5b7a09",
+      "bytes": 42088
+    }
+  }
+}
