@@ -1,0 +1,286 @@
+{
+  "synthetic_test": true,
+  "inference_or_generation_performed": false,
+  "model_loaded": false,
+  "started_unix": 1792732225.217748,
+  "cases": [
+    {
+      "name": "normal_short_sentence",
+      "synthetic": true,
+      "input": "This is a normal short sentence.",
+      "user_language": "English",
+      "expected_detect_and_fix_repetitions": "This is a normal short sentence.",
+      "observed_detect_and_fix_repetitions": "This is a normal short sentence.",
+      "expected_parse_asr_output": [
+        "English",
+        "This is a normal short sentence."
+      ],
+      "observed_parse_asr_output": [
+        "English",
+        "This is a normal short sentence."
+      ],
+      "passed": true
+    },
+    {
+      "name": "already_short_two_word_text",
+      "synthetic": true,
+      "input": "CULINARY CUL",
+      "user_language": "English",
+      "expected_detect_and_fix_repetitions": "CULINARY CUL",
+      "observed_detect_and_fix_repetitions": "CULINARY CUL",
+      "expected_parse_asr_output": [
+        "English",
+        "CULINARY CUL"
+      ],
+      "observed_parse_asr_output": [
+        "English",
+        "CULINARY CUL"
+      ],
+      "passed": true
+    },
+    {
+      "name": "outer_whitespace_only",
+      "synthetic": true,
+      "input": "  Hello world.  ",
+      "user_language": "English",
+      "expected_detect_and_fix_repetitions": "  Hello world.  ",
+      "observed_detect_and_fix_repetitions": "  Hello world.  ",
+      "expected_parse_asr_output": [
+        "English",
+        "Hello world."
+      ],
+      "observed_parse_asr_output": [
+        "English",
+        "Hello world."
+      ],
+      "passed": true
+    },
+    {
+      "name": "culinary_pattern_repeat_19",
+      "synthetic": true,
+      "input": "CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CUL",
+      "user_language": "English",
+      "expected_detect_and_fix_repetitions": "CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CUL",
+      "observed_detect_and_fix_repetitions": "CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CUL",
+      "expected_parse_asr_output": [
+        "English",
+        "CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CUL"
+      ],
+      "observed_parse_asr_output": [
+        "English",
+        "CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CUL"
+      ],
+      "passed": true
+    },
+    {
+      "name": "culinary_pattern_repeat_20",
+      "synthetic": true,
+      "input": "CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CUL",
+      "user_language": "English",
+      "expected_detect_and_fix_repetitions": "CULINARY CUL",
+      "observed_detect_and_fix_repetitions": "CULINARY CUL",
+      "expected_parse_asr_output": [
+        "English",
+        "CULINARY CUL"
+      ],
+      "observed_parse_asr_output": [
+        "English",
+        "CULINARY CUL"
+      ],
+      "passed": true
+    },
+    {
+      "name": "culinary_pattern_repeat_21",
+      "synthetic": true,
+      "input": "CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CUL",
+      "user_language": "English",
+      "expected_detect_and_fix_repetitions": "CULINARY CUL",
+      "observed_detect_and_fix_repetitions": "CULINARY CUL",
+      "expected_parse_asr_output": [
+        "English",
+        "CULINARY CUL"
+      ],
+      "observed_parse_asr_output": [
+        "English",
+        "CULINARY CUL"
+      ],
+      "passed": true
+    },
+    {
+      "name": "culinary_pattern_repeat_64",
+      "synthetic": true,
+      "input": "CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CULINARY CUL",
+      "user_language": "English",
+      "expected_detect_and_fix_repetitions": "CULINARY CUL",
+      "observed_detect_and_fix_repetitions": "CULINARY CUL",
+      "expected_parse_asr_output": [
+        "English",
+        "CULINARY CUL"
+      ],
+      "observed_parse_asr_output": [
+        "English",
+        "CULINARY CUL"
+      ],
+      "passed": true
+    },
+    {
+      "name": "single_character_repeat_20",
+      "synthetic": true,
+      "input": "aaaaaaaaaaaaaaaaaaaa!",
+      "user_language": "English",
+      "expected_detect_and_fix_repetitions": "aaaaaaaaaaaaaaaaaaaa!",
+      "observed_detect_and_fix_repetitions": "aaaaaaaaaaaaaaaaaaaa!",
+      "expected_parse_asr_output": [
+        "English",
+        "aaaaaaaaaaaaaaaaaaaa!"
+      ],
+      "observed_parse_asr_output": [
+        "English",
+        "aaaaaaaaaaaaaaaaaaaa!"
+      ],
+      "passed": true
+    },
+    {
+      "name": "single_character_repeat_21",
+      "synthetic": true,
+      "input": "aaaaaaaaaaaaaaaaaaaaa!",
+      "user_language": "English",
+      "expected_detect_and_fix_repetitions": "a!",
+      "observed_detect_and_fix_repetitions": "a!",
+      "expected_parse_asr_output": [
+        "English",
+        "a!"
+      ],
+      "observed_parse_asr_output": [
+        "English",
+        "a!"
+      ],
+      "passed": true
+    },
+    {
+      "name": "forced_english_keeps_metadata_text",
+      "synthetic": true,
+      "input": "language English<asr_text>Hello.",
+      "user_language": "English",
+      "expected_detect_and_fix_repetitions": "language English<asr_text>Hello.",
+      "observed_detect_and_fix_repetitions": "language English<asr_text>Hello.",
+      "expected_parse_asr_output": [
+        "English",
+        "language English<asr_text>Hello."
+      ],
+      "observed_parse_asr_output": [
+        "English",
+        "language English<asr_text>Hello."
+      ],
+      "passed": true
+    },
+    {
+      "name": "automatic_language_splits_metadata",
+      "synthetic": true,
+      "input": "language English<asr_text>Hello.",
+      "user_language": null,
+      "expected_detect_and_fix_repetitions": "language English<asr_text>Hello.",
+      "observed_detect_and_fix_repetitions": "language English<asr_text>Hello.",
+      "expected_parse_asr_output": [
+        "English",
+        "Hello."
+      ],
+      "observed_parse_asr_output": [
+        "English",
+        "Hello."
+      ],
+      "passed": true
+    },
+    {
+      "name": "literal_special_marker_is_not_tokenizer_filtered_by_parser",
+      "synthetic": true,
+      "input": "Hello<|im_end|>",
+      "user_language": "English",
+      "expected_detect_and_fix_repetitions": "Hello<|im_end|>",
+      "observed_detect_and_fix_repetitions": "Hello<|im_end|>",
+      "expected_parse_asr_output": [
+        "English",
+        "Hello<|im_end|>"
+      ],
+      "observed_parse_asr_output": [
+        "English",
+        "Hello<|im_end|>"
+      ],
+      "passed": true
+    },
+    {
+      "name": "empty_text",
+      "synthetic": true,
+      "input": "",
+      "user_language": "English",
+      "expected_detect_and_fix_repetitions": "",
+      "observed_detect_and_fix_repetitions": "",
+      "expected_parse_asr_output": [
+        "",
+        ""
+      ],
+      "observed_parse_asr_output": [
+        "",
+        ""
+      ],
+      "passed": true
+    },
+    {
+      "name": "none_text",
+      "synthetic": true,
+      "input": null,
+      "user_language": "English",
+      "expected_detect_and_fix_repetitions": null,
+      "observed_detect_and_fix_repetitions": null,
+      "expected_parse_asr_output": [
+        "",
+        ""
+      ],
+      "observed_parse_asr_output": [
+        "",
+        ""
+      ],
+      "passed": true
+    }
+  ],
+  "module_path": "/mnt/raid/asr-lab/vendor/Qwen3-ASR/qwen_asr/inference/utils.py",
+  "full_source_sha256": "b37fb4140e6d9be85f2ecb1552ed16136eb98a57f44b402f8b0b213cb6df2a82",
+  "function_sources": {
+    "parse_asr_output": "def parse_asr_output(\n    raw: str,\n    user_language: Optional[str] = None,\n) -> Tuple[str, str]:\n    \"\"\"\n    Parse Qwen3-ASR raw output into (language, text).\n\n    Cases:\n      - With tag: \"language Chinese<asr_text>....\"\n      - With newlines: \"language Chinese\\\\n...\\\\n<asr_text>....\"\n      - No tag: treat whole string as text.\n      - \"language None<asr_text>\": treat as empty audio -> (\"\", \"\")\n\n    If user_language is provided, language is forced to user_language and raw is treated as text-only\n    (the model is expected to output plain transcription without metadata).\n\n    Args:\n        raw: Raw decoded string.\n        user_language: Canonical language name if user forced language.\n\n    Returns:\n        Tuple[str, str]: (language, text)\n    \"\"\"\n    if raw is None:\n        return \"\", \"\"\n    s = str(raw).strip()\n    if not s:\n        return \"\", \"\"\n\n    s = detect_and_fix_repetitions(s)\n\n    if user_language:\n        # user explicitly forced language => model output is treated as pure text\n        return user_language, s\n\n    meta_part = s\n    text_part = \"\"\n    has_tag = _ASR_TEXT_TAG in s\n    if has_tag:\n        meta_part, text_part = s.split(_ASR_TEXT_TAG, 1)\n    else:\n        # no tag => pure text\n        return \"\", s.strip()\n\n    meta_lower = meta_part.lower()\n\n    # empty audio heuristic\n    if \"language none\" in meta_lower:\n        t = text_part.strip()\n        if not t:\n            return \"\", \"\"\n        # if model still returned something, keep it but language unknown\n        return \"\", t\n\n    # extract \"language xxx\" from meta\n    lang = \"\"\n    for line in meta_part.splitlines():\n        line = line.strip()\n        if not line:\n            continue\n        low = line.lower()\n        if low.startswith(_LANG_PREFIX):\n            val = line[len(_LANG_PREFIX):].strip()\n            if val:\n                lang = normalize_language_name(val)\n            break\n\n    return lang, text_part.strip()\n",
+    "detect_and_fix_repetitions": "def detect_and_fix_repetitions(text, threshold=20):\n    def fix_char_repeats(s, thresh):\n        res = []\n        i = 0\n        n = len(s)\n        while i < n:\n            count = 1\n            while i + count < n and s[i + count] == s[i]:\n                count += 1\n\n            if count > thresh:\n                res.append(s[i])\n                i += count\n            else:\n                res.append(s[i:i+count])\n                i += count\n        return ''.join(res)\n\n    def fix_pattern_repeats(s, thresh, max_len=20):\n        n = len(s)\n        min_repeat_chars = thresh * 2\n        if n < min_repeat_chars:\n            return s\n            \n        i = 0\n        result = []\n        while i <= n - min_repeat_chars:\n            found = False\n            for k in range(1, max_len + 1):\n                if i + k * thresh > n:\n                    break\n                    \n                pattern = s[i:i+k]\n                valid = True\n                for rep in range(1, thresh):\n                    start_idx = i + rep * k\n                    if s[start_idx:start_idx+k] != pattern:\n                        valid = False\n                        break\n                \n                if valid:\n                    total_rep = thresh\n                    end_index = i + thresh * k\n                    while end_index + k <= n and s[end_index:end_index+k] == pattern:\n                        total_rep += 1\n                        end_index += k\n                    result.append(pattern)\n                    result.append(fix_pattern_repeats(s[end_index:], thresh, max_len))\n                    i = n\n                    found = True\n                    break\n            \n            if found:\n                break\n            else:\n                result.append(s[i])\n                i += 1\n\n        if not found:\n            result.append(s[i:])\n        return ''.join(result)\n    \n    text_raw = text\n    text = fix_char_repeats(text_raw, threshold)\n    text = fix_pattern_repeats(text, threshold)\n    return text\n"
+  },
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "",
+    "torch_cuda_available": false,
+    "torch_cuda_device_count": 0,
+    "python_version": "3.10.12 (main, Aug 15 2025, 14:32:43) [GCC 11.4.0]",
+    "packages": {
+      "qwen-asr": "0.0.6",
+      "transformers": "4.57.6",
+      "torch": "2.8.0+cu128"
+    }
+  },
+  "status": "passed",
+  "all_assertions_passed": true,
+  "ended_unix": 1792732238.4123054,
+  "remote_exit_code": 0,
+  "command": [
+    "ssh",
+    "-o",
+    "BatchMode=yes",
+    "-o",
+    "ConnectTimeout=10",
+    "-o",
+    "ControlPath=/tmp/codex-asr-tensorboard-%C",
+    "exx@100.70.230.73",
+    "CUDA_VISIBLE_DEVICES= /mnt/raid/asr-lab/venv/bin/python -"
+  ],
+  "stdin_python": "import os,json,hashlib,inspect,importlib.metadata,time,traceback\nresult={'synthetic_test':True,'inference_or_generation_performed':False,'model_loaded':False,'started_unix':time.time(),'cases':[]}\ndef case(name,text,language,expected_fixed,expected_parsed):\n fixed=u.detect_and_fix_repetitions(text) if text is not None else None\n parsed=list(u.parse_asr_output(text,user_language=language))\n entry={'name':name,'synthetic':True,'input':text,'user_language':language,'expected_detect_and_fix_repetitions':expected_fixed,'observed_detect_and_fix_repetitions':fixed,'expected_parse_asr_output':expected_parsed,'observed_parse_asr_output':parsed,'passed':fixed==expected_fixed and parsed==expected_parsed}\n result['cases'].append(entry)\n assert entry['passed'],name\ntry:\n assert os.environ.get('CUDA_VISIBLE_DEVICES')==''\n import qwen_asr.inference.utils as u\n import torch\n from pathlib import Path\n result['module_path']=str(Path(u.__file__).resolve())\n result['full_source_sha256']=hashlib.sha256(Path(u.__file__).read_bytes()).hexdigest()\n assert result['full_source_sha256']=='b37fb4140e6d9be85f2ecb1552ed16136eb98a57f44b402f8b0b213cb6df2a82'\n result['function_sources']={name:inspect.getsource(getattr(u,name)) for name in ('parse_asr_output','detect_and_fix_repetitions')}\n result['environment']={'CUDA_VISIBLE_DEVICES':os.environ['CUDA_VISIBLE_DEVICES'],'torch_cuda_available':torch.cuda.is_available(),'torch_cuda_device_count':torch.cuda.device_count(),'python_version':__import__('sys').version,'packages':{name:importlib.metadata.version(name) for name in ('qwen-asr','transformers','torch')}}\n assert not result['environment']['torch_cuda_available'] and result['environment']['torch_cuda_device_count']==0\n text='This is a normal short sentence.';case('normal_short_sentence',text,'English',text,['English',text])\n text='CULINARY CUL';case('already_short_two_word_text',text,'English',text,['English',text])\n text='  Hello world.  ';case('outer_whitespace_only',text,'English',text,['English','Hello world.'])\n for n in (19,20,21,64):\n  text='CULINARY '*n+'CUL';expected=text if n<20 else 'CULINARY CUL';case('culinary_pattern_repeat_'+str(n),text,'English',expected,['English',expected])\n for n in (20,21):\n  text='a'*n+'!';expected=text if n==20 else 'a!';case('single_character_repeat_'+str(n),text,'English',expected,['English',expected])\n text='language English<asr_text>Hello.';case('forced_english_keeps_metadata_text',text,'English',text,['English',text]);case('automatic_language_splits_metadata',text,None,text,['English','Hello.'])\n text='Hello<|im_end|>';case('literal_special_marker_is_not_tokenizer_filtered_by_parser',text,'English',text,['English',text])\n case('empty_text','', 'English','',['',''])\n case('none_text',None,'English',None,['',''])\n result['status']='passed';result['all_assertions_passed']=True\nexcept Exception as exc:\n result.update(status='failed',all_assertions_passed=False,error=repr(exc),traceback=traceback.format_exc())\nresult['ended_unix']=time.time()\nprint('PARSER_CONTRACT_JSON='+json.dumps(result,ensure_ascii=False,allow_nan=False))\n",
+  "captured_source_receipt": {
+    "path": "reports/truncation-probe/inputs/upstream-parser-source.json",
+    "sha256": "04c9662a338837df23b6c91ac35f9daade9e69c5b950cd7ec8b4296712c7eb30",
+    "full_upstream_file_sha256": "b37fb4140e6d9be85f2ecb1552ed16136eb98a57f44b402f8b0b213cb6df2a82"
+  },
+  "interpretation": "Synthetic CPU parser-contract tests only. They demonstrate parser behavior, not the real truncated utterance token IDs, repetition content, EOS or cause; no generation/model execution.",
+  "remote_stderr": ""
+}

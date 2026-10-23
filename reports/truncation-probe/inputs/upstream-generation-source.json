@@ -1,0 +1,41 @@
+{
+  "package_root": "/mnt/raid/asr-lab/vendor/Qwen3-ASR/qwen_asr",
+  "files": [
+    {
+      "path": "/mnt/raid/asr-lab/vendor/Qwen3-ASR/qwen_asr/inference/utils.py",
+      "sha256": "b37fb4140e6d9be85f2ecb1552ed16136eb98a57f44b402f8b0b213cb6df2a82",
+      "sections": [
+        {
+          "function": "parse_asr_output",
+          "start_line": 403,
+          "end_line": 470,
+          "source": "def parse_asr_output(\n    raw: str,\n    user_language: Optional[str] = None,\n) -> Tuple[str, str]:\n    \"\"\"\n    Parse Qwen3-ASR raw output into (language, text).\n\n    Cases:\n      - With tag: \"language Chinese<asr_text>....\"\n      - With newlines: \"language Chinese\\\\n...\\\\n<asr_text>....\"\n      - No tag: treat whole string as text.\n      - \"language None<asr_text>\": treat as empty audio -> (\"\", \"\")\n\n    If user_language is provided, language is forced to user_language and raw is treated as text-only\n    (the model is expected to output plain transcription without metadata).\n\n    Args:\n        raw: Raw decoded string.\n        user_language: Canonical language name if user forced language.\n\n    Returns:\n        Tuple[str, str]: (language, text)\n    \"\"\"\n    if raw is None:\n        return \"\", \"\"\n    s = str(raw).strip()\n    if not s:\n        return \"\", \"\"\n\n    s = detect_and_fix_repetitions(s)\n\n    if user_language:\n        # user explicitly forced language => model output is treated as pure text\n        return user_language, s\n\n    meta_part = s\n    text_part = \"\"\n    has_tag = _ASR_TEXT_TAG in s\n    if has_tag:\n        meta_part, text_part = s.split(_ASR_TEXT_TAG, 1)\n    else:\n        # no tag => pure text\n        return \"\", s.strip()\n\n    meta_lower = meta_part.lower()\n\n    # empty audio heuristic\n    if \"language none\" in meta_lower:\n        t = text_part.strip()\n        if not t:\n            return \"\", \"\"\n        # if model still returned something, keep it but language unknown\n        return \"\", t\n\n    # extract \"language xxx\" from meta\n    lang = \"\"\n    for line in meta_part.splitlines():\n        line = line.strip()\n        if not line:\n            continue\n        low = line.lower()\n        if low.startswith(_LANG_PREFIX):\n            val = line[len(_LANG_PREFIX):].strip()\n            if val:\n                lang = normalize_language_name(val)\n            break\n\n    return lang, text_part.strip()"
+        }
+      ]
+    },
+    {
+      "path": "/mnt/raid/asr-lab/vendor/Qwen3-ASR/qwen_asr/inference/qwen3_asr.py",
+      "sha256": "0b1770f8e907b6c5a0a1e9ebce037cb63f48555f3cd15eaf6ea2078e9df41a7b",
+      "sections": [
+        {
+          "function": "from_pretrained",
+          "start_line": 176,
+          "end_line": 224,
+          "source": "    def from_pretrained(\n        cls,\n        pretrained_model_name_or_path: str,\n        forced_aligner: Optional[str] = None,\n        forced_aligner_kwargs: Optional[Dict[str, Any]] = None,\n        max_inference_batch_size: int = 32,\n        max_new_tokens: Optional[int] = 512,\n        **kwargs,\n    ) -> \"Qwen3ASRModel\":\n        \"\"\"\n        Initialize using Transformers backend.\n\n        Args:\n            pretrained_model_name_or_path:\n                HuggingFace repo id or local directory.\n            forced_aligner:\n                Optional forced aligner model path/repo id.\n            forced_aligner_kwargs:\n                Optional kwargs forwarded to Qwen3ForcedAligner.from_pretrained(...).\n            max_inference_batch_size:\n                Batch size limit for inference. -1 means no chunking. Small values can avoid OOM.\n            max_new_tokens:\n                Maximum number of tokens to generate.\n            **kwargs:\n                Forwarded to AutoModel.from_pretrained(...).\n\n        Returns:\n            Qwen3ASRModel\n        \"\"\"\n\n        model = AutoModel.from_pretrained(pretrained_model_name_or_path, **kwargs)\n\n        processor = AutoProcessor.from_pretrained(pretrained_model_name_or_path, fix_mistral_regex=True)\n\n        forced_aligner_model = None\n        if forced_aligner is not None:\n            forced_aligner_model = Qwen3ForcedAligner.from_pretrained(\n                forced_aligner, **(forced_aligner_kwargs or {})\n            )\n\n        return cls(\n            backend=\"transformers\",\n            model=model,\n            processor=processor,\n            sampling_params=None,\n            forced_aligner=forced_aligner_model,\n            max_inference_batch_size=max_inference_batch_size,\n            max_new_tokens=max_new_tokens,\n        )"
+        }
+      ]
+    },
+    {
+      "path": "/mnt/raid/asr-lab/vendor/Qwen3-ASR/qwen_asr/core/transformers_backend/modeling_qwen3_asr.py",
+      "sha256": "2fb5d98da1933748f5117ee05ce4e7150c9ead8154fb8e25f7af3968b853adc7",
+      "sections": [
+        {
+          "function": "generate",
+          "start_line": 1325,
+          "end_line": 1355,
+          "source": "    def generate(\n        self,\n        input_ids: Optional[torch.Tensor] = None,\n        max_new_tokens: int = 4096,\n        eos_token_id: int | list[int] = [151645, 151643],\n        **kwargs,\n    ):\n        shared_kwargs = {}\n        thinker_kwargs = {\n            \"max_new_tokens\": max_new_tokens,\n            \"eos_token_id\": eos_token_id,\n        }\n\n        for key, value in kwargs.items():\n            # Process special input values\n            if key == \"feature_attention_mask\":\n                thinker_kwargs[key] = value\n            elif key in (\"input_features\", \"attention_mask\"):\n                thinker_kwargs[key] = value\n            # Put other key to shared kwargs\n            else:\n                shared_kwargs[key] = value\n\n        # Merge kwargs\n        for key, value in shared_kwargs.items():\n            if key not in thinker_kwargs:\n                thinker_kwargs[key] = value\n\n        thinker_result = self.thinker.generate(input_ids=input_ids, return_dict_in_generate=True, **thinker_kwargs)\n\n        return thinker_result"
+        }
+      ]
+    }
+  ]
+}

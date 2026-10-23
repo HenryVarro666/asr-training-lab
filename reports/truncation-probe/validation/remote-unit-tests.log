@@ -1,0 +1,19 @@
+test_capture_returns_original_processors_and_never_inserts_one (test_truncation_probe.ProbeContracts) ... ok
+test_eos_and_padding_retained_and_legacy_rule_is_per_row (test_truncation_probe.ProbeContracts) ... ok
+test_exact_kwargs_and_tokens_exist_before_decoder_failure (test_truncation_probe.ProbeContracts) ... ok
+test_exact_three_calls33_examples_and_order (test_truncation_probe.ProbeContracts) ... ok
+test_two_decode_modes_and_actual_parser_input (test_truncation_probe.ProbeContracts) ... ok
+test_prefix_and_shape_failures_keep_complete_returned_sequences (test_truncation_probe.RawFailureEvidenceContracts) ... ok
+test_input_or_effective_rule_drift_stops_before_single_tokens_and_raw_metadata_do_not (test_truncation_probe.RepeatIdentityGateContracts) ... ok
+test_expected_truncation_does_not_schedule_retry_or_fourth_call (test_truncation_probe.SupervisorContracts) ... ok
+test_gpu1_busy_guard_preserves_gpu0_and_rejects_other_gpu1_apps (test_truncation_probe.SupervisorContracts) ... ok
+test_identity_file_drift_is_rejected (test_truncation_probe.SupervisorContracts) ... ok
+test_identity_includes_chat_template_and_both_upstream_receipt_shapes (test_truncation_probe.SupervisorContracts) ... ok
+test_partial_results_cannot_be_claimed_complete (test_truncation_probe.SupervisorContracts) ... ok
+test_worker_deadline_uses_minimum_with_total (test_truncation_probe.SupervisorContracts) ... ok
+test_worker_failure_or_incomplete_evidence_stops_remaining_stages (test_truncation_probe.SupervisorContracts) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 1.155s
+
+OK

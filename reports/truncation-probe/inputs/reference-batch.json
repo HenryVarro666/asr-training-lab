@@ -1,0 +1,892 @@
+{
+  "schema_version": 1,
+  "purpose": "Immutable original batch reference for an authorized generation-only truncation probe; not new inference results or a relaxed quality gate.",
+  "indexing": "All indices are zero-based; original evaluator sorts all accepted IDs lexicographically and slices consecutive batches of 16.",
+  "original_batch_index_zero_based": 137,
+  "batch_size": 16,
+  "global_prediction_indices_zero_based_inclusive": [
+    2192,
+    2207
+  ],
+  "ordered_ids": [
+    "6345-93306-0021",
+    "6345-93306-0022",
+    "6345-93306-0023",
+    "6345-93306-0024",
+    "6345-93306-0025",
+    "652-129742-0000",
+    "652-129742-0001",
+    "652-129742-0002",
+    "652-129742-0003",
+    "652-129742-0004",
+    "652-129742-0005",
+    "652-129742-0006",
+    "652-129742-0007",
+    "652-129742-0008",
+    "652-129742-0009",
+    "652-129742-0010"
+  ],
+  "target_id": "652-129742-0006",
+  "target_global_prediction_index_zero_based": 2203,
+  "target_batch_position_zero_based": 11,
+  "target_batch_position_one_based": 12,
+  "original_model": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100",
+  "original_model_revision": null,
+  "base_model": "Qwen/Qwen3-ASR-1.7B",
+  "base_model_revision": "7278e1e70fe206f11671096ffdd38061171dd6e5",
+  "manifest_remote_path": "/mnt/raid/asr-lab/data/manifests/dev-clean.jsonl",
+  "manifest_sha256": "fc6f7f048b571431d244a854b204a8e9ed34062796350359e10ee5635ff9ca9a",
+  "original_stage_command": [
+    "/mnt/raid/asr-lab/venv/bin/python",
+    "-m",
+    "asr_lab.qwen_evaluate",
+    "--model",
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100",
+    "--revision",
+    "7278e1e70fe206f11671096ffdd38061171dd6e5",
+    "--manifest",
+    "/mnt/raid/asr-lab/data/manifests/dev-clean.jsonl",
+    "--output",
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/evaluation/step100-dev_clean/predictions.jsonl",
+    "--all",
+    "--batch-size",
+    "16",
+    "--max-new-tokens",
+    "512"
+  ],
+  "original_decoding": {
+    "evaluation_batch_size": 16,
+    "max_new_tokens": 512,
+    "do_sample": false,
+    "num_beams": 1,
+    "use_cache": true,
+    "padding_side": "left",
+    "dtype": "torch.bfloat16",
+    "attention_implementation": "sdpa",
+    "forced_language": "English",
+    "continuation_start": "result.sequences[:, inputs[input_ids].shape[1]:]",
+    "recognized_eos_ids_in_frozen_rule": [
+      151643,
+      151645
+    ]
+  },
+  "normalizer": {
+    "name": "Whisper EnglishTextNormalizer",
+    "revision": "973afd24965f72e36ca33b3055d56a652f456b4d"
+  },
+  "saved_output_limitations": {
+    "saved_hypothesis_is": "parse_asr_output(decoded continuation, user_language=English) hypothesis; NOT the raw pre-parse decode",
+    "token_ids_saved": false,
+    "pre_parse_decode_saved": false,
+    "actual_generated_token_lengths_saved": false,
+    "512_length_claim": "Source-rule inference only: truncated=True requires padded continuation width >=512 and no recognized EOS in that row; original token IDs and per-row termination cannot be independently checked."
+  },
+  "sources": [
+    {
+      "path": "reports/diagnosis/inputs/dev-clean.jsonl",
+      "sha256": "fc6f7f048b571431d244a854b204a8e9ed34062796350359e10ee5635ff9ca9a",
+      "bytes": 1196607
+    },
+    {
+      "path": "reports/early100/run/evaluation/step100-dev_clean/predictions.jsonl",
+      "sha256": "250a38687dfc1368363476c62eb74b1662358543def61d2ee8efe3ead3362d72",
+      "bytes": 1536532
+    },
+    {
+      "path": "reports/early100/run/evaluation/step100-dev_clean/predictions.metrics.json",
+      "sha256": "a20c06b697e131c533bc9401e4cd6b1678f34443c29e1edd17fe17ae81ec18a1",
+      "bytes": 63838
+    },
+    {
+      "path": "reports/qwen-campaign-20261022-a/evaluation/baseline-dev-clean/predictions.jsonl",
+      "sha256": "0432e6615b0996b86e9e0fc977a28b527d486f41998d395e3d299b9402d97f63",
+      "bytes": 1544683
+    },
+    {
+      "path": "reports/qwen-campaign-20261022-a/evaluation/baseline-dev-clean/predictions.metrics.json",
+      "sha256": "504a67be4f3f64393c0c49e36dc2a9c2994dc38bf5136b7c9d76fa9026d72fd7",
+      "bytes": 63805
+    },
+    {
+      "path": "reports/early100/run/evaluation/step100-dev_clean/stage.json",
+      "sha256": "12a832b15429acd84633d398b7e1d360f626eaa619612aaf27715ce6afa789a1",
+      "bytes": 881
+    },
+    {
+      "path": "reports/early100/truncation-audit.json",
+      "sha256": "613bb310267da7a321b1928ff4eb305d5024a657b40a14705697e25490e711ae",
+      "bytes": 18195
+    },
+    {
+      "path": "src/asr_lab/qwen_evaluate.py",
+      "sha256": "0a2012eb016cddadee7b3c0f0ca5ad9f3f94b502faad780392788a8ccf9e30d6",
+      "bytes": 4936
+    },
+    {
+      "path": "src/asr_lab/qwen_data.py",
+      "sha256": "769aed8478da4a6e9dcd33ed3bf87aaa6b846eede3d677c9ae4dc88469dc89b0",
+      "bytes": 7139
+    }
+  ],
+  "checkpoint_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100",
+  "target_index_in_batch": 11,
+  "rows": [
+    {
+      "batch_position_zero_based": 0,
+      "global_prediction_index_zero_based": 2192,
+      "id": "6345-93306-0021",
+      "is_target": false,
+      "original_prediction": {
+        "id": "6345-93306-0021",
+        "reference": "ALL THE SAME HE ADDED IRRELEVANTLY YOU SHALL HAVE THE LATCH KEY",
+        "hypothesis": "ALL THE SAME HE ADDED IRRELEVANTLY YOU SHALL HAVE THE LATCH KEY",
+        "reference_normalized": "all the same he added irrelevantly you shall have the latch key",
+        "hypothesis_normalized": "all the same he added irrelevantly you shall have the latch key",
+        "generation_truncated": false
+      },
+      "baseline_prediction": {
+        "id": "6345-93306-0021",
+        "reference": "ALL THE SAME HE ADDED IRRELEVANTLY YOU SHALL HAVE THE LATCH KEY",
+        "hypothesis": "All the same, he added irrelevantly, \"You shall have the latch key.\"",
+        "reference_normalized": "all the same he added irrelevantly you shall have the latch key",
+        "hypothesis_normalized": "all the same he added irrelevantly you shall have the latch key",
+        "generation_truncated": false
+      },
+      "original_recomputed_counts": {
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "hits": 12,
+        "reference_words": 12
+      },
+      "baseline_recomputed_counts": {
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "hits": 12,
+        "reference_words": 12
+      },
+      "manifest_row": {
+        "id": "6345-93306-0021",
+        "audio_filepath": "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/6345/93306/6345-93306-0021.flac",
+        "split": "dev-clean",
+        "text": "ALL THE SAME HE ADDED IRRELEVANTLY YOU SHALL HAVE THE LATCH KEY",
+        "duration": 3.785,
+        "sample_rate": 16000,
+        "source": "LibriSpeech/OpenSLR12",
+        "speaker_id": "6345",
+        "sha256": "2185d2a0eeced27e205f47a2487406a7a655dd2a07207ca4e933f5e1b6c3c3c4"
+      }
+    },
+    {
+      "batch_position_zero_based": 1,
+      "global_prediction_index_zero_based": 2193,
+      "id": "6345-93306-0022",
+      "is_target": false,
+      "original_prediction": {
+        "id": "6345-93306-0022",
+        "reference": "YOU ARE KIND SHE SAID FOR THE THIRD TIME AND REACHED HER HAND OUT TO HIM HE DID NOT KISS IT THEN ONLY TOOK IT IN HIS AND FELT HOW SMALL AND COLD IT WAS THEN IT WAS TAKEN AWAY",
+        "hypothesis": "YOU ARE KIND SHE SAID FOR THE THIRD TIME AND REACHED HER HAND OUT TO HIM HE DID NOT KISS IT THEN ONLY TOOK IT IN HIS AND FELT HOW SMALL AND COLD IT WAS THEN IT WAS TAKEN AWAY",
+        "reference_normalized": "you are kind she said for the 3rd time and reached her hand out to him he did not kiss it then only took it in his and felt how small and cold it was then it was taken away",
+        "hypothesis_normalized": "you are kind she said for the 3rd time and reached her hand out to him he did not kiss it then only took it in his and felt how small and cold it was then it was taken away",
+        "generation_truncated": false
+      },
+      "baseline_prediction": {
+        "id": "6345-93306-0022",
+        "reference": "YOU ARE KIND SHE SAID FOR THE THIRD TIME AND REACHED HER HAND OUT TO HIM HE DID NOT KISS IT THEN ONLY TOOK IT IN HIS AND FELT HOW SMALL AND COLD IT WAS THEN IT WAS TAKEN AWAY",
+        "hypothesis": "You are kind,\" she said for the third time, and reached her hand out to him. He did not kiss it then; only took it in his and felt how small and cold it was. Then it was taken away.",
+        "reference_normalized": "you are kind she said for the 3rd time and reached her hand out to him he did not kiss it then only took it in his and felt how small and cold it was then it was taken away",
+        "hypothesis_normalized": "you are kind she said for the 3rd time and reached her hand out to him he did not kiss it then only took it in his and felt how small and cold it was then it was taken away",
+        "generation_truncated": false
+      },
+      "original_recomputed_counts": {
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "hits": 40,
+        "reference_words": 40
+      },
+      "baseline_recomputed_counts": {
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "hits": 40,
+        "reference_words": 40
+      },
+      "manifest_row": {
+        "id": "6345-93306-0022",
+        "audio_filepath": "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/6345/93306/6345-93306-0022.flac",
+        "split": "dev-clean",
+        "text": "YOU ARE KIND SHE SAID FOR THE THIRD TIME AND REACHED HER HAND OUT TO HIM HE DID NOT KISS IT THEN ONLY TOOK IT IN HIS AND FELT HOW SMALL AND COLD IT WAS THEN IT WAS TAKEN AWAY",
+        "duration": 10.11,
+        "sample_rate": 16000,
+        "source": "LibriSpeech/OpenSLR12",
+        "speaker_id": "6345",
+        "sha256": "f7a79b44d30d9f02ca4007350ed4804e9b7860f628a5801085aae47e4e25d184"
+      }
+    },
+    {
+      "batch_position_zero_based": 2,
+      "global_prediction_index_zero_based": 2194,
+      "id": "6345-93306-0023",
+      "is_target": false,
+      "original_prediction": {
+        "id": "6345-93306-0023",
+        "reference": "THE LADY AND THE GUITAR CERTAINLY PASSED THE NIGHT AT HILL VIEW VILLA BUT WHEN HIS MOTHER VERY ANGRY AND VERY FRIGHTENED CAME UP WITH HIM AT ABOUT NOON THE HOUSE LOOKED JUST AS USUAL AND NO ONE WAS THERE BUT THE CHARWOMAN",
+        "hypothesis": "THE LADY AND THE GUITAR CERTAINLY PASSED THE NIGHT AT HILL VIEW VILLA BUT WHEN HIS MOTHER VERY ANGRY AND VERY FRIGHTENED CAME UP WITH HIM AT ABOUT NOON THE HOUSE LOOKED JUST AS USUAL AND NO ONE WAS THERE BUT THE CHAR WOMAN",
+        "reference_normalized": "the lady and the guitar certainly passed the night at hill view villa but when his mother very angry and very frightened came up with him at about noon the house looked just as usual and no one was there but the charwoman",
+        "hypothesis_normalized": "the lady and the guitar certainly passed the night at hill view villa but when his mother very angry and very frightened came up with him at about noon the house looked just as usual and no one was there but the char woman",
+        "generation_truncated": false
+      },
+      "baseline_prediction": {
+        "id": "6345-93306-0023",
+        "reference": "THE LADY AND THE GUITAR CERTAINLY PASSED THE NIGHT AT HILL VIEW VILLA BUT WHEN HIS MOTHER VERY ANGRY AND VERY FRIGHTENED CAME UP WITH HIM AT ABOUT NOON THE HOUSE LOOKED JUST AS USUAL AND NO ONE WAS THERE BUT THE CHARWOMAN",
+        "hypothesis": "The lady and the guitar certainly passed the night at Hillview Villa, but when his mother, very angry and very frightened, came up with him at about noon, the house looked just as usual, and no one was there but the charwoman.",
+        "reference_normalized": "the lady and the guitar certainly passed the night at hill view villa but when his mother very angry and very frightened came up with him at about noon the house looked just as usual and no one was there but the charwoman",
+        "hypothesis_normalized": "the lady and the guitar certainly passed the night at hillview villa but when his mother very angry and very frightened came up with him at about noon the house looked just as usual and no one was there but the charwoman",
+        "generation_truncated": false
+      },
+      "original_recomputed_counts": {
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 1,
+        "hits": 42,
+        "reference_words": 43
+      },
+      "baseline_recomputed_counts": {
+        "substitutions": 1,
+        "deletions": 1,
+        "insertions": 0,
+        "hits": 41,
+        "reference_words": 43
+      },
+      "manifest_row": {
+        "id": "6345-93306-0023",
+        "audio_filepath": "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/6345/93306/6345-93306-0023.flac",
+        "split": "dev-clean",
+        "text": "THE LADY AND THE GUITAR CERTAINLY PASSED THE NIGHT AT HILL VIEW VILLA BUT WHEN HIS MOTHER VERY ANGRY AND VERY FRIGHTENED CAME UP WITH HIM AT ABOUT NOON THE HOUSE LOOKED JUST AS USUAL AND NO ONE WAS THERE BUT THE CHARWOMAN",
+        "duration": 11.85,
+        "sample_rate": 16000,
+        "source": "LibriSpeech/OpenSLR12",
+        "speaker_id": "6345",
+        "sha256": "b722378f8387cbe7f0eee7dcdf8defa996c327112e1cb208c1e204052ea8c975"
+      }
+    },
+    {
+      "batch_position_zero_based": 3,
+      "global_prediction_index_zero_based": 2195,
+      "id": "6345-93306-0024",
+      "is_target": false,
+      "original_prediction": {
+        "id": "6345-93306-0024",
+        "reference": "THE SILVER IS ALL RIGHT THANK GOODNESS SHE SAID BUT YOUR BANJO GIRL HAS TAKEN A PAIR OF YOUR SISTER'S SILK STOCKINGS AND THOSE NEW SHOES OF HERS WITH THE SILVER BUCKLES AND SHE'S LEFT THESE",
+        "hypothesis": "THE SILVER IS ALL RIGHT THANK GOODNESS SHE SAID BUT YOUR BANJO GIRL HAS TAKEN A PAIR OF YOUR SISTER'S SILK STOCKINGS AND THOSE NEW SHOES OF HER'S WITH THE SILVER BUCKLES AND SHE'S LEFT THESE",
+        "reference_normalized": "the silver is all right thank goodness she said but your banjo girl has taken a pair of your sister is silk stockings and those new shoes of hers with the silver buckles and she is left these",
+        "hypothesis_normalized": "the silver is all right thank goodness she said but your banjo girl has taken a pair of your sister is silk stockings and those new shoes of her is with the silver buckles and she is left these",
+        "generation_truncated": false
+      },
+      "baseline_prediction": {
+        "id": "6345-93306-0024",
+        "reference": "THE SILVER IS ALL RIGHT THANK GOODNESS SHE SAID BUT YOUR BANJO GIRL HAS TAKEN A PAIR OF YOUR SISTER'S SILK STOCKINGS AND THOSE NEW SHOES OF HERS WITH THE SILVER BUCKLES AND SHE'S LEFT THESE",
+        "hypothesis": "The silver is all right, thank goodness,\" she said. \"But your banjo girl has taken a pair of your sister's silk stockings and those new shoes of hers with the silver buckles, and she's left these.\"",
+        "reference_normalized": "the silver is all right thank goodness she said but your banjo girl has taken a pair of your sister is silk stockings and those new shoes of hers with the silver buckles and she is left these",
+        "hypothesis_normalized": "the silver is all right thank goodness she said but your banjo girl has taken a pair of your sister is silk stockings and those new shoes of hers with the silver buckles and she is left these",
+        "generation_truncated": false
+      },
+      "original_recomputed_counts": {
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 1,
+        "hits": 37,
+        "reference_words": 38
+      },
+      "baseline_recomputed_counts": {
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "hits": 38,
+        "reference_words": 38
+      },
+      "manifest_row": {
+        "id": "6345-93306-0024",
+        "audio_filepath": "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/6345/93306/6345-93306-0024.flac",
+        "split": "dev-clean",
+        "text": "THE SILVER IS ALL RIGHT THANK GOODNESS SHE SAID BUT YOUR BANJO GIRL HAS TAKEN A PAIR OF YOUR SISTER'S SILK STOCKINGS AND THOSE NEW SHOES OF HERS WITH THE SILVER BUCKLES AND SHE'S LEFT THESE",
+        "duration": 9.365,
+        "sample_rate": 16000,
+        "source": "LibriSpeech/OpenSLR12",
+        "speaker_id": "6345",
+        "sha256": "d5831d5c3806b03ace849ba12fd0d3f53964e6e4ecb35320fe4d2e30405f8df3"
+      }
+    },
+    {
+      "batch_position_zero_based": 4,
+      "global_prediction_index_zero_based": 2196,
+      "id": "6345-93306-0025",
+      "is_target": false,
+      "original_prediction": {
+        "id": "6345-93306-0025",
+        "reference": "IT WAS PLAIN THAT HIS CASTANET GIRL HIS MOTHER AND SISTER TOOK A PLEASURE IN CREDITING HER DAILY WITH SOME FRESH AND UNPLEASING INSTRUMENT COULD HAVE HAD NEITHER TASTE MONEY NOR HONESTY TO SUCH A POINT AS THIS",
+        "hypothesis": "IT WAS PLAIN THAT HIS CASTANET GIRL HIS MOTHER AND SISTER TOOK A PLEASURE IN CREDITING HER DAILY WITH SOME FRESH AND UNPLEASING INSTRUMENT COULD HAVE HAD NEITHER TASTE MONEY NOR HONESTY TO SUCH A POINT AS THIS",
+        "reference_normalized": "it was plain that his castanet girl his mother and sister took a pleasure in crediting her daily with some fresh and unpleasing instrument could have had neither taste money nor honesty to such a point as this",
+        "hypothesis_normalized": "it was plain that his castanet girl his mother and sister took a pleasure in crediting her daily with some fresh and unpleasing instrument could have had neither taste money nor honesty to such a point as this",
+        "generation_truncated": false
+      },
+      "baseline_prediction": {
+        "id": "6345-93306-0025",
+        "reference": "IT WAS PLAIN THAT HIS CASTANET GIRL HIS MOTHER AND SISTER TOOK A PLEASURE IN CREDITING HER DAILY WITH SOME FRESH AND UNPLEASING INSTRUMENT COULD HAVE HAD NEITHER TASTE MONEY NOR HONESTY TO SUCH A POINT AS THIS",
+        "hypothesis": "It was plain that his castanet girl, his mother and sister, took a pleasure in crediting her daily with some fresh and unpleasing instrument, could have had neither taste, money, nor honesty to such a point as this.",
+        "reference_normalized": "it was plain that his castanet girl his mother and sister took a pleasure in crediting her daily with some fresh and unpleasing instrument could have had neither taste money nor honesty to such a point as this",
+        "hypothesis_normalized": "it was plain that his castanet girl his mother and sister took a pleasure in crediting her daily with some fresh and unpleasing instrument could have had neither taste money nor honesty to such a point as this",
+        "generation_truncated": false
+      },
+      "original_recomputed_counts": {
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "hits": 38,
+        "reference_words": 38
+      },
+      "baseline_recomputed_counts": {
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "hits": 38,
+        "reference_words": 38
+      },
+      "manifest_row": {
+        "id": "6345-93306-0025",
+        "audio_filepath": "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/6345/93306/6345-93306-0025.flac",
+        "split": "dev-clean",
+        "text": "IT WAS PLAIN THAT HIS CASTANET GIRL HIS MOTHER AND SISTER TOOK A PLEASURE IN CREDITING HER DAILY WITH SOME FRESH AND UNPLEASING INSTRUMENT COULD HAVE HAD NEITHER TASTE MONEY NOR HONESTY TO SUCH A POINT AS THIS",
+        "duration": 11.55,
+        "sample_rate": 16000,
+        "source": "LibriSpeech/OpenSLR12",
+        "speaker_id": "6345",
+        "sha256": "388c64980eaf1473fc09014da041f3f22a06ac6b3d0601ec86f71845a12cc97e"
+      }
+    },
+    {
+      "batch_position_zero_based": 5,
+      "global_prediction_index_zero_based": 2197,
+      "id": "652-129742-0000",
+      "is_target": false,
+      "original_prediction": {
+        "id": "652-129742-0000",
+        "reference": "ASPARAGUS SALAD COOK THE ASPARAGUS IN SALTED WATER DRAIN AND CHILL",
+        "hypothesis": "ASPARAGUS SALAD COOK THE ASPARAGUS IN SALTED WATER DRAIN AND CHILL",
+        "reference_normalized": "asparagus salad cook the asparagus in salted water drain and chill",
+        "hypothesis_normalized": "asparagus salad cook the asparagus in salted water drain and chill",
+        "generation_truncated": false
+      },
+      "baseline_prediction": {
+        "id": "652-129742-0000",
+        "reference": "ASPARAGUS SALAD COOK THE ASPARAGUS IN SALTED WATER DRAIN AND CHILL",
+        "hypothesis": "Asparagus salad. Cook the asparagus in salted water, drain, and chill.",
+        "reference_normalized": "asparagus salad cook the asparagus in salted water drain and chill",
+        "hypothesis_normalized": "asparagus salad cook the asparagus in salted water drain and chill",
+        "generation_truncated": false
+      },
+      "original_recomputed_counts": {
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "hits": 11,
+        "reference_words": 11
+      },
+      "baseline_recomputed_counts": {
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "hits": 11,
+        "reference_words": 11
+      },
+      "manifest_row": {
+        "id": "652-129742-0000",
+        "audio_filepath": "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0000.flac",
+        "split": "dev-clean",
+        "text": "ASPARAGUS SALAD COOK THE ASPARAGUS IN SALTED WATER DRAIN AND CHILL",
+        "duration": 6.025,
+        "sample_rate": 16000,
+        "source": "LibriSpeech/OpenSLR12",
+        "speaker_id": "652",
+        "sha256": "d944936d185bf3a1cf0c95e640fef39c0a5eda71e4be0c358fdf49e83d288d39"
+      }
+    },
+    {
+      "batch_position_zero_based": 6,
+      "global_prediction_index_zero_based": 2198,
+      "id": "652-129742-0001",
+      "is_target": false,
+      "original_prediction": {
+        "id": "652-129742-0001",
+        "reference": "BIRDS NEST SALAD HAVE READY AS MANY CRISP LEAVES OF LETTUCE AS MAY BE REQUIRED TO MAKE A DAINTY LITTLE NEST FOR EACH PERSON",
+        "hypothesis": "BIRD'S NEST SALAD HAVE READY AS MANY CRISP LEAVES OF LETTUCE AS MAY BE REQUIRED TO MAKE A DAINTY LITTLE NEST FOR EACH PERSON",
+        "reference_normalized": "birds nest salad have ready as many crisp leaves of lettuce as may be required to make a dainty little nest for each person",
+        "hypothesis_normalized": "bird is nest salad have ready as many crisp leaves of lettuce as may be required to make a dainty little nest for each person",
+        "generation_truncated": false
+      },
+      "baseline_prediction": {
+        "id": "652-129742-0001",
+        "reference": "BIRDS NEST SALAD HAVE READY AS MANY CRISP LEAVES OF LETTUCE AS MAY BE REQUIRED TO MAKE A DAINTY LITTLE NEST FOR EACH PERSON",
+        "hypothesis": "Bird's Nest Salad. Have ready as many crisp leaves of lettuce as may be required to make a dainty little nest for each person.",
+        "reference_normalized": "birds nest salad have ready as many crisp leaves of lettuce as may be required to make a dainty little nest for each person",
+        "hypothesis_normalized": "bird is nest salad have ready as many crisp leaves of lettuce as may be required to make a dainty little nest for each person",
+        "generation_truncated": false
+      },
+      "original_recomputed_counts": {
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 1,
+        "hits": 23,
+        "reference_words": 24
+      },
+      "baseline_recomputed_counts": {
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 1,
+        "hits": 23,
+        "reference_words": 24
+      },
+      "manifest_row": {
+        "id": "652-129742-0001",
+        "audio_filepath": "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0001.flac",
+        "split": "dev-clean",
+        "text": "BIRDS NEST SALAD HAVE READY AS MANY CRISP LEAVES OF LETTUCE AS MAY BE REQUIRED TO MAKE A DAINTY LITTLE NEST FOR EACH PERSON",
+        "duration": 8.66,
+        "sample_rate": 16000,
+        "source": "LibriSpeech/OpenSLR12",
+        "speaker_id": "652",
+        "sha256": "60bff4fab7ad2e30001acc1c2075d40c603002840ec67a11d0899cd460508448"
+      }
+    },
+    {
+      "batch_position_zero_based": 7,
+      "global_prediction_index_zero_based": 2199,
+      "id": "652-129742-0002",
+      "is_target": false,
+      "original_prediction": {
+        "id": "652-129742-0002",
+        "reference": "SERVE WITH FRENCH DRESSING HIDDEN UNDER THE LEAVES OF THE NEST",
+        "hypothesis": "SERVE WITH FRENCH DRESSING HIDDEN UNDER THE LEAVES OF THE NEST",
+        "reference_normalized": "serve with french dressing hidden under the leaves of the nest",
+        "hypothesis_normalized": "serve with french dressing hidden under the leaves of the nest",
+        "generation_truncated": false
+      },
+      "baseline_prediction": {
+        "id": "652-129742-0002",
+        "reference": "SERVE WITH FRENCH DRESSING HIDDEN UNDER THE LEAVES OF THE NEST",
+        "hypothesis": "Serve with French dressing, hidden under the leaves of the nest.",
+        "reference_normalized": "serve with french dressing hidden under the leaves of the nest",
+        "hypothesis_normalized": "serve with french dressing hidden under the leaves of the nest",
+        "generation_truncated": false
+      },
+      "original_recomputed_counts": {
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "hits": 11,
+        "reference_words": 11
+      },
+      "baseline_recomputed_counts": {
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "hits": 11,
+        "reference_words": 11
+      },
+      "manifest_row": {
+        "id": "652-129742-0002",
+        "audio_filepath": "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0002.flac",
+        "split": "dev-clean",
+        "text": "SERVE WITH FRENCH DRESSING HIDDEN UNDER THE LEAVES OF THE NEST",
+        "duration": 3.7,
+        "sample_rate": 16000,
+        "source": "LibriSpeech/OpenSLR12",
+        "speaker_id": "652",
+        "sha256": "d742054eacd60e97843cbb5003af8a12201ce11f7c9e8ddb2df287cd46a08edc"
+      }
+    },
+    {
+      "batch_position_zero_based": 8,
+      "global_prediction_index_zero_based": 2200,
+      "id": "652-129742-0003",
+      "is_target": false,
+      "original_prediction": {
+        "id": "652-129742-0003",
+        "reference": "CABBAGE SALAD CHOP OR SHAVE FINE HALF A MEDIUM SIZE HEAD OF CABBAGE THAT HAS BEEN LEFT IN COLD WATER UNTIL CRISP THEN DRAIN",
+        "hypothesis": "CABBAGE SALAD CHOP OR SHAVE FINE HALF A MEDIUM SIZED HEAD OF CABBAGE THAT HAS BEEN LEFT IN COLD WATER UNTIL CRISP THEN DRAIN",
+        "reference_normalized": "cabbage salad chop or shave fine half a medium size head of cabbage that has been left in cold water until crisp then drain",
+        "hypothesis_normalized": "cabbage salad chop or shave fine half a medium sized head of cabbage that has been left in cold water until crisp then drain",
+        "generation_truncated": false
+      },
+      "baseline_prediction": {
+        "id": "652-129742-0003",
+        "reference": "CABBAGE SALAD CHOP OR SHAVE FINE HALF A MEDIUM SIZE HEAD OF CABBAGE THAT HAS BEEN LEFT IN COLD WATER UNTIL CRISP THEN DRAIN",
+        "hypothesis": "Cabbage salad: Chop or shave fine half a medium-sized head of cabbage that has been left in cold water until crisp. Then drain.",
+        "reference_normalized": "cabbage salad chop or shave fine half a medium size head of cabbage that has been left in cold water until crisp then drain",
+        "hypothesis_normalized": "cabbage salad chop or shave fine half a medium sized head of cabbage that has been left in cold water until crisp then drain",
+        "generation_truncated": false
+      },
+      "original_recomputed_counts": {
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "hits": 23,
+        "reference_words": 24
+      },
+      "baseline_recomputed_counts": {
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "hits": 23,
+        "reference_words": 24
+      },
+      "manifest_row": {
+        "id": "652-129742-0003",
+        "audio_filepath": "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0003.flac",
+        "split": "dev-clean",
+        "text": "CABBAGE SALAD CHOP OR SHAVE FINE HALF A MEDIUM SIZE HEAD OF CABBAGE THAT HAS BEEN LEFT IN COLD WATER UNTIL CRISP THEN DRAIN",
+        "duration": 9.18,
+        "sample_rate": 16000,
+        "source": "LibriSpeech/OpenSLR12",
+        "speaker_id": "652",
+        "sha256": "6cb846d82ef17515e62206b4ac8b58841c52a9a50b09093ae1981e64e43bd930"
+      }
+    },
+    {
+      "batch_position_zero_based": 9,
+      "global_prediction_index_zero_based": 2201,
+      "id": "652-129742-0004",
+      "is_target": false,
+      "original_prediction": {
+        "id": "652-129742-0004",
+        "reference": "ADD TWO TABLESPOONS THICK SOUR CREAM TWO TABLESPOONS SUGAR A SPRINKLE OF MUSTARD AND HALF CUP OF VINEGAR",
+        "hypothesis": "ADD TWO TABLESPOONS THICK SOUR CREAM TWO TABLESPOONS SUGAR A SPRINKLE OF MUSTARD AND HALF CUP OF VINEGAR",
+        "reference_normalized": "add 2 tablespoons thick sour cream 2 tablespoons sugar a sprinkle of mustard and half cup of vinegar",
+        "hypothesis_normalized": "add 2 tablespoons thick sour cream 2 tablespoons sugar a sprinkle of mustard and half cup of vinegar",
+        "generation_truncated": false
+      },
+      "baseline_prediction": {
+        "id": "652-129742-0004",
+        "reference": "ADD TWO TABLESPOONS THICK SOUR CREAM TWO TABLESPOONS SUGAR A SPRINKLE OF MUSTARD AND HALF CUP OF VINEGAR",
+        "hypothesis": "Add two tablespoons thick sour cream, two tablespoons sugar, a sprinkle of mustard, and half cup of vinegar.",
+        "reference_normalized": "add 2 tablespoons thick sour cream 2 tablespoons sugar a sprinkle of mustard and half cup of vinegar",
+        "hypothesis_normalized": "add 2 tablespoons thick sour cream 2 tablespoons sugar a sprinkle of mustard and half cup of vinegar",
+        "generation_truncated": false
+      },
+      "original_recomputed_counts": {
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "hits": 18,
+        "reference_words": 18
+      },
+      "baseline_recomputed_counts": {
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "hits": 18,
+        "reference_words": 18
+      },
+      "manifest_row": {
+        "id": "652-129742-0004",
+        "audio_filepath": "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0004.flac",
+        "split": "dev-clean",
+        "text": "ADD TWO TABLESPOONS THICK SOUR CREAM TWO TABLESPOONS SUGAR A SPRINKLE OF MUSTARD AND HALF CUP OF VINEGAR",
+        "duration": 7.12,
+        "sample_rate": 16000,
+        "source": "LibriSpeech/OpenSLR12",
+        "speaker_id": "652",
+        "sha256": "ab6f07e50bc0f5df4074c5237b46557bba48cbea77e2c5ee12fc60164594c90e"
+      }
+    },
+    {
+      "batch_position_zero_based": 10,
+      "global_prediction_index_zero_based": 2202,
+      "id": "652-129742-0005",
+      "is_target": false,
+      "original_prediction": {
+        "id": "652-129742-0005",
+        "reference": "BEAT UNTIL THOROUGHLY MIXED POUR OVER THE CABBAGE AND TOSS LIGHTLY UNTIL UNIFORMLY SEASONED",
+        "hypothesis": "BEAT UNTIL THOROUGHLY MIXED POOR OVER THE CABBAGE AND TOSSE LIGHTLY UNTIL UNIFORMLY SEASONED",
+        "reference_normalized": "beat until thoroughly mixed pour over the cabbage and toss lightly until uniformly seasoned",
+        "hypothesis_normalized": "beat until thoroughly mixed poor over the cabbage and tosse lightly until uniformly seasoned",
+        "generation_truncated": false
+      },
+      "baseline_prediction": {
+        "id": "652-129742-0005",
+        "reference": "BEAT UNTIL THOROUGHLY MIXED POUR OVER THE CABBAGE AND TOSS LIGHTLY UNTIL UNIFORMLY SEASONED",
+        "hypothesis": "Beat until thoroughly mixed. Pour over the cabbage and toss lightly until uniformly seasoned.",
+        "reference_normalized": "beat until thoroughly mixed pour over the cabbage and toss lightly until uniformly seasoned",
+        "hypothesis_normalized": "beat until thoroughly mixed pour over the cabbage and toss lightly until uniformly seasoned",
+        "generation_truncated": false
+      },
+      "original_recomputed_counts": {
+        "substitutions": 2,
+        "deletions": 0,
+        "insertions": 0,
+        "hits": 12,
+        "reference_words": 14
+      },
+      "baseline_recomputed_counts": {
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "hits": 14,
+        "reference_words": 14
+      },
+      "manifest_row": {
+        "id": "652-129742-0005",
+        "audio_filepath": "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0005.flac",
+        "split": "dev-clean",
+        "text": "BEAT UNTIL THOROUGHLY MIXED POUR OVER THE CABBAGE AND TOSS LIGHTLY UNTIL UNIFORMLY SEASONED",
+        "duration": 6.015,
+        "sample_rate": 16000,
+        "source": "LibriSpeech/OpenSLR12",
+        "speaker_id": "652",
+        "sha256": "83a16b2692d2874051ca30b45a13f1dfa245969c6af977acbde7557b8b8d6e7c"
+      }
+    },
+    {
+      "batch_position_zero_based": 11,
+      "global_prediction_index_zero_based": 2203,
+      "id": "652-129742-0006",
+      "is_target": true,
+      "original_prediction": {
+        "id": "652-129742-0006",
+        "reference": "CAULIFLOWER MAYONNAISE TAKE COLD BOILED CAULIFLOWER BREAK INTO BRANCHES ADDING SALT PEPPER AND VINEGAR TO SEASON",
+        "hypothesis": "CULINARY CUL",
+        "reference_normalized": "cauliflower mayonnaise take cold boiled cauliflower break into branches adding salt pepper and vinegar to season",
+        "hypothesis_normalized": "culinary cul",
+        "generation_truncated": true
+      },
+      "baseline_prediction": {
+        "id": "652-129742-0006",
+        "reference": "CAULIFLOWER MAYONNAISE TAKE COLD BOILED CAULIFLOWER BREAK INTO BRANCHES ADDING SALT PEPPER AND VINEGAR TO SEASON",
+        "hypothesis": "Cauliflower mayonnaise: Take cold boiled cauliflower, break into branches, adding salt, pepper, and vinegar to season.",
+        "reference_normalized": "cauliflower mayonnaise take cold boiled cauliflower break into branches adding salt pepper and vinegar to season",
+        "hypothesis_normalized": "cauliflower mayonnaise take cold boiled cauliflower break into branches adding salt pepper and vinegar to season",
+        "generation_truncated": false
+      },
+      "original_recomputed_counts": {
+        "substitutions": 2,
+        "deletions": 14,
+        "insertions": 0,
+        "hits": 0,
+        "reference_words": 16
+      },
+      "baseline_recomputed_counts": {
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "hits": 16,
+        "reference_words": 16
+      },
+      "manifest_row": {
+        "id": "652-129742-0006",
+        "audio_filepath": "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0006.flac",
+        "split": "dev-clean",
+        "text": "CAULIFLOWER MAYONNAISE TAKE COLD BOILED CAULIFLOWER BREAK INTO BRANCHES ADDING SALT PEPPER AND VINEGAR TO SEASON",
+        "duration": 9.115,
+        "sample_rate": 16000,
+        "source": "LibriSpeech/OpenSLR12",
+        "speaker_id": "652",
+        "sha256": "0ced52d5cbb692c5c8c36aa84f5d3d283934a9f9055d6c0e689ca3ebb6be54a1"
+      }
+    },
+    {
+      "batch_position_zero_based": 12,
+      "global_prediction_index_zero_based": 2204,
+      "id": "652-129742-0007",
+      "is_target": false,
+      "original_prediction": {
+        "id": "652-129742-0007",
+        "reference": "SURROUND WITH A GARNISH OF COOKED AND DICED CARROTS TURNIPS GREEN PEAS",
+        "hypothesis": "SURROUND WITH A GARNISH OF COOKED AND DICED CARROTS TURNIPS GREEN PEAS",
+        "reference_normalized": "surround with a garnish of cooked and diced carrots turnips green peas",
+        "hypothesis_normalized": "surround with a garnish of cooked and diced carrots turnips green peas",
+        "generation_truncated": false
+      },
+      "baseline_prediction": {
+        "id": "652-129742-0007",
+        "reference": "SURROUND WITH A GARNISH OF COOKED AND DICED CARROTS TURNIPS GREEN PEAS",
+        "hypothesis": "Surround with a garnish of cooked and diced carrots, turnips, green peas.",
+        "reference_normalized": "surround with a garnish of cooked and diced carrots turnips green peas",
+        "hypothesis_normalized": "surround with a garnish of cooked and diced carrots turnips green peas",
+        "generation_truncated": false
+      },
+      "original_recomputed_counts": {
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "hits": 12,
+        "reference_words": 12
+      },
+      "baseline_recomputed_counts": {
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "hits": 12,
+        "reference_words": 12
+      },
+      "manifest_row": {
+        "id": "652-129742-0007",
+        "audio_filepath": "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0007.flac",
+        "split": "dev-clean",
+        "text": "SURROUND WITH A GARNISH OF COOKED AND DICED CARROTS TURNIPS GREEN PEAS",
+        "duration": 4.885,
+        "sample_rate": 16000,
+        "source": "LibriSpeech/OpenSLR12",
+        "speaker_id": "652",
+        "sha256": "1f69ddbc82bd4425d43a67c05af14a54268988ca8b1439631529a031ff6bbbb3"
+      }
+    },
+    {
+      "batch_position_zero_based": 13,
+      "global_prediction_index_zero_based": 2205,
+      "id": "652-129742-0008",
+      "is_target": false,
+      "original_prediction": {
+        "id": "652-129742-0008",
+        "reference": "POUR MAYONNAISE OVER ALL CHILL AND SERVE",
+        "hypothesis": "POUR MAYONNAISE OVERALL CHILL AND SERVE",
+        "reference_normalized": "pour mayonnaise over all chill and serve",
+        "hypothesis_normalized": "pour mayonnaise overall chill and serve",
+        "generation_truncated": false
+      },
+      "baseline_prediction": {
+        "id": "652-129742-0008",
+        "reference": "POUR MAYONNAISE OVER ALL CHILL AND SERVE",
+        "hypothesis": "Pour mayonnaise over all. Chill and serve.",
+        "reference_normalized": "pour mayonnaise over all chill and serve",
+        "hypothesis_normalized": "pour mayonnaise over all chill and serve",
+        "generation_truncated": false
+      },
+      "original_recomputed_counts": {
+        "substitutions": 1,
+        "deletions": 1,
+        "insertions": 0,
+        "hits": 5,
+        "reference_words": 7
+      },
+      "baseline_recomputed_counts": {
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "hits": 7,
+        "reference_words": 7
+      },
+      "manifest_row": {
+        "id": "652-129742-0008",
+        "audio_filepath": "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0008.flac",
+        "split": "dev-clean",
+        "text": "POUR MAYONNAISE OVER ALL CHILL AND SERVE",
+        "duration": 3.43,
+        "sample_rate": 16000,
+        "source": "LibriSpeech/OpenSLR12",
+        "speaker_id": "652",
+        "sha256": "87fae06e59686d6f29d21e13b7ed096c8ad6a68a05e8942d0a0b53a3db646876"
+      }
+    },
+    {
+      "batch_position_zero_based": 14,
+      "global_prediction_index_zero_based": 2206,
+      "id": "652-129742-0009",
+      "is_target": false,
+      "original_prediction": {
+        "id": "652-129742-0009",
+        "reference": "CELERY AND NUT SALAD CUT ENOUGH CELERY FINE TO MEASURE TWO CUPS ADD ONE CUP OF FINELY SHREDDED OR SHAVED CABBAGE AND ONE AND ONE HALF CUPS OF WALNUT MEATS BROKEN IN SMALL PIECES BUT NOT CHOPPED",
+        "hypothesis": "CELERY AND NUT SALAD CUT ENOUGH CELERY FINE TO MEASURE TWO CUPS ADD ONE CUP OF FINELY SHREDDED OR SHAVED CABBAGE AND ONE AND ONE HALF CUPS OF WALNUT MEATS BROKEN IN SMALL PIECES BUT NOT CHOPPED",
+        "reference_normalized": "celery and nut salad cut enough celery fine to measure 2 cups add one cup of finely shredded or shaved cabbage and one and one half cups of walnut meats broken in small pieces but not chopped",
+        "hypothesis_normalized": "celery and nut salad cut enough celery fine to measure 2 cups add one cup of finely shredded or shaved cabbage and one and one half cups of walnut meats broken in small pieces but not chopped",
+        "generation_truncated": false
+      },
+      "baseline_prediction": {
+        "id": "652-129742-0009",
+        "reference": "CELERY AND NUT SALAD CUT ENOUGH CELERY FINE TO MEASURE TWO CUPS ADD ONE CUP OF FINELY SHREDDED OR SHAVED CABBAGE AND ONE AND ONE HALF CUPS OF WALNUT MEATS BROKEN IN SMALL PIECES BUT NOT CHOPPED",
+        "hypothesis": "Celery and Nut Salad. Cut enough celery fine to measure two cups. Add one cup of finely shredded or shaved cabbage and one and one half cups of walnut meats, broken in small pieces, but not chopped.",
+        "reference_normalized": "celery and nut salad cut enough celery fine to measure 2 cups add one cup of finely shredded or shaved cabbage and one and one half cups of walnut meats broken in small pieces but not chopped",
+        "hypothesis_normalized": "celery and nut salad cut enough celery fine to measure 2 cups add one cup of finely shredded or shaved cabbage and one and one half cups of walnut meats broken in small pieces but not chopped",
+        "generation_truncated": false
+      },
+      "original_recomputed_counts": {
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "hits": 37,
+        "reference_words": 37
+      },
+      "baseline_recomputed_counts": {
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "hits": 37,
+        "reference_words": 37
+      },
+      "manifest_row": {
+        "id": "652-129742-0009",
+        "audio_filepath": "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0009.flac",
+        "split": "dev-clean",
+        "text": "CELERY AND NUT SALAD CUT ENOUGH CELERY FINE TO MEASURE TWO CUPS ADD ONE CUP OF FINELY SHREDDED OR SHAVED CABBAGE AND ONE AND ONE HALF CUPS OF WALNUT MEATS BROKEN IN SMALL PIECES BUT NOT CHOPPED",
+        "duration": 13.97,
+        "sample_rate": 16000,
+        "source": "LibriSpeech/OpenSLR12",
+        "speaker_id": "652",
+        "sha256": "83c319e0bb59ac238e52f0ecaaff6d381af4bc87ad24597a2ddb47f9fb0caf94"
+      }
+    },
+    {
+      "batch_position_zero_based": 15,
+      "global_prediction_index_zero_based": 2207,
+      "id": "652-129742-0010",
+      "is_target": false,
+      "original_prediction": {
+        "id": "652-129742-0010",
+        "reference": "STIR THE SOAKED GELATIN IN WHILE THE CUCUMBER IS HOT",
+        "hypothesis": "STIR THE SOAKED GELATIN IN WHILE THE CUCUMBER IS HOT",
+        "reference_normalized": "stir the soaked gelatin in while the cucumber is hot",
+        "hypothesis_normalized": "stir the soaked gelatin in while the cucumber is hot",
+        "generation_truncated": false
+      },
+      "baseline_prediction": {
+        "id": "652-129742-0010",
+        "reference": "STIR THE SOAKED GELATIN IN WHILE THE CUCUMBER IS HOT",
+        "hypothesis": "Stir the soaked gelatin in while the cucumber is hot.",
+        "reference_normalized": "stir the soaked gelatin in while the cucumber is hot",
+        "hypothesis_normalized": "stir the soaked gelatin in while the cucumber is hot",
+        "generation_truncated": false
+      },
+      "original_recomputed_counts": {
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "hits": 10,
+        "reference_words": 10
+      },
+      "baseline_recomputed_counts": {
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "hits": 10,
+        "reference_words": 10
+      },
+      "manifest_row": {
+        "id": "652-129742-0010",
+        "audio_filepath": "/mnt/raid/asr-lab/data/raw/LibriSpeech/dev-clean/652/129742/652-129742-0010.flac",
+        "split": "dev-clean",
+        "text": "STIR THE SOAKED GELATIN IN WHILE THE CUCUMBER IS HOT",
+        "duration": 3.4,
+        "sample_rate": 16000,
+        "source": "LibriSpeech/OpenSLR12",
+        "speaker_id": "652",
+        "sha256": "bf88a90782811e05c5c66ff03a894e523f3f898de205b1cb5d737284ae96eecd"
+      }
+    }
+  ],
+  "audio_integrity": {
+    "manifest_sha256_field_semantics": "Decoded float32 PCM SHA256 from prepare_data.py, not compressed FLAC file SHA256",
+    "source_flac_file_sha256_available_locally": false,
+    "required_probe_preflight": "Hash actual remote FLAC source bytes separately and preserve decoded PCM hash separately; do not substitute one for the other."
+  }
+}

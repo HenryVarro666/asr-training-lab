@@ -1,0 +1,12 @@
+{
+  "status": "reviewed_sources_hashes_match",
+  "files": {
+    "src/asr_lab/qwen_truncation_probe.py": "3c3c73d1e14f0f040b02893a5269747852558292c308507f87db5b85584fd74e",
+    "scripts/run_truncation_probe.py": "a4be9be1860df9c2076d34893f96fe25f5d135885060c5990dc0795fd2927708",
+    "tests/test_truncation_probe.py": "dd752b05cd9a0ccd4928b089d8a6eea921b7dd04d8fe2d569a441b62e6d9a0bb",
+    "reports/truncation-probe/inputs/reference-batch.json": "b586b6c289ea97d78a9b3396a4718579949328ff9f9ec301b3c026ff83de18e5",
+    "reports/truncation-probe/inputs/upstream-generation-source.json": "0abe865b4c3a27cc3b964d02a0afe0b703796a96299c98b591a15384cd59a868",
+    "reports/truncation-probe/inputs/upstream-parser-source.json": "04c9662a338837df23b6c91ac35f9daade9e69c5b950cd7ec8b4296712c7eb30"
+  },
+  "remote_root": "/mnt/raid/asr-lab/repo"
+}

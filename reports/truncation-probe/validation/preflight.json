@@ -1,0 +1,59 @@
+{
+  "time_utc": "2026-10-23T05:12:20Z",
+  "disk": {
+    "total": 47808184197120,
+    "used": 42102886551552,
+    "free": 3305266671616
+  },
+  "global_lock_available": true,
+  "run_exists": false,
+  "gpu": {
+    "command": [
+      "nvidia-smi",
+      "--query-gpu=index,name,memory.total,memory.free,memory.used,utilization.gpu",
+      "--format=csv"
+    ],
+    "returncode": 0,
+    "stdout": "index, name, memory.total [MiB], memory.free [MiB], memory.used [MiB], utilization.gpu [%]\n0, NVIDIA H100 NVL, 95830 MiB, 72624 MiB, 22697 MiB, 0 %\n1, NVIDIA H100 NVL, 95830 MiB, 43228 MiB, 52093 MiB, 99 %\n",
+    "stderr": ""
+  },
+  "gpu_processes": {
+    "command": [
+      "nvidia-smi",
+      "--query-compute-apps=gpu_uuid,pid,process_name,used_gpu_memory",
+      "--format=csv"
+    ],
+    "returncode": 0,
+    "stdout": "gpu_uuid, pid, process_name, used_gpu_memory [MiB]\nGPU-eed83181-48a7-e9f3-cb49-e851dfaf647c, 2154793, .venv/bin/python, 22674 MiB\nGPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c, 491104, /data/speech-avatar-exx-20261020/e1b-video/.venv-longcat/bin/python, 52070 MiB\n",
+    "stderr": ""
+  },
+  "project_size": {
+    "command": [
+      "du",
+      "-sb",
+      "/mnt/raid/asr-lab"
+    ],
+    "returncode": 0,
+    "stdout": "250827835743\t/mnt/raid/asr-lab\n",
+    "stderr": ""
+  },
+  "processes": {
+    "command": [
+      "ps",
+      "-eo",
+      "pid,pgid,etimes,args"
+    ],
+    "returncode": 0,
+    "stdout": "2154793 2154792  198239 .venv/bin/python -u -m moshi.server_prefix_paced --host 127.0.0.1 --port 8998 --static none\n2154794 2154792  198239 zsh -c cd /mnt/data2/exx/voice-ai-personaplex-demo && nohup env PYTHONPATH=\"$PWD/src\" HF_HOME=\"$PWD/hf-home\" HF_HUB_CACHE=\"$PWD/models/hub\" HF_HUB_OFFLINE=1 CUDA_VISIBLE_DEVICES=0 .venv/bin/python -u -m moshi.server_prefix_paced --host 127.0.0.1 --port 8998 --static none > logs/prefix-paced-backend.log 2>&1 < /dev/null > /dev/null 2>&1 &\n2154795 2154792  198239 zsh -c cd /mnt/data2/exx/voice-ai-personaplex-demo && nohup env PYTHONPATH=\"$PWD/src\" HF_HOME=\"$PWD/hf-home\" HF_HUB_CACHE=\"$PWD/models/hub\" HF_HUB_OFFLINE=1 CUDA_VISIBLE_DEVICES=0 .venv/bin/python -u -m moshi.server_prefix_paced --host 127.0.0.1 --port 8998 --static none > logs/prefix-paced-backend.log 2>&1 < /dev/null > /dev/null 2>&1 &\n3729179 3729179   76017 /mnt/raid/asr-lab/venv/bin/python -m tensorboard.main --logdir /mnt/raid/asr-lab/runs --host 127.0.0.1 --port 6006\n3729263 3729179   76017 /mnt/raid/asr-lab/venv/lib/python3.10/site-packages/tensorboard_data_server/bin/server --logdir=/mnt/raid/asr-lab/runs --reload=5 --samples-per-plugin= --port=0 --port-file=/mnt/raid/asr-lab/tmp/tensorboard_data_server_lb7dohio/port --die-after-stdin --error-file=/mnt/raid/asr-lab/tmp/tensorboard_data_server_lb7dohio/startup_error",
+    "stderr": ""
+  },
+  "tmux": {
+    "command": [
+      "tmux",
+      "list-sessions"
+    ],
+    "returncode": 0,
+    "stdout": "0: 1 windows (created Mon Oct  5 18:21:25 2026) (attached)\nasr-tensorboard: 1 windows (created Thu Oct 22 03:05:28 2026)\n",
+    "stderr": ""
+  }
+}

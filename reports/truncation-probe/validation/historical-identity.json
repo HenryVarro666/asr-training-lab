@@ -1,0 +1,23 @@
+{
+  "status": "pass",
+  "checks": {
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/prefix-complete.json": {
+      "local": "reports/early100/run/training/checkpoint-100/prefix-complete.json",
+      "expected_sha256": "b32e69488301d492bd3cffe6b957bf07dc20449726dadc0e2ca2bebbbae4eb80",
+      "actual_sha256": "b32e69488301d492bd3cffe6b957bf07dc20449726dadc0e2ca2bebbbae4eb80",
+      "equal": true
+    },
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/checkpoint.json": {
+      "local": "reports/early100/run/training/checkpoint-100/checkpoint.json",
+      "expected_sha256": "bad241c06c02cfaf01d37eff1a3672c56ed2269ab10734346809c75d653567d7",
+      "actual_sha256": "bad241c06c02cfaf01d37eff1a3672c56ed2269ab10734346809c75d653567d7",
+      "equal": true
+    },
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/campaign.json": {
+      "local": "reports/early100/run/campaign.json",
+      "expected_sha256": "f6be4d5322fba1fb03d89b311017220506fff83ffa238d22614fb1e97ea1c279",
+      "actual_sha256": "f6be4d5322fba1fb03d89b311017220506fff83ffa238d22614fb1e97ea1c279",
+      "equal": true
+    }
+  }
+}
