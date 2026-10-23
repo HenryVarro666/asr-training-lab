@@ -1,0 +1,24 @@
+{
+  "time_utc": "2026-10-23T13:53:47Z",
+  "gpu": {
+    "returncode": 0,
+    "stdout": "index, uuid, name, memory.free [MiB], memory.used [MiB], utilization.gpu [%]\n0, GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c, NVIDIA H100 NVL, 72624 MiB, 22697 MiB, 0 %\n1, GPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c, NVIDIA H100 NVL, 95306 MiB, 14 MiB, 0 %\n",
+    "stderr": ""
+  },
+  "gpu_processes": {
+    "returncode": 0,
+    "stdout": "gpu_uuid, pid, process_name, used_gpu_memory [MiB]\nGPU-eed83181-48a7-e9f3-cb49-e851dfaf647c, 2154793, .venv/bin/python, 22674 MiB\n",
+    "stderr": ""
+  },
+  "disk": {
+    "total": 47808184197120,
+    "used": 42630040793088,
+    "free": 2778112430080
+  },
+  "project_size": {
+    "returncode": 0,
+    "stdout": "250852695987\t/mnt/raid/asr-lab\n",
+    "stderr": ""
+  },
+  "lock_available": true
+}

@@ -1,0 +1,19 @@
+test_arbitrary_periods_not_only_one_named_word (test_repetition_onset.RepetitionContracts) ... ok
+test_coverage_and_twenty_period_thresholds (test_repetition_onset.RepetitionContracts) ... ok
+test_early_stop_strong_repeat_and_exhaustion_are_separate (test_repetition_onset.RepetitionContracts) ... ok
+test_eos_and_following_padding_are_excluded (test_repetition_onset.RepetitionContracts) ... ok
+test_sampled_earliest_does_not_assume_monotonicity_or_causal_onset (test_repetition_onset.RepetitionContracts) ... ok
+test_short_genuine_repetition_is_not_strong (test_repetition_onset.RepetitionContracts) ... ok
+test_longest_run_agrees_with_brute_force_for_small_sequences (test_repetition_onset.RepetitionTieContracts) ... ok
+test_period_tie_and_partial_period_are_deterministic (test_repetition_onset.RepetitionTieContracts) ... ok
+test_four_calls_continue_observations_but_failure_or_drift_stops_following_models (test_repetition_onset.RunnerContracts) ... ok
+test_hash_checks_deadline_between_chunks (test_repetition_onset.RunnerContracts) ... ok
+test_historical_checkpoint_sha_mismatch_rejected_before_content_read (test_repetition_onset.RunnerContracts) ... ok
+test_pregeneration_guard_pass_calls_original_once_same_args_and_failure_calls_zero (test_repetition_onset.RunnerContracts) ... ok
+test_single_capture_base_provenance_and_later_stat_drift (test_repetition_onset.RunnerContracts) ... ok
+test_symlink_target_drift_is_saved_and_rejected (test_repetition_onset.RunnerContracts) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 14.958s
+
+OK

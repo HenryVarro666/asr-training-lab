@@ -1,0 +1,14 @@
+{
+  "checked_unix": 1792767638.3251982,
+  "status": "matched",
+  "mode": "Allowlisted file deployment overlay; remote Git HEAD is not claimed as the executed source identity.",
+  "sha256": {
+    "scripts/run_repetition_onset.py": "688955c31abc04448a9b577010f9369ae35e59896dd5d38153e61b87a0b080db",
+    "src/asr_lab/repetition_metrics.py": "95f232d3e46b258ce07096d08ef4fcfc8201003635aa49f9ec609496035c1596",
+    "tests/test_repetition_onset.py": "eba120fd35f309ab6018525f55f3e5d66745903a146b683e93fec9020b925aaa",
+    "reports/repetition-onset/inputs/model-reference.json": "812ec7ed461720455e2cd192cc6ff97e227a1a703c5e2af4e4d9678d8e9e893a",
+    "reports/repetition-onset/validation/launch-command.sh": "b3cdccfabb5888be7d41204f0f66dd567fbf44eeefcc317a0703dc0bfab6aebd",
+    "docs/REPETITION_ONSET_PROBE.md": "9e20e23ceab992fc4dd3d28ae16226a6ade70b51acf7dc6c199cfd448a22e06a",
+    "docs/superpowers/plans/2026-10-23-repetition-onset.md": "7e597440f65e66aca3d8401934f1bbbf4a4879ebfaf768b26b1c74783066793e"
+  }
+}
