@@ -1,0 +1,97 @@
+{
+  "status": "complete",
+  "stage": "diagnostic_evaluations_complete",
+  "started_unix": 1792727519.881878,
+  "max_wall_seconds": 1200,
+  "results": [],
+  "main_lr_matrix_status": "recommendation_pending_analysis",
+  "selected_config": null,
+  "commands": [
+    {
+      "name": "evaluate-dev-clean",
+      "command": [
+        "/mnt/raid/asr-lab/venv/bin/python",
+        "-m",
+        "asr_lab.qwen_evaluate",
+        "--model",
+        "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/main-epoch1/checkpoint-800",
+        "--manifest",
+        "/mnt/raid/asr-lab/data/manifests/dev-clean.jsonl",
+        "--output",
+        "/mnt/raid/asr-lab/runs/qwen-checkpoint800-diagnostic-20261022/dev-clean/predictions.jsonl",
+        "--all",
+        "--batch-size",
+        "16"
+      ],
+      "physical_gpus": "1",
+      "run_dir": "/mnt/raid/asr-lab/runs/qwen-checkpoint800-diagnostic-20261022/dev-clean",
+      "fingerprint": "ee7f75aaf09702bdab88b662fd464e8f1e45d152a7b3116386b0e3d9045ab802",
+      "started_unix": 1792727521.5681562,
+      "status": "complete",
+      "exit_code": 0,
+      "ended_unix": 1792727763.8995643
+    },
+    {
+      "name": "evaluate-dev-other",
+      "command": [
+        "/mnt/raid/asr-lab/venv/bin/python",
+        "-m",
+        "asr_lab.qwen_evaluate",
+        "--model",
+        "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/main-epoch1/checkpoint-800",
+        "--manifest",
+        "/mnt/raid/asr-lab/data/manifests/dev-other.jsonl",
+        "--output",
+        "/mnt/raid/asr-lab/runs/qwen-checkpoint800-diagnostic-20261022/dev-other/predictions.jsonl",
+        "--all",
+        "--batch-size",
+        "16"
+      ],
+      "physical_gpus": "1",
+      "run_dir": "/mnt/raid/asr-lab/runs/qwen-checkpoint800-diagnostic-20261022/dev-other",
+      "fingerprint": "f5c7567060d7e6223effc0cd020f5c37cd0563bba2e11e135d55ba6a3d79b876",
+      "started_unix": 1792727765.6762893,
+      "status": "complete",
+      "exit_code": 0,
+      "ended_unix": 1792727999.1217682
+    }
+  ],
+  "updated_unix": 1792727999.3744962,
+  "kind": "existing_checkpoint_generation_diagnostic",
+  "parameter_updates": 0,
+  "reference_campaign": "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a",
+  "checkpoint": "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/main-epoch1/checkpoint-800",
+  "checkpoint_step": 800,
+  "question": "Was the observed WER regression already present by step800, before the final92 updates?",
+  "source_sha256": {
+    "/mnt/raid/asr-lab/repo/src/asr_lab/qwen_train.py": "97951994468a14b10ce57b7c5c864dcef6ffb6af4ee9c75e621b48c01e9de961",
+    "/mnt/raid/asr-lab/repo/src/asr_lab/qwen_data.py": "769aed8478da4a6e9dcd33ed3bf87aaa6b846eede3d677c9ae4dc88469dc89b0",
+    "/mnt/raid/asr-lab/repo/src/asr_lab/qwen_evaluate.py": "0a2012eb016cddadee7b3c0f0ca5ad9f3f94b502faad780392788a8ccf9e30d6",
+    "/mnt/raid/asr-lab/repo/src/asr_lab/benchmark.py": "382b9faa741d36153e847796b518494cf31821e9ca65e2391e25fb79c1f828b5"
+  },
+  "manifests": {
+    "/mnt/raid/asr-lab/data/manifests/dev-clean.jsonl": "fc6f7f048b571431d244a854b204a8e9ed34062796350359e10ee5635ff9ca9a",
+    "/mnt/raid/asr-lab/data/manifests/dev-other.jsonl": "bcd2dbbc9f189cb550cba5d0a35203732a1425aad80e66e513276a627266b3fa"
+  },
+  "model_revision": "7278e1e70fe206f11671096ffdd38061171dd6e5",
+  "evaluations": {
+    "dev-clean": {
+      "baseline_wer": 0.016121568845207025,
+      "candidate_wer": 0.024191607899753827,
+      "final_wer": 0.023728876302589446,
+      "examples": 2694,
+      "reference_words": 54027
+    },
+    "dev-other": {
+      "baseline_wer": 0.03085029283293832,
+      "candidate_wer": 0.05041819285840205,
+      "final_wer": 0.04985015572052573,
+      "examples": 2857,
+      "reference_words": 51053
+    }
+  },
+  "evaluation_batch_size": 16,
+  "original_campaign_sha256": "52d7791445dab5539ceeee648b3ca9f3fecad00a466a78b3c29ecf7b15582f00",
+  "checkpoint_metadata_sha256": "3f0819f5a0e04fef7f1c3891b025b2393dc4cc5437db66c6ceb954ecd0245970",
+  "completed_unix": 1792727999.374493
+}

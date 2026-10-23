@@ -1,6 +1,6 @@
 # ASR training lab
 
-Current workflow: the first campaign completed with worse development WER. Follow the [staged diagnosis plan](docs/NEXT_STEPS.md) before any new training. The user has replaced continuous autonomous experimentation with step-by-step planning and review of each stage's evidence. The commands below document the completed campaign workflow; they are not a queued next run. See the [measured results](EXPERIMENT_STATUS.md).
+Current workflow: the first campaign completed with worse development WER. Follow the [staged diagnosis plan](docs/NEXT_STEPS.md) and [diagnosis evidence](reports/diagnosis/README.md) before any new training. The user has replaced continuous autonomous experimentation with step-by-step planning and review of each stage's evidence. The commands below document the completed campaign workflow; they are not a queued next run. See the [measured results](EXPERIMENT_STATUS.md).
 
 The primary experiment trains the official **Qwen3-ASR-1.7B** architecture on LibriSpeech `train-clean-100` with both H100 GPUs. The loaded model contains about 2.038 billion unique parameters, measured after loading (2,038,052,480), including its acoustic components. Whisper-small remains a separately measured reference. This is supervised finetuning of pretrained ASR models; source code alone does not establish a completed training run or improved WER.
 

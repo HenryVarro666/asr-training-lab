@@ -1,0 +1,20 @@
+{
+  "recorded_utc": "2026-10-23T03:56:58.187925+00:00",
+  "command": "PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -v",
+  "exit_code": 0,
+  "tests_run": 49,
+  "result": "OK",
+  "log": "unit-tests.log",
+  "log_sha256": "3fd0a3fc061d182a7abd48d615876bb3b6c5408985db7bfd925568ac68afaf83",
+  "source_sha256": {
+    "scripts/analyze_asr_predictions.py": "a7662a7164a569045a4a197a29ab58f59c46c9115e8be33933afc89572c5b428",
+    "scripts/audit_saved_predictions.py": "3480b0a6571510e93dce4b30954e8d5613c841831c5af62b453050cf85a52422",
+    "scripts/evaluate_checkpoint_diagnostic.py": "473e3b36ba7b5b65c0efb32e6fa1f7d2809d5208efd46bde61f05e086cfd931b",
+    "tests/test_prediction_analysis.py": "186f060a6e10ebf355a0157fc0d80a3d3e1be4f44455bc5edd517aa2829b53a2"
+  },
+  "notes": [
+    "Initial local discovery without PYTHONPATH failed to import asr_lab in test_benchmark; rerunning the documented src-layout command passed all49 tests without a source change.",
+    "The15 prediction analysis tests include a real command-line comparison gate.",
+    "Actual checkpoint800 GPU generation is a separate integration run."
+  ]
+}

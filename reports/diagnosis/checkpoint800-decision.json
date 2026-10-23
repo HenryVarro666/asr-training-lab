@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-22",
+  "state": "complete",
+  "scope": "evaluate existing checkpoint only",
+  "parameter_updates": 0,
+  "question": "Was the observed WER regression already present at step800, before the final92 updates?",
+  "checkpoint": "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/main-epoch1/checkpoint-800",
+  "output": "/mnt/raid/asr-lab/runs/qwen-checkpoint800-diagnostic-20261022",
+  "reference_campaign": "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a",
+  "splits": [
+    "dev-clean",
+    "dev-other"
+  ],
+  "evaluation_batch_size": 16,
+  "physical_gpu": "1",
+  "max_wall_seconds": 1200,
+  "project_quota_gib": 300,
+  "mount_reserve_gib": 500,
+  "reasons": [
+    "Saved predictions and corpus edits reproduce exactly",
+    "Same normalization and generation conditions",
+    "Only checkpoint800 and892 remain",
+    "Astra recommends existing-checkpoint diagnostic before new training"
+  ],
+  "limitations": [
+    "Step800 is89.7percent ofepoch, not earlytraining",
+    "This is adaptive development analysis, not independent test confirmation"
+  ],
+  "next_training": "not_queued",
+  "test_accessed": false,
+  "review": "Astra recommends A; Sol read-only runner review found no blocker",
+  "runner_source_sha256": "473e3b36ba7b5b65c0efb32e6fa1f7d2809d5208efd46bde61f05e086cfd931b",
+  "completed_utc": "2026-10-23T03:59:59.374493+00:00",
+  "actual_wall_seconds": 479.49261498451233,
+  "outcome": "Regression is already present by step800 in both splits; point estimates improve slightly by892 and paired delta intervals overlap zero. No evidence that the final92 updates caused the main regression.",
+  "next_action": "Plan a zero-update save/reload control before another training experiment; not queued.",
+  "local_campaign_sha256": "8f4afd18d03cfcc4908f916378574a8dd6236e9af6fc33bc69780788f3c4fea5"
+}

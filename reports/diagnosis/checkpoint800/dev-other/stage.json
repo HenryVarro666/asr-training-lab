@@ -1,0 +1,24 @@
+{
+  "name": "evaluate-dev-other",
+  "command": [
+    "/mnt/raid/asr-lab/venv/bin/python",
+    "-m",
+    "asr_lab.qwen_evaluate",
+    "--model",
+    "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/main-epoch1/checkpoint-800",
+    "--manifest",
+    "/mnt/raid/asr-lab/data/manifests/dev-other.jsonl",
+    "--output",
+    "/mnt/raid/asr-lab/runs/qwen-checkpoint800-diagnostic-20261022/dev-other/predictions.jsonl",
+    "--all",
+    "--batch-size",
+    "16"
+  ],
+  "physical_gpus": "1",
+  "run_dir": "/mnt/raid/asr-lab/runs/qwen-checkpoint800-diagnostic-20261022/dev-other",
+  "fingerprint": "f5c7567060d7e6223effc0cd020f5c37cd0563bba2e11e135d55ba6a3d79b876",
+  "started_unix": 1792727765.6762893,
+  "status": "complete",
+  "exit_code": 0,
+  "ended_unix": 1792727999.1217682
+}

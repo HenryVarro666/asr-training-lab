@@ -1,0 +1,24 @@
+{
+  "name": "evaluate-dev-clean",
+  "command": [
+    "/mnt/raid/asr-lab/venv/bin/python",
+    "-m",
+    "asr_lab.qwen_evaluate",
+    "--model",
+    "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/main-epoch1/checkpoint-800",
+    "--manifest",
+    "/mnt/raid/asr-lab/data/manifests/dev-clean.jsonl",
+    "--output",
+    "/mnt/raid/asr-lab/runs/qwen-checkpoint800-diagnostic-20261022/dev-clean/predictions.jsonl",
+    "--all",
+    "--batch-size",
+    "16"
+  ],
+  "physical_gpus": "1",
+  "run_dir": "/mnt/raid/asr-lab/runs/qwen-checkpoint800-diagnostic-20261022/dev-clean",
+  "fingerprint": "ee7f75aaf09702bdab88b662fd464e8f1e45d152a7b3116386b0e3d9045ab802",
+  "started_unix": 1792727521.5681562,
+  "status": "complete",
+  "exit_code": 0,
+  "ended_unix": 1792727763.8995643
+}

@@ -1,0 +1,162 @@
+{
+  "comparison_valid": true,
+  "comparison_invalid_reasons": [],
+  "provenance": {
+    "python_version": "3.12.15",
+    "packages": {
+      "jiwer": "4.0.0",
+      "rapidfuzz": "3.14.6"
+    },
+    "analysis_source_sha256": "c29617c294d9ca4560961fefc7062df70e1c6bc209218510f46fc9c0ca224386",
+    "jiwer_process_source_sha256": "47ec0046008d434c78d4c9fba370959b0150029b466a20938f7218c717ee0436"
+  },
+  "paired_utterances": 2857,
+  "speakers": 33,
+  "validation": {
+    "exact_id_sets": true,
+    "exact_raw_references": true,
+    "exact_normalized_references": true,
+    "identical_reference_word_denominators": true,
+    "stored_normalized_text_used": true,
+    "lexical_normalizer_rerun": false,
+    "normalizer_metadata": {
+      "normalizer": {
+        "baseline": "Whisper EnglishTextNormalizer",
+        "candidate": "Whisper EnglishTextNormalizer",
+        "consistent": true
+      },
+      "normalizer_revision": {
+        "baseline": "973afd24965f72e36ca33b3055d56a652f456b4d",
+        "candidate": "973afd24965f72e36ca33b3055d56a652f456b4d",
+        "consistent": true
+      },
+      "status": "verified_declared_metadata",
+      "interpretation": "Exact saved normalized references are verified; missing metadata cannot establish identical hypothesis normalization.",
+      "manifest_sha256": {
+        "baseline": "bcd2dbbc9f189cb550cba5d0a35203732a1425aad80e66e513276a627266b3fa",
+        "candidate": "bcd2dbbc9f189cb550cba5d0a35203732a1425aad80e66e513276a627266b3fa",
+        "equal": true
+      },
+      "evaluation_batch_size": {
+        "baseline": 16,
+        "candidate": 16,
+        "equal": true
+      },
+      "generation_max_new_tokens": {
+        "baseline": 512,
+        "candidate": 512,
+        "equal": true
+      },
+      "generation_truncated_count": {
+        "baseline": 0,
+        "candidate": 0,
+        "equal": true
+      },
+      "issues": []
+    },
+    "baseline_stored_metrics": {
+      "verified_fields": [
+        "hits",
+        "substitutions",
+        "deletions",
+        "insertions",
+        "reference_words",
+        "wer",
+        "examples"
+      ],
+      "complete": true
+    },
+    "candidate_stored_metrics": {
+      "verified_fields": [
+        "hits",
+        "substitutions",
+        "deletions",
+        "insertions",
+        "reference_words",
+        "wer",
+        "examples"
+      ],
+      "complete": true
+    },
+    "supplied_manifest_file_hash_match": true
+  },
+  "baseline": {
+    "hits": 49602,
+    "substitutions": 1251,
+    "deletions": 200,
+    "insertions": 124,
+    "reference_words": 51053,
+    "edits": 1575,
+    "wer": 0.03085029283293832,
+    "perfect_utterances": 1963
+  },
+  "candidate": {
+    "hits": 48758,
+    "substitutions": 2096,
+    "deletions": 199,
+    "insertions": 250,
+    "reference_words": 51053,
+    "edits": 2545,
+    "wer": 0.04985015572052573,
+    "perfect_utterances": 1614
+  },
+  "comparison": {
+    "delta_definition": "candidate WER minus baseline WER; negative is improvement",
+    "wer_delta": 0.01899986288758741,
+    "wer_delta_percentage_points": 1.8999862887587409,
+    "relative_wer_reduction": -0.6158730158730158
+  },
+  "utterance_changes": {
+    "improved": 181,
+    "regressed": 732,
+    "tied": 1944,
+    "normalized_hypothesis_changed": 1099
+  },
+  "edit_deltas": {
+    "substitutions": 845,
+    "deletions": -1,
+    "insertions": 126
+  },
+  "primary_bootstrap_unit": "speaker_cluster",
+  "bootstrap": {
+    "speaker": {
+      "unit": "speaker_cluster",
+      "units": 33,
+      "replicates": 10000,
+      "seed": 20261022,
+      "confidence_level": 0.95,
+      "method": "paired percentile bootstrap; corpus edits/reference words recomputed for each resample",
+      "wer_delta_95_ci": [
+        0.015171317320128877,
+        0.02337904735457703
+      ],
+      "wer_delta_percentage_points_95_ci": [
+        1.5171317320128876,
+        2.337904735457703
+      ],
+      "scope": "Conditional on saved predictions; does not estimate variation across training seeds."
+    }
+  },
+  "inputs": {
+    "baseline": {
+      "path": "/Users/caochao/Documents/ChatGPT/train/reports/qwen-campaign-20261022-a/evaluation/baseline-dev-other/predictions.jsonl",
+      "sha256": "716e2a465443484b001a2583c961e3049321d9205cba5c5f63819d150d6d4494"
+    },
+    "candidate": {
+      "path": "/Users/caochao/Documents/ChatGPT/train/reports/qwen-campaign-20261022-a/evaluation/final-dev_other/predictions.jsonl",
+      "sha256": "7858b59e22d5a8a720c268d04599af24150dfea4a38d584e830a6c9cd5aac9da"
+    },
+    "manifest": {
+      "path": "/Users/caochao/Documents/ChatGPT/train/reports/diagnosis/inputs/dev-other.jsonl",
+      "sha256": "bcd2dbbc9f189cb550cba5d0a35203732a1425aad80e66e513276a627266b3fa"
+    },
+    "baseline_metrics": {
+      "path": "/Users/caochao/Documents/ChatGPT/train/reports/qwen-campaign-20261022-a/evaluation/baseline-dev-other/predictions.metrics.json",
+      "sha256": "d77df8e4454ca42ac65fd568df83d8f054f8c1fd46c128e03c7b10b176714b8c"
+    },
+    "candidate_metrics": {
+      "path": "/Users/caochao/Documents/ChatGPT/train/reports/qwen-campaign-20261022-a/evaluation/final-dev_other/predictions.metrics.json",
+      "sha256": "e120bcf8fe2beda540e7721ff1a4d2f545492f81fbcce0f36fb9de6103d28e11"
+    }
+  }
+}

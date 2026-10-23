@@ -1,0 +1,10 @@
+{
+  "recorded_utc": "2026-10-23T04:02:15.337088+00:00",
+  "campaign_status": "complete",
+  "stage": "diagnostic_evaluations_complete",
+  "parameter_updates": 0,
+  "gpu_compute_processes_csv": "2154793, GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c, 22674 MiB, .venv/bin/python",
+  "preserved_service_pid": 2154793,
+  "preserved_service_pid_exists": true,
+  "raid_disk_free_bytes": 3354414854144
+}

@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-10-23T03:56:03.510622+00:00",
+  "unix_time": 1792727763.4540524,
+  "training_pid": 430854,
+  "training_process": "zombie",
+  "gpu_target": "1",
+  "training_status": null,
+  "summary": null,
+  "run_metadata": null,
+  "gpus": [
+    {
+      "index": 0.0,
+      "uuid": "GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c",
+      "utilization_percent": 0.0,
+      "memory_used_mib": 22697.0,
+      "memory_total_mib": 95830.0,
+      "temperature_c": 37.0,
+      "power_w": 89.84
+    },
+    {
+      "index": 1.0,
+      "uuid": "GPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c",
+      "utilization_percent": 0.0,
+      "memory_used_mib": 14.0,
+      "memory_total_mib": 95830.0,
+      "temperature_c": 52.0,
+      "power_w": 96.79
+    }
+  ],
+  "gpu_error": null,
+  "disk_free_gib": 3124.043876647949,
+  "disk_used_gib": 39165.59429168701,
+  "latest_metric": null,
+  "metric_age_seconds": null,
+  "latest_checkpoint": null,
+  "checkpoint_age_seconds": null,
+  "alerts": [
+    "training_process_exited"
+  ]
+}
