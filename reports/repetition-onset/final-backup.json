@@ -1,0 +1,15 @@
+{
+  "status": "verified_local_and_remote",
+  "captured_utc": "2026-10-23T15:11:44.387774+00:00",
+  "payload_commit": "23478e3214588ead38d74a6f5f41dacd376f7ca9",
+  "branch": "experiment/repetition-onset",
+  "local_bundle": "/Users/caochao/Documents/ChatGPT/train/.git/asr-backups/asr-lab-repetition-onset-23478e3.bundle",
+  "remote_bundle": "/mnt/raid/asr-lab/backups/asr-lab-repetition-onset-23478e3.bundle",
+  "sha256": "0e4b98378adb622d9ed4cfd29a1933852e43f79220aa0ac86a61a5672a6e3249",
+  "bytes": 5601370,
+  "local_verification": "The bundle contains these 2 refs:\n23478e3214588ead38d74a6f5f41dacd376f7ca9 HEAD\n23478e3214588ead38d74a6f5f41dacd376f7ca9 refs/heads/experiment/repetition-onset\nThe bundle records a complete history.\nThe bundle uses this hash algorithm: sha1\n.git/asr-backups/asr-lab-repetition-onset-23478e3.bundle is okay\n",
+  "remote_verification": "The bundle contains these 2 refs:\n23478e3214588ead38d74a6f5f41dacd376f7ca9 HEAD\n23478e3214588ead38d74a6f5f41dacd376f7ca9 refs/heads/experiment/repetition-onset\nThe bundle records a complete history.\n/mnt/raid/asr-lab/backups/asr-lab-repetition-onset-23478e3.bundle is okay\n",
+  "coverage": "Committed code, documents, small JSON/log/CSV evidence and audits through payload_commit. No public GitHub push.",
+  "excluded": "Ignored .pt input/raw-evidence tensors (already mirrored local and remote), original audio, cached model weights and training checkpoints. Unrelated untracked study materials are not part of this payload.",
+  "receipt_scope": "This receipt is written after the payload bundle and is copied separately to the remote repo; it is not claimed to be inside its own bundle."
+}

@@ -51,7 +51,7 @@
 - [x] Verify liveGPU1, lock, disk and source; run exactly4preset processes and save actual progress.
 - [x] Mirror rawJSON/PT/config/resource traces; independently recompute tokens/EOS/decodes/parser/normalizer/repetition and verify all4input/settings match.
 - [x] Report per-checkpoint findings, earliest observed repetition/loop and limitations; retain oldfailed states and verify cleanup/service preservation.
-- [ ] Commit allowlisted small artifacts; verify cross-hostGit bundle and receipt, no publicpush or automaticnextstage.
+- [x] Commit allowlisted small artifacts; verify cross-hostGit bundle and receipt, no publicpush or automaticnextstage.
 
 ## Execution decisions
 
