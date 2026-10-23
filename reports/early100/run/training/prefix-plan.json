@@ -1,0 +1,13 @@
+{
+  "original_total_steps": 892,
+  "warmup_steps": 45,
+  "actual_stop": 100,
+  "model_only_steps": [
+    25,
+    50
+  ],
+  "full_checkpoint_step": 100,
+  "rng_control": "Python/NumPy/CPU/local CUDA preserved around exports; nativeHF full RNG files retained",
+  "original_per_id_order_recorded": false,
+  "reference_metrics_sha256": "a7163b884ddf50e99ead921b518c0218aa966ac8733875bc0a8aab2483d07572"
+}

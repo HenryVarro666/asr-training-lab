@@ -1,0 +1,19 @@
+test_callback_exports25_and_stops100_without_changing_eval_flag (test_early100.CallbackBoundaryContract) ... ok
+test_rank0_io_failure_reaches_both_ranks_without_hang (test_early100.DistributedSaveContract) ... [Gloo] Rank 0 is connected to 1 peer ranks. Expected number of connected peer ranks is : 1
+[Gloo] Rank 1 is connected to 1 peer ranks. Expected number of connected peer ranks is : 1
+ok
+test_export25_50_and_full100_stop_policy (test_early100.EarlyScheduleContracts) ... ok
+test_only_wall_budget_may_change_in_original_config (test_early100.EarlyScheduleContracts) ... ok
+test_original892_and45_warmup_are_required_not100 (test_early100.EarlyScheduleContracts) ... ok
+test_private_id_observation_does_not_change_collator_tensors (test_early100.EarlyScheduleContracts) ... ok
+test_rng_can_be_restored_without_reseeding (test_early100.EarlyScheduleContracts) ... ok
+test_used_lr_and_consumption_mismatch_fail (test_early100.EarlyScheduleContracts) ... ok
+test_checkpoint_mode_and_full_resume_requirements (test_early100.RunnerContracts) ... ok
+test_original_epoch_complete_is_not_prefix_complete (test_early100.RunnerContracts) ... ok
+test_paired_eval_order_and_decode_must_match (test_early100.RunnerContracts) ... ok
+test_stage_deadline_is_minimum_not_reset_total_budget (test_early100.RunnerContracts) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 4.282s
+
+OK

@@ -1,0 +1,28 @@
+{
+  "name": "step100-fixed128",
+  "command": [
+    "/mnt/raid/asr-lab/venv/bin/python",
+    "-m",
+    "asr_lab.qwen_evaluate",
+    "--model",
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100",
+    "--revision",
+    "7278e1e70fe206f11671096ffdd38061171dd6e5",
+    "--manifest",
+    "/mnt/raid/asr-lab/data/manifests/dev-clean-fixed128.jsonl",
+    "--output",
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/evaluation/step100-fixed128/predictions.jsonl",
+    "--all",
+    "--batch-size",
+    "16",
+    "--max-new-tokens",
+    "512"
+  ],
+  "physical_gpus": "1",
+  "run_dir": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/evaluation/step100-fixed128",
+  "fingerprint": "38c97faec38522d980436f8f3fa8d0563b2810bf366281151c227fc6c5795f14",
+  "started_unix": 1792731158.2917254,
+  "status": "complete",
+  "exit_code": 0,
+  "ended_unix": 1792731180.3209918
+}

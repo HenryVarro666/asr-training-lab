@@ -1,0 +1,46 @@
+{
+  "compiled_scripts": [
+    "scripts/audit_early100_outputs.py",
+    "scripts/audit_early100_partial.py",
+    "scripts/plot_early100_results.py"
+  ],
+  "checks": [
+    {
+      "name": "full_plot_gate",
+      "command": [
+        "/Users/caochao/Documents/ChatGPT/train/.venv/bin/python",
+        "scripts/plot_early100_results.py",
+        "--early100",
+        "reports/early100/run",
+        "--check-only"
+      ],
+      "expected_exit_code": 1,
+      "actual_exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/caochao/Documents/ChatGPT/train/scripts/plot_early100_results.py\", line 246, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/Users/caochao/Documents/ChatGPT/train/scripts/plot_early100_results.py\", line 201, in main\n    inputs=validate_inputs(args)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/caochao/Documents/ChatGPT/train/scripts/plot_early100_results.py\", line 54, in validate_inputs\n    raise ValueError('Early100 campaign and all five evaluations must be complete before rendering')\nValueError: Early100 campaign and all five evaluations must be complete before rendering\n"
+    },
+    {
+      "name": "partial_plot_gate",
+      "command": [
+        "/Users/caochao/Documents/ChatGPT/train/.venv/bin/python",
+        "scripts/plot_early100_results.py",
+        "--early100",
+        "reports/early100/run",
+        "--partial-diagnostic",
+        "--check-only"
+      ],
+      "expected_exit_code": 0,
+      "actual_exit_code": 0,
+      "stdout": "Partial diagnostic: completed training and accepted fixed128 only; failed full-clean excluded, full-other not run. Trajectory and comparison settings validated; no figures written.\n",
+      "stderr": ""
+    }
+  ],
+  "script_sha256": {
+    "scripts/audit_early100_outputs.py": "45d84d43ef61981ea6ee38a86dd33edf59bafd3c5308cbea809d7b64f686c8b6",
+    "scripts/audit_early100_partial.py": "4fba255f03fd78ae5a5427c48bb5310d9145bc6198bb8a83289f395fa38574a2",
+    "scripts/plot_early100_results.py": "80b3aba858dd340ec08f6d81827917cd7856160d1bf63355755ddc0c1b0f7959"
+  },
+  "training_suite": "72local and12remote checks already recorded before execution; not repeated after unchanged training implementation",
+  "raw_audit_sha256": "613bb310267da7a321b1928ff4eb305d5024a657b40a14705697e25490e711ae",
+  "render_verification_sha256": "074966a56962d7915aa12c2e9e73eb8c4acc4ce81d7250927e243555b5f25cfe"
+}

@@ -1,0 +1,267 @@
+{
+  "status": "training_complete_evaluation_partial_quality_gate_failed",
+  "campaign_status": "failed",
+  "failure": "ValueError: Generation truncation prevents an accepted evaluation",
+  "actual_updates": 100,
+  "original_schedule": 892,
+  "warmup_steps": 45,
+  "wall_seconds_to_failure": 641.521476984024,
+  "limits": {
+    "total_seconds": 5400,
+    "training_seconds": 1200,
+    "per_evaluation_seconds": 600,
+    "incremental_gib": 80,
+    "project_gib": 300,
+    "reserve_gib": 500
+  },
+  "stages": [
+    {
+      "name": "training-prefix100",
+      "status": "complete",
+      "exit_code": 0,
+      "elapsed_seconds": 279.28942799568176,
+      "source": "reports/early100/run/training/stage.json",
+      "sha256": "255336bcea4ab7224d7382d5d7e240213bba0adfe9bee50f141c156dafc914f2"
+    },
+    {
+      "name": "step100-dev_clean",
+      "status": "complete",
+      "exit_code": 0,
+      "elapsed_seconds": 250.57436394691467,
+      "source": "reports/early100/run/evaluation/step100-dev_clean/stage.json",
+      "sha256": "12a832b15429acd84633d398b7e1d360f626eaa619612aaf27715ce6afa789a1"
+    },
+    {
+      "name": "step100-fixed128",
+      "status": "complete",
+      "exit_code": 0,
+      "elapsed_seconds": 22.029266357421875,
+      "source": "reports/early100/run/evaluation/step100-fixed128/stage.json",
+      "sha256": "b2ed24717e0d5dbe37de8a4e4017aadd3e9ad4306c32cdf9b86fc69d89cfb370"
+    },
+    {
+      "name": "step25-fixed128",
+      "status": "complete",
+      "exit_code": 0,
+      "elapsed_seconds": 26.23455047607422,
+      "source": "reports/early100/run/evaluation/step25-fixed128/stage.json",
+      "sha256": "35b431197ee099c69bfc89250530217c5f48818b39b17b319d2dd8a9d3e1b6f5"
+    },
+    {
+      "name": "step50-fixed128",
+      "status": "complete",
+      "exit_code": 0,
+      "elapsed_seconds": 22.705207586288452,
+      "source": "reports/early100/run/evaluation/step50-fixed128/stage.json",
+      "sha256": "e2e00ffeb84708c715ae10569edc8cfae12a52522f466e28104aa17c58ec9af7"
+    }
+  ],
+  "completed_generation_stages": 4,
+  "accepted_generation_stages": 3,
+  "planned_generation_stages": 5,
+  "not_executed": [
+    "step100-dev_other"
+  ],
+  "trajectory": {
+    "consumed_examples": 3200,
+    "unique_consumed_ids": 3200,
+    "consumed_audio_hours": 11.313861145833334,
+    "max_lr_absolute_difference": 0.0,
+    "max_audio_seconds_absolute_difference": 0.0,
+    "first_loss_difference_step": 3,
+    "max_loss_absolute_difference": 0.008099999999999996,
+    "mean_loss_absolute_difference": 0.002192000000000001,
+    "first_grad_difference_step": 2,
+    "max_grad_norm_absolute_difference": 3.542092800140381,
+    "original_per_id_order_recorded": false,
+    "bitwise_replay_claimed": false
+  },
+  "tensorboard": {
+    "train/loss": {
+      "count": 100,
+      "min_step": 1,
+      "max_step": 100
+    },
+    "train/grad_norm": {
+      "count": 100,
+      "min_step": 1,
+      "max_step": 100
+    },
+    "train/learning_rate": {
+      "count": 100,
+      "min_step": 1,
+      "max_step": 100
+    },
+    "train/epoch": {
+      "count": 102,
+      "min_step": 1,
+      "max_step": 100
+    },
+    "eval/loss": {
+      "count": 1,
+      "min_step": 100,
+      "max_step": 100
+    },
+    "eval/runtime": {
+      "count": 1,
+      "min_step": 100,
+      "max_step": 100
+    },
+    "eval/samples_per_second": {
+      "count": 1,
+      "min_step": 100,
+      "max_step": 100
+    },
+    "eval/steps_per_second": {
+      "count": 1,
+      "min_step": 100,
+      "max_step": 100
+    },
+    "train/train_runtime": {
+      "count": 1,
+      "min_step": 100,
+      "max_step": 100
+    },
+    "train/train_samples_per_second": {
+      "count": 1,
+      "min_step": 100,
+      "max_step": 100
+    },
+    "train/train_steps_per_second": {
+      "count": 1,
+      "min_step": 100,
+      "max_step": 100
+    },
+    "train/total_flos": {
+      "count": 1,
+      "min_step": 100,
+      "max_step": 100
+    },
+    "train/train_loss": {
+      "count": 1,
+      "min_step": 100,
+      "max_step": 100
+    }
+  },
+  "tensorboard_http": {
+    "status": 200,
+    "url": "http://127.0.0.1:16006/"
+  },
+  "monitor": {
+    "training": {
+      "samples": 28,
+      "alerts": [
+        {
+          "timestamp": "2026-10-23T04:50:37.412773+00:00",
+          "alerts": [
+            "training_interrupted"
+          ]
+        },
+        {
+          "timestamp": "2026-10-23T04:50:47.471969+00:00",
+          "alerts": [
+            "training_interrupted"
+          ]
+        },
+        {
+          "timestamp": "2026-10-23T04:50:57.552616+00:00",
+          "alerts": [
+            "training_interrupted"
+          ]
+        },
+        {
+          "timestamp": "2026-10-23T04:51:07.654386+00:00",
+          "alerts": [
+            "training_interrupted"
+          ]
+        }
+      ],
+      "minimum_free_disk_gib": 3078.275981903076,
+      "gpu_peaks": {
+        "0": {
+          "memory_used_mib": 74926.0,
+          "utilization_percent": 100.0
+        },
+        "1": {
+          "memory_used_mib": 54579.0,
+          "utilization_percent": 100.0
+        }
+      },
+      "input_sha256": "ef312b6917c377fa7b1e13c90a448bbb2d2822d80feddec0eb83ccd794945402"
+    },
+    "evaluation/step100-dev_clean": {
+      "samples": 25,
+      "alerts": [],
+      "minimum_free_disk_gib": 3078.275550842285,
+      "gpu_peaks": {
+        "0": {
+          "memory_used_mib": 22697.0,
+          "utilization_percent": 0.0
+        },
+        "1": {
+          "memory_used_mib": 9531.0,
+          "utilization_percent": 80.0
+        }
+      },
+      "input_sha256": "9cb6f9a5e0580f0cd43fd934e0e655e0919c3084f9c9646678aedbc8a71062a7"
+    },
+    "evaluation/step25-fixed128": {
+      "samples": 3,
+      "alerts": [],
+      "minimum_free_disk_gib": 3078.2759437561035,
+      "gpu_peaks": {
+        "0": {
+          "memory_used_mib": 22697.0,
+          "utilization_percent": 0.0
+        },
+        "1": {
+          "memory_used_mib": 8217.0,
+          "utilization_percent": 73.0
+        }
+      },
+      "input_sha256": "1feaf41f6997260076fa02dfcd75d05a040904661873e501747cf0faa31bc8d7"
+    },
+    "evaluation/step50-fixed128": {
+      "samples": 3,
+      "alerts": [],
+      "minimum_free_disk_gib": 3078.2758293151855,
+      "gpu_peaks": {
+        "0": {
+          "memory_used_mib": 22697.0,
+          "utilization_percent": 0.0
+        },
+        "1": {
+          "memory_used_mib": 9683.0,
+          "utilization_percent": 79.0
+        }
+      },
+      "input_sha256": "fe204b155eddb104a351c51d89e4d0ea5103040a1a1a983795f59825711a5d99"
+    },
+    "evaluation/step100-fixed128": {
+      "samples": 3,
+      "alerts": [],
+      "minimum_free_disk_gib": 3078.2757148742676,
+      "gpu_peaks": {
+        "0": {
+          "memory_used_mib": 22697.0,
+          "utilization_percent": 0.0
+        },
+        "1": {
+          "memory_used_mib": 9685.0,
+          "utilization_percent": 79.0
+        }
+      },
+      "input_sha256": "9d586d24c9f5b545c4be9e7e16f9be1f4c0865b48da63467b3c466700eaac059"
+    }
+  },
+  "project_gib": 233.81842422485352,
+  "run_gib": 38.02473831176758,
+  "final_free_disk_gib": 3078.274013519287,
+  "source_sha256": {
+    "reports/early100/run/campaign.json": "f6be4d5322fba1fb03d89b311017220506fff83ffa238d22614fb1e97ea1c279",
+    "reports/early100/run/training/prefix-trajectory.jsonl": "6d7b0fb5bf247e416ae04abe73771bbcc03f1799fd9aa525837719482786855f",
+    "reports/early100/run/training/metrics.jsonl": "546134da7d47425eeb103e9a34bf7ffc688d2e74a0989012e0ec0e08e3004f73",
+    "reports/early100/final-host-snapshot.json": "599cf4ab3ed15ab6e508d38ce9257bc9bc20e346cac6acc068440f0ff19eb8b9"
+  },
+  "interpretation": "Raw generic training_interrupted alerts reflect the planned 100-update stop, confirmed by prefix-status and exit0. The actual terminal failure is the generation-truncation quality gate. HF overall training throughput at an early stop must not be interpreted using its full-epoch denominator."
+}

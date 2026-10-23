@@ -1,0 +1,856 @@
+{
+  "captured_utc": "2026-10-23T04:58:22.612641+00:00",
+  "run": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a",
+  "campaign": {
+    "status": "failed",
+    "stage": "step100-dev_clean",
+    "started_unix": 1792730790.8111799,
+    "max_wall_seconds": 5400,
+    "results": [],
+    "commands": [
+      {
+        "name": "training-prefix100",
+        "command": [
+          "/mnt/raid/asr-lab/venv/bin/python",
+          "-m",
+          "torch.distributed.run",
+          "--standalone",
+          "--nproc_per_node=2",
+          "-m",
+          "asr_lab.qwen_early100",
+          "--config",
+          "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/config.yaml",
+          "--run-dir",
+          "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training",
+          "--original-run",
+          "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/main-epoch1"
+        ],
+        "physical_gpus": "0,1",
+        "run_dir": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training",
+        "fingerprint": "bf8db41f76543173ccd947f79659f91d4fa66da60cde7beb6e74a606f07cca0f",
+        "started_unix": 1792730795.251599,
+        "status": "complete",
+        "exit_code": 0,
+        "ended_unix": 1792731074.541027
+      },
+      {
+        "name": "step25-fixed128",
+        "command": [
+          "/mnt/raid/asr-lab/venv/bin/python",
+          "-m",
+          "asr_lab.qwen_evaluate",
+          "--model",
+          "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-25",
+          "--revision",
+          "7278e1e70fe206f11671096ffdd38061171dd6e5",
+          "--manifest",
+          "/mnt/raid/asr-lab/data/manifests/dev-clean-fixed128.jsonl",
+          "--output",
+          "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/evaluation/step25-fixed128/predictions.jsonl",
+          "--all",
+          "--batch-size",
+          "16",
+          "--max-new-tokens",
+          "512"
+        ],
+        "physical_gpus": "1",
+        "run_dir": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/evaluation/step25-fixed128",
+        "fingerprint": "8d796e47c7ab9bd6a74461ffeef287ed539f72948c38d00333a49b3abc815d64",
+        "started_unix": 1792731104.9699214,
+        "status": "complete",
+        "exit_code": 0,
+        "ended_unix": 1792731131.2044718
+      },
+      {
+        "name": "step50-fixed128",
+        "command": [
+          "/mnt/raid/asr-lab/venv/bin/python",
+          "-m",
+          "asr_lab.qwen_evaluate",
+          "--model",
+          "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-50",
+          "--revision",
+          "7278e1e70fe206f11671096ffdd38061171dd6e5",
+          "--manifest",
+          "/mnt/raid/asr-lab/data/manifests/dev-clean-fixed128.jsonl",
+          "--output",
+          "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/evaluation/step50-fixed128/predictions.jsonl",
+          "--all",
+          "--batch-size",
+          "16",
+          "--max-new-tokens",
+          "512"
+        ],
+        "physical_gpus": "1",
+        "run_dir": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/evaluation/step50-fixed128",
+        "fingerprint": "c422f866ed54fd8f06d04bb41e75e23cf87ea93b4fb9eac5e5b403de609509af",
+        "started_unix": 1792731132.2951996,
+        "status": "complete",
+        "exit_code": 0,
+        "ended_unix": 1792731155.0004072
+      },
+      {
+        "name": "step100-fixed128",
+        "command": [
+          "/mnt/raid/asr-lab/venv/bin/python",
+          "-m",
+          "asr_lab.qwen_evaluate",
+          "--model",
+          "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100",
+          "--revision",
+          "7278e1e70fe206f11671096ffdd38061171dd6e5",
+          "--manifest",
+          "/mnt/raid/asr-lab/data/manifests/dev-clean-fixed128.jsonl",
+          "--output",
+          "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/evaluation/step100-fixed128/predictions.jsonl",
+          "--all",
+          "--batch-size",
+          "16",
+          "--max-new-tokens",
+          "512"
+        ],
+        "physical_gpus": "1",
+        "run_dir": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/evaluation/step100-fixed128",
+        "fingerprint": "38c97faec38522d980436f8f3fa8d0563b2810bf366281151c227fc6c5795f14",
+        "started_unix": 1792731158.2917254,
+        "status": "complete",
+        "exit_code": 0,
+        "ended_unix": 1792731180.3209918
+      },
+      {
+        "name": "step100-dev_clean",
+        "command": [
+          "/mnt/raid/asr-lab/venv/bin/python",
+          "-m",
+          "asr_lab.qwen_evaluate",
+          "--model",
+          "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100",
+          "--revision",
+          "7278e1e70fe206f11671096ffdd38061171dd6e5",
+          "--manifest",
+          "/mnt/raid/asr-lab/data/manifests/dev-clean.jsonl",
+          "--output",
+          "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/evaluation/step100-dev_clean/predictions.jsonl",
+          "--all",
+          "--batch-size",
+          "16",
+          "--max-new-tokens",
+          "512"
+        ],
+        "physical_gpus": "1",
+        "run_dir": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/evaluation/step100-dev_clean",
+        "fingerprint": "559ece2f61656cc11733db826d8a79b5810ef8abf56cad00f81aa56409b5f173",
+        "started_unix": 1792731181.6915658,
+        "status": "complete",
+        "exit_code": 0,
+        "ended_unix": 1792731432.2659297
+      }
+    ],
+    "updated_unix": 1792731432.3326569,
+    "kind": "original_schedule_early100",
+    "original_total_steps": 892,
+    "actual_stop": 100,
+    "automatic_followup_training": false,
+    "evaluations": {
+      "step25-fixed128": {
+        "wer": 0.04199655765920826,
+        "examples": 128,
+        "reference_words": 2905,
+        "substitutions": 96,
+        "deletions": 13,
+        "insertions": 13,
+        "generation_truncated_count": 0,
+        "baseline_wer": 0.015834767641996556
+      },
+      "step50-fixed128": {
+        "wer": 0.03717728055077452,
+        "examples": 128,
+        "reference_words": 2905,
+        "substitutions": 84,
+        "deletions": 8,
+        "insertions": 16,
+        "generation_truncated_count": 0,
+        "baseline_wer": 0.015834767641996556
+      },
+      "step100-fixed128": {
+        "wer": 0.03201376936316695,
+        "examples": 128,
+        "reference_words": 2905,
+        "substitutions": 73,
+        "deletions": 9,
+        "insertions": 11,
+        "generation_truncated_count": 0,
+        "baseline_wer": 0.015834767641996556
+      }
+    },
+    "source_sha256": {
+      "/mnt/raid/asr-lab/repo/src/asr_lab/qwen_train.py": "97951994468a14b10ce57b7c5c864dcef6ffb6af4ee9c75e621b48c01e9de961",
+      "/mnt/raid/asr-lab/repo/src/asr_lab/qwen_data.py": "769aed8478da4a6e9dcd33ed3bf87aaa6b846eede3d677c9ae4dc88469dc89b0",
+      "/mnt/raid/asr-lab/repo/src/asr_lab/qwen_evaluate.py": "0a2012eb016cddadee7b3c0f0ca5ad9f3f94b502faad780392788a8ccf9e30d6",
+      "/mnt/raid/asr-lab/repo/src/asr_lab/benchmark.py": "382b9faa741d36153e847796b518494cf31821e9ca65e2391e25fb79c1f828b5",
+      "/mnt/raid/asr-lab/repo/src/asr_lab/qwen_early100.py": "0d54a5472c4695019ebb935bab03c79509f0aab5f3633ea55cf384291eff8c46",
+      "/mnt/raid/asr-lab/repo/scripts/run_early100_control.py": "0fe684e25d4ce8013082cd3447d54d7db3daba660ecd9fe72540da3395e2ecc8",
+      "/mnt/raid/asr-lab/repo/scripts/run_qwen_campaign.py": "c72d49316a2b35ccddc6ef8f52e10060d79dfe607ee8efd9a12e91e76e966cdd",
+      "/mnt/raid/asr-lab/repo/scripts/monitor.py": "4e6a0d4f1fb9e44d98f419041f2f6ee2277b3ab65abb5b3a054256ef9440d96c",
+      "/mnt/raid/asr-lab/repo/src/asr_lab/qwen_roundtrip_control.py": "718fd41d61f0d89d2e6acaea67fd3df7f827ab66c7167d0bba359cfeac197d00",
+      "/mnt/raid/asr-lab/repo/src/asr_lab/training_utils.py": "5b8eba6aab98e97080baace995e6acc8aca619b5da89e3bbfa7a2209ea6d2ad4",
+      "/mnt/raid/asr-lab/repo/src/asr_lab/prepare_data.py": "489c613f44bc0054fea1db49453eeec4a1c6f9e9b1cb64478d901cba70f8f752",
+      "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/campaign.json": "52d7791445dab5539ceeee648b3ca9f3fecad00a466a78b3c29ecf7b15582f00",
+      "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/main-epoch1/run.json": "df89c47dd1273ce7872bced73c17e2a0b193aa32cea0d4918c428f837b22d758",
+      "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/main-epoch1/metrics.jsonl": "a7163b884ddf50e99ead921b518c0218aa966ac8733875bc0a8aab2483d07572",
+      "/mnt/raid/asr-lab/runs/qwen-baseline-pinned-b16/dev-clean-fixed128.metrics.json": "6c8761a291df246c5c0ae37b933d26187542544af7e5167d4da4aca25468d6f4",
+      "/mnt/raid/asr-lab/runs/qwen-baseline-pinned-b16/dev-clean-fixed128.jsonl": "a4a64233cc75d472473af0ff939d942d64db858075de08dd3c80aa4f85b0b484",
+      "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/evaluation/baseline-dev-clean/predictions.metrics.json": "504a67be4f3f64393c0c49e36dc2a9c2994dc38bf5136b7c9d76fa9026d72fd7",
+      "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/evaluation/baseline-dev-clean/predictions.jsonl": "0432e6615b0996b86e9e0fc977a28b527d486f41998d395e3d299b9402d97f63",
+      "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/evaluation/baseline-dev-other/predictions.metrics.json": "d77df8e4454ca42ac65fd568df83d8f054f8c1fd46c128e03c7b10b176714b8c",
+      "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/evaluation/baseline-dev-other/predictions.jsonl": "716e2a465443484b001a2583c961e3049321d9205cba5c5f63819d150d6d4494",
+      "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/config.yaml": "ae81c631fa1f8a60d08618cf6874223deab76ac687451ffd781eb8c5fb610053"
+    },
+    "manifests": {
+      "/mnt/raid/asr-lab/data/manifests/train-clean-100.jsonl": "5b8155f7daa57a2f2c039b96800c2d9d16b620deaa57bc4e187a0b84e8867d9e",
+      "/mnt/raid/asr-lab/data/manifests/dev-clean-fixed128.jsonl": "1c657340c27cdc1f4b025ba5731da07fc7fd2f505e9dddbfc8fffc9cc59df999",
+      "/mnt/raid/asr-lab/data/manifests/dev-clean.jsonl": "fc6f7f048b571431d244a854b204a8e9ed34062796350359e10ee5635ff9ca9a",
+      "/mnt/raid/asr-lab/data/manifests/dev-other.jsonl": "bcd2dbbc9f189cb550cba5d0a35203732a1425aad80e66e513276a627266b3fa"
+    },
+    "model_id": "Qwen/Qwen3-ASR-1.7B",
+    "model_revision": "7278e1e70fe206f11671096ffdd38061171dd6e5",
+    "receipt_sha256": "52d7791445dab5539ceeee648b3ca9f3fecad00a466a78b3c29ecf7b15582f00",
+    "training": {
+      "terminal": {
+        "status": "completed_bounded_prefix",
+        "actual_step": 100,
+        "original_total_steps": 892,
+        "original_training_status": "interrupted",
+        "completed_epoch": false,
+        "trajectory_validation": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/trajectory-validation.json"
+      },
+      "trajectory": {
+        "status": "passed",
+        "validated_steps": 100,
+        "original_total_steps": 892,
+        "warmup_steps": 45,
+        "max_lr_absolute_difference": 0.0,
+        "max_audio_seconds_absolute_difference": 0.0,
+        "total_consumed_examples": 3200,
+        "total_consumed_audio_seconds": 40729.90012500001,
+        "new_actual_ids_recorded": true,
+        "original_per_id_order_recorded": false,
+        "limitation": "Matched config, counts and audio seconds do not prove old per-ID order or bitwise model replay."
+      },
+      "checkpoints": {
+        "25": {
+          "status": "complete",
+          "step": 25,
+          "original_total_steps": 892,
+          "model_only": true,
+          "resumable": false,
+          "verification": "files/structure/steps/dtypes; no new resume training test",
+          "files": {
+            "added_tokens.json": {
+              "bytes": 1566,
+              "sha256": "de40784677cbd1843cabe5fbee078c7e042cd0b62155f0810af5a13842e5722a"
+            },
+            "chat_template.jinja": {
+              "bytes": 1099,
+              "sha256": "a103579066642f0e035873f12de6046a1bbc909a7a2833732fda9fd6bc7c528d"
+            },
+            "checkpoint.json": {
+              "bytes": 6053,
+              "sha256": "75002c62b11b26929d58bd652d566d9a2ce0fb23627603a0239ee231d1e12f6a"
+            },
+            "config.json": {
+              "bytes": 5916,
+              "sha256": "90907b1e2b2d95ee310a38daefda306f95dfcf2df3c797e252afdc161127eb6a"
+            },
+            "generation_config.json": {
+              "bytes": 125,
+              "sha256": "a275709a685826eaf1c763af663dc9ee3653c9353251f6eb3f859c3526652204"
+            },
+            "merges.txt": {
+              "bytes": 1671853,
+              "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+            },
+            "model-00001-of-00002.safetensors": {
+              "bytes": 4981095680,
+              "sha256": "cf38ba4a11c581b10d6ef6342b56a387947bf4a7427d47efd89d030306ae1e30"
+            },
+            "model-00002-of-00002.safetensors": {
+              "bytes": 3171200384,
+              "sha256": "6a29585c4d7593f4e7c79533933ce2626e3fcf15c73f0585761b9797700661b5"
+            },
+            "model.safetensors.index.json": {
+              "bytes": 64802,
+              "sha256": "1f1d8ee445ca095a2e643e8ce1012b903df12fd906e64d1bf3025a30f03524b5"
+            },
+            "preprocessor_config.json": {
+              "bytes": 357,
+              "sha256": "0443a40d411d3caad769e7b59971fa6eae75926ed4b7e337e60da909eb38c1f7"
+            },
+            "rng-preservation.json": {
+              "bytes": 585,
+              "sha256": "23ff8089af8f6e952fc714738abf71db3ea6cc33c9b9547d9e20bd89776c75ad"
+            },
+            "special_tokens_map.json": {
+              "bytes": 1008,
+              "sha256": "7b376c510ccf9d88bb9bbee41dfc5052122e16e0dec1124a8d8983c59259a9f3"
+            },
+            "tokenizer.json": {
+              "bytes": 11429499,
+              "sha256": "0499602714160467f2d68b910651d6216020689f1e016be87a2d0019ee3baeab"
+            },
+            "tokenizer_config.json": {
+              "bytes": 12517,
+              "sha256": "7f335cbd3b6f1036808e23613c1c1919f8d5570c11cb55420e5094e036f45669"
+            },
+            "trainer_state.json": {
+              "bytes": 5091,
+              "sha256": "9f9870299880ccd92cb66db7bd2dc4af45b290a7e51ae278c6b1f006d8816af4"
+            },
+            "training_args.bin": {
+              "bytes": 5905,
+              "sha256": "b537d14baa9b3bb258ae366001060fbb98c48edf24de2a0faf0e7af9c0f6e731"
+            },
+            "vocab.json": {
+              "bytes": 2776833,
+              "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+            }
+          }
+        },
+        "50": {
+          "status": "complete",
+          "step": 50,
+          "original_total_steps": 892,
+          "model_only": true,
+          "resumable": false,
+          "verification": "files/structure/steps/dtypes; no new resume training test",
+          "files": {
+            "added_tokens.json": {
+              "bytes": 1566,
+              "sha256": "de40784677cbd1843cabe5fbee078c7e042cd0b62155f0810af5a13842e5722a"
+            },
+            "chat_template.jinja": {
+              "bytes": 1099,
+              "sha256": "a103579066642f0e035873f12de6046a1bbc909a7a2833732fda9fd6bc7c528d"
+            },
+            "checkpoint.json": {
+              "bytes": 6052,
+              "sha256": "3a8315df2aab87e647fedc10798587b2ba5f0e5d6a2d9f8f567336ba144ce89c"
+            },
+            "config.json": {
+              "bytes": 5916,
+              "sha256": "90907b1e2b2d95ee310a38daefda306f95dfcf2df3c797e252afdc161127eb6a"
+            },
+            "generation_config.json": {
+              "bytes": 125,
+              "sha256": "a275709a685826eaf1c763af663dc9ee3653c9353251f6eb3f859c3526652204"
+            },
+            "merges.txt": {
+              "bytes": 1671853,
+              "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+            },
+            "model-00001-of-00002.safetensors": {
+              "bytes": 4981095680,
+              "sha256": "d0f5ddee0b2b6b6c951ae0429365ad711a6d51670a5949010f8ffb695c723506"
+            },
+            "model-00002-of-00002.safetensors": {
+              "bytes": 3171200384,
+              "sha256": "bd178217dadd664ae8754830992d39c50004f53146a7315fd4b772d7b214e940"
+            },
+            "model.safetensors.index.json": {
+              "bytes": 64802,
+              "sha256": "1f1d8ee445ca095a2e643e8ce1012b903df12fd906e64d1bf3025a30f03524b5"
+            },
+            "preprocessor_config.json": {
+              "bytes": 357,
+              "sha256": "0443a40d411d3caad769e7b59971fa6eae75926ed4b7e337e60da909eb38c1f7"
+            },
+            "rng-preservation.json": {
+              "bytes": 585,
+              "sha256": "23ff8089af8f6e952fc714738abf71db3ea6cc33c9b9547d9e20bd89776c75ad"
+            },
+            "special_tokens_map.json": {
+              "bytes": 1008,
+              "sha256": "7b376c510ccf9d88bb9bbee41dfc5052122e16e0dec1124a8d8983c59259a9f3"
+            },
+            "tokenizer.json": {
+              "bytes": 11429499,
+              "sha256": "0499602714160467f2d68b910651d6216020689f1e016be87a2d0019ee3baeab"
+            },
+            "tokenizer_config.json": {
+              "bytes": 12517,
+              "sha256": "7f335cbd3b6f1036808e23613c1c1919f8d5570c11cb55420e5094e036f45669"
+            },
+            "trainer_state.json": {
+              "bytes": 9375,
+              "sha256": "5a343346e9eae619a265331dc7f03c572eff7b9dbffaf4a80fda02d80d798847"
+            },
+            "training_args.bin": {
+              "bytes": 5905,
+              "sha256": "b537d14baa9b3bb258ae366001060fbb98c48edf24de2a0faf0e7af9c0f6e731"
+            },
+            "vocab.json": {
+              "bytes": 2776833,
+              "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+            }
+          }
+        },
+        "100": {
+          "status": "complete",
+          "step": 100,
+          "original_total_steps": 892,
+          "model_only": false,
+          "resumable": true,
+          "verification": "files/structure/steps/dtypes; no new resume training test",
+          "files": {
+            "added_tokens.json": {
+              "bytes": 1566,
+              "sha256": "de40784677cbd1843cabe5fbee078c7e042cd0b62155f0810af5a13842e5722a"
+            },
+            "chat_template.jinja": {
+              "bytes": 1099,
+              "sha256": "a103579066642f0e035873f12de6046a1bbc909a7a2833732fda9fd6bc7c528d"
+            },
+            "checkpoint.json": {
+              "bytes": 6051,
+              "sha256": "bad241c06c02cfaf01d37eff1a3672c56ed2269ab10734346809c75d653567d7"
+            },
+            "config.json": {
+              "bytes": 5916,
+              "sha256": "90907b1e2b2d95ee310a38daefda306f95dfcf2df3c797e252afdc161127eb6a"
+            },
+            "generation_config.json": {
+              "bytes": 125,
+              "sha256": "a275709a685826eaf1c763af663dc9ee3653c9353251f6eb3f859c3526652204"
+            },
+            "merges.txt": {
+              "bytes": 1671853,
+              "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+            },
+            "model-00001-of-00002.safetensors": {
+              "bytes": 4981095680,
+              "sha256": "5d88baf171bbdb3564211875768478aeae1cf57410bfc257d9813fe66ac8168f"
+            },
+            "model-00002-of-00002.safetensors": {
+              "bytes": 3171200384,
+              "sha256": "5fe3336852ed8c8366921ee44c643d655954669808f21b640128e40a3a36bf25"
+            },
+            "model.safetensors.index.json": {
+              "bytes": 64802,
+              "sha256": "1f1d8ee445ca095a2e643e8ce1012b903df12fd906e64d1bf3025a30f03524b5"
+            },
+            "optimizer.pt": {
+              "bytes": 16305044668,
+              "sha256": "768451421360095c84edc5fa9b898185704df3a0bbd30e59a6e0869fd5a1af30"
+            },
+            "preprocessor_config.json": {
+              "bytes": 357,
+              "sha256": "0443a40d411d3caad769e7b59971fa6eae75926ed4b7e337e60da909eb38c1f7"
+            },
+            "rng-preservation.json": {
+              "bytes": 585,
+              "sha256": "5e6553c9592717679839c1a473bb9f00fd6456f339459e5fc4de9c01b81718ea"
+            },
+            "rng_state_0.pth": {
+              "bytes": 14917,
+              "sha256": "95e5fc2074c0df31522a514f862c86cb00d71c946a7f15cc9ec0e53a69fb28a7"
+            },
+            "rng_state_1.pth": {
+              "bytes": 14917,
+              "sha256": "0e7153eae67b6c9232a41bc996a2bf5b83229b8c7230d61911ac0fd40e64154e"
+            },
+            "scheduler.pt": {
+              "bytes": 1465,
+              "sha256": "5965a8091024d49419e1fabf5cf53aae949ac120c00c8882230c5b391a96e99a"
+            },
+            "special_tokens_map.json": {
+              "bytes": 1008,
+              "sha256": "7b376c510ccf9d88bb9bbee41dfc5052122e16e0dec1124a8d8983c59259a9f3"
+            },
+            "tokenizer.json": {
+              "bytes": 11429499,
+              "sha256": "0499602714160467f2d68b910651d6216020689f1e016be87a2d0019ee3baeab"
+            },
+            "tokenizer_config.json": {
+              "bytes": 12517,
+              "sha256": "7f335cbd3b6f1036808e23613c1c1919f8d5570c11cb55420e5094e036f45669"
+            },
+            "trainer_state.json": {
+              "bytes": 18195,
+              "sha256": "a09ccd1ca957fd3bac661043c2330524817c3be23029e4bf4b73ce337c4f9dfd"
+            },
+            "training_args.bin": {
+              "bytes": 5905,
+              "sha256": "1bae14b06361f70526f0da918a60fc4ea51873d099ec238c0cebb417e6883c1e"
+            },
+            "vocab.json": {
+              "bytes": 2776833,
+              "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+            }
+          }
+        }
+      }
+    },
+    "error": "ValueError: Generation truncation prevents an accepted evaluation"
+  },
+  "disk": {
+    "total_bytes": 47808184197120,
+    "used_bytes": 42102881669120,
+    "free_bytes": 3305271554048
+  },
+  "project_du": {
+    "returncode": 0,
+    "stdout": "251060621312\t/mnt/raid/asr-lab",
+    "stderr": ""
+  },
+  "run_du": {
+    "returncode": 0,
+    "stdout": "40828751872\t/mnt/raid/asr-lab/runs/qwen-early100-20261022-a",
+    "stderr": ""
+  },
+  "gpus": {
+    "returncode": 0,
+    "stdout": "0, GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c, 95830 MiB, 22697 MiB, 0 %\n1, GPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c, 95830 MiB, 14 MiB, 0 %",
+    "stderr": ""
+  },
+  "gpu_processes": {
+    "returncode": 0,
+    "stdout": "GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c, 2154793, .venv/bin/python, 22674 MiB",
+    "stderr": ""
+  },
+  "preserved_service": {
+    "returncode": 0,
+    "stdout": "2154793 Tue Oct 20 17:08:26 2026 .venv/bin/python -u -m moshi.server_prefix_paced --host 127.0.0.1 --port 8998 --static none",
+    "stderr": ""
+  },
+  "tmux_experiment": {
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "can't find session: asr-early100"
+  },
+  "checkpoints": {
+    "25": {
+      "path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-25",
+      "marker": {
+        "status": "complete",
+        "step": 25,
+        "original_total_steps": 892,
+        "model_only": true,
+        "resumable": false,
+        "verification": "files/structure/steps/dtypes; no new resume training test",
+        "files": {
+          "added_tokens.json": {
+            "bytes": 1566,
+            "sha256": "de40784677cbd1843cabe5fbee078c7e042cd0b62155f0810af5a13842e5722a"
+          },
+          "chat_template.jinja": {
+            "bytes": 1099,
+            "sha256": "a103579066642f0e035873f12de6046a1bbc909a7a2833732fda9fd6bc7c528d"
+          },
+          "checkpoint.json": {
+            "bytes": 6053,
+            "sha256": "75002c62b11b26929d58bd652d566d9a2ce0fb23627603a0239ee231d1e12f6a"
+          },
+          "config.json": {
+            "bytes": 5916,
+            "sha256": "90907b1e2b2d95ee310a38daefda306f95dfcf2df3c797e252afdc161127eb6a"
+          },
+          "generation_config.json": {
+            "bytes": 125,
+            "sha256": "a275709a685826eaf1c763af663dc9ee3653c9353251f6eb3f859c3526652204"
+          },
+          "merges.txt": {
+            "bytes": 1671853,
+            "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+          },
+          "model-00001-of-00002.safetensors": {
+            "bytes": 4981095680,
+            "sha256": "cf38ba4a11c581b10d6ef6342b56a387947bf4a7427d47efd89d030306ae1e30"
+          },
+          "model-00002-of-00002.safetensors": {
+            "bytes": 3171200384,
+            "sha256": "6a29585c4d7593f4e7c79533933ce2626e3fcf15c73f0585761b9797700661b5"
+          },
+          "model.safetensors.index.json": {
+            "bytes": 64802,
+            "sha256": "1f1d8ee445ca095a2e643e8ce1012b903df12fd906e64d1bf3025a30f03524b5"
+          },
+          "preprocessor_config.json": {
+            "bytes": 357,
+            "sha256": "0443a40d411d3caad769e7b59971fa6eae75926ed4b7e337e60da909eb38c1f7"
+          },
+          "rng-preservation.json": {
+            "bytes": 585,
+            "sha256": "23ff8089af8f6e952fc714738abf71db3ea6cc33c9b9547d9e20bd89776c75ad"
+          },
+          "special_tokens_map.json": {
+            "bytes": 1008,
+            "sha256": "7b376c510ccf9d88bb9bbee41dfc5052122e16e0dec1124a8d8983c59259a9f3"
+          },
+          "tokenizer.json": {
+            "bytes": 11429499,
+            "sha256": "0499602714160467f2d68b910651d6216020689f1e016be87a2d0019ee3baeab"
+          },
+          "tokenizer_config.json": {
+            "bytes": 12517,
+            "sha256": "7f335cbd3b6f1036808e23613c1c1919f8d5570c11cb55420e5094e036f45669"
+          },
+          "trainer_state.json": {
+            "bytes": 5091,
+            "sha256": "9f9870299880ccd92cb66db7bd2dc4af45b290a7e51ae278c6b1f006d8816af4"
+          },
+          "training_args.bin": {
+            "bytes": 5905,
+            "sha256": "b537d14baa9b3bb258ae366001060fbb98c48edf24de2a0faf0e7af9c0f6e731"
+          },
+          "vocab.json": {
+            "bytes": 2776833,
+            "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+          }
+        }
+      },
+      "current_file_bytes": {
+        "training_args.bin": 5905,
+        "checkpoint.json": 6053,
+        "model-00002-of-00002.safetensors": 3171200384,
+        "vocab.json": 2776833,
+        "model-00001-of-00002.safetensors": 4981095680,
+        "model.safetensors.index.json": 64802,
+        "trainer_state.json": 5091,
+        "tokenizer_config.json": 12517,
+        "added_tokens.json": 1566,
+        "config.json": 5916,
+        "generation_config.json": 125,
+        "tokenizer.json": 11429499,
+        "special_tokens_map.json": 1008,
+        "rng-preservation.json": 585,
+        "prefix-complete.json": 2624,
+        "merges.txt": 1671853,
+        "chat_template.jinja": 1099,
+        "preprocessor_config.json": 357
+      }
+    },
+    "50": {
+      "path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-50",
+      "marker": {
+        "status": "complete",
+        "step": 50,
+        "original_total_steps": 892,
+        "model_only": true,
+        "resumable": false,
+        "verification": "files/structure/steps/dtypes; no new resume training test",
+        "files": {
+          "added_tokens.json": {
+            "bytes": 1566,
+            "sha256": "de40784677cbd1843cabe5fbee078c7e042cd0b62155f0810af5a13842e5722a"
+          },
+          "chat_template.jinja": {
+            "bytes": 1099,
+            "sha256": "a103579066642f0e035873f12de6046a1bbc909a7a2833732fda9fd6bc7c528d"
+          },
+          "checkpoint.json": {
+            "bytes": 6052,
+            "sha256": "3a8315df2aab87e647fedc10798587b2ba5f0e5d6a2d9f8f567336ba144ce89c"
+          },
+          "config.json": {
+            "bytes": 5916,
+            "sha256": "90907b1e2b2d95ee310a38daefda306f95dfcf2df3c797e252afdc161127eb6a"
+          },
+          "generation_config.json": {
+            "bytes": 125,
+            "sha256": "a275709a685826eaf1c763af663dc9ee3653c9353251f6eb3f859c3526652204"
+          },
+          "merges.txt": {
+            "bytes": 1671853,
+            "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+          },
+          "model-00001-of-00002.safetensors": {
+            "bytes": 4981095680,
+            "sha256": "d0f5ddee0b2b6b6c951ae0429365ad711a6d51670a5949010f8ffb695c723506"
+          },
+          "model-00002-of-00002.safetensors": {
+            "bytes": 3171200384,
+            "sha256": "bd178217dadd664ae8754830992d39c50004f53146a7315fd4b772d7b214e940"
+          },
+          "model.safetensors.index.json": {
+            "bytes": 64802,
+            "sha256": "1f1d8ee445ca095a2e643e8ce1012b903df12fd906e64d1bf3025a30f03524b5"
+          },
+          "preprocessor_config.json": {
+            "bytes": 357,
+            "sha256": "0443a40d411d3caad769e7b59971fa6eae75926ed4b7e337e60da909eb38c1f7"
+          },
+          "rng-preservation.json": {
+            "bytes": 585,
+            "sha256": "23ff8089af8f6e952fc714738abf71db3ea6cc33c9b9547d9e20bd89776c75ad"
+          },
+          "special_tokens_map.json": {
+            "bytes": 1008,
+            "sha256": "7b376c510ccf9d88bb9bbee41dfc5052122e16e0dec1124a8d8983c59259a9f3"
+          },
+          "tokenizer.json": {
+            "bytes": 11429499,
+            "sha256": "0499602714160467f2d68b910651d6216020689f1e016be87a2d0019ee3baeab"
+          },
+          "tokenizer_config.json": {
+            "bytes": 12517,
+            "sha256": "7f335cbd3b6f1036808e23613c1c1919f8d5570c11cb55420e5094e036f45669"
+          },
+          "trainer_state.json": {
+            "bytes": 9375,
+            "sha256": "5a343346e9eae619a265331dc7f03c572eff7b9dbffaf4a80fda02d80d798847"
+          },
+          "training_args.bin": {
+            "bytes": 5905,
+            "sha256": "b537d14baa9b3bb258ae366001060fbb98c48edf24de2a0faf0e7af9c0f6e731"
+          },
+          "vocab.json": {
+            "bytes": 2776833,
+            "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+          }
+        }
+      },
+      "current_file_bytes": {
+        "training_args.bin": 5905,
+        "checkpoint.json": 6052,
+        "model-00002-of-00002.safetensors": 3171200384,
+        "vocab.json": 2776833,
+        "model-00001-of-00002.safetensors": 4981095680,
+        "model.safetensors.index.json": 64802,
+        "trainer_state.json": 9375,
+        "tokenizer_config.json": 12517,
+        "added_tokens.json": 1566,
+        "config.json": 5916,
+        "generation_config.json": 125,
+        "tokenizer.json": 11429499,
+        "special_tokens_map.json": 1008,
+        "rng-preservation.json": 585,
+        "prefix-complete.json": 2624,
+        "merges.txt": 1671853,
+        "chat_template.jinja": 1099,
+        "preprocessor_config.json": 357
+      }
+    },
+    "100": {
+      "path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100",
+      "marker": {
+        "status": "complete",
+        "step": 100,
+        "original_total_steps": 892,
+        "model_only": false,
+        "resumable": true,
+        "verification": "files/structure/steps/dtypes; no new resume training test",
+        "files": {
+          "added_tokens.json": {
+            "bytes": 1566,
+            "sha256": "de40784677cbd1843cabe5fbee078c7e042cd0b62155f0810af5a13842e5722a"
+          },
+          "chat_template.jinja": {
+            "bytes": 1099,
+            "sha256": "a103579066642f0e035873f12de6046a1bbc909a7a2833732fda9fd6bc7c528d"
+          },
+          "checkpoint.json": {
+            "bytes": 6051,
+            "sha256": "bad241c06c02cfaf01d37eff1a3672c56ed2269ab10734346809c75d653567d7"
+          },
+          "config.json": {
+            "bytes": 5916,
+            "sha256": "90907b1e2b2d95ee310a38daefda306f95dfcf2df3c797e252afdc161127eb6a"
+          },
+          "generation_config.json": {
+            "bytes": 125,
+            "sha256": "a275709a685826eaf1c763af663dc9ee3653c9353251f6eb3f859c3526652204"
+          },
+          "merges.txt": {
+            "bytes": 1671853,
+            "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+          },
+          "model-00001-of-00002.safetensors": {
+            "bytes": 4981095680,
+            "sha256": "5d88baf171bbdb3564211875768478aeae1cf57410bfc257d9813fe66ac8168f"
+          },
+          "model-00002-of-00002.safetensors": {
+            "bytes": 3171200384,
+            "sha256": "5fe3336852ed8c8366921ee44c643d655954669808f21b640128e40a3a36bf25"
+          },
+          "model.safetensors.index.json": {
+            "bytes": 64802,
+            "sha256": "1f1d8ee445ca095a2e643e8ce1012b903df12fd906e64d1bf3025a30f03524b5"
+          },
+          "optimizer.pt": {
+            "bytes": 16305044668,
+            "sha256": "768451421360095c84edc5fa9b898185704df3a0bbd30e59a6e0869fd5a1af30"
+          },
+          "preprocessor_config.json": {
+            "bytes": 357,
+            "sha256": "0443a40d411d3caad769e7b59971fa6eae75926ed4b7e337e60da909eb38c1f7"
+          },
+          "rng-preservation.json": {
+            "bytes": 585,
+            "sha256": "5e6553c9592717679839c1a473bb9f00fd6456f339459e5fc4de9c01b81718ea"
+          },
+          "rng_state_0.pth": {
+            "bytes": 14917,
+            "sha256": "95e5fc2074c0df31522a514f862c86cb00d71c946a7f15cc9ec0e53a69fb28a7"
+          },
+          "rng_state_1.pth": {
+            "bytes": 14917,
+            "sha256": "0e7153eae67b6c9232a41bc996a2bf5b83229b8c7230d61911ac0fd40e64154e"
+          },
+          "scheduler.pt": {
+            "bytes": 1465,
+            "sha256": "5965a8091024d49419e1fabf5cf53aae949ac120c00c8882230c5b391a96e99a"
+          },
+          "special_tokens_map.json": {
+            "bytes": 1008,
+            "sha256": "7b376c510ccf9d88bb9bbee41dfc5052122e16e0dec1124a8d8983c59259a9f3"
+          },
+          "tokenizer.json": {
+            "bytes": 11429499,
+            "sha256": "0499602714160467f2d68b910651d6216020689f1e016be87a2d0019ee3baeab"
+          },
+          "tokenizer_config.json": {
+            "bytes": 12517,
+            "sha256": "7f335cbd3b6f1036808e23613c1c1919f8d5570c11cb55420e5094e036f45669"
+          },
+          "trainer_state.json": {
+            "bytes": 18195,
+            "sha256": "a09ccd1ca957fd3bac661043c2330524817c3be23029e4bf4b73ce337c4f9dfd"
+          },
+          "training_args.bin": {
+            "bytes": 5905,
+            "sha256": "1bae14b06361f70526f0da918a60fc4ea51873d099ec238c0cebb417e6883c1e"
+          },
+          "vocab.json": {
+            "bytes": 2776833,
+            "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+          }
+        }
+      },
+      "current_file_bytes": {
+        "training_args.bin": 5905,
+        "checkpoint.json": 6051,
+        "model-00002-of-00002.safetensors": 3171200384,
+        "vocab.json": 2776833,
+        "model-00001-of-00002.safetensors": 4981095680,
+        "model.safetensors.index.json": 64802,
+        "trainer_state.json": 18195,
+        "tokenizer_config.json": 12517,
+        "added_tokens.json": 1566,
+        "config.json": 5916,
+        "scheduler.pt": 1465,
+        "optimizer.pt": 16305044668,
+        "generation_config.json": 125,
+        "tokenizer.json": 11429499,
+        "special_tokens_map.json": 1008,
+        "rng_state_1.pth": 14917,
+        "rng-preservation.json": 585,
+        "prefix-complete.json": 3173,
+        "rng_state_0.pth": 14917,
+        "merges.txt": 1671853,
+        "chat_template.jinja": 1099,
+        "preprocessor_config.json": 357
+      }
+    }
+  },
+  "asr_processes": []
+}

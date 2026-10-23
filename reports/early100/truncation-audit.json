@@ -1,0 +1,442 @@
+{
+  "status": "partial_failed_quality_gate",
+  "comparison_valid": false,
+  "campaign_status": "failed",
+  "campaign_stage": "step100-dev_clean",
+  "stop_reason": "ValueError: Generation truncation prevents an accepted evaluation",
+  "command": "/Users/caochao/Documents/ChatGPT/train/.venv/bin/python scripts/audit_early100_partial.py",
+  "script_sha256": "4fba255f03fd78ae5a5427c48bb5310d9145bc6198bb8a83289f395fa38574a2",
+  "normalizer": {
+    "spelling_sha256": "bf1c507dc8724ca9cf9903640dacfb69dae2f00edee4f21ceba106a7392f26dd",
+    "transformers": "4.57.6",
+    "jiwer": "4.0.0"
+  },
+  "expected_generation_stages": 5,
+  "stages": {
+    "step25-fixed128": {
+      "examples": 128,
+      "manifest_sha256": "1c657340c27cdc1f4b025ba5731da07fc7fd2f505e9dddbfc8fffc9cc59df999",
+      "identical_paired_ids_and_order": true,
+      "raw_references_match_manifest": true,
+      "normalization_mismatches": [],
+      "sides": {
+        "baseline": {
+          "recomputed_counts": {
+            "substitutions": 32,
+            "deletions": 9,
+            "insertions": 5,
+            "hits": 2864,
+            "reference_words": 2905
+          },
+          "recomputed_wer": 0.015834767641996556,
+          "flags": {
+            "empty_normalized": 0,
+            "parsed_prefix_leak": 0,
+            "repeated_trigram_not_in_reference": 0,
+            "all_uppercase": 0,
+            "words_over_1_5x_reference": 0,
+            "generation_truncated": 0
+          },
+          "raw_case_categories": {
+            "mixed_case": 128
+          },
+          "uppercase_fraction": 0.0,
+          "normalization_checked_raw_reference_and_parsed_hypothesis": 256
+        },
+        "candidate": {
+          "recomputed_counts": {
+            "substitutions": 96,
+            "deletions": 13,
+            "insertions": 13,
+            "hits": 2796,
+            "reference_words": 2905
+          },
+          "recomputed_wer": 0.04199655765920826,
+          "flags": {
+            "empty_normalized": 0,
+            "parsed_prefix_leak": 0,
+            "repeated_trigram_not_in_reference": 0,
+            "all_uppercase": 125,
+            "words_over_1_5x_reference": 0,
+            "generation_truncated": 0
+          },
+          "raw_case_categories": {
+            "all_uppercase": 125,
+            "mixed_case": 3
+          },
+          "uppercase_fraction": 0.9765625,
+          "normalization_checked_raw_reference_and_parsed_hypothesis": 256
+        }
+      },
+      "text_integrity_passed": true,
+      "accepted_by_original_generation_gate": true
+    },
+    "step50-fixed128": {
+      "examples": 128,
+      "manifest_sha256": "1c657340c27cdc1f4b025ba5731da07fc7fd2f505e9dddbfc8fffc9cc59df999",
+      "identical_paired_ids_and_order": true,
+      "raw_references_match_manifest": true,
+      "normalization_mismatches": [],
+      "sides": {
+        "baseline": {
+          "recomputed_counts": {
+            "substitutions": 32,
+            "deletions": 9,
+            "insertions": 5,
+            "hits": 2864,
+            "reference_words": 2905
+          },
+          "recomputed_wer": 0.015834767641996556,
+          "flags": {
+            "empty_normalized": 0,
+            "parsed_prefix_leak": 0,
+            "repeated_trigram_not_in_reference": 0,
+            "all_uppercase": 0,
+            "words_over_1_5x_reference": 0,
+            "generation_truncated": 0
+          },
+          "raw_case_categories": {
+            "mixed_case": 128
+          },
+          "uppercase_fraction": 0.0,
+          "normalization_checked_raw_reference_and_parsed_hypothesis": 256
+        },
+        "candidate": {
+          "recomputed_counts": {
+            "substitutions": 84,
+            "deletions": 8,
+            "insertions": 16,
+            "hits": 2813,
+            "reference_words": 2905
+          },
+          "recomputed_wer": 0.03717728055077452,
+          "flags": {
+            "empty_normalized": 0,
+            "parsed_prefix_leak": 0,
+            "repeated_trigram_not_in_reference": 0,
+            "all_uppercase": 128,
+            "words_over_1_5x_reference": 0,
+            "generation_truncated": 0
+          },
+          "raw_case_categories": {
+            "all_uppercase": 128
+          },
+          "uppercase_fraction": 1.0,
+          "normalization_checked_raw_reference_and_parsed_hypothesis": 256
+        }
+      },
+      "text_integrity_passed": true,
+      "accepted_by_original_generation_gate": true
+    },
+    "step100-fixed128": {
+      "examples": 128,
+      "manifest_sha256": "1c657340c27cdc1f4b025ba5731da07fc7fd2f505e9dddbfc8fffc9cc59df999",
+      "identical_paired_ids_and_order": true,
+      "raw_references_match_manifest": true,
+      "normalization_mismatches": [],
+      "sides": {
+        "baseline": {
+          "recomputed_counts": {
+            "substitutions": 32,
+            "deletions": 9,
+            "insertions": 5,
+            "hits": 2864,
+            "reference_words": 2905
+          },
+          "recomputed_wer": 0.015834767641996556,
+          "flags": {
+            "empty_normalized": 0,
+            "parsed_prefix_leak": 0,
+            "repeated_trigram_not_in_reference": 0,
+            "all_uppercase": 0,
+            "words_over_1_5x_reference": 0,
+            "generation_truncated": 0
+          },
+          "raw_case_categories": {
+            "mixed_case": 128
+          },
+          "uppercase_fraction": 0.0,
+          "normalization_checked_raw_reference_and_parsed_hypothesis": 256
+        },
+        "candidate": {
+          "recomputed_counts": {
+            "substitutions": 73,
+            "deletions": 9,
+            "insertions": 11,
+            "hits": 2823,
+            "reference_words": 2905
+          },
+          "recomputed_wer": 0.03201376936316695,
+          "flags": {
+            "empty_normalized": 0,
+            "parsed_prefix_leak": 0,
+            "repeated_trigram_not_in_reference": 0,
+            "all_uppercase": 128,
+            "words_over_1_5x_reference": 0,
+            "generation_truncated": 0
+          },
+          "raw_case_categories": {
+            "all_uppercase": 128
+          },
+          "uppercase_fraction": 1.0,
+          "normalization_checked_raw_reference_and_parsed_hypothesis": 256
+        }
+      },
+      "text_integrity_passed": true,
+      "accepted_by_original_generation_gate": true
+    },
+    "step100-dev_clean": {
+      "examples": 2694,
+      "manifest_sha256": "fc6f7f048b571431d244a854b204a8e9ed34062796350359e10ee5635ff9ca9a",
+      "identical_paired_ids_and_order": true,
+      "raw_references_match_manifest": true,
+      "normalization_mismatches": [],
+      "sides": {
+        "baseline": {
+          "recomputed_counts": {
+            "substitutions": 643,
+            "deletions": 157,
+            "insertions": 71,
+            "hits": 53227,
+            "reference_words": 54027
+          },
+          "recomputed_wer": 0.016121568845207025,
+          "flags": {
+            "empty_normalized": 0,
+            "parsed_prefix_leak": 0,
+            "repeated_trigram_not_in_reference": 0,
+            "all_uppercase": 0,
+            "words_over_1_5x_reference": 0,
+            "generation_truncated": 0
+          },
+          "raw_case_categories": {
+            "mixed_case": 2694
+          },
+          "uppercase_fraction": 0.0,
+          "normalization_checked_raw_reference_and_parsed_hypothesis": 5388
+        },
+        "candidate": {
+          "recomputed_counts": {
+            "substitutions": 1463,
+            "deletions": 149,
+            "insertions": 188,
+            "hits": 52415,
+            "reference_words": 54027
+          },
+          "recomputed_wer": 0.03331667499583542,
+          "flags": {
+            "empty_normalized": 0,
+            "parsed_prefix_leak": 0,
+            "repeated_trigram_not_in_reference": 0,
+            "all_uppercase": 2675,
+            "words_over_1_5x_reference": 0,
+            "generation_truncated": 1
+          },
+          "raw_case_categories": {
+            "all_uppercase": 2675,
+            "mixed_case": 19
+          },
+          "uppercase_fraction": 0.9929472902746845,
+          "normalization_checked_raw_reference_and_parsed_hypothesis": 5388
+        }
+      },
+      "text_integrity_passed": true,
+      "accepted_by_original_generation_gate": false
+    }
+  },
+  "missing_stages": [
+    "step100-dev_other"
+  ],
+  "interpretation": "Text-only forensic audit. Saved parsed hypothesis text is not raw generation text or audio truth. No inference, retry, bootstrap, causal attribution, or retroactive quality-gate relaxation.",
+  "saved_prediction_stages": 4,
+  "truncation_rule_audit": {
+    "source": "src/asr_lab/qwen_evaluate.py",
+    "lines": [
+      58,
+      60,
+      62,
+      63,
+      65,
+      67
+    ],
+    "rule": "Per utterance: len(continuation_tokens)>=512 AND no token in {151645,151643}",
+    "padded_batch_width_used": true,
+    "per_utterance_eos_checked": true,
+    "padding_interpretation": "Width alone is shared by the padded batch; preserved recognized EOS prevents a completed utterance being marked solely because another item reaches512. Saved token IDs are unavailable for independent EOS verification.",
+    "target_zero_based_index": 2203,
+    "batch_zero_based_index": 137,
+    "same_batch": [
+      {
+        "id": "6345-93306-0021",
+        "generation_truncated": false,
+        "parsed_hypothesis_words": 12
+      },
+      {
+        "id": "6345-93306-0022",
+        "generation_truncated": false,
+        "parsed_hypothesis_words": 40
+      },
+      {
+        "id": "6345-93306-0023",
+        "generation_truncated": false,
+        "parsed_hypothesis_words": 44
+      },
+      {
+        "id": "6345-93306-0024",
+        "generation_truncated": false,
+        "parsed_hypothesis_words": 39
+      },
+      {
+        "id": "6345-93306-0025",
+        "generation_truncated": false,
+        "parsed_hypothesis_words": 38
+      },
+      {
+        "id": "652-129742-0000",
+        "generation_truncated": false,
+        "parsed_hypothesis_words": 11
+      },
+      {
+        "id": "652-129742-0001",
+        "generation_truncated": false,
+        "parsed_hypothesis_words": 25
+      },
+      {
+        "id": "652-129742-0002",
+        "generation_truncated": false,
+        "parsed_hypothesis_words": 11
+      },
+      {
+        "id": "652-129742-0003",
+        "generation_truncated": false,
+        "parsed_hypothesis_words": 24
+      },
+      {
+        "id": "652-129742-0004",
+        "generation_truncated": false,
+        "parsed_hypothesis_words": 18
+      },
+      {
+        "id": "652-129742-0005",
+        "generation_truncated": false,
+        "parsed_hypothesis_words": 14
+      },
+      {
+        "id": "652-129742-0006",
+        "generation_truncated": true,
+        "parsed_hypothesis_words": 2
+      },
+      {
+        "id": "652-129742-0007",
+        "generation_truncated": false,
+        "parsed_hypothesis_words": 12
+      },
+      {
+        "id": "652-129742-0008",
+        "generation_truncated": false,
+        "parsed_hypothesis_words": 6
+      },
+      {
+        "id": "652-129742-0009",
+        "generation_truncated": false,
+        "parsed_hypothesis_words": 37
+      },
+      {
+        "id": "652-129742-0010",
+        "generation_truncated": false,
+        "parsed_hypothesis_words": 10
+      }
+    ],
+    "other_same_batch_count": 15,
+    "other_same_batch_truncated": 0
+  },
+  "truncated_utterance": {
+    "id": "652-129742-0006",
+    "candidate": {
+      "id": "652-129742-0006",
+      "reference": "CAULIFLOWER MAYONNAISE TAKE COLD BOILED CAULIFLOWER BREAK INTO BRANCHES ADDING SALT PEPPER AND VINEGAR TO SEASON",
+      "hypothesis": "CULINARY CUL",
+      "reference_normalized": "cauliflower mayonnaise take cold boiled cauliflower break into branches adding salt pepper and vinegar to season",
+      "hypothesis_normalized": "culinary cul",
+      "generation_truncated": true
+    },
+    "baseline": {
+      "id": "652-129742-0006",
+      "reference": "CAULIFLOWER MAYONNAISE TAKE COLD BOILED CAULIFLOWER BREAK INTO BRANCHES ADDING SALT PEPPER AND VINEGAR TO SEASON",
+      "hypothesis": "Cauliflower mayonnaise: Take cold boiled cauliflower, break into branches, adding salt, pepper, and vinegar to season.",
+      "reference_normalized": "cauliflower mayonnaise take cold boiled cauliflower break into branches adding salt pepper and vinegar to season",
+      "hypothesis_normalized": "cauliflower mayonnaise take cold boiled cauliflower break into branches adding salt pepper and vinegar to season",
+      "generation_truncated": false
+    },
+    "candidate_counts": {
+      "substitutions": 2,
+      "deletions": 14,
+      "insertions": 0,
+      "hits": 0,
+      "reference_words": 16
+    },
+    "baseline_counts": {
+      "substitutions": 0,
+      "deletions": 0,
+      "insertions": 0,
+      "hits": 16,
+      "reference_words": 16
+    },
+    "parsed_hypothesis_words": 2,
+    "generation_tokens": {
+      "saved_token_ids": false,
+      "saved_token_length": false,
+      "independently_verified_length": null,
+      "inferred_generated_width": 512,
+      "inference": "Frozen evaluator maximum512 plus generation_truncated=True implies continuation width512 and no recognized EOS; token IDs/raw pre-parse generation were not persisted. This is a source-rule inference, not an observed token-length record."
+    }
+  },
+  "clean_error_contribution": {
+    "all_examples": 2694,
+    "reference_words": 54027,
+    "candidate_errors": 1800,
+    "baseline_errors": 871,
+    "candidate_wer": 0.03331667499583542,
+    "baseline_wer": 0.016121568845207025,
+    "difference_percentage_points": 1.719510615062839,
+    "flagged_utterance_errors": 16,
+    "baseline_same_utterance_errors": 0,
+    "flagged_utterance_contribution_to_corpus_wer_percentage_points": 0.02961482221852037,
+    "flagged_utterance_share_of_candidate_errors": 0.008888888888888889,
+    "flagged_utterance_share_of_candidate_minus_baseline_errors": 0.017222820236813777,
+    "excluding_same_utterance_from_both": {
+      "examples": 2693,
+      "reference_words": 54011,
+      "candidate_errors": 1784,
+      "baseline_errors": 871,
+      "candidate_wer": 0.03303030864083242,
+      "baseline_wer": 0.016126344633500583,
+      "interpretation": "Descriptive paired exclusion sensitivity only; it does not replace the failed full-population evaluation or establish the cause of errors."
+    }
+  },
+  "all_saved_stage_text_integrity_passed": true,
+  "input_and_source_sha256": {
+    "/Users/caochao/Documents/ChatGPT/train/reports/baselines/qwen-pinned-b16/dev-clean-fixed128.jsonl": "a4a64233cc75d472473af0ff939d942d64db858075de08dd3c80aa4f85b0b484",
+    "/Users/caochao/Documents/ChatGPT/train/reports/baselines/qwen-pinned-b16/dev-clean-fixed128.metrics.json": "6c8761a291df246c5c0ae37b933d26187542544af7e5167d4da4aca25468d6f4",
+    "/Users/caochao/Documents/ChatGPT/train/reports/diagnosis/inputs/dev-clean.jsonl": "fc6f7f048b571431d244a854b204a8e9ed34062796350359e10ee5635ff9ca9a",
+    "/Users/caochao/Documents/ChatGPT/train/reports/diagnosis/inputs/whisper-english-spelling-normalizer.json": "bf1c507dc8724ca9cf9903640dacfb69dae2f00edee4f21ceba106a7392f26dd",
+    "/Users/caochao/Documents/ChatGPT/train/reports/diagnosis/text-audit.json": "ac2c053ea4b3a19183fd2c2698dd5f8f96cf8149901be95f84b09a08bb2ee632",
+    "/Users/caochao/Documents/ChatGPT/train/reports/early100/inputs/dev-clean-fixed128.jsonl": "1c657340c27cdc1f4b025ba5731da07fc7fd2f505e9dddbfc8fffc9cc59df999",
+    "/Users/caochao/Documents/ChatGPT/train/reports/early100/run/campaign.json": "f6be4d5322fba1fb03d89b311017220506fff83ffa238d22614fb1e97ea1c279",
+    "/Users/caochao/Documents/ChatGPT/train/reports/early100/run/evaluation/step100-dev_clean/predictions.jsonl": "250a38687dfc1368363476c62eb74b1662358543def61d2ee8efe3ead3362d72",
+    "/Users/caochao/Documents/ChatGPT/train/reports/early100/run/evaluation/step100-dev_clean/predictions.metrics.json": "a20c06b697e131c533bc9401e4cd6b1678f34443c29e1edd17fe17ae81ec18a1",
+    "/Users/caochao/Documents/ChatGPT/train/reports/early100/run/evaluation/step100-fixed128/predictions.jsonl": "8be5e0f3bb313e0c6b1184ca93616ea39da315ba22e171b60801c097c3268e79",
+    "/Users/caochao/Documents/ChatGPT/train/reports/early100/run/evaluation/step100-fixed128/predictions.metrics.json": "6421f104ef6c03ca41d29f7931dda9a62922020b90d4b80fd0fbabfa6dab8003",
+    "/Users/caochao/Documents/ChatGPT/train/reports/early100/run/evaluation/step25-fixed128/predictions.jsonl": "b5fecc95569507107a4419af487c602375e6ffa9d2f615cdf0289c95b23024af",
+    "/Users/caochao/Documents/ChatGPT/train/reports/early100/run/evaluation/step25-fixed128/predictions.metrics.json": "ddcdb32c909c7bf2ef07f21ec791e7d18d43ecb7abcac6384fe319666b796e0b",
+    "/Users/caochao/Documents/ChatGPT/train/reports/early100/run/evaluation/step50-fixed128/predictions.jsonl": "7b884350a66d1c39f8b591b65bb181ccacac8b83e1410b6973bc7054593a3ef2",
+    "/Users/caochao/Documents/ChatGPT/train/reports/early100/run/evaluation/step50-fixed128/predictions.metrics.json": "fda96597d4bd838a0d4b2538f3d67d4178b5b62dc0b25b2e345fdba0ece70b71",
+    "/Users/caochao/Documents/ChatGPT/train/reports/qwen-campaign-20261022-a/campaign.json": "52d7791445dab5539ceeee648b3ca9f3fecad00a466a78b3c29ecf7b15582f00",
+    "/Users/caochao/Documents/ChatGPT/train/reports/qwen-campaign-20261022-a/evaluation/baseline-dev-clean/predictions.jsonl": "0432e6615b0996b86e9e0fc977a28b527d486f41998d395e3d299b9402d97f63",
+    "/Users/caochao/Documents/ChatGPT/train/reports/qwen-campaign-20261022-a/evaluation/baseline-dev-clean/predictions.metrics.json": "504a67be4f3f64393c0c49e36dc2a9c2994dc38bf5136b7c9d76fa9026d72fd7",
+    "/Users/caochao/Documents/ChatGPT/train/scripts/audit_early100_outputs.py": "45d84d43ef61981ea6ee38a86dd33edf59bafd3c5308cbea809d7b64f686c8b6",
+    "/Users/caochao/Documents/ChatGPT/train/scripts/audit_early100_partial.py": "4fba255f03fd78ae5a5427c48bb5310d9145bc6198bb8a83289f395fa38574a2",
+    "/Users/caochao/Documents/ChatGPT/train/scripts/audit_saved_predictions.py": "3480b0a6571510e93dce4b30954e8d5613c841831c5af62b453050cf85a52422",
+    "/Users/caochao/Documents/ChatGPT/train/src/asr_lab/qwen_evaluate.py": "0a2012eb016cddadee7b3c0f0ca5ad9f3f94b502faad780392788a8ccf9e30d6"
+  }
+}

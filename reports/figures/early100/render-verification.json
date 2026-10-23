@@ -1,0 +1,51 @@
+{
+  "verified_utc": "2026-10-23T05:01:22.433414+00:00",
+  "mode": "partial_diagnostic",
+  "figure_count": 2,
+  "export_count": 6,
+  "repeat_render_export_sha256_identical": true,
+  "all_source_export_metadata_sha256_valid": true,
+  "original_script_and_nine_exports_unchanged": true,
+  "visual_inspection": {
+    "first100_training.png": "Passed: titles/warning/captions/ticks readable; LR legend moved away from observed curve.",
+    "fixed128_early_wer.png": "Passed: four measured WER labels and partial failure warning readable."
+  },
+  "partial_audit_receipt": {
+    "path": "reports/early100/truncation-audit.json",
+    "sha256": "613bb310267da7a321b1928ff4eb305d5024a657b40a14705697e25490e711ae"
+  },
+  "figure_manifest": {
+    "path": "reports/figures/early100/figure_manifest.json",
+    "sha256": "8c58488ad9d5912363b179fb11208bb286f79335857a43b828e919fd8a462ba8"
+  },
+  "exports": [
+    {
+      "path": "reports/figures/early100/first100_training.pdf",
+      "sha256": "5eb91cfdd1b4d4ce3fdc77e6b4994f15217c28437ed914247b12c8b1d9246f54"
+    },
+    {
+      "path": "reports/figures/early100/first100_training.png",
+      "sha256": "c91e541d78d461f10d4461aecd3dd7d63a98acd0fb85ba6a5064411848a60039"
+    },
+    {
+      "path": "reports/figures/early100/first100_training.svg",
+      "sha256": "8a3c66eaa05419b9359fdef1acabfd4e1747f8564964031aad6c4d4ddbb11ac0"
+    },
+    {
+      "path": "reports/figures/early100/fixed128_early_wer.pdf",
+      "sha256": "da93bcf1bce047d2c69aa24fb186007d167e7c0bda74e10631afef60083a8ad0"
+    },
+    {
+      "path": "reports/figures/early100/fixed128_early_wer.png",
+      "sha256": "5488e3790db8d92db7e0b442d00286190c9cb75cd3c84b8040a531d7d45ee1cb"
+    },
+    {
+      "path": "reports/figures/early100/fixed128_early_wer.svg",
+      "sha256": "c68badc2a26f274544e08fb37978ff9c0f2bf7df42116e90abc9d0f48189e3c9"
+    }
+  ],
+  "excluded_results": {
+    "step100-dev_clean": "rejected: one 512-token generation truncation",
+    "step100-dev_other": "not run"
+  }
+}

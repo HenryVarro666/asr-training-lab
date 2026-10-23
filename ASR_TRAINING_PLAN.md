@@ -1,10 +1,10 @@
 # 双 H100 ASR 训练与 Speech-LLM 演进计划
 
-> 最新执行方式（2026-10-22）：用户取消“持续运行直到耗尽token/usage”的要求，改为分阶段规划与结果复核。后续以 [分阶段诊断计划](docs/NEXT_STEPS.md) 为准；当前优先复核已有证据，不自动启动第二轮训练或新的完整campaign。
+> 最新执行方式（2026-10-22）：用户取消“持续运行直到耗尽token/usage”的要求，改为分阶段规划与结果复核。后续以 [分阶段诊断计划](docs/NEXT_STEPS.md) 为准；当前Early100已按质量门槛停止，下一步依据失败审计单独规划，不自动继续训练或启动新的完整campaign。
 
 版本：2026-10-22，Astra 6 策略审阅第二版。已纳入用户新增“现代架构、充分利用两张 H100、比较数据/模型/张量并行”的要求。实施与真实训练由 GPT-6.1 Sol 接续。
 
-本文件记录设计与验收合同；执行结果以仓库 README、运行目录和报告为准。首轮双卡训练、基线／结束评测及checkpoint800诊断已完成，但微调后WER退化；详见[实验状态](EXPERIMENT_STATUS.md)和[诊断报告](reports/diagnosis/README.md)。随后[零更新保存／重载控制](reports/zero-update-control/README.md)也已通过，当前阶段已归档；下一项候选为保持原调度的早期轨迹验证，尚未开始第二轮训练。原始输入为用户提供的 `deepinfer_speech_llm_asr_plan.md`；外部事实经过下述官方来源核查。
+本文件记录设计与验收合同；执行结果以仓库 README、运行目录和报告为准。首轮双卡训练、基线／结束评测及checkpoint800诊断已完成，但微调后WER退化；详见[实验状态](EXPERIMENT_STATUS.md)和[诊断报告](reports/diagnosis/README.md)。随后[零更新保存／重载控制](reports/zero-update-control/README.md)也已通过，随后[Early100](reports/early100/README.md)完成100次双卡更新、保留892/45调度，固定128已见退化；完整clean出现1条生成截断触发停止，other未执行。该阶段是部分完成且质量门槛失败，不能称作完整评测通过。原始输入为用户提供的 `deepinfer_speech_llm_asr_plan.md`；外部事实经过下述官方来源核查。
 
 ## 1. 现在要做的决定
 

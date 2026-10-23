@@ -1,0 +1,8 @@
+{
+  "status": "completed_bounded_prefix",
+  "actual_step": 100,
+  "original_total_steps": 892,
+  "original_training_status": "interrupted",
+  "completed_epoch": false,
+  "trajectory_validation": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/trajectory-validation.json"
+}

@@ -1,0 +1,17 @@
+{
+  "status": "interrupted",
+  "completion_reason": "wall_or_signal",
+  "epoch": 0.11210762331838565,
+  "target_epochs": 1.0,
+  "step": 100,
+  "elapsed_seconds": 223.6167055312544,
+  "metrics": {
+    "train_runtime": 220.9025,
+    "train_samples_per_second": 129.193,
+    "train_steps_per_second": 4.038,
+    "total_flos": 9895480171429888.0,
+    "train_loss": 0.16597227860242128,
+    "epoch": 0.11210762331838565
+  },
+  "latest_checkpoint": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100"
+}

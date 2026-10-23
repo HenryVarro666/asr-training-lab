@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="756pt" height="460.8pt" viewBox="0 0 756 460.8" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title>Observed base25/50/100 fixed128 WER</title>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Observed base25/50/100 fixed128 WER</dc:title>
+    <dc:description>Only base / 25 / 50 / 100 generation results are measured here; lines are visual guides, not a continuous WER trajectory.
+Fixed128 is a development subset, not full dev-clean or independent test. Same IDs/normalizer, greedy, batch 16, budget 512; zero truncation.
+Repeated development inspection is exploratory; this chart neither selects a winning checkpoint nor establishes the cause of any change.</dc:description>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>ASR Lab / plot_experiment_results.py</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 460.8 
+L 756 460.8 
+L 756 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 75.6 354.816 
+L 740.88 354.816 
+L 740.88 87.552 
+L 75.6 87.552 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m0be43e2b42" d="M 0 0 
+L 0 3.5 
+" style="stroke: #47515b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m0be43e2b42" x="121.481379" y="354.816" style="fill: #47515b; stroke: #47515b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #47515b" transform="translate(109.305598 370.414633)">Base</text>
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #47515b" transform="translate(118.300129 382.416586)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m0be43e2b42" x="264.86069" y="354.816" style="fill: #47515b; stroke: #47515b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #47515b" transform="translate(236.727877 370.415414)">Checkpoint</text>
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #47515b" transform="translate(258.49819 382.417367)">25</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m0be43e2b42" x="408.24" y="354.816" style="fill: #47515b; stroke: #47515b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #47515b" transform="translate(380.107188 370.415414)">Checkpoint</text>
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #47515b" transform="translate(401.8775 382.417367)">50</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m0be43e2b42" x="694.998621" y="354.816" style="fill: #47515b; stroke: #47515b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #47515b" transform="translate(666.865808 370.415414)">Checkpoint</text>
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #47515b" transform="translate(685.454871 382.417367)">100</text>
+     </g>
+    </g>
+    <g id="text_5">
+     <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #26323d" x="408.24" y="397.419125" transform="rotate(-0 408.24 397.419125)">Measured optimizer update</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_5">
+      <path d="M 75.6 354.816 
+L 740.88 354.816 
+" clip-path="url(#p8d52fc3a78)" style="fill: none; stroke: #e3e7eb; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <defs>
+       <path id="m2d76c57fa2" d="M 0 0 
+L -3.5 0 
+" style="stroke: #47515b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m2d76c57fa2" x="75.6" y="354.816" style="fill: #47515b; stroke: #47515b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #47515b" x="68.6" y="358.614828" transform="rotate(-0 68.6 358.614828)">0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_7">
+      <path d="M 75.6 304.856094 
+L 740.88 304.856094 
+" clip-path="url(#p8d52fc3a78)" style="fill: none; stroke: #e3e7eb; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m2d76c57fa2" x="75.6" y="304.856094" style="fill: #47515b; stroke: #47515b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #47515b" x="68.6" y="308.654922" transform="rotate(-0 68.6 308.654922)">1</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_9">
+      <path d="M 75.6 254.896188 
+L 740.88 254.896188 
+" clip-path="url(#p8d52fc3a78)" style="fill: none; stroke: #e3e7eb; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m2d76c57fa2" x="75.6" y="254.896188" style="fill: #47515b; stroke: #47515b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #47515b" x="68.6" y="258.695016" transform="rotate(-0 68.6 258.695016)">2</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_11">
+      <path d="M 75.6 204.936282 
+L 740.88 204.936282 
+" clip-path="url(#p8d52fc3a78)" style="fill: none; stroke: #e3e7eb; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m2d76c57fa2" x="75.6" y="204.936282" style="fill: #47515b; stroke: #47515b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #47515b" x="68.6" y="208.73511" transform="rotate(-0 68.6 208.73511)">3</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_13">
+      <path d="M 75.6 154.976376 
+L 740.88 154.976376 
+" clip-path="url(#p8d52fc3a78)" style="fill: none; stroke: #e3e7eb; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m2d76c57fa2" x="75.6" y="154.976376" style="fill: #47515b; stroke: #47515b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #47515b" x="68.6" y="158.775204" transform="rotate(-0 68.6 158.775204)">4</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_15">
+      <path d="M 75.6 105.01647 
+L 740.88 105.01647 
+" clip-path="url(#p8d52fc3a78)" style="fill: none; stroke: #e3e7eb; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m2d76c57fa2" x="75.6" y="105.01647" style="fill: #47515b; stroke: #47515b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #47515b" x="68.6" y="108.815298" transform="rotate(-0 68.6 108.815298)">5</text>
+     </g>
+    </g>
+    <g id="text_12">
+     <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #26323d" x="55.835156" y="221.184" transform="rotate(-90 55.835156 221.184)">Corpus word error rate (%)</text>
+    </g>
+   </g>
+   <g id="line2d_17">
+    <path d="M 121.481379 275.70565 
+L 264.86069 145.001592 
+L 408.24 169.078656 
+L 694.998621 194.875509 
+" clip-path="url(#p8d52fc3a78)" style="fill: none; stroke: #0072b2; stroke-width: 1.8; stroke-linecap: square"/>
+    <defs>
+     <path id="meb27b1a743" d="M 0 3.5 
+C 0.928211 3.5 1.81853 3.131218 2.474874 2.474874 
+C 3.131218 1.81853 3.5 0.928211 3.5 0 
+C 3.5 -0.928211 3.131218 -1.81853 2.474874 -2.474874 
+C 1.81853 -3.131218 0.928211 -3.5 0 -3.5 
+C -0.928211 -3.5 -1.81853 -3.131218 -2.474874 -2.474874 
+C -3.131218 -1.81853 -3.5 -0.928211 -3.5 0 
+C -3.5 0.928211 -3.131218 1.81853 -2.474874 2.474874 
+C -1.81853 3.131218 -0.928211 3.5 0 3.5 
+z
+" style="stroke: #0072b2"/>
+    </defs>
+    <g clip-path="url(#p8d52fc3a78)">
+     <use xlink:href="#meb27b1a743" x="121.481379" y="275.70565" style="fill: #0072b2; stroke: #0072b2"/>
+     <use xlink:href="#meb27b1a743" x="264.86069" y="145.001592" style="fill: #0072b2; stroke: #0072b2"/>
+     <use xlink:href="#meb27b1a743" x="408.24" y="169.078656" style="fill: #0072b2; stroke: #0072b2"/>
+     <use xlink:href="#meb27b1a743" x="694.998621" y="194.875509" style="fill: #0072b2; stroke: #0072b2"/>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 75.6 354.816 
+L 75.6 87.552 
+" style="fill: none; stroke: #b5bec5; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 75.6 354.816 
+L 740.88 354.816 
+" style="fill: none; stroke: #b5bec5; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #0072b2" x="121.481379" y="265.70565" transform="rotate(-0 121.481379 265.70565)">1.5835%</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #0072b2" x="264.86069" y="135.001592" transform="rotate(-0 264.86069 135.001592)">4.1997%</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #0072b2" x="408.24" y="159.078656" transform="rotate(-0 408.24 159.078656)">3.7177%</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #0072b2" x="694.998621" y="184.875509" transform="rotate(-0 694.998621 184.875509)">3.2014%</text>
+   </g>
+  </g>
+  <g id="text_17">
+   <text style="font-weight: 700; font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #172532" x="75.6" y="25.0599" transform="rotate(-0 75.6 25.0599)">Fixed128 generation WER: measured early checkpoints</text>
+  </g>
+  <g id="text_18">
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #47515b" x="75.6" y="38.2464" transform="rotate(-0 75.6 38.2464)">Same 128 utterances / 2,905 reference words; exploratory development diagnosis</text>
+  </g>
+  <g id="text_19">
+   <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #9b3423" x="75.6" y="56.6784" transform="rotate(-0 75.6 56.6784)">PARTIAL DIAGNOSTIC — campaign failed on full-clean truncation; full-other not run</text>
+  </g>
+  <g id="text_20">
+   <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #424a52" transform="translate(15.12 431.039369)">Only base / 25 / 50 / 100 generation results are measured here; lines are visual guides, not a continuous WER trajectory.</text>
+   <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #424a52" transform="translate(15.12 440.641556)">Fixed128 is a development subset, not full dev-clean or independent test. Same IDs/normalizer, greedy, batch 16, budget 512; zero truncation.</text>
+   <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #424a52" transform="translate(15.12 450.243744)">Repeated development inspection is exploratory; this chart neither selects a winning checkpoint nor establishes the cause of any change.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p8d52fc3a78">
+   <rect x="75.6" y="87.552" width="665.28" height="267.264"/>
+  </clipPath>
+ </defs>
+</svg>

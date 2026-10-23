@@ -1,0 +1,120 @@
+{
+  "title": "Observed base25/50/100 fixed128 WER",
+  "caption": "Only base / 25 / 50 / 100 generation results are measured here; lines are visual guides, not a continuous WER trajectory.\nFixed128 is a development subset, not full dev-clean or independent test. Same IDs/normalizer, greedy, batch 16, budget 512; zero truncation.\nRepeated development inspection is exploratory; this chart neither selects a winning checkpoint nor establishes the cause of any change.",
+  "sources": [
+    {
+      "path": "reports/baselines/qwen-pinned-b16/dev-clean-fixed128.metrics.json",
+      "sha256": "6c8761a291df246c5c0ae37b933d26187542544af7e5167d4da4aca25468d6f4",
+      "bytes": 3740
+    },
+    {
+      "path": "reports/early100/run/evaluation/step25-fixed128/predictions.metrics.json",
+      "sha256": "ddcdb32c909c7bf2ef07f21ec791e7d18d43ecb7abcac6384fe319666b796e0b",
+      "bytes": 3754
+    },
+    {
+      "path": "reports/early100/run/evaluation/step50-fixed128/predictions.metrics.json",
+      "sha256": "fda96597d4bd838a0d4b2538f3d67d4178b5b62dc0b25b2e345fdba0ece70b71",
+      "bytes": 3752
+    },
+    {
+      "path": "reports/early100/run/evaluation/step100-fixed128/predictions.metrics.json",
+      "sha256": "6421f104ef6c03ca41d29f7931dda9a62922020b90d4b80fd0fbabfa6dab8003",
+      "bytes": 3754
+    },
+    {
+      "path": "reports/early100/run/evaluation/step25-fixed128/stage.json",
+      "sha256": "35b431197ee099c69bfc89250530217c5f48818b39b17b319d2dd8a9d3e1b6f5",
+      "bytes": 883
+    },
+    {
+      "path": "reports/early100/run/evaluation/step50-fixed128/stage.json",
+      "sha256": "e2e00ffeb84708c715ae10569edc8cfae12a52522f466e28104aa17c58ec9af7",
+      "bytes": 883
+    },
+    {
+      "path": "reports/early100/run/evaluation/step100-fixed128/stage.json",
+      "sha256": "b2ed24717e0d5dbe37de8a4e4017aadd3e9ad4306c32cdf9b86fc69d89cfb370",
+      "bytes": 887
+    },
+    {
+      "path": "reports/early100/run/campaign.json",
+      "sha256": "f6be4d5322fba1fb03d89b311017220506fff83ffa238d22614fb1e97ea1c279",
+      "bytes": 20673
+    },
+    {
+      "path": "reports/early100/run/training/prefix-status.json",
+      "sha256": "46f001f8f7ed673772c9bc94a50968bf931c8d0851aa2473bc42419b2386bd27",
+      "bytes": 283
+    },
+    {
+      "path": "reports/early100/run/training/trajectory-validation.json",
+      "sha256": "2058e387efd7940721436b2d4bf699d5e6188973af373e93a67c6515f469ad15",
+      "bytes": 470
+    },
+    {
+      "path": "reports/early100/run/training/prefix-plan.json",
+      "sha256": "97d2a26321c5f47cadd416e08e3ee1065a08f8179cbb4ff619297e286af0ec70",
+      "bytes": 401
+    },
+    {
+      "path": "reports/early100/run/training/prefix-trajectory.jsonl",
+      "sha256": "6d7b0fb5bf247e416ae04abe73771bbcc03f1799fd9aa525837719482786855f",
+      "bytes": 118015
+    },
+    {
+      "path": "reports/early100/run/training/stage.json",
+      "sha256": "255336bcea4ab7224d7382d5d7e240213bba0adfe9bee50f141c156dafc914f2",
+      "bytes": 770
+    },
+    {
+      "path": "reports/early100/run/evaluation/step100-dev_clean/stage.json",
+      "sha256": "12a832b15429acd84633d398b7e1d360f626eaa619612aaf27715ce6afa789a1",
+      "bytes": 881
+    },
+    {
+      "path": "reports/early100/run/evaluation/step100-dev_clean/predictions.metrics.json",
+      "sha256": "a20c06b697e131c533bc9401e4cd6b1678f34443c29e1edd17fe17ae81ec18a1",
+      "bytes": 63838
+    }
+  ],
+  "derived_data": {
+    "steps": [
+      0,
+      25,
+      50,
+      100
+    ],
+    "wer_percent": [
+      1.5834767641996557,
+      4.199655765920826,
+      3.7177280550774525,
+      3.201376936316695
+    ],
+    "reference_words": 2905,
+    "examples": 128,
+    "edits": [
+      46,
+      122,
+      108,
+      93
+    ]
+  },
+  "outputs": {
+    "png": {
+      "path": "reports/figures/early100/fixed128_early_wer.png",
+      "sha256": "5488e3790db8d92db7e0b442d00286190c9cb75cd3c84b8040a531d7d45ee1cb",
+      "bytes": 186530
+    },
+    "svg": {
+      "path": "reports/figures/early100/fixed128_early_wer.svg",
+      "sha256": "c68badc2a26f274544e08fb37978ff9c0f2bf7df42116e90abc9d0f48189e3c9",
+      "bytes": 12300
+    },
+    "pdf": {
+      "path": "reports/figures/early100/fixed128_early_wer.pdf",
+      "sha256": "da93bcf1bce047d2c69aa24fb186007d167e7c0bda74e10631afef60083a8ad0",
+      "bytes": 30575
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "training-prefix100",
+  "command": [
+    "/mnt/raid/asr-lab/venv/bin/python",
+    "-m",
+    "torch.distributed.run",
+    "--standalone",
+    "--nproc_per_node=2",
+    "-m",
+    "asr_lab.qwen_early100",
+    "--config",
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/config.yaml",
+    "--run-dir",
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training",
+    "--original-run",
+    "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/main-epoch1"
+  ],
+  "physical_gpus": "0,1",
+  "run_dir": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training",
+  "fingerprint": "bf8db41f76543173ccd947f79659f91d4fa66da60cde7beb6e74a606f07cca0f",
+  "started_unix": 1792730795.251599,
+  "status": "complete",
+  "exit_code": 0,
+  "ended_unix": 1792731074.541027
+}

@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "validated_steps": 100,
+  "original_total_steps": 892,
+  "warmup_steps": 45,
+  "max_lr_absolute_difference": 0.0,
+  "max_audio_seconds_absolute_difference": 0.0,
+  "total_consumed_examples": 3200,
+  "total_consumed_audio_seconds": 40729.90012500001,
+  "new_actual_ids_recorded": true,
+  "original_per_id_order_recorded": false,
+  "limitation": "Matched config, counts and audio seconds do not prove old per-ID order or bitwise model replay."
+}

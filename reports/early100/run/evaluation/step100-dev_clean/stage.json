@@ -1,0 +1,28 @@
+{
+  "name": "step100-dev_clean",
+  "command": [
+    "/mnt/raid/asr-lab/venv/bin/python",
+    "-m",
+    "asr_lab.qwen_evaluate",
+    "--model",
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100",
+    "--revision",
+    "7278e1e70fe206f11671096ffdd38061171dd6e5",
+    "--manifest",
+    "/mnt/raid/asr-lab/data/manifests/dev-clean.jsonl",
+    "--output",
+    "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/evaluation/step100-dev_clean/predictions.jsonl",
+    "--all",
+    "--batch-size",
+    "16",
+    "--max-new-tokens",
+    "512"
+  ],
+  "physical_gpus": "1",
+  "run_dir": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/evaluation/step100-dev_clean",
+  "fingerprint": "559ece2f61656cc11733db826d8a79b5810ef8abf56cad00f81aa56409b5f173",
+  "started_unix": 1792731181.6915658,
+  "status": "complete",
+  "exit_code": 0,
+  "ended_unix": 1792731432.2659297
+}
