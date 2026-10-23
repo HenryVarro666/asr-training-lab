@@ -1,0 +1,14 @@
+{
+  "status": "verified_local_and_remote",
+  "payload_commit": "342d232877ea91863795e0fe14e5627dc2ffaffd",
+  "local_bundle": "/Users/caochao/Documents/ChatGPT/train/.git/asr-backups/asr-lab-truncation-probe-342d232.bundle",
+  "remote_bundle": "/mnt/raid/asr-lab/backups/asr-lab-truncation-probe-342d232.bundle",
+  "sha256": "428a8bdb6949b9dab9e11841e386d43919f3cd5eceb725bb71ba968ed3fae956",
+  "bytes": 5006337,
+  "local_verify_output": "The bundle contains these 2 refs:\n342d232877ea91863795e0fe14e5627dc2ffaffd HEAD\n342d232877ea91863795e0fe14e5627dc2ffaffd refs/heads/experiment/truncation-probe\nThe bundle records a complete history.\nThe bundle uses this hash algorithm: sha1\n/Users/caochao/Documents/ChatGPT/train/.git/asr-backups/asr-lab-truncation-probe-342d232.bundle is okay\n",
+  "remote_verify_output": "The bundle contains these 2 refs:\n342d232877ea91863795e0fe14e5627dc2ffaffd HEAD\n342d232877ea91863795e0fe14e5627dc2ffaffd refs/heads/experiment/truncation-probe\nThe bundle records a complete history.\n/mnt/raid/asr-lab/backups/asr-lab-truncation-probe-342d232.bundle is okay\n",
+  "scope": "Committed source, plans, small JSON/raw-token/text/monitor evidence and Git history through payload_commit. This receipt is written afterward and copied separately.",
+  "excluded": "No model weights, raw audio, HF caches, credentials, untracked unrelated plans, or ignored PT input/raw-token tensors. PT evidence exists separately in both local reports and original remote run.",
+  "raw_monitor_csv": "Original CRLF bytes preserved for SHA256 identity; Git whitespace check passes with cr-at-eol enabled for verification only.",
+  "remote_hash_verified": true
+}

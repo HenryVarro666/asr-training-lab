@@ -56,7 +56,7 @@
 - [x] Launch the single authorized supervisor; monitor actual stage progress and only its owned processes.
 - [x] Sync raw evidence and compare same-batch inputs, effective settings, tokens/EOS, decoded text and parser output; distinguish repeat/single and historical comparisons.
 - [x] Record observed mechanism and limitations; review results with Astra, update progress/entry docs, verify host cleanup and service preservation.
-- [ ] Commit small evidence and verify a cross-host code/report bundle; finish the finite diagnostic without training or a new queue.
+- [x] Commit small evidence and verify a cross-host code/report bundle; finish the finite diagnostic without training or a new queue.
 
 ## Execution rulings
 
