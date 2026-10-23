@@ -1,0 +1,214 @@
+{
+  "captured_utc": "2026-10-23T04:17:28.023693+00:00",
+  "gpu": {
+    "returncode": 0,
+    "stdout": "0, NVIDIA H100 NVL, 95830 MiB, 22697 MiB, 0 %\n1, NVIDIA H100 NVL, 95830 MiB, 14 MiB, 0 %",
+    "stderr": ""
+  },
+  "gpu_processes": {
+    "returncode": 0,
+    "stdout": "GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c, 2154793, .venv/bin/python, 22674 MiB",
+    "stderr": ""
+  },
+  "personaplex": {
+    "returncode": 0,
+    "stdout": "2154793  194942 .venv/bin/python -u -m moshi.server_prefix_paced --host 127.0.0.1 --port 8998 --static none",
+    "stderr": ""
+  },
+  "control_supervisor": {
+    "returncode": 1,
+    "stdout": "",
+    "stderr": ""
+  },
+  "control_tmux": {
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "can't find session: asr-zero-update-control"
+  },
+  "asr_processes": {
+    "returncode": 1,
+    "stdout": "",
+    "stderr": ""
+  },
+  "disk": {
+    "total_bytes": 47808184197120,
+    "used_bytes": 42062048845824,
+    "free_bytes": 3346104377344
+  },
+  "project_disk_usage": {
+    "returncode": 0,
+    "stdout": "209990511405\t/mnt/raid/asr-lab",
+    "stderr": ""
+  },
+  "control_disk_usage": {
+    "returncode": 0,
+    "stdout": "8289930515\t/mnt/raid/asr-lab/runs/qwen-zero-update-control-20261022",
+    "stderr": ""
+  },
+  "checkpoints": {
+    "checkpoint-800": [
+      {
+        "name": "added_tokens.json",
+        "bytes": 1566
+      },
+      {
+        "name": "chat_template.jinja",
+        "bytes": 1099
+      },
+      {
+        "name": "checkpoint.json",
+        "bytes": 5836
+      },
+      {
+        "name": "config.json",
+        "bytes": 5916
+      },
+      {
+        "name": "generation_config.json",
+        "bytes": 125
+      },
+      {
+        "name": "merges.txt",
+        "bytes": 1671853
+      },
+      {
+        "name": "model-00001-of-00002.safetensors",
+        "bytes": 4981095680
+      },
+      {
+        "name": "model-00002-of-00002.safetensors",
+        "bytes": 3171200384
+      },
+      {
+        "name": "model.safetensors.index.json",
+        "bytes": 64802
+      },
+      {
+        "name": "optimizer.pt",
+        "bytes": 16305044668
+      },
+      {
+        "name": "preprocessor_config.json",
+        "bytes": 357
+      },
+      {
+        "name": "rng_state_0.pth",
+        "bytes": 14917
+      },
+      {
+        "name": "rng_state_1.pth",
+        "bytes": 14917
+      },
+      {
+        "name": "scheduler.pt",
+        "bytes": 1465
+      },
+      {
+        "name": "special_tokens_map.json",
+        "bytes": 1008
+      },
+      {
+        "name": "tokenizer.json",
+        "bytes": 11429499
+      },
+      {
+        "name": "tokenizer_config.json",
+        "bytes": 12517
+      },
+      {
+        "name": "trainer_state.json",
+        "bytes": 140609
+      },
+      {
+        "name": "training_args.bin",
+        "bytes": 5905
+      },
+      {
+        "name": "vocab.json",
+        "bytes": 2776833
+      }
+    ],
+    "checkpoint-892": [
+      {
+        "name": "added_tokens.json",
+        "bytes": 1566
+      },
+      {
+        "name": "chat_template.jinja",
+        "bytes": 1099
+      },
+      {
+        "name": "checkpoint.json",
+        "bytes": 5821
+      },
+      {
+        "name": "config.json",
+        "bytes": 5916
+      },
+      {
+        "name": "generation_config.json",
+        "bytes": 125
+      },
+      {
+        "name": "merges.txt",
+        "bytes": 1671853
+      },
+      {
+        "name": "model-00001-of-00002.safetensors",
+        "bytes": 4981095680
+      },
+      {
+        "name": "model-00002-of-00002.safetensors",
+        "bytes": 3171200384
+      },
+      {
+        "name": "model.safetensors.index.json",
+        "bytes": 64802
+      },
+      {
+        "name": "optimizer.pt",
+        "bytes": 16305044668
+      },
+      {
+        "name": "preprocessor_config.json",
+        "bytes": 357
+      },
+      {
+        "name": "rng_state_0.pth",
+        "bytes": 14917
+      },
+      {
+        "name": "rng_state_1.pth",
+        "bytes": 14917
+      },
+      {
+        "name": "scheduler.pt",
+        "bytes": 1465
+      },
+      {
+        "name": "special_tokens_map.json",
+        "bytes": 1008
+      },
+      {
+        "name": "tokenizer.json",
+        "bytes": 11429499
+      },
+      {
+        "name": "tokenizer_config.json",
+        "bytes": 12517
+      },
+      {
+        "name": "trainer_state.json",
+        "bytes": 156457
+      },
+      {
+        "name": "training_args.bin",
+        "bytes": 5905
+      },
+      {
+        "name": "vocab.json",
+        "bytes": 2776833
+      }
+    ]
+  }
+}

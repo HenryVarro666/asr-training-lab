@@ -1,0 +1,68 @@
+{
+  "verified_utc": "2026-10-23T04:17:57.036642+00:00",
+  "independent_review": "Astra 6 read-only review: passed with no blocking findings; covers this fixed128 roundtrip only",
+  "checks": {
+    "model": true,
+    "inputs": true,
+    "generation": true,
+    "loading_info": true,
+    "runtime": true,
+    "package_source_sha256": true,
+    "forward_module": true,
+    "saved_state_unchanged": true,
+    "projected_state_matches_base": true,
+    "projected_state_matches_reload": true,
+    "base_state_unchanged": true,
+    "reload_state_unchanged": true,
+    "raw_predictions_identical": true,
+    "all_stages_exit_zero": true,
+    "zero_updates": true,
+    "no_automatic_training": true
+  },
+  "examples": 128,
+  "input_batches": 8,
+  "state_dict_tensor_keys": 708,
+  "state_dict_elements_including_tied_aliases": 2349217408,
+  "tied_alias_duplicate_elements": 311164928,
+  "unique_parameter_elements": 2038052480,
+  "persistent_buffer_keys": 0,
+  "metrics": {
+    "wer": 0.015834767641996556,
+    "reference_words": 2905,
+    "substitutions": 32,
+    "deletions": 9,
+    "insertions": 5,
+    "hits": 2864,
+    "examples": 128,
+    "evaluation_batch_size": 16,
+    "manifest_sha256": "1c657340c27cdc1f4b025ba5731da07fc7fd2f505e9dddbfc8fffc9cc59df999",
+    "model_revision": "7278e1e70fe206f11671096ffdd38061171dd6e5",
+    "role": "base",
+    "generation_truncated_count": 0
+  },
+  "wall_seconds": 136.79292917251587,
+  "monitor_samples": 14,
+  "recorded_alert_counts": {},
+  "stage_seconds": {
+    "prepare": 53.34374451637268,
+    "base": 37.53587484359741,
+    "reload": 38.46627497673035
+  },
+  "source_code_commit": "c1d8ac3",
+  "limitations": [
+    "No optimizer update or backward pass is tested.",
+    "Fixed128 control does not validate all inputs or establish the cause of training regression.",
+    "Monitor status is the last sample, not a terminal receipt; its inputs-*.pt checkpoint field represents diagnostic inputs, not resumable checkpoints."
+  ],
+  "evidence_sha256": {
+    "base/evidence.json": "31c610fcbd89f12ddd03b2e702d8660242c21959282eef5b55cd407b62920100",
+    "base/stage.json": "3ed777112c72969e2a9c2437ebb4b289003e472cc1806003b5aea469563067fd",
+    "campaign.json": "d47639c411f7a2c93b65807b190cd5376f669755a3dd0de1e1682ab59bed5e60",
+    "comparison.json": "19f90360ba8be97ed77ae314f603623d857d10d4f0a14a0f9e8780142da6d61f",
+    "final-host-snapshot.json": "ad46dc9146c4672bad2ad741fb0a4b444f354569bff9eafe3db9edc7681e6734",
+    "prepare/prepared.json": "634e33fd6df47d181ef18bc0feddcbb6171671829f42f6928ca18ba3746f54ad",
+    "prepare/stage.json": "9ce490fccd2253117881f5a497ee2756b9019b986af0a10f47f298da31e927d5",
+    "reload/evidence.json": "bc75d011fbd4e5cc4160ab6368779b698a4941418604a2ff8a6a1b50a72f7af0",
+    "reload/stage.json": "08cedc60c6918b58a643b735ba2fff55ae49e2f33ae225a2dbe7cab1adfbd531"
+  }
+}

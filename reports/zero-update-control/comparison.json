@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "differences": [],
+  "token_only_difference": false,
+  "first_token_difference": null,
+  "conclusion": "pass_on_this_fixed128_only",
+  "prepared_bf16_projection_matches_base": true,
+  "prepared_bf16_projection_matches_reload": true,
+  "base_persistent_state_unchanged": true,
+  "reload_persistent_state_unchanged": true
+}

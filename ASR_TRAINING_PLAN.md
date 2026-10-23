@@ -4,7 +4,7 @@
 
 版本：2026-10-22，Astra 6 策略审阅第二版。已纳入用户新增“现代架构、充分利用两张 H100、比较数据/模型/张量并行”的要求。实施与真实训练由 GPT-6.1 Sol 接续。
 
-本文件记录设计与验收合同；执行结果以仓库 README、运行目录和报告为准。首轮双卡训练、基线／结束评测及checkpoint800诊断已完成，但微调后WER退化；详见[实验状态](EXPERIMENT_STATUS.md)和[诊断报告](reports/diagnosis/README.md)。当前按阶段验证保存／重载路径，尚未开始第二轮训练。原始输入为用户提供的 `deepinfer_speech_llm_asr_plan.md`；外部事实经过下述官方来源核查。
+本文件记录设计与验收合同；执行结果以仓库 README、运行目录和报告为准。首轮双卡训练、基线／结束评测及checkpoint800诊断已完成，但微调后WER退化；详见[实验状态](EXPERIMENT_STATUS.md)和[诊断报告](reports/diagnosis/README.md)。随后[零更新保存／重载控制](reports/zero-update-control/README.md)也已通过，当前阶段已归档；下一项候选为保持原调度的早期轨迹验证，尚未开始第二轮训练。原始输入为用户提供的 `deepinfer_speech_llm_asr_plan.md`；外部事实经过下述官方来源核查。
 
 ## 1. 现在要做的决定
 

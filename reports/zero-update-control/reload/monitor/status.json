@@ -1,0 +1,38 @@
+{
+  "timestamp": "2026-10-23T04:16:35.636187+00:00",
+  "unix_time": 1792728995.5798159,
+  "training_pid": 450499,
+  "training_process": "running",
+  "gpu_target": "1",
+  "training_status": null,
+  "summary": null,
+  "run_metadata": null,
+  "gpus": [
+    {
+      "index": 0.0,
+      "uuid": "GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c",
+      "utilization_percent": 0.0,
+      "memory_used_mib": 22697.0,
+      "memory_total_mib": 95830.0,
+      "temperature_c": 36.0,
+      "power_w": 89.68
+    },
+    {
+      "index": 1.0,
+      "uuid": "GPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c",
+      "utilization_percent": 1.0,
+      "memory_used_mib": 9683.0,
+      "memory_total_mib": 95830.0,
+      "temperature_c": 35.0,
+      "power_w": 85.77
+    }
+  ],
+  "gpu_error": null,
+  "disk_free_gib": 3116.3039054870605,
+  "disk_used_gib": 39173.3342628479,
+  "latest_metric": null,
+  "metric_age_seconds": null,
+  "latest_checkpoint": "/mnt/raid/asr-lab/runs/qwen-zero-update-control-20261022/reload/inputs-07.pt",
+  "checkpoint_age_seconds": 4.154145956039429,
+  "alerts": []
+}

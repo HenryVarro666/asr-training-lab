@@ -1,0 +1,28 @@
+{
+  "name": "reload",
+  "command": [
+    "/mnt/raid/asr-lab/venv/bin/python",
+    "-m",
+    "asr_lab.qwen_roundtrip_control",
+    "evaluate",
+    "--receipt",
+    "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/campaign.json",
+    "--training-receipt",
+    "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/main-epoch1/run.json",
+    "--manifest",
+    "/mnt/raid/asr-lab/data/manifests/dev-clean-fixed128.jsonl",
+    "--source",
+    "/mnt/raid/asr-lab/runs/qwen-zero-update-control-20261022/prepare/snapshot",
+    "--output",
+    "/mnt/raid/asr-lab/runs/qwen-zero-update-control-20261022/reload",
+    "--role",
+    "reload"
+  ],
+  "physical_gpus": "1",
+  "run_dir": "/mnt/raid/asr-lab/runs/qwen-zero-update-control-20261022/reload",
+  "fingerprint": "8222bd4644ea2561af6af78700659b5c2ad1ee0d232df63217f9224b03b58319",
+  "started_unix": 1792728965.2388132,
+  "status": "complete",
+  "exit_code": 0,
+  "ended_unix": 1792729003.7050881
+}

@@ -1,0 +1,21 @@
+{
+  "recorded_utc": "2026-10-23T04:14:13.344033+00:00",
+  "new_run": "/mnt/raid/asr-lab/runs/qwen-zero-update-control-20261022",
+  "run_did_not_exist": true,
+  "source_sha256": {
+    "src/asr_lab/qwen_roundtrip_control.py": "718fd41d61f0d89d2e6acaea67fd3df7f827ab66c7167d0bba359cfeac197d00",
+    "scripts/run_zero_update_control.py": "4ed2501d27a366fcf8df339e4e4fb60f64952754969299bed75dd7b789138c7a",
+    "tests/test_zero_update_control.py": "16a4700246199362205917eb0f40c4e214cb682b2a91ad0b80bfb135001ffdeb"
+  },
+  "raid_free_bytes": 3354394501120,
+  "gpu_processes": "2154793, GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c, 22674 MiB, .venv/bin/python\n",
+  "preserved_service_exists": true,
+  "local_commit": "c1d8ac37280243a9b344ff2e7f80f1cb0d960f56",
+  "source_transfer_verified": true,
+  "mode": "zero_optimizer_updates",
+  "max_wall_seconds": 1200,
+  "incremental_storage_limit_gib": 20,
+  "physical_gpu": "1",
+  "full_local_tests": 60,
+  "remote_control_tests": 11
+}

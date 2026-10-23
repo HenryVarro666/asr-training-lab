@@ -1,0 +1,18 @@
+test_actual_trainer_token_alignment_handles_bos_pad_and_eos_lists (test_zero_update_control.DecodeContracts) ... The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'eos_token_id': 2, 'bos_token_id': None, 'pad_token_id': 2}.
+ok
+test_eos_is_retained_and_only_following_batch_padding_is_removed (test_zero_update_control.DecodeContracts) ... ok
+test_greedy_ignores_only_inactive_sampling_and_still_compares_active_rules (test_zero_update_control.DecodeContracts) ... The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+ok
+test_token_mismatch_never_passes_even_with_other_matching_evidence (test_zero_update_control.DecodeContracts) ... ok
+test_trace_does_not_change_scores_and_keeps_margin (test_zero_update_control.DecodeContracts) ... ok
+test_all_parameter_aliases_and_only_persistent_buffers_are_recorded (test_zero_update_control.FingerprintContracts) ... ok
+test_eval_projection_preserves_integer_dtype_and_compares_bf16_values (test_zero_update_control.FingerprintContracts) ... ok
+test_nonfinite_model_state_is_rejected (test_zero_update_control.FingerprintContracts) ... ok
+test_frozen_four_source_hashes_and_manifest_are_required (test_zero_update_control.ReceiptContracts) ... ok
+test_persistent_state_mutation_cannot_pass_even_when_both_sides_mutate_the_same (test_zero_update_control.StateChainContracts) ... ok
+test_prepare_projection_must_match_both_evaluation_models (test_zero_update_control.StateChainContracts) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.022s
+
+OK

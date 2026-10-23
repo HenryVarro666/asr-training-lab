@@ -1,0 +1,133 @@
+{
+  "status": "complete",
+  "stage": "control_finished",
+  "started_unix": 1792728867.381101,
+  "max_wall_seconds": 1200,
+  "results": [],
+  "commands": [
+    {
+      "name": "prepare",
+      "command": [
+        "/mnt/raid/asr-lab/venv/bin/python",
+        "-m",
+        "asr_lab.qwen_roundtrip_control",
+        "prepare",
+        "--receipt",
+        "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/campaign.json",
+        "--training-receipt",
+        "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/main-epoch1/run.json",
+        "--manifest",
+        "/mnt/raid/asr-lab/data/manifests/dev-clean-fixed128.jsonl",
+        "--source",
+        "/mnt/raid/asr-lab/cache/huggingface/hub/models--Qwen--Qwen3-ASR-1.7B/snapshots/7278e1e70fe206f11671096ffdd38061171dd6e5",
+        "--output",
+        "/mnt/raid/asr-lab/runs/qwen-zero-update-control-20261022/prepare",
+        "--role",
+        "base",
+        "--snapshot",
+        "/mnt/raid/asr-lab/runs/qwen-zero-update-control-20261022/prepare/snapshot"
+      ],
+      "physical_gpus": "1",
+      "run_dir": "/mnt/raid/asr-lab/runs/qwen-zero-update-control-20261022/prepare",
+      "fingerprint": "50bab5c17bc2572d57bc74731c426fda15aacdbbcbd3aa61cc01b9f66fce79f7",
+      "started_unix": 1792728870.719236,
+      "status": "complete",
+      "exit_code": 0,
+      "ended_unix": 1792728924.0629804
+    },
+    {
+      "name": "base",
+      "command": [
+        "/mnt/raid/asr-lab/venv/bin/python",
+        "-m",
+        "asr_lab.qwen_roundtrip_control",
+        "evaluate",
+        "--receipt",
+        "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/campaign.json",
+        "--training-receipt",
+        "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/main-epoch1/run.json",
+        "--manifest",
+        "/mnt/raid/asr-lab/data/manifests/dev-clean-fixed128.jsonl",
+        "--source",
+        "/mnt/raid/asr-lab/cache/huggingface/hub/models--Qwen--Qwen3-ASR-1.7B/snapshots/7278e1e70fe206f11671096ffdd38061171dd6e5",
+        "--output",
+        "/mnt/raid/asr-lab/runs/qwen-zero-update-control-20261022/base",
+        "--role",
+        "base"
+      ],
+      "physical_gpus": "1",
+      "run_dir": "/mnt/raid/asr-lab/runs/qwen-zero-update-control-20261022/base",
+      "fingerprint": "8075cead5f75756de12ccdef21bfe520a25e1a0f9f879b701d39581f4c2d86e3",
+      "started_unix": 1792728926.0709336,
+      "status": "complete",
+      "exit_code": 0,
+      "ended_unix": 1792728963.6068084
+    },
+    {
+      "name": "reload",
+      "command": [
+        "/mnt/raid/asr-lab/venv/bin/python",
+        "-m",
+        "asr_lab.qwen_roundtrip_control",
+        "evaluate",
+        "--receipt",
+        "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/campaign.json",
+        "--training-receipt",
+        "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/main-epoch1/run.json",
+        "--manifest",
+        "/mnt/raid/asr-lab/data/manifests/dev-clean-fixed128.jsonl",
+        "--source",
+        "/mnt/raid/asr-lab/runs/qwen-zero-update-control-20261022/prepare/snapshot",
+        "--output",
+        "/mnt/raid/asr-lab/runs/qwen-zero-update-control-20261022/reload",
+        "--role",
+        "reload"
+      ],
+      "physical_gpus": "1",
+      "run_dir": "/mnt/raid/asr-lab/runs/qwen-zero-update-control-20261022/reload",
+      "fingerprint": "8222bd4644ea2561af6af78700659b5c2ad1ee0d232df63217f9224b03b58319",
+      "started_unix": 1792728965.2388132,
+      "status": "complete",
+      "exit_code": 0,
+      "ended_unix": 1792729003.7050881
+    }
+  ],
+  "updated_unix": 1792729004.174034,
+  "kind": "zero_update_control_B",
+  "optimizer_updates": 0,
+  "automatic_training": false,
+  "source_sha256": {
+    "/mnt/raid/asr-lab/repo/src/asr_lab/qwen_train.py": "97951994468a14b10ce57b7c5c864dcef6ffb6af4ee9c75e621b48c01e9de961",
+    "/mnt/raid/asr-lab/repo/src/asr_lab/qwen_data.py": "769aed8478da4a6e9dcd33ed3bf87aaa6b846eede3d677c9ae4dc88469dc89b0",
+    "/mnt/raid/asr-lab/repo/src/asr_lab/qwen_evaluate.py": "0a2012eb016cddadee7b3c0f0ca5ad9f3f94b502faad780392788a8ccf9e30d6",
+    "/mnt/raid/asr-lab/repo/src/asr_lab/benchmark.py": "382b9faa741d36153e847796b518494cf31821e9ca65e2391e25fb79c1f828b5",
+    "/mnt/raid/asr-lab/repo/src/asr_lab/qwen_roundtrip_control.py": "718fd41d61f0d89d2e6acaea67fd3df7f827ab66c7167d0bba359cfeac197d00",
+    "/mnt/raid/asr-lab/repo/scripts/run_zero_update_control.py": "4ed2501d27a366fcf8df339e4e4fb60f64952754969299bed75dd7b789138c7a",
+    "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/campaign.json": "52d7791445dab5539ceeee648b3ca9f3fecad00a466a78b3c29ecf7b15582f00",
+    "/mnt/raid/asr-lab/runs/qwen-campaign-20261022-a/main-epoch1/run.json": "df89c47dd1273ce7872bced73c17e2a0b193aa32cea0d4918c428f837b22d758"
+  },
+  "manifests": {
+    "/mnt/raid/asr-lab/data/manifests/dev-clean-fixed128.jsonl": "1c657340c27cdc1f4b025ba5731da07fc7fd2f505e9dddbfc8fffc9cc59df999"
+  },
+  "model_id": "Qwen/Qwen3-ASR-1.7B",
+  "model_revision": "7278e1e70fe206f11671096ffdd38061171dd6e5",
+  "receipt_sha256": "52d7791445dab5539ceeee648b3ca9f3fecad00a466a78b3c29ecf7b15582f00",
+  "training_receipt_sha256": "df89c47dd1273ce7872bced73c17e2a0b193aa32cea0d4918c428f837b22d758",
+  "original_snapshot": "/mnt/raid/asr-lab/cache/huggingface/hub/models--Qwen--Qwen3-ASR-1.7B/snapshots/7278e1e70fe206f11671096ffdd38061171dd6e5",
+  "comparison": {
+    "passed": true,
+    "differences": [],
+    "token_only_difference": false,
+    "first_token_difference": null,
+    "conclusion": "pass_on_this_fixed128_only",
+    "prepared_bf16_projection_matches_base": true,
+    "prepared_bf16_projection_matches_reload": true,
+    "base_persistent_state_unchanged": true,
+    "reload_persistent_state_unchanged": true
+  },
+  "wer": {
+    "base": 0.015834767641996556,
+    "reload": 0.015834767641996556
+  },
+  "completed_unix": 1792729004.17403
+}

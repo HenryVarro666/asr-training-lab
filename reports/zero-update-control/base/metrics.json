@@ -1,0 +1,14 @@
+{
+  "wer": 0.015834767641996556,
+  "reference_words": 2905,
+  "substitutions": 32,
+  "deletions": 9,
+  "insertions": 5,
+  "hits": 2864,
+  "examples": 128,
+  "evaluation_batch_size": 16,
+  "manifest_sha256": "1c657340c27cdc1f4b025ba5731da07fc7fd2f505e9dddbfc8fffc9cc59df999",
+  "model_revision": "7278e1e70fe206f11671096ffdd38061171dd6e5",
+  "role": "base",
+  "generation_truncated_count": 0
+}

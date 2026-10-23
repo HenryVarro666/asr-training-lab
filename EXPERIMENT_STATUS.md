@@ -10,12 +10,16 @@
 
 已完成一个零更新实验：现存checkpoint800的完整合格dev-clean/dev-other生成评测，仅GPU1，实际7.99分钟（上限20分钟）。WER分别为2.4192%和5.0418%，均差于原始模型，也略差于第892步。两集800→892的配对差值区间覆盖零；退化在第800步时已存在，未支持最后92步造成主要退化的假设。
 
-运行目录：`/mnt/raid/asr-lab/runs/qwen-checkpoint800-diagnostic-20261022`。逐句预测、配对统计和资源记录已同步到本地。所有诊断进程已退出，GPU0原有PersonaPlex进程仍在；RAID约3.1TiB可用。下一阶段是[零更新保存／重载控制](docs/ZERO_UPDATE_CONTROL.md)，尚未启动；不立即改学习率重训。
+运行目录：`/mnt/raid/asr-lab/runs/qwen-checkpoint800-diagnostic-20261022`。逐句预测、配对统计和资源记录已同步到本地。
+
+随后[零更新保存／重载控制](reports/zero-update-control/README.md)已通过：用时136.79秒，仅GPU1、0次更新；两侧实际参数／输入／有效生成规则与128条raw token完全一致，WER同为1.5835%。Astra独立复核无阻断项。它没有解释训练退化，也不证明优化器更新逻辑全部正确。
+
+全部实验进程已退出，GPU0原有PersonaPlex仍在；项目约195.6GiB，RAID约3.04TiB可用。下一项候选为保持原892步学习率调度的前100步轨迹验证；当前未启动或排队新训练。
 
 ## 完成的工作
 
 - Astra 6 完成方案与训练流程审阅；GPT-6.1 Sol 完成训练、数据处理和实验编排代码。
-- 代码固定为 `cf30f45e0beb005f43520c33e2ddad73ad67a01e`；远端实际运行前34项测试及5个subtests通过。
+- 首轮训练代码固定为 `cf30f45e0beb005f43520c33e2ddad73ad67a01e`；该次远端运行前34项测试及5个subtests通过。新增控制实现为 `c1d8ac3`，原训练／数据／评测／benchmark四文件指纹不变；控制前本地完整60项测试、远端11项专属测试通过。
 - 数据/模型/环境/日志/checkpoints全部位于 `/mnt/raid/asr-lab`。准备LibriSpeech train-clean-100共28,539条、100.591小时，及独立dev-clean/dev-other。
 - 主模型 `Qwen/Qwen3-ASR-1.7B`，revision `7278e1e70fe206f11671096ffdd38061171dd6e5`；加载后唯一参数实测2,038,052,480。此前HF元数据估算2.349B不能作为实际训练参数数目。
 - 主训练双卡DDP、BF16 autocast、FP32权重/梯度/Adam状态、SDPA、activation checkpointing；microbatch8 × 2卡 × accumulation2，总batch32；lr1e-5，一轮。
@@ -65,8 +69,8 @@
 
 数据归档／manifest校验收据已补齐到[本地数据记录](reports/data/README.md)，Whisper完整合格clean预测已同步并逐句复算至[参考验证](reports/baselines/whisper-full-clean/verification.json)。TensorBoard事件文件也已同步，解析确认892条训练loss与8条dev loss，见[事件验证](reports/monitoring/tensorboard-verification.json)。
 
-首轮campaign结束后，15分钟自动化 `h100-asr` 已删除。当前诊断由独立runner监控并设置20分钟期限；没有恢复无限自动实验队列。监控不重启训练、扩大预算或停止其他服务。
+首轮campaign结束后，15分钟自动化 `h100-asr` 已删除。两项后续诊断均由独立runner监控并设置20分钟期限，现已完成退出；没有恢复无限自动实验队列。监控不重启训练、扩大预算或停止其他服务。
 
 ## 未完成的后续工作
 
-生成错误与现存checkpoint诊断已完成；下一步先做零更新保存／重载控制，再决定降低lr、缩短训练或受控LoRA对照。`docs/ADAPTIVE_EXPERIMENT_POLICY.md`仍为历史策略草案；预测分析脚本及其15项CPU测试已验收并用于诊断，本地完整49项测试通过，不追溯声称分析事前预注册。第二轮训练、中文/混合语料、流式评测和独立test评测均未执行。
+生成错误、现存checkpoint诊断和零更新保存／重载控制均已完成，完整证据见[交付核对表](reports/DELIVERY_AUDIT.md)。下一步优先设计保持原调度的早期轨迹验证，再决定是否值得改变lr或参数更新范围。`docs/ADAPTIVE_EXPERIMENT_POLICY.md`仍为历史策略草案，不恢复无限队列。第二轮训练、中文/混合语料、流式评测、人工听音和独立test评测均未执行。
