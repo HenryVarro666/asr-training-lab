@@ -1,6 +1,6 @@
 {
   "status": "ready_blocked_gpu_busy",
-  "recorded_utc": "2026-10-24T03:14:33.785203+00:00",
+  "recorded_utc": "2026-10-24T04:02:49.121328+00:00",
   "intended_remote_run": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261023-a",
   "remote_run_exists": false,
   "gpu_run_launched": false,
@@ -31,11 +31,11 @@
     ],
     "max_new_tokens": 512
   },
-  "resource_observation": "validation/gpu-recheck-20261024T031412Z.json",
+  "resource_observation": "validation/gpu-recheck-20261024T040223Z.json",
   "blocked_gpu1_pids": [
     1427597,
     1501077,
-    1533571
+    1591050
   ],
   "old_early100_campaign_sha256": "f6be4d5322fba1fb03d89b311017220506fff83ffa238d22614fb1e97ea1c279",
   "personaplex_pid2154793_preserved": true,
@@ -43,6 +43,6 @@
   "automatic_retry": false,
   "training_queue": false,
   "next_gate": "A later explicit resume must recheck free GPU1/lock/disk/source identities before one bounded launch. No current probability findings exist.",
-  "last_resource_check_utc": "2026-10-24T03:14:13.320540+00:00",
-  "resource_recheck_outcome": "Still busy; user-authorized conditional launch not taken. No other task stopped."
+  "last_resource_check_utc": "2026-10-24T04:02:24.816624+00:00",
+  "resource_recheck_outcome": "Still busy; conditional launch not taken. No other task stopped."
 }
