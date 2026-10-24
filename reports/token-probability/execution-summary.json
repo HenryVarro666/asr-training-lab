@@ -1,6 +1,6 @@
 {
   "status": "ready_blocked_gpu_busy",
-  "recorded_utc": "2026-10-24T04:02:49.121328+00:00",
+  "recorded_utc": "2026-10-24T04:25:27.578570+00:00",
   "intended_remote_run": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261023-a",
   "remote_run_exists": false,
   "gpu_run_launched": false,
@@ -31,11 +31,11 @@
     ],
     "max_new_tokens": 512
   },
-  "resource_observation": "validation/gpu-recheck-20261024T040223Z.json",
+  "resource_observation": "validation/gpu-recheck-20261024T042501Z.json",
   "blocked_gpu1_pids": [
     1427597,
     1501077,
-    1591050
+    1622504
   ],
   "old_early100_campaign_sha256": "f6be4d5322fba1fb03d89b311017220506fff83ffa238d22614fb1e97ea1c279",
   "personaplex_pid2154793_preserved": true,
@@ -43,6 +43,38 @@
   "automatic_retry": false,
   "training_queue": false,
   "next_gate": "A later explicit resume must recheck free GPU1/lock/disk/source identities before one bounded launch. No current probability findings exist.",
-  "last_resource_check_utc": "2026-10-24T04:02:24.816624+00:00",
-  "resource_recheck_outcome": "Still busy; conditional launch not taken. No other task stopped."
+  "last_resource_check_utc": "2026-10-24T04:25:01.762910+00:00",
+  "resource_recheck_outcome": "Both GPU0 and GPU1 are occupied by existing tasks, utilization100%; no conditional launch or device-source modification. No other task stopped.",
+  "blocked_device_indices": [
+    0,
+    1
+  ],
+  "candidate_device_observations": [
+    {
+      "index": 0,
+      "uuid": "GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c",
+      "memory_used_mib": 62598,
+      "memory_free_mib": 32722,
+      "utilization_percent": 100,
+      "compute_pids": [
+        2154793,
+        1577799,
+        1597780
+      ],
+      "has_other_tasks": true
+    },
+    {
+      "index": 1,
+      "uuid": "GPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c",
+      "memory_used_mib": 65496,
+      "memory_free_mib": 29824,
+      "utilization_percent": 100,
+      "compute_pids": [
+        1427597,
+        1501077,
+        1622504
+      ],
+      "has_other_tasks": true
+    }
+  ]
 }
