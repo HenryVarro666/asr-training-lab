@@ -45,3 +45,7 @@ GPU必须先空闲。身份、输入、有效生成决策、旧生成轨迹漂�
 此前已执行的单句对照结论仍见[repetition-onset报告](../repetition-onset/README.md)：base/25/50正常，100在512窗口内重复。当前阶段尚未提供逐token概率来解释该现象。
 
 准备包已提交为`484acae752e23513fc00b3b8180c1e27184016df`，31份允许文件已跨机逐一匹配SHA；Git bundle在本地与远端均verify且SHA一致。见[归档收据](validation/archive-sync.json)。该bundle覆盖准备代码/文档/小型收据，未包含任何尚不存在的本轮概率矩阵；本段与归档收据在payload提交后另行提交、同步。
+
+## 再次资源核查
+
+2026-10-23 22:14:13 CDT 按用户“空闲才执行”要求再次只读核查：GPU1仍有PID1427597、1501077、1533571三个外来compute进程，未满足既定空闲门槛，因此未启动；未停止任何其他任务。计划run仍不存在，计数仍为0生成／0显式评分forward／0训练更新。预算和512-token设置未改变，无自动等待或重试队列。[此次快照](validation/gpu-recheck-20261024T031412Z.json)记录剩余空间约2584.86GiB、锁可用、PersonaPlex保留及旧Early100 campaign SHA未变。
