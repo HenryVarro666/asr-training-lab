@@ -1,0 +1,17 @@
+COMMAND: cd /mnt/raid/asr-lab/repo && env CUDA_VISIBLE_DEVICES='' PYTHONPATH=/mnt/raid/asr-lab/repo/src HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 OMP_NUM_THREADS=1 /mnt/raid/asr-lab/venv/bin/python -m unittest discover -s tests -p test_token_probability.py -v
+test_actual_processed_argmax_and_missing_or_nonfinite_fail (test_token_probability.ProbabilityContracts) ... ok
+test_equal_roles_share_storage_and_budget_counts_one_payload (test_token_probability.ProbabilityContracts) ... ok
+test_only_two_observation_flags_may_differ (test_token_probability.ProbabilityContracts) ... ok
+test_probability_eos_union_rank_ties_entropy_and_top10_ties (test_token_probability.ProbabilityContracts) ... ok
+test_shift_first_last_and_single_eos_without_retokenization (test_token_probability.ProbabilityContracts) ... ok
+test_expired_validation_and_summary_cannot_start_reading (test_token_probability.ProbabilitySupervisorContracts) ... ok
+test_summary_rechecks_deadline_per_row (test_token_probability.ProbabilitySupervisorContracts) ... ok
+test_three_workers_fixed_budget_and_fail_stop_without_retry (test_token_probability.ProbabilitySupervisorContracts) ... ok
+test_validation_detects_deadline_crossed_during_artifact_hash (test_token_probability.ProbabilitySupervisorContracts) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.174s
+
+OK
+
+EXIT=0

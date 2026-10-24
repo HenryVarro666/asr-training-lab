@@ -1,0 +1,20 @@
+{
+  "status": "matched",
+  "purpose": "Independent CPU piece lookup only; no model load. Local ignored .git cache, remote pinned files remain authoritative.",
+  "files": {
+    "tokenizer_config.json": {
+      "path": "/Users/caochao/Documents/ChatGPT/train/.git/asr-cache/token-probability-tokenizer/tokenizer_config.json",
+      "bytes": 12487,
+      "sha256": "4942d005604266809309cabc9f4e9cb89ce855d59b14681fdc0e1cc62ea26c4c",
+      "expected_sha256": "4942d005604266809309cabc9f4e9cb89ce855d59b14681fdc0e1cc62ea26c4c",
+      "matched": true
+    },
+    "vocab.json": {
+      "path": "/Users/caochao/Documents/ChatGPT/train/.git/asr-cache/token-probability-tokenizer/vocab.json",
+      "bytes": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "expected_sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "matched": true
+    }
+  }
+}

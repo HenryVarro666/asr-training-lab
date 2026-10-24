@@ -1,5 +1,7 @@
 # ASR实验产物归档索引
 
+最新准备阶段：[逐token概率诊断](token-probability/README.md)已保存合同、代码、固定轨迹/官方来源、CPU测试、独立最终审阅、部署SHA和资源快照。GPU1占用导致`ready_blocked_gpu_busy`；0模型调用/0更新/0真实概率行/0结果图，无自动队列。现有实验结果和历史归档保持原记录。
+
 本地工作目录：`/Users/caochao/Documents/ChatGPT/train`；远端资源根：`/mnt/raid/asr-lab`。代码、文档、实际收据、原始逐句预测、监控记录与图片分别归档，结构合理。此前缺少独立可导出的图片，本轮补齐原实验三组与Early100两组PNG/SVG/PDF及逐图来源指纹。随后已执行获授权的Early100短程双卡训练；没有下载新模型/音频或公开推送。
 
 归档日期2026-10-23。Early100训练完成，完整clean有1条截断触发验收失败，other未执行；状态与证据见[本阶段报告](early100/README.md)。原三组图继续保持不变，新目录只展示已通过固定128结果和实际100步loss/LR。

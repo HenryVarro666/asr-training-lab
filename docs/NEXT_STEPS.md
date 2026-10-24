@@ -4,6 +4,8 @@
 
 ## 当前目标（已更新）
 
+**当前为[逐token概率诊断](../reports/token-probability/README.md) `ready_blocked_gpu_busy`。** 按[合同](TOKEN_PROBABILITY_PROBE.md)完成代码、CPU验证、独立复核与远端部署；GPU1被其他任务占用，未执行本轮推理/训练，实际调用0。恢复后先刷新资源与身份门槛，再进行同句base/50/100的有限3+9诊断；不新增训练、不扩大预算，无后台等待/重试队列。
+
 **最新阶段已完成：[原始／25／50／100步单句重复对照](../reports/repetition-onset/README.md)。** 按[合同](REPETITION_ONSET_PROBE.md)以相同512预算完成4次生成、0更新、99.16秒。base/25/50均正常EOS且该句16词全对；100复现512无EOS的170次`CULINARY`加`CUL`。最早已测阳性为100，不能推断精确首次异常更新或训练机制；fixed128总体退化在25步已观察到，与单句循环起点分开。完整raw token/EOS/解码/解析/监控和独立审计已归档。到此停止，无后续自动队列，不恢复或扩大训练。
 
 用户授权的[Early100实验](EARLY100_EXPERIMENT.md)已执行并按质量门槛停止：双卡100次更新保留892/45调度；三个fixed128结果通过，最早观测25步已退化。完整clean出现1条512-token截断，campaign维持failed，other未执行。全部实际产物见[报告](../reports/early100/README.md)。本阶段不恢复、重试或扩预算。

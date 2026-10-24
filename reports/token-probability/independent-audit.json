@@ -1,0 +1,31 @@
+{
+  "status": "prepared_not_run",
+  "prepared_at": "2026-10-24T03:06:32.885975+00:00",
+  "reason": "No completed probability run exists. Parent reported GPU1 occupied; no GPU waiting/retry is authorized.",
+  "reference_sha256": "6753b127d40288a558761c6b8e79964f07af7e96f4e85964a0a8b66c26b03f49",
+  "validation": [
+    "Independent FP64 CPU toy checks passed",
+    "Pinned tokenizer hashes and C/CA/UL/aul piece IDs checked",
+    "Plot helper syntax checked; no probability figures generated"
+  ],
+  "audit_cpu_budget_seconds": 600,
+  "actual_probability_rows_audited": 0,
+  "actual_model_calls": 0,
+  "weight_reads": 0,
+  "real_audit_requires": "Explicit parent completed-run signal and local mirrored reports/token-probability/run.",
+  "commands": [
+    ".venv/bin/python reports/token-probability/validation/audit_saved_evidence.py --run reports/token-probability/run --tokenizer-dir .git/asr-cache/token-probability-tokenizer --seconds 600",
+    ".venv/bin/python reports/token-probability/validation/plot_evidence.py --run reports/token-probability/run"
+  ],
+  "plots_prepared": [
+    "fixed-prefix-branches: j0 C34 vs CA5049; j1 fixed C prefix UL1094 vs aul4943 and distinct EOS sum",
+    "correct-endings-eos: natural j26 and uppercase j36",
+    "full-loop-traces: all512 target logprob, EOS total logprob and target rank"
+  ],
+  "figure_formats": [
+    "PNG",
+    "SVG",
+    "PDF"
+  ],
+  "figures_generated": 0
+}

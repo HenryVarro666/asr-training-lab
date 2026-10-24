@@ -1,0 +1,16 @@
+{
+  "status": "matched",
+  "remote_git_head": "cf30f45e0beb005f43520c33e2ddad73ad67a01e",
+  "sha256": {
+    "src/asr_lab/token_probability.py": "d7deb7ea0d65cb9ef10a6e66ff5c9eca5207068c4397a1fa27a687dfa111c4f6",
+    "scripts/run_token_probability.py": "e0eff6b1a9560576c69fdb039277e1085a86b7adc1028dfba22b3e1ac5538400",
+    "tests/test_token_probability.py": "8390ef0c7a118d7f5acbe4c6d5f3e474c4316c1cf737f5b1f951e0b95d47784f",
+    "docs/TOKEN_PROBABILITY_PROBE.md": "1d8ea4f616bceb4c6ff91bd71ec3e9925d6c41eb89ae2cea4f93d0a1556068e0",
+    "docs/superpowers/plans/2026-10-23-token-probability.md": "05adea69fabf40f9ab66f99228ff289340c4ed3b08a1140c616039e193c013e5",
+    "reports/token-probability/inputs/trajectory-reference.json": "6753b127d40288a558761c6b8e79964f07af7e96f4e85964a0a8b66c26b03f49",
+    "reports/token-probability/inputs/upstream-probability-source.json": "d8dfc1cb079b5d58994aa6ca345a7cddff9e13cc7f8b8fcc34ffd3c14d1f1f40",
+    "reports/token-probability/validation/launch-command.sh": "8f1f15c3ee5a9495eb176b004ceda0276ffaf97b720ecf9af6de29d575623aba"
+  },
+  "checked_unix": 1792811204.27584,
+  "mode": "Allowlisted overlay; remote HEAD differs from executed source identity; no model/GPU call."
+}

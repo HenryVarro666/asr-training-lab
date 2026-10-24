@@ -1,0 +1,279 @@
+{
+  "files": [
+    {
+      "path": "/mnt/raid/asr-lab/vendor/Qwen3-ASR/qwen_asr/core/transformers_backend/modeling_qwen3_asr.py",
+      "sha256": "2fb5d98da1933748f5117ee05ce4e7150c9ead8154fb8e25f7af3968b853adc7",
+      "bytes": 57850,
+      "methods": [
+        {
+          "name": "Qwen3ASRForConditionalGeneration.generate",
+          "start_line": 1325,
+          "end_line": 1355,
+          "signature": "(self, input_ids: Optional[torch.Tensor]=None, max_new_tokens: int=4096, eos_token_id: int | list[int]=[151645, 151643], **kwargs)",
+          "excerpts": [
+            {
+              "start_line": 1333,
+              "end_line": 1355,
+              "source": "        thinker_kwargs = {\n            \"max_new_tokens\": max_new_tokens,\n            \"eos_token_id\": eos_token_id,\n        }\n\n        for key, value in kwargs.items():\n            # Process special input values\n            if key == \"feature_attention_mask\":\n                thinker_kwargs[key] = value\n            elif key in (\"input_features\", \"attention_mask\"):\n                thinker_kwargs[key] = value\n            # Put other key to shared kwargs\n            else:\n                shared_kwargs[key] = value\n\n        # Merge kwargs\n        for key, value in shared_kwargs.items():\n            if key not in thinker_kwargs:\n                thinker_kwargs[key] = value\n\n        thinker_result = self.thinker.generate(input_ids=input_ids, return_dict_in_generate=True, **thinker_kwargs)\n\n        return thinker_result"
+            }
+          ]
+        },
+        {
+          "name": "Qwen3ASRThinkerForConditionalGeneration.forward",
+          "start_line": 1159,
+          "end_line": 1256,
+          "signature": "(self, input_ids=None, input_features=None, attention_mask=None, feature_attention_mask=None, audio_feature_lengths=None, position_ids=None, past_key_values=None, inputs_embeds=None, rope_deltas=None, labels=None, use_cache=None, cache_position=None, **kwargs)",
+          "excerpts": [
+            {
+              "start_line": 1190,
+              "end_line": 1203,
+              "source": "        if inputs_embeds is None:\n            # 1. Extract the input embeddings\n            inputs_embeds = self.get_input_embeddings()(input_ids)\n\n        # 2. Merge text, audios\n        if input_features is not None:\n            audio_features = self.get_audio_features(\n                input_features,\n                feature_attention_mask=feature_attention_mask,\n                audio_feature_lengths=audio_feature_lengths,\n            )\n            audio_features = audio_features.to(inputs_embeds.device, inputs_embeds.dtype)\n            audio_mask = self.get_placeholder_mask(input_ids, inputs_embeds=inputs_embeds)\n            inputs_embeds = inputs_embeds.masked_scatter(audio_mask, audio_features)"
+            },
+            {
+              "start_line": 1210,
+              "end_line": 1228,
+              "source": "        if attention_mask is not None and position_ids is None:\n            if (\n                cache_position is None\n                or (cache_position is not None and cache_position[0] == 0)\n                or self.rope_deltas is None\n            ):\n                delta0 = (1 - attention_mask).sum(dim=-1).unsqueeze(1)\n                position_ids, rope_deltas = self.get_rope_index(\n                    attention_mask,\n                )\n                rope_deltas = rope_deltas - delta0\n                self.rope_deltas = rope_deltas\n            else:\n                batch_size, seq_length = input_ids.shape\n                delta = cache_position[0] + self.rope_deltas if cache_position is not None else 0\n                position_ids = torch.arange(seq_length, device=input_ids.device)\n                position_ids = position_ids.view(1, -1).expand(batch_size, -1)\n                position_ids = position_ids.add(delta)\n                position_ids = position_ids.unsqueeze(0).expand(3, -1, -1)"
+            },
+            {
+              "start_line": 1240,
+              "end_line": 1256,
+              "source": "        hidden_states = outputs[0]\n        logits = self.lm_head(hidden_states)\n\n        loss = None\n        if labels is not None:\n            loss = self.loss_function(\n                logits=logits, labels=labels, vocab_size=self.config.get_text_config().vocab_size\n            )\n\n        return Qwen3ASRThinkerCausalLMOutputWithPast(\n            loss=loss,\n            logits=logits,\n            hidden_states=outputs.hidden_states,\n            attentions=outputs.attentions,\n            past_key_values=outputs.past_key_values,\n            rope_deltas=self.rope_deltas,\n        )"
+            }
+          ]
+        },
+        {
+          "name": "Qwen3ASRThinkerForConditionalGeneration.prepare_inputs_for_generation",
+          "start_line": 1258,
+          "end_line": 1289,
+          "signature": "(self, input_ids, past_key_values=None, attention_mask=None, inputs_embeds=None, cache_position=None, position_ids=None, use_cache=True, input_features=None, feature_attention_mask=None, **kwargs)",
+          "excerpts": [
+            {
+              "start_line": 1284,
+              "end_line": 1289,
+              "source": "        model_inputs[\"position_ids\"] = None\n\n        if cache_position[0] != 0:\n            model_inputs[\"input_features\"] = None\n\n        return model_inputs"
+            }
+          ]
+        },
+        {
+          "name": "Qwen3ASRThinkerForConditionalGeneration.get_audio_features",
+          "start_line": 1099,
+          "end_line": 1133,
+          "signature": "(self, input_features: torch.FloatTensor, feature_attention_mask: Optional[torch.LongTensor]=None, audio_feature_lengths: Optional[torch.LongTensor]=None)",
+          "excerpts": [
+            {
+              "start_line": 1116,
+              "end_line": 1131,
+              "source": "        if feature_attention_mask is not None:\n            audio_feature_lengths = torch.sum(feature_attention_mask, dim=1)\n        else:\n            audio_feature_lengths = None\n        feature_lens = audio_feature_lengths if audio_feature_lengths is not None else feature_attention_mask.sum(-1)\n    \n        # audio encoder do not support batch inference to keep precision\n        audio_features = []\n        for input_feature, feature_len in zip(input_features, feature_lens):\n            audio_output = self.audio_tower(\n                input_feature[:, :feature_len],\n                feature_lens=feature_len.unsqueeze(0),\n            )\n            audio_feature = audio_output.last_hidden_state\n            audio_features.append(audio_feature)\n        audio_features = torch.cat(audio_features, dim=0)"
+            }
+          ]
+        },
+        {
+          "name": "Qwen3ASRPreTrainedModelForConditionalGeneration.get_rope_index",
+          "start_line": 414,
+          "end_line": 448,
+          "signature": "(self, attention_mask: Optional[torch.Tensor]=None)",
+          "excerpts": [
+            {
+              "start_line": 442,
+              "end_line": 448,
+              "source": "        position_ids = attention_mask.float().cumsum(-1) - 1\n        position_ids.masked_fill_(attention_mask == 0, 1)\n        position_ids = position_ids.unsqueeze(0).expand(3, -1, -1).to(attention_mask.device)\n        max_position_ids = position_ids.max(0, keepdim=False)[0].max(-1, keepdim=True)[0]\n        mrope_position_deltas = max_position_ids + 1 - torch.sum(attention_mask, dim=-1, keepdim=True)\n\n        return position_ids, mrope_position_deltas"
+            }
+          ]
+        },
+        {
+          "name": "Qwen3ASRThinkerTextModel.forward",
+          "start_line": 988,
+          "end_line": 1059,
+          "signature": "(self, input_ids: Optional[torch.LongTensor]=None, attention_mask: Optional[torch.Tensor]=None, position_ids: Optional[torch.LongTensor]=None, past_key_values: Optional[Cache]=None, inputs_embeds: Optional[torch.FloatTensor]=None, use_cache: Optional[bool]=None, cache_position: Optional[torch.LongTensor]=None, **kwargs: Unpack[FlashAttentionKwargs])",
+          "excerpts": [
+            {
+              "start_line": 1002,
+              "end_line": 1013,
+              "source": "        # torch.jit.trace() doesn't support cache objects in the output\n        if use_cache and past_key_values is None and not torch.jit.is_tracing():\n            past_key_values = DynamicCache(config=self.config)\n\n        if inputs_embeds is None:\n            inputs_embeds = self.embed_tokens(input_ids)\n\n        if cache_position is None:\n            past_seen_tokens = past_key_values.get_seq_length() if past_key_values is not None else 0\n            cache_position = torch.arange(\n                past_seen_tokens, past_seen_tokens + inputs_embeds.shape[1], device=inputs_embeds.device\n            )"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/mnt/raid/asr-lab/venv/lib/python3.10/site-packages/transformers/generation/utils.py",
+      "sha256": "55fd5c50aa785e226afa03e4507b8d27c0328714c0bd048bc60af9e8813a1173",
+      "bytes": 210172,
+      "methods": [
+        {
+          "name": "GenerationMixin._sample",
+          "start_line": 2688,
+          "end_line": 2878,
+          "signature": "(self, input_ids: torch.LongTensor, logits_processor: LogitsProcessorList, stopping_criteria: StoppingCriteriaList, generation_config: GenerationConfig, synced_gpus: bool=False, streamer: Optional['BaseStreamer']=None, **model_kwargs)",
+          "excerpts": [
+            {
+              "start_line": 2730,
+              "end_line": 2744,
+              "source": "        # init values\n        pad_token_id = generation_config._pad_token_tensor\n        output_attentions = generation_config.output_attentions\n        output_hidden_states = generation_config.output_hidden_states\n        output_scores = generation_config.output_scores\n        output_logits = generation_config.output_logits\n        return_dict_in_generate = generation_config.return_dict_in_generate\n        has_eos_stopping_criteria = any(hasattr(criteria, \"eos_token_id\") for criteria in stopping_criteria)\n        do_sample = generation_config.do_sample\n\n        # init attention / hidden states / scores tuples\n        scores = () if (return_dict_in_generate and output_scores) else None\n        raw_logits = () if (return_dict_in_generate and output_logits) else None\n        decoder_attentions = () if (return_dict_in_generate and output_attentions) else None\n        cross_attentions = () if (return_dict_in_generate and output_attentions) else None"
+            },
+            {
+              "start_line": 2800,
+              "end_line": 2812,
+              "source": "            # Copy is needed to avoid keeping a hanging ref to outputs.logits which may be very large for first iteration\n            # (the clone itself is always small)\n            next_token_logits = outputs.logits[:, -1, :].to(copy=True, dtype=torch.float32, device=input_ids.device)\n\n            # pre-process distribution\n            next_token_scores = logits_processor(input_ids, next_token_logits)\n\n            # Store scores, attentions and hidden_states when required\n            if return_dict_in_generate:\n                if output_scores:\n                    scores += (next_token_scores,)\n                if output_logits:\n                    raw_logits += (next_token_logits,)"
+            },
+            {
+              "start_line": 2827,
+              "end_line": 2845,
+              "source": "            # token selection\n            if do_sample:\n                probs = nn.functional.softmax(next_token_scores, dim=-1)\n                # TODO (joao): this OP throws \"skipping cudagraphs due to ['incompatible ops']\", find solution\n                next_tokens = torch.multinomial(probs, num_samples=1).squeeze(1)\n            else:\n                next_tokens = torch.argmax(next_token_scores, dim=-1)\n\n            # finished sentences should have their next token be a padding token\n            if has_eos_stopping_criteria:\n                next_tokens = next_tokens * unfinished_sequences + pad_token_id * (1 - unfinished_sequences)\n\n            # update generated ids, model inputs, and length for next step\n            input_ids = torch.cat([input_ids, next_tokens[:, None]], dim=-1)\n            if streamer is not None:\n                streamer.put(next_tokens.cpu())\n\n            unfinished_sequences = unfinished_sequences & ~stopping_criteria(input_ids, scores)\n            this_peer_finished = unfinished_sequences.max() == 0"
+            },
+            {
+              "start_line": 2868,
+              "end_line": 2875,
+              "source": "            else:\n                return GenerateDecoderOnlyOutput(\n                    sequences=input_ids,\n                    scores=scores,\n                    logits=raw_logits,\n                    attentions=decoder_attentions,\n                    hidden_states=decoder_hidden_states,\n                    past_key_values=model_kwargs.get(\"past_key_values\"),"
+            }
+          ]
+        },
+        {
+          "name": "GenerationMixin._get_logits_processor",
+          "start_line": 1090,
+          "end_line": 1309,
+          "signature": "(self, generation_config: GenerationConfig, input_ids_seq_length: Optional[int]=None, encoder_input_ids: Optional[torch.LongTensor]=None, prefix_allowed_tokens_fn: Optional[Callable[[int, torch.Tensor], list[int]]]=None, logits_processor: Optional[LogitsProcessorList]=None, device: Optional[str]=None, model_kwargs: Optional[dict[str, Any]]=None, negative_prompt_ids: Optional[torch.Tensor]=None, negative_prompt_attention_mask: Optional[torch.Tensor]=None)",
+          "excerpts": []
+        }
+      ]
+    },
+    {
+      "path": "/mnt/raid/asr-lab/venv/lib/python3.10/site-packages/transformers/loss/loss_utils.py",
+      "sha256": "fa65f18b3167f45989d7a8ba86432a41d322338f9789cc89b08d5d7f20f110b7",
+      "bytes": 7046,
+      "methods": [
+        {
+          "name": "ForCausalLMLoss",
+          "start_line": 45,
+          "end_line": 68,
+          "signature": "(logits, labels, vocab_size: int, num_items_in_batch: Optional[torch.Tensor]=None, ignore_index: int=-100, shift_labels: Optional[torch.Tensor]=None, **kwargs)",
+          "excerpts": [
+            {
+              "start_line": 54,
+              "end_line": 60,
+              "source": "    # Upcast to float if we need to compute the loss to avoid potential precision issues\n    logits = logits.float()\n\n    if shift_labels is None:\n        # Shift so that tokens < n predict n\n        labels = nn.functional.pad(labels, (0, 1), value=ignore_index)\n        shift_labels = labels[..., 1:].contiguous()"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/mnt/raid/asr-lab/venv/lib/python3.10/site-packages/torch/nn/modules/module.py",
+      "sha256": "0cb24956454199a46e8fc37a7cce4fc1cff52130f25fb6eb052745e9eca89067",
+      "bytes": 126775,
+      "methods": [
+        {
+          "name": "_forward_unimplemented",
+          "start_line": 388,
+          "end_line": 401,
+          "signature": "(self, *input: Any)",
+          "excerpts": [
+            {
+              "start_line": 388,
+              "end_line": 401,
+              "source": "def _forward_unimplemented(self, *input: Any) -> None:\n    r\"\"\"Define the computation performed at every call.\n\n    Should be overridden by all subclasses.\n\n    .. note::\n        Although the recipe for forward pass needs to be defined within\n        this function, one should call the :class:`Module` instance afterwards\n        instead of this since the former takes care of running the\n        registered hooks while the latter silently ignores them.\n    \"\"\"\n    raise NotImplementedError(\n        f'Module [{type(self).__name__}] is missing the required \"forward\" function'\n    )"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "config": {
+    "path": "/mnt/raid/asr-lab/cache/huggingface/hub/models--Qwen--Qwen3-ASR-1.7B/snapshots/7278e1e70fe206f11671096ffdd38061171dd6e5/config.json",
+    "sha256": "2e74a751548b8ad7d7526d29365ad8144c345d8b412b1152d25dc6698452712f",
+    "vocab_size": 151936,
+    "audio_token_id": 151676
+  },
+  "schema_version": 1,
+  "purpose": "Read-only installed official source investigation; no model construction, GPU work, weight hashing or implementation changes.",
+  "command": [
+    "ssh",
+    "-o",
+    "BatchMode=yes",
+    "-o",
+    "ConnectTimeout=10",
+    "-o",
+    "ControlPath=/tmp/codex-asr-tensorboard-%C",
+    "exx@100.70.230.73",
+    "CUDA_VISIBLE_DEVICES='' PYTHONDONTWRITEBYTECODE=1 /mnt/raid/asr-lab/venv/bin/python -"
+  ],
+  "outer_forward_cpu_inspection": {
+    "qualified_name": "_forward_unimplemented",
+    "path": "/mnt/raid/asr-lab/venv/lib/python3.10/site-packages/torch/nn/modules/module.py",
+    "line": 388,
+    "model_instances_created": 0
+  },
+  "fixed_input": {
+    "prompt_width": 137,
+    "trajectory_lengths": {
+      "base": 27,
+      "step050": 37,
+      "step100": 512
+    },
+    "trajectory_ids_are_saved_not_retokenized": true,
+    "audio_placeholder_not_in_any_continuation": true
+  },
+  "teacher_forcing": {
+    "input": "P || Y[:-1]",
+    "attention_mask": "original text mask followed by len(Y)-1 ones",
+    "label_logit_indices": "P-1+j for j=0..len(Y)-1",
+    "use_cache": false,
+    "past_key_values": null,
+    "cache_position": null,
+    "position_ids": null,
+    "labels": null,
+    "call": "unpatched model.thinker(...)",
+    "rope": "Set thinker.rope_deltas=None before each trajectory and explicitly pass no KV/cache_position. Official cache_position=None branch recomputes self.rope_deltas; passing rope_deltas=None alone is not the reset mechanism.",
+    "audio": "Reuse original input_features and feature_attention_mask unchanged. Full forward reinjects/re-encodes audio; no generation KV or precomputed audio cache is reused."
+  },
+  "probability_notes": [
+    "GenerationMixin clones final logits into FP32, calls processors, then optionally retains both tuples. Returned raw_logits may alias in-place-mutated processor input in general.",
+    "All three frozen captures have zero logits processors; require that to remain true. Under this gate, raw and postprocessor logits must be identical, so official output_logits/output_scores are sufficient without adding a processor.",
+    "Calculate probabilities/log-probabilities from original FP32 rows with logsumexp; EOS mass sums unique effective EOS IDs. BF16 archives and FP32 archives have different I/O budgets.",
+    "Cached generation and full-sequence teacher forcing can differ numerically; compare and report rather than claim bitwise equality.",
+    "Word CULINARY is multiple tokens: initial [34,1094,32593], later [356,1094,32593]. Base correct first token34 is shared with loop; compare candidates only under the same token prefix."
+  ],
+  "size_estimates_bytes": {
+    "vocab_size": 151936,
+    "one_512row_bf16": 155582464,
+    "one_512row_fp32": 311164928,
+    "teacher_target_rows": 1728,
+    "teacher_nine_target_arrays_bf16": 525090816,
+    "teacher_nine_target_arrays_fp32": 1050181632,
+    "free_three_max512_raw_and_scores_bf16": 933494784,
+    "free_three_max512_raw_and_scores_fp32": 1866989568,
+    "total_full_fp32_expected_if_new_lengths_match_old": 1750302720,
+    "total_full_fp32_worst_generation": 2917171200,
+    "one_teacher_full_forward_648rows_bf16": 196909056,
+    "note": "Array payload only; excludes model weights/activations/KV cache, serialized metadata, filesystem overhead and derived summaries. No full softmax probability matrices need be archived."
+  },
+  "prior_effective_rule_anchors": [
+    {
+      "path": "reports/repetition-onset/run/base/target-single/effective-generation.json",
+      "sha256": "90d980511832f1378396ff132908c01b7f3b5b73423883473a6d9a2eb868e9bc",
+      "logits_processor_types": [],
+      "effective_eos_ids": [
+        151645,
+        151643
+      ]
+    },
+    {
+      "path": "reports/repetition-onset/run/step050/target-single/effective-generation.json",
+      "sha256": "90d980511832f1378396ff132908c01b7f3b5b73423883473a6d9a2eb868e9bc",
+      "logits_processor_types": [],
+      "effective_eos_ids": [
+        151645,
+        151643
+      ]
+    },
+    {
+      "path": "reports/repetition-onset/run/step100/target-single/effective-generation.json",
+      "sha256": "90d980511832f1378396ff132908c01b7f3b5b73423883473a6d9a2eb868e9bc",
+      "logits_processor_types": [],
+      "effective_eos_ids": [
+        151645,
+        151643
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "cpu_synthetic_only_ready_not_executed",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "torch_version": "2.8.0",
+  "threads": 1,
+  "vocab_size": 151936,
+  "candidate_count": 59,
+  "rows": 100,
+  "elapsed_seconds": 2.2199801670503803,
+  "seconds_per_row": 0.022199801670503803,
+  "estimated_stage_rows_own_generation_512_plus_fixed_576": 1088,
+  "estimated_stage_statistics_seconds": 24.153384217508137,
+  "limitations": "Synthetic CPU row statistics timing only; excludes model load, GPU generation/forward, I/O, hashing and remote CPU differences. Does not establish 240s GPU stage feasibility or execute model calls."
+}

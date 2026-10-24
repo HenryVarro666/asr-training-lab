@@ -1,5 +1,7 @@
 # ASR training lab
 
+Current stage: the [token-probability diagnostic](reports/token-probability/README.md) is ready but blocked by other tasks on GPU1. Local109 / remote9 CPU tests passed, source hashes were verified, and independent final code review passed. This stage has **0 actual model calls and 0 updates**; no probability results or result figures exist, and no waiting/retry queue is running.
+
 Latest stage: the [four-checkpoint repetition comparison](reports/repetition-onset/README.md) completed in99.16seconds: four singleton calls, identical512-token settings, zero training updates. Base/step25/step50 ended normally with EOS and correctly transcribed this16-word sample; step100 repeated `CULINARY` to512tokens without EOS. Step100 is the earliest observed positive saved checkpoint in this comparison; the exact first update and training cause remain unknown. Raw tokens, EOS, decoder/parser evidence and independent audit are archived. The old Early100 gate remains failed; no next experiment is queued.
 
 Current workflow: the first campaign completed with worse development WER. Follow the [staged diagnosis plan](docs/NEXT_STEPS.md) and [diagnosis evidence](reports/diagnosis/README.md) before any new training. The user has replaced continuous autonomous experimentation with step-by-step planning and review of each stage's evidence. The commands below document the completed campaign workflow; they are not a queued next run. See the [measured results](EXPERIMENT_STATUS.md).

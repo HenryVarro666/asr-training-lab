@@ -1,0 +1,626 @@
+{
+  "status": "matched",
+  "captured_unix": 1792811271.8102746,
+  "models": {
+    "base": {
+      "path": "/mnt/raid/asr-lab/cache/huggingface/hub/models--Qwen--Qwen3-ASR-1.7B/snapshots/7278e1e70fe206f11671096ffdd38061171dd6e5",
+      "status": "matched",
+      "files": {
+        "chat_template.json": {
+          "current": {
+            "logical_path": "/mnt/raid/asr-lab/cache/huggingface/hub/models--Qwen--Qwen3-ASR-1.7B/snapshots/7278e1e70fe206f11671096ffdd38061171dd6e5/chat_template.json",
+            "is_symlink": true,
+            "symlink_target": "../../blobs/c44736493efd71ec96218cc626904698cdb13235",
+            "symlink_lstat": {
+              "dev": 2431,
+              "inode": 560301742,
+              "size": 52,
+              "mtime_ns": 1792656266656444816,
+              "ctime_ns": 1792656266656444816
+            },
+            "resolved_path": "/mnt/raid/asr-lab/cache/huggingface/hub/models--Qwen--Qwen3-ASR-1.7B/blobs/c44736493efd71ec96218cc626904698cdb13235",
+            "dev": 2431,
+            "inode": 560301733,
+            "size": 1161,
+            "mtime_ns": 1792656266648444791,
+            "ctime_ns": 1792656266656444816
+          },
+          "matched_prior_stat": true
+        },
+        "config.json": {
+          "current": {
+            "logical_path": "/mnt/raid/asr-lab/cache/huggingface/hub/models--Qwen--Qwen3-ASR-1.7B/snapshots/7278e1e70fe206f11671096ffdd38061171dd6e5/config.json",
+            "is_symlink": true,
+            "symlink_target": "../../blobs/2bc16c9d4ca08963715cfb94d879799b9adbd0e9",
+            "symlink_lstat": {
+              "dev": 2431,
+              "inode": 560301744,
+              "size": 52,
+              "mtime_ns": 1792656266656444816,
+              "ctime_ns": 1792656266656444816
+            },
+            "resolved_path": "/mnt/raid/asr-lab/cache/huggingface/hub/models--Qwen--Qwen3-ASR-1.7B/blobs/2bc16c9d4ca08963715cfb94d879799b9adbd0e9",
+            "dev": 2431,
+            "inode": 560301732,
+            "size": 6194,
+            "mtime_ns": 1792656266648444791,
+            "ctime_ns": 1792656266656444816
+          },
+          "matched_prior_stat": true
+        },
+        "generation_config.json": {
+          "current": {
+            "logical_path": "/mnt/raid/asr-lab/cache/huggingface/hub/models--Qwen--Qwen3-ASR-1.7B/snapshots/7278e1e70fe206f11671096ffdd38061171dd6e5/generation_config.json",
+            "is_symlink": true,
+            "symlink_target": "../../blobs/7382a4d347c0a865b76bb1b8277f66a5ac312854",
+            "symlink_lstat": {
+              "dev": 2431,
+              "inode": 560301738,
+              "size": 52,
+              "mtime_ns": 1792656266660444829,
+              "ctime_ns": 1792656266660444829
+            },
+            "resolved_path": "/mnt/raid/asr-lab/cache/huggingface/hub/models--Qwen--Qwen3-ASR-1.7B/blobs/7382a4d347c0a865b76bb1b8277f66a5ac312854",
+            "dev": 2431,
+            "inode": 560301726,
+            "size": 142,
+            "mtime_ns": 1792656266648444791,
+            "ctime_ns": 1792656266648444791
+          },
+          "matched_prior_stat": true
+        },
+        "merges.txt": {
+          "current": {
+            "logical_path": "/mnt/raid/asr-lab/cache/huggingface/hub/models--Qwen--Qwen3-ASR-1.7B/snapshots/7278e1e70fe206f11671096ffdd38061171dd6e5/merges.txt",
+            "is_symlink": true,
+            "symlink_target": "../../blobs/31349551d90c7606f325fe0f11bbb8bd5fa0d7c7",
+            "symlink_lstat": {
+              "dev": 2431,
+              "inode": 560301739,
+              "size": 52,
+              "mtime_ns": 1792656266676444878,
+              "ctime_ns": 1792656266676444878
+            },
+            "resolved_path": "/mnt/raid/asr-lab/cache/huggingface/hub/models--Qwen--Qwen3-ASR-1.7B/blobs/31349551d90c7606f325fe0f11bbb8bd5fa0d7c7",
+            "dev": 2431,
+            "inode": 560301735,
+            "size": 1671853,
+            "mtime_ns": 1792656266676444878,
+            "ctime_ns": 1792656266676444878
+          },
+          "matched_prior_stat": true
+        },
+        "model-00001-of-00002.safetensors": {
+          "current": {
+            "logical_path": "/mnt/raid/asr-lab/cache/huggingface/hub/models--Qwen--Qwen3-ASR-1.7B/snapshots/7278e1e70fe206f11671096ffdd38061171dd6e5/model-00001-of-00002.safetensors",
+            "is_symlink": true,
+            "symlink_target": "../../blobs/a4cd1f1a04d90b757dc7f7dd26254e69a013b19e80efe590a83c6a3bde8608d6",
+            "symlink_lstat": {
+              "dev": 2431,
+              "inode": 560306194,
+              "size": 76,
+              "mtime_ns": 1792656323472632220,
+              "ctime_ns": 1792656323472632220
+            },
+            "resolved_path": "/mnt/raid/asr-lab/cache/huggingface/hub/models--Qwen--Qwen3-ASR-1.7B/blobs/a4cd1f1a04d90b757dc7f7dd26254e69a013b19e80efe590a83c6a3bde8608d6",
+            "dev": 2431,
+            "inode": 560301730,
+            "size": 4220320824,
+            "mtime_ns": 1792656323464632193,
+            "ctime_ns": 1792656323472632220
+          },
+          "matched_prior_stat": true
+        },
+        "model-00002-of-00002.safetensors": {
+          "current": {
+            "logical_path": "/mnt/raid/asr-lab/cache/huggingface/hub/models--Qwen--Qwen3-ASR-1.7B/snapshots/7278e1e70fe206f11671096ffdd38061171dd6e5/model-00002-of-00002.safetensors",
+            "is_symlink": true,
+            "symlink_target": "../../blobs/6e0b9d9e09e2e0238e7ef3cc8a484ab387e91b90f1900bedf88bc92d7929ccfc",
+            "symlink_lstat": {
+              "dev": 2431,
+              "inode": 560302663,
+              "size": 76,
+              "mtime_ns": 1792656275728473647,
+              "ctime_ns": 1792656275728473647
+            },
+            "resolved_path": "/mnt/raid/asr-lab/cache/huggingface/hub/models--Qwen--Qwen3-ASR-1.7B/blobs/6e0b9d9e09e2e0238e7ef3cc8a484ab387e91b90f1900bedf88bc92d7929ccfc",
+            "dev": 2431,
+            "inode": 560301723,
+            "size": 478200688,
+            "mtime_ns": 1792656275716473608,
+            "ctime_ns": 1792656275728473647
+          },
+          "matched_prior_stat": true
+        },
+        "model.safetensors.index.json": {
+          "current": {
+            "logical_path": "/mnt/raid/asr-lab/cache/huggingface/hub/models--Qwen--Qwen3-ASR-1.7B/snapshots/7278e1e70fe206f11671096ffdd38061171dd6e5/model.safetensors.index.json",
+            "is_symlink": true,
+            "symlink_target": "../../blobs/1048a4eb4f21fef9aea06d8568a784b2b5595689",
+            "symlink_lstat": {
+              "dev": 2431,
+              "inode": 560301741,
+              "size": 52,
+              "mtime_ns": 1792656266656444816,
+              "ctime_ns": 1792656266656444816
+            },
+            "resolved_path": "/mnt/raid/asr-lab/cache/huggingface/hub/models--Qwen--Qwen3-ASR-1.7B/blobs/1048a4eb4f21fef9aea06d8568a784b2b5595689",
+            "dev": 2431,
+            "inode": 560301736,
+            "size": 64821,
+            "mtime_ns": 1792656266652444804,
+            "ctime_ns": 1792656266656444816
+          },
+          "matched_prior_stat": true
+        },
+        "preprocessor_config.json": {
+          "current": {
+            "logical_path": "/mnt/raid/asr-lab/cache/huggingface/hub/models--Qwen--Qwen3-ASR-1.7B/snapshots/7278e1e70fe206f11671096ffdd38061171dd6e5/preprocessor_config.json",
+            "is_symlink": true,
+            "symlink_target": "../../blobs/8f7f07346466d5d494ec0d4969d1c3d0190eed72",
+            "symlink_lstat": {
+              "dev": 2431,
+              "inode": 560301743,
+              "size": 52,
+              "mtime_ns": 1792656266656444816,
+              "ctime_ns": 1792656266656444816
+            },
+            "resolved_path": "/mnt/raid/asr-lab/cache/huggingface/hub/models--Qwen--Qwen3-ASR-1.7B/blobs/8f7f07346466d5d494ec0d4969d1c3d0190eed72",
+            "dev": 2431,
+            "inode": 560301737,
+            "size": 330,
+            "mtime_ns": 1792656266652444804,
+            "ctime_ns": 1792656266656444816
+          },
+          "matched_prior_stat": true
+        },
+        "tokenizer_config.json": {
+          "current": {
+            "logical_path": "/mnt/raid/asr-lab/cache/huggingface/hub/models--Qwen--Qwen3-ASR-1.7B/snapshots/7278e1e70fe206f11671096ffdd38061171dd6e5/tokenizer_config.json",
+            "is_symlink": true,
+            "symlink_target": "../../blobs/b93109843922a40c6654c5449d3bf95372267c66",
+            "symlink_lstat": {
+              "dev": 2431,
+              "inode": 560301757,
+              "size": 52,
+              "mtime_ns": 1792656266712444992,
+              "ctime_ns": 1792656266712444992
+            },
+            "resolved_path": "/mnt/raid/asr-lab/cache/huggingface/hub/models--Qwen--Qwen3-ASR-1.7B/blobs/b93109843922a40c6654c5449d3bf95372267c66",
+            "dev": 2431,
+            "inode": 560301750,
+            "size": 12487,
+            "mtime_ns": 1792656266712444992,
+            "ctime_ns": 1792656266712444992
+          },
+          "matched_prior_stat": true
+        },
+        "vocab.json": {
+          "current": {
+            "logical_path": "/mnt/raid/asr-lab/cache/huggingface/hub/models--Qwen--Qwen3-ASR-1.7B/snapshots/7278e1e70fe206f11671096ffdd38061171dd6e5/vocab.json",
+            "is_symlink": true,
+            "symlink_target": "../../blobs/4783fe10ac3adce15ac8f358ef5462739852c569",
+            "symlink_lstat": {
+              "dev": 2431,
+              "inode": 560301762,
+              "size": 52,
+              "mtime_ns": 1792656266748445105,
+              "ctime_ns": 1792656266748445105
+            },
+            "resolved_path": "/mnt/raid/asr-lab/cache/huggingface/hub/models--Qwen--Qwen3-ASR-1.7B/blobs/4783fe10ac3adce15ac8f358ef5462739852c569",
+            "dev": 2431,
+            "inode": 560301755,
+            "size": 2776833,
+            "mtime_ns": 1792656266748445105,
+            "ctime_ns": 1792656266748445105
+          },
+          "matched_prior_stat": true
+        }
+      }
+    },
+    "step050": {
+      "path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-50",
+      "status": "matched",
+      "files": {
+        "added_tokens.json": {
+          "current": {
+            "logical_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-50/added_tokens.json",
+            "is_symlink": false,
+            "symlink_target": null,
+            "symlink_lstat": null,
+            "resolved_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-50/added_tokens.json",
+            "dev": 2431,
+            "inode": 560566161,
+            "size": 1566,
+            "mtime_ns": 1792730908737444483,
+            "ctime_ns": 1792730908737444483
+          },
+          "matched_prior_stat": true
+        },
+        "chat_template.jinja": {
+          "current": {
+            "logical_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-50/chat_template.jinja",
+            "is_symlink": false,
+            "symlink_target": null,
+            "symlink_lstat": null,
+            "resolved_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-50/chat_template.jinja",
+            "dev": 2431,
+            "inode": 560566165,
+            "size": 1099,
+            "mtime_ns": 1792730908861445255,
+            "ctime_ns": 1792730908861445255
+          },
+          "matched_prior_stat": true
+        },
+        "config.json": {
+          "current": {
+            "logical_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-50/config.json",
+            "is_symlink": false,
+            "symlink_target": null,
+            "symlink_lstat": null,
+            "resolved_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-50/config.json",
+            "dev": 2431,
+            "inode": 560566153,
+            "size": 5916,
+            "mtime_ns": 1792730901977402371,
+            "ctime_ns": 1792730901977402371
+          },
+          "matched_prior_stat": true
+        },
+        "generation_config.json": {
+          "current": {
+            "logical_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-50/generation_config.json",
+            "is_symlink": false,
+            "symlink_target": null,
+            "symlink_lstat": null,
+            "resolved_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-50/generation_config.json",
+            "dev": 2431,
+            "inode": 560566154,
+            "size": 125,
+            "mtime_ns": 1792730901977402371,
+            "ctime_ns": 1792730901977402371
+          },
+          "matched_prior_stat": true
+        },
+        "merges.txt": {
+          "current": {
+            "logical_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-50/merges.txt",
+            "is_symlink": false,
+            "symlink_target": null,
+            "symlink_lstat": null,
+            "resolved_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-50/merges.txt",
+            "dev": 2431,
+            "inode": 560566163,
+            "size": 1671853,
+            "mtime_ns": 1792730908789444807,
+            "ctime_ns": 1792730908789444807
+          },
+          "matched_prior_stat": true
+        },
+        "model-00001-of-00002.safetensors": {
+          "current": {
+            "logical_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-50/model-00001-of-00002.safetensors",
+            "is_symlink": false,
+            "symlink_target": null,
+            "symlink_lstat": null,
+            "resolved_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-50/model-00001-of-00002.safetensors",
+            "dev": 2431,
+            "inode": 560566155,
+            "size": 4981095680,
+            "mtime_ns": 1792730905781426066,
+            "ctime_ns": 1792730905781426066
+          },
+          "matched_prior_stat": true
+        },
+        "model-00002-of-00002.safetensors": {
+          "current": {
+            "logical_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-50/model-00002-of-00002.safetensors",
+            "is_symlink": false,
+            "symlink_target": null,
+            "symlink_lstat": null,
+            "resolved_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-50/model-00002-of-00002.safetensors",
+            "dev": 2431,
+            "inode": 560566152,
+            "size": 3171200384,
+            "mtime_ns": 1792730908221441268,
+            "ctime_ns": 1792730908221441268
+          },
+          "matched_prior_stat": true
+        },
+        "model.safetensors.index.json": {
+          "current": {
+            "logical_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-50/model.safetensors.index.json",
+            "is_symlink": false,
+            "symlink_target": null,
+            "symlink_lstat": null,
+            "resolved_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-50/model.safetensors.index.json",
+            "dev": 2431,
+            "inode": 560566157,
+            "size": 64802,
+            "mtime_ns": 1792730908289441692,
+            "ctime_ns": 1792730908289441692
+          },
+          "matched_prior_stat": true
+        },
+        "preprocessor_config.json": {
+          "current": {
+            "logical_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-50/preprocessor_config.json",
+            "is_symlink": false,
+            "symlink_target": null,
+            "symlink_lstat": null,
+            "resolved_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-50/preprocessor_config.json",
+            "dev": 2431,
+            "inode": 560566158,
+            "size": 357,
+            "mtime_ns": 1792730908737444483,
+            "ctime_ns": 1792730908737444483
+          },
+          "matched_prior_stat": true
+        },
+        "special_tokens_map.json": {
+          "current": {
+            "logical_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-50/special_tokens_map.json",
+            "is_symlink": false,
+            "symlink_target": null,
+            "symlink_lstat": null,
+            "resolved_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-50/special_tokens_map.json",
+            "dev": 2431,
+            "inode": 560566160,
+            "size": 1008,
+            "mtime_ns": 1792730908737444483,
+            "ctime_ns": 1792730908737444483
+          },
+          "matched_prior_stat": true
+        },
+        "tokenizer.json": {
+          "current": {
+            "logical_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-50/tokenizer.json",
+            "is_symlink": false,
+            "symlink_target": null,
+            "symlink_lstat": null,
+            "resolved_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-50/tokenizer.json",
+            "dev": 2431,
+            "inode": 560566164,
+            "size": 11429499,
+            "mtime_ns": 1792730908857445230,
+            "ctime_ns": 1792730908857445230
+          },
+          "matched_prior_stat": true
+        },
+        "tokenizer_config.json": {
+          "current": {
+            "logical_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-50/tokenizer_config.json",
+            "is_symlink": false,
+            "symlink_target": null,
+            "symlink_lstat": null,
+            "resolved_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-50/tokenizer_config.json",
+            "dev": 2431,
+            "inode": 560566159,
+            "size": 12517,
+            "mtime_ns": 1792730908737444483,
+            "ctime_ns": 1792730908737444483
+          },
+          "matched_prior_stat": true
+        },
+        "vocab.json": {
+          "current": {
+            "logical_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-50/vocab.json",
+            "is_symlink": false,
+            "symlink_target": null,
+            "symlink_lstat": null,
+            "resolved_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-50/vocab.json",
+            "dev": 2431,
+            "inode": 560566162,
+            "size": 2776833,
+            "mtime_ns": 1792730908761444632,
+            "ctime_ns": 1792730908761444632
+          },
+          "matched_prior_stat": true
+        }
+      }
+    },
+    "step100": {
+      "path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100",
+      "status": "matched",
+      "files": {
+        "added_tokens.json": {
+          "current": {
+            "logical_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/added_tokens.json",
+            "is_symlink": false,
+            "symlink_target": null,
+            "symlink_lstat": null,
+            "resolved_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/added_tokens.json",
+            "dev": 2431,
+            "inode": 560566197,
+            "size": 1566,
+            "mtime_ns": 1792731014494104771,
+            "ctime_ns": 1792731014494104771
+          },
+          "matched_prior_stat": true
+        },
+        "chat_template.jinja": {
+          "current": {
+            "logical_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/chat_template.jinja",
+            "is_symlink": false,
+            "symlink_target": null,
+            "symlink_lstat": null,
+            "resolved_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/chat_template.jinja",
+            "dev": 2431,
+            "inode": 560566201,
+            "size": 1099,
+            "mtime_ns": 1792731014646105722,
+            "ctime_ns": 1792731014646105722
+          },
+          "matched_prior_stat": true
+        },
+        "config.json": {
+          "current": {
+            "logical_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/config.json",
+            "is_symlink": false,
+            "symlink_target": null,
+            "symlink_lstat": null,
+            "resolved_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/config.json",
+            "dev": 2431,
+            "inode": 560566188,
+            "size": 5916,
+            "mtime_ns": 1792730989413947948,
+            "ctime_ns": 1792730989413947948
+          },
+          "matched_prior_stat": true
+        },
+        "generation_config.json": {
+          "current": {
+            "logical_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/generation_config.json",
+            "is_symlink": false,
+            "symlink_target": null,
+            "symlink_lstat": null,
+            "resolved_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/generation_config.json",
+            "dev": 2431,
+            "inode": 560566190,
+            "size": 125,
+            "mtime_ns": 1792730989413947948,
+            "ctime_ns": 1792730989413947948
+          },
+          "matched_prior_stat": true
+        },
+        "merges.txt": {
+          "current": {
+            "logical_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/merges.txt",
+            "is_symlink": false,
+            "symlink_target": null,
+            "symlink_lstat": null,
+            "resolved_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/merges.txt",
+            "dev": 2431,
+            "inode": 560566199,
+            "size": 1671853,
+            "mtime_ns": 1792731014542105071,
+            "ctime_ns": 1792731014542105071
+          },
+          "matched_prior_stat": true
+        },
+        "model-00001-of-00002.safetensors": {
+          "current": {
+            "logical_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/model-00001-of-00002.safetensors",
+            "is_symlink": false,
+            "symlink_target": null,
+            "symlink_lstat": null,
+            "resolved_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/model-00001-of-00002.safetensors",
+            "dev": 2431,
+            "inode": 560566191,
+            "size": 4981095680,
+            "mtime_ns": 1792730993613974201,
+            "ctime_ns": 1792730993617974226
+          },
+          "matched_prior_stat": true
+        },
+        "model-00002-of-00002.safetensors": {
+          "current": {
+            "logical_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/model-00002-of-00002.safetensors",
+            "is_symlink": false,
+            "symlink_target": null,
+            "symlink_lstat": null,
+            "resolved_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/model-00002-of-00002.safetensors",
+            "dev": 2431,
+            "inode": 560566192,
+            "size": 3171200384,
+            "mtime_ns": 1792730996141990005,
+            "ctime_ns": 1792730996141990005
+          },
+          "matched_prior_stat": true
+        },
+        "model.safetensors.index.json": {
+          "current": {
+            "logical_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/model.safetensors.index.json",
+            "is_symlink": false,
+            "symlink_target": null,
+            "symlink_lstat": null,
+            "resolved_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/model.safetensors.index.json",
+            "dev": 2431,
+            "inode": 560566193,
+            "size": 64802,
+            "mtime_ns": 1792730996233990579,
+            "ctime_ns": 1792730996233990579
+          },
+          "matched_prior_stat": true
+        },
+        "preprocessor_config.json": {
+          "current": {
+            "logical_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/preprocessor_config.json",
+            "is_symlink": false,
+            "symlink_target": null,
+            "symlink_lstat": null,
+            "resolved_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/preprocessor_config.json",
+            "dev": 2431,
+            "inode": 560566194,
+            "size": 357,
+            "mtime_ns": 1792731014478104671,
+            "ctime_ns": 1792731014478104671
+          },
+          "matched_prior_stat": true
+        },
+        "special_tokens_map.json": {
+          "current": {
+            "logical_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/special_tokens_map.json",
+            "is_symlink": false,
+            "symlink_target": null,
+            "symlink_lstat": null,
+            "resolved_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/special_tokens_map.json",
+            "dev": 2431,
+            "inode": 560566196,
+            "size": 1008,
+            "mtime_ns": 1792731014494104771,
+            "ctime_ns": 1792731014494104771
+          },
+          "matched_prior_stat": true
+        },
+        "tokenizer.json": {
+          "current": {
+            "logical_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/tokenizer.json",
+            "is_symlink": false,
+            "symlink_target": null,
+            "symlink_lstat": null,
+            "resolved_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/tokenizer.json",
+            "dev": 2431,
+            "inode": 560566200,
+            "size": 11429499,
+            "mtime_ns": 1792731014610105497,
+            "ctime_ns": 1792731014610105497
+          },
+          "matched_prior_stat": true
+        },
+        "tokenizer_config.json": {
+          "current": {
+            "logical_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/tokenizer_config.json",
+            "is_symlink": false,
+            "symlink_target": null,
+            "symlink_lstat": null,
+            "resolved_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/tokenizer_config.json",
+            "dev": 2431,
+            "inode": 560566195,
+            "size": 12517,
+            "mtime_ns": 1792731014494104771,
+            "ctime_ns": 1792731014494104771
+          },
+          "matched_prior_stat": true
+        },
+        "vocab.json": {
+          "current": {
+            "logical_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/vocab.json",
+            "is_symlink": false,
+            "symlink_target": null,
+            "symlink_lstat": null,
+            "resolved_path": "/mnt/raid/asr-lab/runs/qwen-early100-20261022-a/training/checkpoint-100/vocab.json",
+            "dev": 2431,
+            "inode": 560566198,
+            "size": 2776833,
+            "mtime_ns": 1792731014514104896,
+            "ctime_ns": 1792731014514104896
+          },
+          "matched_prior_stat": true
+        }
+      }
+    }
+  },
+  "weight_content_reads": 0,
+  "limitation": "Stat/path comparison to prior onset capture only, not a fresh weight SHA. Actual bounded stage must still content-hash once before load."
+}

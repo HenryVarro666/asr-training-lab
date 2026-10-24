@@ -1,0 +1,5 @@
+PREPARED_NOT_RUN
+Independent FP64 CPU toy checks passed; no real run or model was read.
+Pinned tokenizer hash/piece toy checks passed: C=34, CA=5049, UL=1094, aul=4943.
+Plot helper syntax check passed; no probability figure generated.
+No SSH, GPU, model/weight load, generation, training or commit performed.

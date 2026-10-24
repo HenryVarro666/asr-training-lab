@@ -6,6 +6,8 @@
 
 ## 后续诊断进展
 
+**当前：[逐token概率诊断准备完成、GPU占用阻断](reports/token-probability/README.md)**：同句base/50/100的3生成+9固定轨迹forward合同已固定；本地109、远端9项CPU测试通过，独立Sol最终审阅及部署SHA核对通过。GPU1三个其他用户任务使空闲门槛不满足，计划run不存在；实际0模型调用、0更新，尚无新概率结论/结果图。没有自动等待或重试队列，旧Early100失败状态不变。
+
 **最新：[四检查点重复对照已完成](reports/repetition-onset/README.md)**（2026-10-23）：同一句音频、同137-token输入、同512-token生成预算，base/25/50/100各一次，共4次调用／0更新／99.16秒。base/25/50正常EOS结束且原normalizer下16词全对；100生成170次`CULINARY`加`CUL`，512无EOS，parser压成两词。最早受测阳性为100，上个受测阴性为50；不能定位精确首发更新或训练原因。独立CPU审计通过，85份run产物跨机一致，GPU1退出、Plex保留，旧Early100 failed未改，无追加训练。
 
 **此前：[512-token截断探针已完成](reports/truncation-probe/README.md)**（2026-10-23）：固定checkpoint100与原生成规则，GPU1上原batch16两次、单句一次，共3次调用／33条消费／0次更新，用时130.69秒。三次目标raw token完全一致，均512个且无EOS；解码为170次`CULINARY`加`CUL`，随后官方parser压成`CULINARY CUL`。单句同样复现，原batch组成不是必要条件；训练根因尚未确定。raw tokens、EOS、解析前后文本、指纹、监控及独立审计已保存，旧Early100 failed状态不变，没有扩大训练。
