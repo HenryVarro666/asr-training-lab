@@ -43,3 +43,5 @@ GPU必须先空闲。身份、输入、有效生成决策、旧生成轨迹漂�
 - [固定轨迹与来源](inputs/trajectory-reference.json)、[官方forward/generate来源核查](inputs/upstream-probability-source.json)
 
 此前已执行的单句对照结论仍见[repetition-onset报告](../repetition-onset/README.md)：base/25/50正常，100在512窗口内重复。当前阶段尚未提供逐token概率来解释该现象。
+
+准备包已提交为`484acae752e23513fc00b3b8180c1e27184016df`，31份允许文件已跨机逐一匹配SHA；Git bundle在本地与远端均verify且SHA一致。见[归档收据](validation/archive-sync.json)。该bundle覆盖准备代码/文档/小型收据，未包含任何尚不存在的本轮概率矩阵；本段与归档收据在payload提交后另行提交、同步。

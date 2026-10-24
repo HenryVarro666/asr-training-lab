@@ -1,0 +1,60 @@
+{
+  "status": "verified",
+  "checked_unix": 1792811309.740939,
+  "covered_payload_commit": "484acae752e23513fc00b3b8180c1e27184016df",
+  "covered_branch": "codex/token-probability",
+  "scope": "31 allowlisted committed source/doc/preparation receipts; no probability matrices, weights or audio. This receipt is created afterward and copied separately.",
+  "local_bundle": {
+    "path": "/Users/caochao/Documents/ChatGPT/train/.git/asr-backups/asr-lab-token-probability-484acae.bundle",
+    "sha256": "de69d55700b142dea0cd7a181fc58e8339d1dfd7968fa7260e84a31e49e42a91",
+    "bytes": 5209099,
+    "verify_stdout": "The bundle contains these 2 refs:\n484acae752e23513fc00b3b8180c1e27184016df HEAD\n484acae752e23513fc00b3b8180c1e27184016df refs/heads/codex/token-probability\nThe bundle records a complete history.\nThe bundle uses this hash algorithm: sha1\n",
+    "verify_stderr": "/Users/caochao/Documents/ChatGPT/train/.git/asr-backups/asr-lab-token-probability-484acae.bundle is okay\n"
+  },
+  "remote": {
+    "files_verified": 31,
+    "file_sha256": {
+      "EXPERIMENT_STATUS.md": "4b0a758eb570910bf108c5500ac09eb986acbf27b84dab9ce8050874b86ab584",
+      "README.md": "6bc580e61914bb68f1d735ca1baa5e4f7a182d5acdb79a8b9eaa650512c6a7d1",
+      "docs/NEXT_STEPS.md": "92ed748e23fe2832f770462b55152b57a94bf63b942126d2279f5d9ace8d47fd",
+      "docs/TOKEN_PROBABILITY_PROBE.md": "1d8ea4f616bceb4c6ff91bd71ec3e9925d6c41eb89ae2cea4f93d0a1556068e0",
+      "docs/superpowers/plans/2026-10-23-token-probability.md": "d3b88617d532b74bb259721474ecf6616a12d0ee89190092e673501adeb982c2",
+      "reports/ARTIFACT_INVENTORY.md": "cde126be800badf540f966b43a03d8909463af76a2bcf8cf55cfd119adceb03b",
+      "reports/DELIVERY_AUDIT.md": "e0cbe2bea2906213622be18a6ec67a5b4fad0f7655e515c5d2fd03dfafa8ae03",
+      "reports/token-probability/README.md": "6480add9bf026aa8d9183bc615e51d1c3c3b1cd3882b302d3ea62688954d8843",
+      "reports/token-probability/execution-summary.json": "e881012745922280584116405f33a6c2c07b573075040c071f7bdb9a8ca5f79b",
+      "reports/token-probability/independent-audit.json": "ba25af853ac1daf13e8198ee24ad5a1be31ba6d9c651de1470faf9adc47ce154",
+      "reports/token-probability/independent-audit.md": "693f3a57e4597f2cf6136c3bc94cc944b245c3a0c4c381f2dc1d75c97bff8666",
+      "reports/token-probability/inputs/trajectory-reference.json": "6753b127d40288a558761c6b8e79964f07af7e96f4e85964a0a8b66c26b03f49",
+      "reports/token-probability/inputs/upstream-probability-source.json": "d8dfc1cb079b5d58994aa6ca345a7cddff9e13cc7f8b8fcc34ffd3c14d1f1f40",
+      "reports/token-probability/validation/audit_saved_evidence.py": "ebc8db219efce0f05db3859976cf0d41834d4cfac2160837cb6418fe8b6e921d",
+      "reports/token-probability/validation/checkpoint-stat-resume.json": "53a212a301ae0b1f1a3289e050914608085daec0af6d806f54c3753b75cea326",
+      "reports/token-probability/validation/cpu-statistics-timing.json": "8f253fcb6ac81431a0a513771609f5a27565d9f3be7f52e82722a419fbb66736",
+      "reports/token-probability/validation/deployment.json": "cd90814b499144375192d6cf418d9a59c24ca564349179d26c52df571c09ea36",
+      "reports/token-probability/validation/final-code-review.md": "deae09b164c46ac90549b5eda35df6b6e5d38fbf4f80b64057540c22e8c156ce",
+      "reports/token-probability/validation/final-host.json": "afa9476beed013de72fff13b8ca2d6766ca67b59259f094000af08ebc699105c",
+      "reports/token-probability/validation/host-preflight.json": "5d38a21b8cd9a810730f0246073ebdf0902ca728bf55e1ef59088af72227da24",
+      "reports/token-probability/validation/host_snapshot.py": "b2c46b0b0be40fca90be8e94ec706100a7826ce12a343d68ddf8fb0157108bd5",
+      "reports/token-probability/validation/independent-audit.log": "a724caed91923704a93f65e0cf31a8cfce05bf5cacc772c36f9beb811c170198",
+      "reports/token-probability/validation/launch-command.sh": "8f1f15c3ee5a9495eb176b004ceda0276ffaf97b720ecf9af6de29d575623aba",
+      "reports/token-probability/validation/local-unit-tests.log": "21587d62f2033c122a92e67b74a7ceee90f4d81a5149770ab07036f6c0ba720c",
+      "reports/token-probability/validation/plot_evidence.py": "ea95eef4e86ff98fb2d7fb1f54150ba13a2080bda7481847b2ffa8c371410621",
+      "reports/token-probability/validation/remote-unit-tests.log": "894d5ddef80cbaa35db0884fd2d5d00b47ea87b0c01e288a7e5f87346fac0a24",
+      "reports/token-probability/validation/resume-host.json": "a3f3dbf3a117221de2ee91fefbf27e8e24bda22825b77b1a0ebf6c623cdc4fa3",
+      "reports/token-probability/validation/tokenizer-cache.json": "5712f3640294955a391f8697af1b94c6789669917b2ed689627bc01a9f4c2245",
+      "scripts/run_token_probability.py": "e0eff6b1a9560576c69fdb039277e1085a86b7adc1028dfba22b3e1ac5538400",
+      "src/asr_lab/token_probability.py": "d7deb7ea0d65cb9ef10a6e66ff5c9eca5207068c4397a1fa27a687dfa111c4f6",
+      "tests/test_token_probability.py": "8390ef0c7a118d7f5acbe4c6d5f3e474c4316c1cf737f5b1f951e0b95d47784f"
+    },
+    "bundle": {
+      "path": "/mnt/raid/asr-lab/backups/asr-lab-token-probability-484acae.bundle",
+      "bytes": 5209099,
+      "sha256": "de69d55700b142dea0cd7a181fc58e8339d1dfd7968fa7260e84a31e49e42a91",
+      "verify_stdout": "The bundle contains these 2 refs:\n484acae752e23513fc00b3b8180c1e27184016df HEAD\n484acae752e23513fc00b3b8180c1e27184016df refs/heads/codex/token-probability\nThe bundle records a complete history.\n",
+      "verify_stderr": "/mnt/raid/asr-lab/backups/asr-lab-token-probability-484acae.bundle is okay\n"
+    },
+    "remote_git_head": "cf30f45e0beb005f43520c33e2ddad73ad67a01e"
+  },
+  "gpu_run_launched": false,
+  "public_push": false
+}
