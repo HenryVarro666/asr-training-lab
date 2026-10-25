@@ -1,0 +1,19 @@
+{
+  "status": "passed_readiness_blocked_resources",
+  "reviewed_utc": "2026-10-25T05:34:59.206073+00:00",
+  "independent_reviewer": "probability_audit (GPT-6.1 Sol)",
+  "source_commit": "6acd9dab4d6a8d8a8cd2aea23d7ea28484ca319e",
+  "deployment_files_sha_matched": 12,
+  "local_cpu_tests": 131,
+  "remote_cpu_tests": 116,
+  "local_only_tests": 15,
+  "new_run_exists": false,
+  "new_run_model_calls": 0,
+  "new_run_matrices": 0,
+  "new_run_result_figures": 0,
+  "prior_partial_files_preserved": 6,
+  "training_updates": 0,
+  "stage_b_started": false,
+  "automatic_queue": false,
+  "note": "Readiness/resources/report verification only. No completed probability run exists; full-logit audit and figures were not executed."
+}

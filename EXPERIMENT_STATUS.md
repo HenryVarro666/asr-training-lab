@@ -6,7 +6,7 @@
 
 ## 后续诊断进展
 
-**当前：[A概率诊断在worker前被资源门槛拦截](reports/token-probability/README.md)**（2026-10-25）：首次GPU1空闲后启动一次既定campaign；base SHA校验期间出现其他用户任务，runner在execute前以failed停止。worker未启动，实际0生成/0TF/0更新、0矩阵/0结果图；6份partial文件跨机SHA一致，无自动重试、B或新增训练，旧Early100 failed不变。原3+9/1200秒/240秒/2GiB/512预算未扩大；未来恢复必须使用新run路径。另已[CPU分析固定128错误迁移](reports/error-transitions/README.md)：25→50有17句错误增加、50→100有15句，23句在三个保存点均差于base。候选改进见[复核记录](docs/EXPERIMENT_REVIEW_2026-10-25.md)。
+**当前：[A监督修正完成，新A2被两卡占用阻断](reports/token-probability/SUPERVISION_UPDATE_2026-10-25.md)**（2026-10-25）：报告按实际证据、总期限含导入/初始化/清理、预检立即/10秒/终态监控均已实现，CPU本地131/远端116、独立review及部署SHA通过。00:33 CDT查GPU0/1均有其他任务，利用率100%/91%，新A2未创建/启动，0生成/0TF/0训练、0矩阵/图；原3+9/512/1200秒/240秒/2GiB未扩大，无自动等待、重试或B。旧A failed和Early100 failed均保留。
 
 **最新：[四检查点重复对照已完成](reports/repetition-onset/README.md)**（2026-10-23）：同一句音频、同137-token输入、同512-token生成预算，base/25/50/100各一次，共4次调用／0更新／99.16秒。base/25/50正常EOS结束且原normalizer下16词全对；100生成170次`CULINARY`加`CUL`，512无EOS，parser压成两词。最早受测阳性为100，上个受测阴性为50；不能定位精确首发更新或训练原因。独立CPU审计通过，85份run产物跨机一致，GPU1退出、Plex保留，旧Early100 failed未改，无追加训练。
 

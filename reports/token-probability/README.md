@@ -1,6 +1,6 @@
-# 单句逐token概率诊断：A尝试在worker前被资源门槛拦截
+# 单句逐token概率诊断：监督修正完成，新A2受资源阻断
 
-2026-10-25（America/Chicago）当前状态为 **failed_pre_gpu_resource_gate**：GPU1最初空闲，已按授权派发一次campaign；base权重SHA校验后发现其他任务新占用，原始campaign以failed退出。**worker未启动，实际0 generate / 0显式TF / 0更新、0概率矩阵、0结果图。** 未重试、未进入B。6份小型partial文件已跨机SHA核对；[执行总结](execution-summary.json)、[失败同步收据](validation/failed-pre-gpu-sync.json)及[改进建议](../../docs/EXPERIMENT_REVIEW_2026-10-25.md)记录详情。
+2026-10-25当前为 **ready_blocked_gpu_busy**。报告、入口总时限及预检监控三项修正完成，本地131/远端116项CPU测试、独立复核和部署SHA通过。00:33:07 CDT实查GPU0/1均有其他计算任务（100%/91%），因此新A2目录未创建、未启动；实际0生成/0TF/0更新、无概率矩阵或结果图。原3+9/512/1200秒/240秒/2GiB预算不变，无自动等待/重试/B/训练。[本次完整更新](SUPERVISION_UPDATE_2026-10-25.md)和[当前机器状态](execution-summary.json)为当前入口；下方保留准备与旧失败历史。
 
 ## 准备阶段历史（下列资源快照不是当前状态）
 

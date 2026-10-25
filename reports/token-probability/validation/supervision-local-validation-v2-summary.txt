@@ -1,0 +1,38 @@
+A supervision v2 targeted fix handoff — 2026-10-25
+
+This supersedes the earlier source freeze for the runner and its probability tests only. Prior source commit, validation notes and failed remote receipt were preserved. No SSH, hardware GPU/model/training, remote log/report/doc edits or commits were performed by this agent.
+
+ROOT CAUSE
+The primary exception handler changed campaign.state only in memory. Durable campaign.json remained running until finalize finished owned teardown/ps, terminal resource observation and report/result writes. If the small remaining cleanup window expired, recovery attempted the monitor write before the campaign write; another deadline interruption could leave campaign.json running. The remote log proves the durable-running failure; it does not identify the exact Linux syscall consuming the window. The 0.4 s test also mixed real child/host scheduling into the timer contract.
+
+FIX (only scripts/run_token_probability.py + tests/test_token_probability.py)
+- Before any costly finalize operation, publish a minimal primary failure campaign.json inside the original absolute deadline. It records cleanup_pending and observed owned PIDs; it does not claim cleanup completed. Any started/unvalidated worker has unknown invocation totals rather than an invented zero.
+- Successful later teardown records cleanup_pending=false; final reporting can refine partial evidence.
+- Existing slow-tree regression still uses the real timer, 2 s sleep, locks and receipts with cap0.4; its external sampler/cleanup boundaries are deterministic. The independent real ten-second fake-resource sampler integration remains unchanged.
+- New regression blocks finalize and terminal recovery writing; it verifies durable budget_stopped was already present at finalize entry and remains present when the final receipt cannot be published. A pending cleanup receipt retains uncertainty.
+- No production total/stage/resource budget, scientific worker/helper logic, retry policy, or frozen trajectory gate changed.
+
+RED / GREEN
+Command: CUDA_VISIBLE_DEVICES='' PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -p 'test_token_probability.py' -k ProbabilityDurableFailureRegressions
+Before fix: 1 test in0.416s, exit1. Actual observed durable state entering slow finalize was ['running']; expected ['budget_stopped'].
+After fix: 1 test in0.413s, exit0. Cap remains0.4 and the existing scheduler tolerance remains0.65.
+Original deterministic slow-tree regression: 1 test in0.335s, exit0.
+Original absolute-boundary regressions: 4 tests in0.442s, exit0.
+
+FINAL FROZEN VALIDATION
+Full command outputs and exact per-command exit codes: implementation-validation-v2-raw.txt
+- CUDA_VISIBLE_DEVICES='' PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -p test_token_probability.py
+  exit0; 25 tests in11.831s (command wall14.293s).
+- CUDA_VISIBLE_DEVICES='' PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -p test_probe_supervision.py
+  exit0; 6 tests in0.395s (command wall0.463s).
+- CUDA_VISIBLE_DEVICES='' PYTHONPATH=src .venv/bin/python -m unittest discover -s tests
+  exit0; 131 tests in16.499s (command wall18.574s). Existing transformers warnings appeared.
+- git diff --check: exit0.
+These are local CPU tests. Remote Linux validation of v2 has not been performed by this agent. Parent identified the prior115/local130 difference as a remote test_prediction_analysis.py omission (15 tests), not shared-test/source drift; the targeted new test increases local total to131.
+
+FROZEN SHA256
+ea10ddfe07cbc40b751dc088d0b3927d7f1e09ac0a828d4ca720932140b16c6e  scripts/run_token_probability.py
+6a6427c0d37171d6c3a53871b500a78169c3019712fd289c437bafbec278df46  tests/test_token_probability.py
+2b6db25983f1d7a81feb902f793dbadb436b6afd4b1e5c166c64785256b8723b  src/asr_lab/probe_supervision.py
+acc34e309468c950b02e930ee7be7d45a0394b092ad0b0a35e07f83016f3a43b  src/asr_lab/token_probability.py
+9a46efb0f3a187edf91a8f37a32008522a290e25df4c25be09fc36d213cd11b6  tests/test_probe_supervision.py

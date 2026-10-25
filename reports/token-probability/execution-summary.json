@@ -1,21 +1,29 @@
 {
-  "status": "failed_pre_gpu_resource_gate",
-  "recorded_utc": "2026-10-25T05:06:58.764296+00:00",
-  "intended_remote_run": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261023-a",
-  "remote_run_exists": true,
+  "status": "ready_blocked_gpu_busy",
+  "recorded_utc": "2026-10-25T05:34:07.057222+00:00",
+  "intended_remote_run": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261025-a2",
+  "remote_run_exists": false,
+  "campaign_launch_dispatched": false,
   "gpu_run_launched": false,
+  "model_worker_launched": false,
   "actual_generate_calls": 0,
   "actual_explicit_teacher_forward_calls": 0,
   "actual_optimizer_updates": 0,
   "evidence_matrices_created": 0,
   "actual_probability_rows_audited": 0,
   "result_figures_created": 0,
-  "code_review": "passed_ready_not_executed",
-  "astra_review": "strategy complete; core code partial; final interrupted by usage limit",
-  "final_reviewer": "Independent GPT-6.1 Sol",
-  "local_focused_cpu_tests": 9,
-  "local_full_cpu_tests": 109,
-  "remote_focused_cpu_tests": 9,
+  "source_commit": "6acd9dab4d6a8d8a8cd2aea23d7ea28484ca319e",
+  "code_review": "passed_ready_not_executed_v2",
+  "local_tests": {
+    "probability": 25,
+    "supervision": 6,
+    "full": 131
+  },
+  "remote_tests": {
+    "full": 116,
+    "includes_probability_and_supervision_tests": 31,
+    "local_only_test_file": "test_prediction_analysis.py (15 tests)"
+  },
   "budget": {
     "max_generate_calls": 3,
     "max_explicit_teacher_forwards": 9,
@@ -31,20 +39,33 @@
     ],
     "max_new_tokens": 512
   },
-  "resource_observation": "validation/failed-pre-gpu-sync.json",
-  "blocked_gpu1_pids": [
-    2801775
-  ],
-  "old_early100_campaign_sha256": "f6be4d5322fba1fb03d89b311017220506fff83ffa238d22614fb1e97ea1c279",
-  "personaplex_pid2154793_preserved": true,
-  "automatic_wait_queue": false,
-  "automatic_retry": false,
-  "training_queue": false,
-  "next_gate": "Stop this failed attempt. A future explicitly resumed A attempt needs a new run path and stable resource window under the same finite budget; preserve this partial run and do not replay the existing-path launch script.",
-  "last_resource_check_utc": "2026-10-25T05:03:13.765002+00:00",
-  "resource_recheck_outcome": "An idle GPU1 permitted campaign dispatch, but a foreign task appeared during base SHA verification. The stage preflight stopped before execute; zero workers/model calls. No retry, B or training.",
+  "resource_observation": "validation/supervision-gpu-recheck-20261025T053307Z.json",
+  "last_resource_check_utc": "2026-10-25T05:33:07.707540+00:00",
   "blocked_device_indices": [
+    0,
     1
+  ],
+  "blocked_gpu1_pids": [
+    2836827
+  ],
+  "candidate_device_observations": [
+    {
+      "index": 0,
+      "utilization_percent": 100,
+      "memory_free_mib": 49626,
+      "compute_pids": [
+        2154793,
+        2836182
+      ]
+    },
+    {
+      "index": 1,
+      "utilization_percent": 91,
+      "memory_free_mib": 71882,
+      "compute_pids": [
+        2836827
+      ]
+    }
   ],
   "authorized_candidate_devices": [
     0,
@@ -52,16 +73,22 @@
   ],
   "authorized_current_stage": "A only; report before deciding B",
   "automatic_enter_stage_b": false,
-  "launch_receipt": "validation/launch-receipt.json",
-  "launched_utc": "2026-10-25T05:03:41.012794+00:00",
-  "remote_campaign_status": "failed",
-  "campaign_launch_dispatched": true,
-  "model_worker_launched": false,
-  "error": "RuntimeError: Physical GPU1 has other compute applications; no launch: [['GPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c', '2801775', '/home/huaqinzhao/miniconda3/envs/loopvlm-h100/bin/python']]",
-  "campaign_elapsed_seconds": 48.8445405960083,
-  "dispatch_to_failure_seconds": 61.93575620651245,
-  "partial_run_files": 6,
-  "partial_run_bytes": 72502,
-  "partial_sync_receipt": "validation/failed-pre-gpu-sync.json",
-  "field_semantics": "gpu_run_launched means a model worker actually started; campaign_launch_dispatched records supervisor launch separately."
+  "automatic_wait_queue": false,
+  "automatic_retry": false,
+  "training_queue": false,
+  "personaplex_pid2154793_preserved": true,
+  "old_early100_campaign_sha256": "f6be4d5322fba1fb03d89b311017220506fff83ffa238d22614fb1e97ea1c279",
+  "prior_attempt": {
+    "intended_remote_run": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261023-a",
+    "status": "failed_pre_gpu_resource_gate",
+    "remote_campaign_status": "failed",
+    "actual_generate_calls": 0,
+    "actual_explicit_teacher_forward_calls": 0,
+    "partial_sync_receipt": "validation/failed-pre-gpu-sync.json",
+    "error": "RuntimeError: Physical GPU1 has other compute applications; no launch: [['GPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c', '2801775', '/home/huaqinzhao/miniconda3/envs/loopvlm-h100/bin/python']]"
+  },
+  "readiness_report": "SUPERVISION_UPDATE_2026-10-25.md",
+  "deployment_receipt": "validation/supervision-deployment.json",
+  "next_gate": "On a later authorized resume recheck both GPUs, source SHA, lock and disk, then at most one attempt in the still-new A2 run directory under the original budget. Do not replay or overwrite the prior failed run.",
+  "resource_recheck_outcome": "After supervision fixes, code review, local131 and remote116 CPU passes, both GPUs have foreign compute applications. A2 was not created or launched; zero A2 model calls, no training/B, no task stopped."
 }

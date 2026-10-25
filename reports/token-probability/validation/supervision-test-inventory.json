@@ -6,5 +6,5 @@
   ],
   "remote_only": [],
   "different_sha": [],
-  "note": "Readonly test inventory, no GPU query/model call. Remote overlay intentionally contains a smaller historical test tree; final remote validation count must be reported as actual, not claimed identical to local130."
+  "note": "Readonly test inventory, no GPU query/model call. Remote overlay lacks local-only test_prediction_analysis.py(15 tests); report current local/remote totals from their actual validation logs."
 }

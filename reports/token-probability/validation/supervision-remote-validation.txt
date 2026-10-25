@@ -1,0 +1,14 @@
+{"event": "deployment_sha_match", "files": 12}
+............[Gloo] Rank 0 is connected to 1 peer ranks. Expected number of connected peer ranks is : 1
+[Gloo] Rank 1 is connected to 1 peer ranks. Expected number of connected peer ranks is : 1
+............................[Gloo] Rank 1 is connected to 1 peer ranks. Expected number of connected peer ranks is : 1
+[Gloo] Rank 0 is connected to 1 peer ranks. Expected number of connected peer ranks is : 1
+.The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+................................................................The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'eos_token_id': 2, 'bos_token_id': None, 'pad_token_id': 2}.
+...........
+----------------------------------------------------------------------
+Ran 116 tests in 26.779s
+
+OK
+
+{"event": "remote_cpu_validation", "returncode": 0, "elapsed_seconds": 30.83216718584299, "checked_utc": "2026-10-25T05:32:52.641744+00:00", "source_sha256": {"scripts/run_token_probability.py": "ea10ddfe07cbc40b751dc088d0b3927d7f1e09ac0a828d4ca720932140b16c6e", "src/asr_lab/probe_supervision.py": "2b6db25983f1d7a81feb902f793dbadb436b6afd4b1e5c166c64785256b8723b", "src/asr_lab/token_probability.py": "acc34e309468c950b02e930ee7be7d45a0394b092ad0b0a35e07f83016f3a43b", "tests/test_token_probability.py": "6a6427c0d37171d6c3a53871b500a78169c3019712fd289c437bafbec278df46", "tests/test_probe_supervision.py": "9a46efb0f3a187edf91a8f37a32008522a290e25df4c25be09fc36d213cd11b6", "docs/TOKEN_PROBABILITY_PROBE.md": "58b5f23c1f529ee7e72cf0f8a3a7122ae72684d44d8e84a4428bb64af932c9d8", "docs/superpowers/plans/2026-10-25-a-supervision.md": "0793e2aa805d20628255b540ffdfddd3205f2f1b557be8381f24d8cbe0a3ce30", "reports/token-probability/validation/supervision-launch.sh": "f99cec787abb3699d7f36d3296bddbf7f7c7f0c9d3c657b26872ea8f64cfb8d8", "reports/token-probability/validation/supervision-execution-intent.json": "14a418de0815d24fb598172027fc6debf61f16a75c8f0b96e771befce90820fc", "reports/token-probability/validation/supervision-code-review.md": "d98536f64f4e58a010b4276011cdd1547115ed56d78ac9fbe0b9a08d3cf209bc", "reports/token-probability/validation/supervision-local-validation-v2.txt": "796086ff9df3fca1efca288b8e81f659046ef356996500d5cbcfd1a3d2c80f63", "reports/token-probability/validation/supervision-freeze.json": "ec187ce03c5e4bf19205f9914f28507158f44c195e11c5b47d9d691927b1a6a6"}}
