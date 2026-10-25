@@ -19,3 +19,9 @@ SHA-bound reviewed source:
 - supervision-launch.sh:f99cec787abb3699d7f36d3296bddbf7f7c7f0c9d3c657b26872ea8f64cfb8d8
 
 No runtime result is approved by this review. Parent must deploy exact files, complete remote CPU validation and refresh GPU0/1/lock/disk/source gates before a single fresh run.
+
+## Final v2 delta review (supersedes runner/test SHA above)
+
+Remote CPU validation exposed a genuine pre-cleanup failure-publication gap in v1. The slow-tree regression saw running rather than budget_stopped under a0.4s Linux budget. Failed logs/deployment are preserved under v1-failed names. The new source commits primary failure plus cleanup_pending atomically before expensive teardown, with unknown invocation counts for launched unvalidated workers; the absolute deadline is not reset. The tiny timer regression now isolates external sampler/cleanup latency; a separate ten-second real fake-resource integration still covers the sampler.
+
+Independent probability_review scoped review PASS,1/1 new durable-failure regression in0.405s, diff check passed. Final SHA runner ea10ddfe07cbc40b751dc088d0b3927d7f1e09ac0a828d4ca720932140b16c6e; test_token_probability.py6a6427c0d37171d6c3a53871b500a78169c3019712fd289c437bafbec278df46. Helper/worker/launcher signatures unchanged. Local final25+6 focused /131 full CPU tests pass; remote rerun remains required. No A or model call has yet been made in this new attempt.

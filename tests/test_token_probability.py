@@ -205,9 +205,13 @@ class ProbabilityLifecycleRegressions(unittest.TestCase):
         from unittest.mock import patch
         with TemporaryDirectory() as temp:
             root=Path(temp);args=self.args(root,.4);started=time.monotonic()
-            # The read-only hardware boundary is stubbed; the real timer, lifecycle and locks run.
+            # Timer/tree/locks/receipts are real; external sampler/cleanup are deterministic.
+            # The separate ten-second fake-resource integration exercises the actual sampler.
+            from types import SimpleNamespace
+            sampler=SimpleNamespace(pid=123456,returncode=0,poll=lambda:None)
             with patch.object(self.runner,'tree_size',side_effect=lambda *_:(time.sleep(2) or 0)), \
                  patch.object(self.runner,'resource_snapshot',return_value={'gpus':[],'compute_apps':[],'disk_free_bytes':1},create=True), \
+                 patch.object(self.runner.subprocess,'Popen',return_value=sampler),patch.object(self.runner,'stop_owned'), \
                  patch.object(self.runner.ProbabilityCampaign,'run') as run, \
                  patch('sys.argv',['run_token_probability.py','--run-dir',str(args.run_dir),'--project-root',str(root),'--max-wall-seconds','.4']):
                 with self.assertRaises(self.runner.BudgetExpired):self.runner.main()
@@ -419,3 +423,41 @@ class ProbabilityAbsoluteBoundaryRegressions(unittest.TestCase):
                 with self.assertRaises(self.runner.BudgetExpired):self.runner.run_campaign(args)
             launch.assert_not_called()
             self.assertEqual(self.runner.read_json(args.run_dir/'campaign.json')['status'],'budget_stopped')
+
+
+class ProbabilityDurableFailureRegressions(unittest.TestCase):
+    setUpClass=classmethod(ProbabilityLifecycleRegressions.setUpClass.__func__)
+    args=ProbabilityLifecycleRegressions.args
+
+    def test_primary_budget_failure_is_durable_before_slow_finalization_and_blocked_terminal_write(self):
+        import time
+        from pathlib import Path
+        from tempfile import TemporaryDirectory
+        from types import SimpleNamespace
+        from unittest.mock import patch
+        sampler=SimpleNamespace(pid=123456,returncode=0,poll=lambda:None)
+        observed=[];original_observation=self.runner.write_observation
+        def slow_finalize(campaign):
+            observed.append(self.runner.read_json(campaign.directory/'campaign.json')['status'])
+            # External owned cleanup is stubbed; close the actual locks before simulating a slow boundary.
+            campaign.owned=[]
+            for handle in campaign.locks:handle.close()
+            campaign.locks=[]
+            time.sleep(2)
+        def terminal_write(*args,**kwargs):
+            if kwargs.get('terminal'):time.sleep(2)
+            return original_observation(*args,**kwargs)
+        with TemporaryDirectory() as temp:
+            root=Path(temp);args=self.args(root,.4);started=time.monotonic()
+            with patch.object(self.runner,'tree_size',side_effect=lambda *_:(time.sleep(2) or 0)), \
+                 patch.object(self.runner,'resource_snapshot',return_value={}), \
+                 patch.object(self.runner.subprocess,'Popen',return_value=sampler), \
+                 patch.object(self.runner.ProbabilityCampaign,'finalize',slow_finalize), \
+                 patch.object(self.runner,'write_observation',side_effect=terminal_write), \
+                 patch.object(self.runner.ProbabilityCampaign,'run') as run:
+                with self.assertRaises(self.runner.BudgetExpired):self.runner.run_campaign(args)
+            self.assertLess(time.monotonic()-started,.65);run.assert_not_called()
+            self.assertEqual(observed,['budget_stopped'])
+            state=self.runner.read_json(args.run_dir/'campaign.json')
+            self.assertEqual(state['status'],'budget_stopped');self.assertEqual(state['actual_generate_calls'],0)
+            self.assertTrue(state['cleanup_pending']);self.assertEqual(state['owned_processes_remaining'],[123456])

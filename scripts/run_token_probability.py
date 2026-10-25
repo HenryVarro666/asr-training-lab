@@ -322,7 +322,7 @@ class ProbabilityCampaign(Campaign):
             except BaseException as error:errors.append(f'{type(error).__name__}: {error}')
         for handle in reversed(self.locks):handle.close()
         self.locks=[]
-        self.state.update(cleanup_elapsed_seconds=time.monotonic()-cleanup_started,owned_processes_remaining=[child.pid for child in self.owned])
+        self.state.update(cleanup_elapsed_seconds=time.monotonic()-cleanup_started,owned_processes_remaining=[child.pid for child in self.owned],cleanup_pending=bool(self.owned))
         if errors:
             self.state.update(status='failed' if self.state['status']=='complete' else self.state['status'],cleanup_errors=errors)
         try:self.observe(terminal=True,campaign_status='complete' if completion_pending and not errors else self.state['status'])
@@ -425,6 +425,23 @@ def run_campaign(args,started=None,started_unix=None):
         if getattr(campaign,'owns_directory',False):
             campaign.state.update(status='budget_stopped' if isinstance(problem,BudgetExpired) else ('interrupted' if isinstance(problem,KeyboardInterrupt) else 'failed'),
                 error=f'{type(problem).__name__}: {problem}',automatic_training=False)
+            # Publish the primary failure before ps, teardown, resource queries or reporting can consume the cleanup window.
+            campaign.finalizing=True
+            pending=[row['name'] for row in campaign.state.get('commands',[]) if row.get('worker_started')
+                and row['name'] not in campaign.state.get('validated_workers',[])]
+            if pending:
+                campaign.state.update(actual_generate_calls=None,actual_teacher_forward_calls=None)
+                evidence=dict(campaign.state.get('observed_evidence',{}))
+                evidence['unknown_invocation_workers']=sorted(set(evidence.get('unknown_invocation_workers',[])+pending))
+                campaign.state['observed_evidence']=evidence
+            campaign.state.update(cleanup_pending=True,cleanup_elapsed_seconds=0.,
+                owned_processes_remaining=[child.pid for child in campaign.owned],
+                elapsed_seconds=time.monotonic()-campaign.started_monotonic,updated_unix=time.time())
+            try:
+                signal.setitimer(signal.ITIMER_REAL,max(.000001,deadline-time.monotonic()))
+                atomic_json(campaign.directory/'campaign.json',campaign.state)
+            except BaseException as receipt_error:
+                campaign.state['primary_failure_receipt_error']=f'{type(receipt_error).__name__}: {receipt_error}'
     finally:
         signal.setitimer(signal.ITIMER_REAL,0)
         if getattr(campaign,'owns_directory',False):

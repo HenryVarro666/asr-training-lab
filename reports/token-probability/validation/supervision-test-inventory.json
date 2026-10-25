@@ -1,0 +1,10 @@
+{
+  "local_test_files": 13,
+  "remote_test_files": 12,
+  "local_only": [
+    "test_prediction_analysis.py"
+  ],
+  "remote_only": [],
+  "different_sha": [],
+  "note": "Readonly test inventory, no GPU query/model call. Remote overlay intentionally contains a smaller historical test tree; final remote validation count must be reported as actual, not claimed identical to local130."
+}

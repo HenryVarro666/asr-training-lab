@@ -1,0 +1,24 @@
+{"command": "CUDA_VISIBLE_DEVICES='' PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -p test_token_probability.py", "exit_code": 0, "elapsed_seconds": 14.293091166997328}
+.........................
+----------------------------------------------------------------------
+Ran 25 tests in 11.831s
+
+OK
+
+{"command": "CUDA_VISIBLE_DEVICES='' PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -p test_probe_supervision.py", "exit_code": 0, "elapsed_seconds": 0.4625742500065826}
+......
+----------------------------------------------------------------------
+Ran 6 tests in 0.395s
+
+OK
+
+{"command": "CUDA_VISIBLE_DEVICES='' PYTHONPATH=src .venv/bin/python -m unittest discover -s tests", "exit_code": 0, "elapsed_seconds": 18.57370087498566}
+........................................................The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+................................................................The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'eos_token_id': 2, 'bos_token_id': None, 'pad_token_id': 2}.
+...........
+----------------------------------------------------------------------
+Ran 131 tests in 16.499s
+
+OK
+
+{"command": "CUDA_VISIBLE_DEVICES='' PYTHONPATH=src git diff --check", "exit_code": 0, "elapsed_seconds": 0.00936949998140335}

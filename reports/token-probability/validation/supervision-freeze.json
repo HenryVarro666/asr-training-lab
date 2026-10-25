@@ -1,17 +1,19 @@
 {
   "status": "passed_ready_not_executed",
-  "frozen_utc": "2026-10-25T05:27:39.675519+00:00",
+  "version": 2,
+  "previous_source_commit": "7c174ca81bf37a64bc1ba7d5a7d2feae8be0e565",
+  "frozen_utc": "2026-10-25T05:31:54.475979+00:00",
   "local_tests": {
-    "probability": 24,
+    "probability": 25,
     "supervision": 6,
-    "full": 130
+    "full": 131
   },
-  "independent_boundary_tests": 4,
+  "independent_boundary_tests": 5,
   "actual_new_model_calls": 0,
   "files": {
     "scripts/run_token_probability.py": {
-      "bytes": 34494,
-      "sha256": "82f7f95d91b7ae39044899cf12870c3cbc9aa58723baab3a59a118e4e10f7b43"
+      "bytes": 35882,
+      "sha256": "ea10ddfe07cbc40b751dc088d0b3927d7f1e09ac0a828d4ca720932140b16c6e"
     },
     "src/asr_lab/probe_supervision.py": {
       "bytes": 6840,
@@ -22,8 +24,8 @@
       "sha256": "acc34e309468c950b02e930ee7be7d45a0394b092ad0b0a35e07f83016f3a43b"
     },
     "tests/test_token_probability.py": {
-      "bytes": 29218,
-      "sha256": "2eef00dd0e354a1c1698247a53566f4d304a20279a8104328d72a20265f86cc9"
+      "bytes": 31904,
+      "sha256": "6a6427c0d37171d6c3a53871b500a78169c3019712fd289c437bafbec278df46"
     },
     "tests/test_probe_supervision.py": {
       "bytes": 5343,
@@ -42,16 +44,16 @@
       "sha256": "f99cec787abb3699d7f36d3296bddbf7f7c7f0c9d3c657b26872ea8f64cfb8d8"
     },
     "reports/token-probability/validation/supervision-execution-intent.json": {
-      "bytes": 1599,
-      "sha256": "4148ebe01e70e39aa83b10c25bd123374b7b9ed6b95d2911518de07d64678747"
+      "bytes": 1616,
+      "sha256": "14a418de0815d24fb598172027fc6debf61f16a75c8f0b96e771befce90820fc"
     },
     "reports/token-probability/validation/supervision-code-review.md": {
-      "bytes": 2328,
-      "sha256": "16bad964e669a88ad842addc22c60daba24a64c88c38c54acd3a409f360852a8"
+      "bytes": 3447,
+      "sha256": "d98536f64f4e58a010b4276011cdd1547115ed56d78ac9fbe0b9a08d3cf209bc"
     },
-    "reports/token-probability/validation/supervision-local-validation.txt": {
-      "bytes": 4820,
-      "sha256": "f7fd26d238172229bd83fb12ffb27b536333094b148c1ea43305c1514d141d90"
+    "reports/token-probability/validation/supervision-local-validation-v2.txt": {
+      "bytes": 1534,
+      "sha256": "796086ff9df3fca1efca288b8e81f659046ef356996500d5cbcfd1a3d2c80f63"
     }
   }
 }

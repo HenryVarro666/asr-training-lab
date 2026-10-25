@@ -21,7 +21,7 @@
     "filesystem_free_reserve_gib": 500,
     "post_cpu_audit_seconds": 600
   },
-  "source_identity_status": "local_cpu130_and_independent_review_passed_not_executed",
+  "source_identity_status": "v2_local_cpu131_and_independent_incremental_review_passed_remote_pending",
   "pinned_references": {
     "inputs/trajectory-reference.json": "6753b127d40288a558761c6b8e79964f07af7e96f4e85964a0a8b66c26b03f49",
     "inputs/upstream-probability-source.json": "d8dfc1cb079b5d58994aa6ca345a7cddff9e13cc7f8b8fcc34ffd3c14d1f1f40"

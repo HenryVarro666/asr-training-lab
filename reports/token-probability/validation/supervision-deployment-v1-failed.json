@@ -1,0 +1,73 @@
+{
+  "status": "failed",
+  "local_source_commit": "7c174ca81bf37a64bc1ba7d5a7d2feae8be0e565",
+  "files": {
+    "scripts/run_token_probability.py": {
+      "bytes": 34494,
+      "sha256": "82f7f95d91b7ae39044899cf12870c3cbc9aa58723baab3a59a118e4e10f7b43"
+    },
+    "src/asr_lab/probe_supervision.py": {
+      "bytes": 6840,
+      "sha256": "2b6db25983f1d7a81feb902f793dbadb436b6afd4b1e5c166c64785256b8723b"
+    },
+    "src/asr_lab/token_probability.py": {
+      "bytes": 22697,
+      "sha256": "acc34e309468c950b02e930ee7be7d45a0394b092ad0b0a35e07f83016f3a43b"
+    },
+    "tests/test_token_probability.py": {
+      "bytes": 29218,
+      "sha256": "2eef00dd0e354a1c1698247a53566f4d304a20279a8104328d72a20265f86cc9"
+    },
+    "tests/test_probe_supervision.py": {
+      "bytes": 5343,
+      "sha256": "9a46efb0f3a187edf91a8f37a32008522a290e25df4c25be09fc36d213cd11b6"
+    },
+    "docs/TOKEN_PROBABILITY_PROBE.md": {
+      "bytes": 17918,
+      "sha256": "58b5f23c1f529ee7e72cf0f8a3a7122ae72684d44d8e84a4428bb64af932c9d8"
+    },
+    "docs/superpowers/plans/2026-10-25-a-supervision.md": {
+      "bytes": 4633,
+      "sha256": "0793e2aa805d20628255b540ffdfddd3205f2f1b557be8381f24d8cbe0a3ce30"
+    },
+    "reports/token-probability/validation/supervision-launch.sh": {
+      "bytes": 1526,
+      "sha256": "f99cec787abb3699d7f36d3296bddbf7f7c7f0c9d3c657b26872ea8f64cfb8d8"
+    },
+    "reports/token-probability/validation/supervision-execution-intent.json": {
+      "bytes": 1599,
+      "sha256": "4148ebe01e70e39aa83b10c25bd123374b7b9ed6b95d2911518de07d64678747"
+    },
+    "reports/token-probability/validation/supervision-code-review.md": {
+      "bytes": 2328,
+      "sha256": "16bad964e669a88ad842addc22c60daba24a64c88c38c54acd3a409f360852a8"
+    },
+    "reports/token-probability/validation/supervision-local-validation.txt": {
+      "bytes": 4820,
+      "sha256": "f7fd26d238172229bd83fb12ffb27b536333094b148c1ea43305c1514d141d90"
+    },
+    "reports/token-probability/validation/supervision-freeze.json": {
+      "bytes": 2098,
+      "sha256": "5fa92deba75588e5819559c759490fa053bb0217771fa465194e08a4b644f0f8"
+    }
+  },
+  "command": [
+    "ssh",
+    "-o",
+    "BatchMode=yes",
+    "-o",
+    "PasswordAuthentication=no",
+    "-o",
+    "ConnectTimeout=10",
+    "-o",
+    "ControlPath=/tmp/codex-asr-tensorboard-%C",
+    "exx@100.70.230.73",
+    "/mnt/raid/asr-lab/venv/bin/python",
+    "-"
+  ],
+  "returncode": 1,
+  "elapsed_seconds": 32.036759082984645,
+  "remote_model_calls": 0,
+  "remote_training_updates": 0,
+  "log": "reports/token-probability/validation/supervision-remote-validation.txt"
+}
