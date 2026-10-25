@@ -1,6 +1,6 @@
 {
   "status": "ready_blocked_gpu_busy",
-  "recorded_utc": "2026-10-25T01:21:04.476680+00:00",
+  "recorded_utc": "2026-10-25T01:26:49.298680+00:00",
   "intended_remote_run": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261023-a",
   "remote_run_exists": false,
   "gpu_run_launched": false,
@@ -31,11 +31,11 @@
     ],
     "max_new_tokens": 512
   },
-  "resource_observation": "validation/gpu-recheck-20261025T012032Z.json",
+  "resource_observation": "validation/gpu-recheck-20261025T012628Z.json",
   "blocked_gpu1_pids": [
     2581010,
-    2586318,
-    2587684
+    2587684,
+    2591635
   ],
   "old_early100_campaign_sha256": "f6be4d5322fba1fb03d89b311017220506fff83ffa238d22614fb1e97ea1c279",
   "personaplex_pid2154793_preserved": true,
@@ -43,8 +43,8 @@
   "automatic_retry": false,
   "training_queue": false,
   "next_gate": "On a later resume recheck both physical GPUs, lock, disk and source identity. If only GPU0 is available, minimally parameterize and review the frozen GPU1-only worker before one bounded launch; preserve all other tasks and the same 3+9/1200s/240s/2GiB/512-token limits.",
-  "last_resource_check_utc": "2026-10-25T01:20:33.860640+00:00",
-  "resource_recheck_outcome": "Both GPU0 and GPU1 remain occupied; no model calls, source-device change or interruption of other tasks.",
+  "last_resource_check_utc": "2026-10-25T01:26:29.357676+00:00",
+  "resource_recheck_outcome": "Stage A remains unlaunched: both GPUs have other tasks and utilization100%. No task stopped, no new training, no stage B.",
   "blocked_device_indices": [
     0,
     1
@@ -53,26 +53,26 @@
     {
       "index": 0,
       "uuid": "GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c",
-      "memory_used_mib": 61122,
-      "memory_free_mib": 34198,
-      "utilization_percent": 85,
+      "memory_used_mib": 71978,
+      "memory_free_mib": 23342,
+      "utilization_percent": 100,
       "compute_pids": [
         2154793,
-        2583428,
-        2586966
+        2586966,
+        2597576
       ],
       "has_other_tasks": true
     },
     {
       "index": 1,
       "uuid": "GPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c",
-      "memory_used_mib": 63816,
-      "memory_free_mib": 31505,
+      "memory_used_mib": 65544,
+      "memory_free_mib": 29776,
       "utilization_percent": 100,
       "compute_pids": [
         2581010,
-        2586318,
-        2587684
+        2587684,
+        2591635
       ],
       "has_other_tasks": true
     }
@@ -80,5 +80,7 @@
   "authorized_candidate_devices": [
     0,
     1
-  ]
+  ],
+  "authorized_current_stage": "A only; report before deciding B",
+  "automatic_enter_stage_b": false
 }
