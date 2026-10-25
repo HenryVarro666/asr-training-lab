@@ -1,0 +1,2690 @@
+[
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "1272-135031-0018",
+    "reference_words": 9,
+    "speaker_id": "1272",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 1
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 1,
+      "base": 0
+    },
+    "id": "1272-141231-0004",
+    "reference_words": 10,
+    "speaker_id": "1272",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "1272-141231-0005",
+    "reference_words": 18,
+    "speaker_id": "1272",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 1,
+      "25": 1,
+      "50": 1,
+      "base": 1
+    },
+    "id": "1462-170138-0017",
+    "reference_words": 17,
+    "speaker_id": "1462",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 1
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 1,
+      "base": 0
+    },
+    "id": "1462-170142-0035",
+    "reference_words": 7,
+    "speaker_id": "1462",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "1462-170142-0037",
+    "reference_words": 11,
+    "speaker_id": "1462",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "1673-143396-0001",
+    "reference_words": 36,
+    "speaker_id": "1673",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 2,
+      "50": 1
+    },
+    "edits": {
+      "100": 0,
+      "25": 2,
+      "50": 1,
+      "base": 0
+    },
+    "id": "1673-143396-0004",
+    "reference_words": 60,
+    "speaker_id": "1673",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "worse",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 1,
+      "25": 2,
+      "50": 2
+    },
+    "edits": {
+      "100": 2,
+      "25": 3,
+      "50": 3,
+      "base": 1
+    },
+    "id": "1673-143397-0000",
+    "reference_words": 23,
+    "speaker_id": "1673",
+    "state_vs_base": {
+      "100": "worse",
+      "25": "worse",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "174-168635-0006",
+    "reference_words": 13,
+    "speaker_id": "174",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 2,
+      "25": 2,
+      "50": 2,
+      "base": 2
+    },
+    "id": "174-50561-0018",
+    "reference_words": 3,
+    "speaker_id": "174",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "174-84280-0000",
+    "reference_words": 4,
+    "speaker_id": "174",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "174-84280-0014",
+    "reference_words": 6,
+    "speaker_id": "174",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "1919-142785-0003",
+    "reference_words": 15,
+    "speaker_id": "1919",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "1919-142785-0020",
+    "reference_words": 25,
+    "speaker_id": "1919",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 3,
+      "25": 3,
+      "50": 3
+    },
+    "edits": {
+      "100": 3,
+      "25": 3,
+      "50": 3,
+      "base": 0
+    },
+    "id": "1919-142785-0061",
+    "reference_words": 44,
+    "speaker_id": "1919",
+    "state_vs_base": {
+      "100": "worse",
+      "25": "worse",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "1988-147956-0013",
+    "reference_words": 9,
+    "speaker_id": "1988",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 1,
+      "25": 1,
+      "50": 0
+    },
+    "edits": {
+      "100": 2,
+      "25": 2,
+      "50": 1,
+      "base": 1
+    },
+    "id": "1988-147956-0017",
+    "reference_words": 23,
+    "speaker_id": "1988",
+    "state_vs_base": {
+      "100": "worse",
+      "25": "worse",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "1988-148538-0003",
+    "reference_words": 14,
+    "speaker_id": "1988",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 1,
+      "25": 1,
+      "50": 0
+    },
+    "edits": {
+      "100": 1,
+      "25": 1,
+      "50": 0,
+      "base": 0
+    },
+    "id": "1993-147149-0002",
+    "reference_words": 16,
+    "speaker_id": "1993",
+    "state_vs_base": {
+      "100": "worse",
+      "25": "worse",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": -2,
+      "25": 1,
+      "50": -2
+    },
+    "edits": {
+      "100": 1,
+      "25": 4,
+      "50": 1,
+      "base": 3
+    },
+    "id": "1993-147149-0024",
+    "reference_words": 42,
+    "speaker_id": "1993",
+    "state_vs_base": {
+      "100": "improved",
+      "25": "worse",
+      "50": "improved"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "1993-147966-0004",
+    "reference_words": 15,
+    "speaker_id": "1993",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 1
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 1,
+      "base": 0
+    },
+    "id": "2035-147960-0015",
+    "reference_words": 4,
+    "speaker_id": "2035",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 1,
+      "25": 1,
+      "50": 1,
+      "base": 1
+    },
+    "id": "2035-147961-0021",
+    "reference_words": 31,
+    "speaker_id": "2035",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "2035-152373-0006",
+    "reference_words": 16,
+    "speaker_id": "2035",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 1,
+      "25": 0,
+      "50": 1
+    },
+    "edits": {
+      "100": 1,
+      "25": 0,
+      "50": 1,
+      "base": 0
+    },
+    "id": "2078-142845-0030",
+    "reference_words": 30,
+    "speaker_id": "2078",
+    "state_vs_base": {
+      "100": "worse",
+      "25": "tied",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 2,
+      "25": 1,
+      "50": 1
+    },
+    "edits": {
+      "100": 2,
+      "25": 1,
+      "50": 1,
+      "base": 0
+    },
+    "id": "2078-142845-0034",
+    "reference_words": 19,
+    "speaker_id": "2078",
+    "state_vs_base": {
+      "100": "worse",
+      "25": "worse",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "2078-142845-0043",
+    "reference_words": 51,
+    "speaker_id": "2078",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 3,
+      "25": 3,
+      "50": 5
+    },
+    "edits": {
+      "100": 4,
+      "25": 4,
+      "50": 6,
+      "base": 1
+    },
+    "id": "2086-149220-0019",
+    "reference_words": 42,
+    "speaker_id": "2086",
+    "state_vs_base": {
+      "100": "worse",
+      "25": "worse",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 1,
+      "25": 0,
+      "50": 2
+    },
+    "edits": {
+      "100": 1,
+      "25": 0,
+      "50": 2,
+      "base": 0
+    },
+    "id": "2086-149220-0031",
+    "reference_words": 18,
+    "speaker_id": "2086",
+    "state_vs_base": {
+      "100": "worse",
+      "25": "tied",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "2086-149220-0043",
+    "reference_words": 7,
+    "speaker_id": "2086",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 1,
+      "50": 1
+    },
+    "edits": {
+      "100": 0,
+      "25": 1,
+      "50": 1,
+      "base": 0
+    },
+    "id": "2086-149220-0049",
+    "reference_words": 36,
+    "speaker_id": "2086",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "worse",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "2277-149874-0002",
+    "reference_words": 16,
+    "speaker_id": "2277",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "2277-149874-0006",
+    "reference_words": 8,
+    "speaker_id": "2277",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "2277-149897-0003",
+    "reference_words": 18,
+    "speaker_id": "2277",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "2277-149897-0012",
+    "reference_words": 12,
+    "speaker_id": "2277",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 2,
+      "25": 3,
+      "50": 2
+    },
+    "edits": {
+      "100": 2,
+      "25": 3,
+      "50": 2,
+      "base": 0
+    },
+    "id": "2412-153947-0011",
+    "reference_words": 31,
+    "speaker_id": "2412",
+    "state_vs_base": {
+      "100": "worse",
+      "25": "worse",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "2412-153948-0003",
+    "reference_words": 29,
+    "speaker_id": "2412",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 1,
+      "25": 0,
+      "50": 1
+    },
+    "edits": {
+      "100": 1,
+      "25": 0,
+      "50": 1,
+      "base": 0
+    },
+    "id": "2412-153948-0014",
+    "reference_words": 38,
+    "speaker_id": "2412",
+    "state_vs_base": {
+      "100": "worse",
+      "25": "tied",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "2412-153954-0021",
+    "reference_words": 22,
+    "speaker_id": "2412",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "2428-83699-0024",
+    "reference_words": 9,
+    "speaker_id": "2428",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": -1,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 1,
+      "50": 1,
+      "base": 1
+    },
+    "id": "2428-83699-0027",
+    "reference_words": 18,
+    "speaker_id": "2428",
+    "state_vs_base": {
+      "100": "improved",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "2428-83705-0018",
+    "reference_words": 17,
+    "speaker_id": "2428",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 1,
+      "50": 1
+    },
+    "edits": {
+      "100": 1,
+      "25": 2,
+      "50": 2,
+      "base": 1
+    },
+    "id": "251-136532-0005",
+    "reference_words": 13,
+    "speaker_id": "251",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "worse",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 2,
+      "25": 2,
+      "50": 0
+    },
+    "edits": {
+      "100": 3,
+      "25": 3,
+      "50": 1,
+      "base": 1
+    },
+    "id": "251-136532-0012",
+    "reference_words": 25,
+    "speaker_id": "251",
+    "state_vs_base": {
+      "100": "worse",
+      "25": "worse",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "251-137823-0025",
+    "reference_words": 6,
+    "speaker_id": "251",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "2803-154328-0011",
+    "reference_words": 17,
+    "speaker_id": "2803",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "2803-154328-0016",
+    "reference_words": 5,
+    "speaker_id": "2803",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 2,
+      "25": 2,
+      "50": 2,
+      "base": 2
+    },
+    "id": "2803-161169-0005",
+    "reference_words": 48,
+    "speaker_id": "2803",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 3,
+      "25": 2,
+      "50": 1
+    },
+    "edits": {
+      "100": 3,
+      "25": 2,
+      "50": 1,
+      "base": 0
+    },
+    "id": "2902-9008-0000",
+    "reference_words": 28,
+    "speaker_id": "2902",
+    "state_vs_base": {
+      "100": "worse",
+      "25": "worse",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "2902-9008-0009",
+    "reference_words": 14,
+    "speaker_id": "2902",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": -1,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 1,
+      "50": 1,
+      "base": 1
+    },
+    "id": "2902-9008-0015",
+    "reference_words": 5,
+    "speaker_id": "2902",
+    "state_vs_base": {
+      "100": "improved",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "3000-15664-0024",
+    "reference_words": 39,
+    "speaker_id": "3000",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 1,
+      "50": 0
+    },
+    "edits": {
+      "100": 2,
+      "25": 3,
+      "50": 2,
+      "base": 2
+    },
+    "id": "3000-15664-0034",
+    "reference_words": 46,
+    "speaker_id": "3000",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "worse",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 1,
+      "25": 1,
+      "50": 1
+    },
+    "edits": {
+      "100": 1,
+      "25": 1,
+      "50": 1,
+      "base": 0
+    },
+    "id": "3000-15664-0035",
+    "reference_words": 59,
+    "speaker_id": "3000",
+    "state_vs_base": {
+      "100": "worse",
+      "25": "worse",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "3081-166546-0042",
+    "reference_words": 16,
+    "speaker_id": "3081",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 2,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 2,
+      "50": 0,
+      "base": 0
+    },
+    "id": "3081-166546-0068",
+    "reference_words": 9,
+    "speaker_id": "3081",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "worse",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "3081-166546-0086",
+    "reference_words": 10,
+    "speaker_id": "3081",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": -2,
+      "25": 0,
+      "50": -2
+    },
+    "edits": {
+      "100": 0,
+      "25": 2,
+      "50": 0,
+      "base": 2
+    },
+    "id": "3170-137482-0014",
+    "reference_words": 9,
+    "speaker_id": "3170",
+    "state_vs_base": {
+      "100": "improved",
+      "25": "tied",
+      "50": "improved"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 1,
+      "50": 1
+    },
+    "edits": {
+      "100": 2,
+      "25": 3,
+      "50": 3,
+      "base": 2
+    },
+    "id": "3170-137482-0022",
+    "reference_words": 46,
+    "speaker_id": "3170",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "worse",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 3,
+      "25": 1,
+      "50": 2
+    },
+    "edits": {
+      "100": 3,
+      "25": 1,
+      "50": 2,
+      "base": 0
+    },
+    "id": "3170-137482-0038",
+    "reference_words": 42,
+    "speaker_id": "3170",
+    "state_vs_base": {
+      "100": "worse",
+      "25": "worse",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "3536-23268-0023",
+    "reference_words": 38,
+    "speaker_id": "3536",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 2,
+      "25": 2,
+      "50": 4
+    },
+    "edits": {
+      "100": 2,
+      "25": 2,
+      "50": 4,
+      "base": 0
+    },
+    "id": "3536-8226-0012",
+    "reference_words": 15,
+    "speaker_id": "3536",
+    "state_vs_base": {
+      "100": "worse",
+      "25": "worse",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 1,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 1,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "3536-8226-0027",
+    "reference_words": 7,
+    "speaker_id": "3536",
+    "state_vs_base": {
+      "100": "worse",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 1,
+      "25": 1,
+      "50": 1
+    },
+    "edits": {
+      "100": 1,
+      "25": 1,
+      "50": 1,
+      "base": 0
+    },
+    "id": "3576-138058-0003",
+    "reference_words": 7,
+    "speaker_id": "3576",
+    "state_vs_base": {
+      "100": "worse",
+      "25": "worse",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": -2,
+      "25": 0,
+      "50": -2
+    },
+    "edits": {
+      "100": 0,
+      "25": 2,
+      "50": 0,
+      "base": 2
+    },
+    "id": "3576-138058-0017",
+    "reference_words": 49,
+    "speaker_id": "3576",
+    "state_vs_base": {
+      "100": "improved",
+      "25": "tied",
+      "50": "improved"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 2,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 2,
+      "50": 0,
+      "base": 0
+    },
+    "id": "3576-138058-0025",
+    "reference_words": 17,
+    "speaker_id": "3576",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "worse",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 2,
+      "50": 1
+    },
+    "edits": {
+      "100": 0,
+      "25": 2,
+      "50": 1,
+      "base": 0
+    },
+    "id": "3752-4943-0002",
+    "reference_words": 26,
+    "speaker_id": "3752",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "worse",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "3752-4944-0010",
+    "reference_words": 10,
+    "speaker_id": "3752",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": -1,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 1,
+      "50": 1,
+      "base": 1
+    },
+    "id": "3752-4944-0044",
+    "reference_words": 5,
+    "speaker_id": "3752",
+    "state_vs_base": {
+      "100": "improved",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 2,
+      "50": 0
+    },
+    "edits": {
+      "100": 2,
+      "25": 4,
+      "50": 2,
+      "base": 2
+    },
+    "id": "3853-163249-0003",
+    "reference_words": 21,
+    "speaker_id": "3853",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "worse",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 1,
+      "25": 1,
+      "50": 1
+    },
+    "edits": {
+      "100": 1,
+      "25": 1,
+      "50": 1,
+      "base": 0
+    },
+    "id": "3853-163249-0046",
+    "reference_words": 58,
+    "speaker_id": "3853",
+    "state_vs_base": {
+      "100": "worse",
+      "25": "worse",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "3853-163249-0055",
+    "reference_words": 12,
+    "speaker_id": "3853",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "422-122949-0003",
+    "reference_words": 48,
+    "speaker_id": "422",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 1,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 1,
+      "50": 0,
+      "base": 0
+    },
+    "id": "422-122949-0005",
+    "reference_words": 24,
+    "speaker_id": "422",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "worse",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 1,
+      "25": 1,
+      "50": 1
+    },
+    "edits": {
+      "100": 1,
+      "25": 1,
+      "50": 1,
+      "base": 0
+    },
+    "id": "422-122949-0011",
+    "reference_words": 46,
+    "speaker_id": "422",
+    "state_vs_base": {
+      "100": "worse",
+      "25": "worse",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "5338-24615-0009",
+    "reference_words": 9,
+    "speaker_id": "5338",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 2,
+      "25": 1,
+      "50": 2
+    },
+    "edits": {
+      "100": 2,
+      "25": 1,
+      "50": 2,
+      "base": 0
+    },
+    "id": "5338-24615-0014",
+    "reference_words": 34,
+    "speaker_id": "5338",
+    "state_vs_base": {
+      "100": "worse",
+      "25": "worse",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": -1,
+      "50": 0
+    },
+    "edits": {
+      "100": 1,
+      "25": 0,
+      "50": 1,
+      "base": 1
+    },
+    "id": "5338-284437-0024",
+    "reference_words": 18,
+    "speaker_id": "5338",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "improved",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "5338-284437-0025",
+    "reference_words": 5,
+    "speaker_id": "5338",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "5536-43358-0014",
+    "reference_words": 7,
+    "speaker_id": "5536",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 1,
+      "25": 0,
+      "50": 1
+    },
+    "edits": {
+      "100": 1,
+      "25": 0,
+      "50": 1,
+      "base": 0
+    },
+    "id": "5536-43359-0001",
+    "reference_words": 33,
+    "speaker_id": "5536",
+    "state_vs_base": {
+      "100": "worse",
+      "25": "tied",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "5536-43363-0008",
+    "reference_words": 35,
+    "speaker_id": "5536",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "5536-43363-0018",
+    "reference_words": 27,
+    "speaker_id": "5536",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "5694-64025-0009",
+    "reference_words": 14,
+    "speaker_id": "5694",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 1
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 1,
+      "base": 0
+    },
+    "id": "5694-64025-0011",
+    "reference_words": 26,
+    "speaker_id": "5694",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "5694-64029-0012",
+    "reference_words": 20,
+    "speaker_id": "5694",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 2,
+      "50": 1
+    },
+    "edits": {
+      "100": 1,
+      "25": 3,
+      "50": 2,
+      "base": 1
+    },
+    "id": "5895-34622-0001",
+    "reference_words": 12,
+    "speaker_id": "5895",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "worse",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": -2,
+      "25": -1,
+      "50": -2
+    },
+    "edits": {
+      "100": 0,
+      "25": 1,
+      "50": 0,
+      "base": 2
+    },
+    "id": "5895-34622-0005",
+    "reference_words": 23,
+    "speaker_id": "5895",
+    "state_vs_base": {
+      "100": "improved",
+      "25": "improved",
+      "50": "improved"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 3,
+      "25": 4,
+      "50": 2
+    },
+    "edits": {
+      "100": 3,
+      "25": 4,
+      "50": 2,
+      "base": 0
+    },
+    "id": "5895-34622-0017",
+    "reference_words": 24,
+    "speaker_id": "5895",
+    "state_vs_base": {
+      "100": "worse",
+      "25": "worse",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "6241-61943-0003",
+    "reference_words": 21,
+    "speaker_id": "6241",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 1,
+      "25": 1,
+      "50": 1
+    },
+    "edits": {
+      "100": 1,
+      "25": 1,
+      "50": 1,
+      "base": 0
+    },
+    "id": "6241-61943-0006",
+    "reference_words": 10,
+    "speaker_id": "6241",
+    "state_vs_base": {
+      "100": "worse",
+      "25": "worse",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 1,
+      "25": 1,
+      "50": 1
+    },
+    "edits": {
+      "100": 1,
+      "25": 1,
+      "50": 1,
+      "base": 0
+    },
+    "id": "6241-66616-0001",
+    "reference_words": 26,
+    "speaker_id": "6241",
+    "state_vs_base": {
+      "100": "worse",
+      "25": "worse",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "6295-244435-0005",
+    "reference_words": 13,
+    "speaker_id": "6295",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 2,
+      "25": 1,
+      "50": 1
+    },
+    "edits": {
+      "100": 2,
+      "25": 1,
+      "50": 1,
+      "base": 0
+    },
+    "id": "6295-64301-0008",
+    "reference_words": 7,
+    "speaker_id": "6295",
+    "state_vs_base": {
+      "100": "worse",
+      "25": "worse",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 1,
+      "50": 1
+    },
+    "edits": {
+      "100": 0,
+      "25": 1,
+      "50": 1,
+      "base": 0
+    },
+    "id": "6295-64301-0019",
+    "reference_words": 17,
+    "speaker_id": "6295",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "worse",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "6313-66125-0010",
+    "reference_words": 21,
+    "speaker_id": "6313",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 3,
+      "25": 2,
+      "50": 2
+    },
+    "edits": {
+      "100": 5,
+      "25": 4,
+      "50": 4,
+      "base": 2
+    },
+    "id": "6313-66129-0026",
+    "reference_words": 38,
+    "speaker_id": "6313",
+    "state_vs_base": {
+      "100": "worse",
+      "25": "worse",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 1,
+      "25": 4,
+      "50": 0
+    },
+    "edits": {
+      "100": 2,
+      "25": 5,
+      "50": 1,
+      "base": 1
+    },
+    "id": "6313-76958-0029",
+    "reference_words": 22,
+    "speaker_id": "6313",
+    "state_vs_base": {
+      "100": "worse",
+      "25": "worse",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "6313-76958-0031",
+    "reference_words": 8,
+    "speaker_id": "6313",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "6319-275224-0018",
+    "reference_words": 19,
+    "speaker_id": "6319",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 1,
+      "50": 1
+    },
+    "edits": {
+      "100": 0,
+      "25": 1,
+      "50": 1,
+      "base": 0
+    },
+    "id": "6319-64726-0000",
+    "reference_words": 31,
+    "speaker_id": "6319",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "worse",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "6319-64726-0001",
+    "reference_words": 49,
+    "speaker_id": "6319",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 2
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 2,
+      "base": 0
+    },
+    "id": "6345-64257-0020",
+    "reference_words": 8,
+    "speaker_id": "6345",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 1,
+      "50": 1
+    },
+    "edits": {
+      "100": 0,
+      "25": 1,
+      "50": 1,
+      "base": 0
+    },
+    "id": "6345-93302-0000",
+    "reference_words": 27,
+    "speaker_id": "6345",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "worse",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "6345-93302-0017",
+    "reference_words": 17,
+    "speaker_id": "6345",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 2,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 2,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "652-129742-0015",
+    "reference_words": 34,
+    "speaker_id": "652",
+    "state_vs_base": {
+      "100": "worse",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 1,
+      "25": 1,
+      "50": 1,
+      "base": 1
+    },
+    "id": "652-130726-0013",
+    "reference_words": 15,
+    "speaker_id": "652",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 2,
+      "25": 1,
+      "50": 2
+    },
+    "edits": {
+      "100": 2,
+      "25": 1,
+      "50": 2,
+      "base": 0
+    },
+    "id": "652-130737-0002",
+    "reference_words": 16,
+    "speaker_id": "652",
+    "state_vs_base": {
+      "100": "worse",
+      "25": "worse",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 1,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 2,
+      "25": 1,
+      "50": 1,
+      "base": 1
+    },
+    "id": "777-126732-0035",
+    "reference_words": 21,
+    "speaker_id": "777",
+    "state_vs_base": {
+      "100": "worse",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "777-126732-0070",
+    "reference_words": 26,
+    "speaker_id": "777",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 2,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 2,
+      "50": 0,
+      "base": 0
+    },
+    "id": "777-126732-0079",
+    "reference_words": 38,
+    "speaker_id": "777",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "worse",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 1
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 1,
+      "base": 0
+    },
+    "id": "7850-281318-0009",
+    "reference_words": 24,
+    "speaker_id": "7850",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 1,
+      "25": 1,
+      "50": 1,
+      "base": 1
+    },
+    "id": "7850-286674-0006",
+    "reference_words": 5,
+    "speaker_id": "7850",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "7850-73752-0001",
+    "reference_words": 18,
+    "speaker_id": "7850",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "7976-110124-0004",
+    "reference_words": 10,
+    "speaker_id": "7976",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 1,
+      "50": 0
+    },
+    "edits": {
+      "100": 5,
+      "25": 6,
+      "50": 5,
+      "base": 5
+    },
+    "id": "7976-110523-0012",
+    "reference_words": 55,
+    "speaker_id": "7976",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "worse",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 2,
+      "25": 1,
+      "50": 1
+    },
+    "edits": {
+      "100": 3,
+      "25": 2,
+      "50": 2,
+      "base": 1
+    },
+    "id": "7976-110523-0015",
+    "reference_words": 23,
+    "speaker_id": "7976",
+    "state_vs_base": {
+      "100": "worse",
+      "25": "worse",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 2,
+      "50": 2
+    },
+    "edits": {
+      "100": 0,
+      "25": 2,
+      "50": 2,
+      "base": 0
+    },
+    "id": "7976-110523-0020",
+    "reference_words": 28,
+    "speaker_id": "7976",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "worse",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "8297-275154-0001",
+    "reference_words": 26,
+    "speaker_id": "8297",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 1,
+      "25": 1,
+      "50": 1,
+      "base": 1
+    },
+    "id": "8297-275155-0009",
+    "reference_words": 22,
+    "speaker_id": "8297",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 1,
+      "50": 1
+    },
+    "edits": {
+      "100": 0,
+      "25": 1,
+      "50": 1,
+      "base": 0
+    },
+    "id": "8297-275155-0015",
+    "reference_words": 20,
+    "speaker_id": "8297",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "worse",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "84-121123-0019",
+    "reference_words": 9,
+    "speaker_id": "84",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 2,
+      "25": 2,
+      "50": 1
+    },
+    "edits": {
+      "100": 2,
+      "25": 2,
+      "50": 1,
+      "base": 0
+    },
+    "id": "84-121123-0020",
+    "reference_words": 21,
+    "speaker_id": "84",
+    "state_vs_base": {
+      "100": "worse",
+      "25": "worse",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "edits": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "id": "84-121123-0021",
+    "reference_words": 17,
+    "speaker_id": "84",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "tied",
+      "50": "tied"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 0,
+      "25": 2,
+      "50": 1
+    },
+    "edits": {
+      "100": 0,
+      "25": 2,
+      "50": 1,
+      "base": 0
+    },
+    "id": "8842-302196-0000",
+    "reference_words": 41,
+    "speaker_id": "8842",
+    "state_vs_base": {
+      "100": "tied",
+      "25": "worse",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 1,
+      "25": 1,
+      "50": 1
+    },
+    "edits": {
+      "100": 1,
+      "25": 1,
+      "50": 1,
+      "base": 0
+    },
+    "id": "8842-302201-0001",
+    "reference_words": 37,
+    "speaker_id": "8842",
+    "state_vs_base": {
+      "100": "worse",
+      "25": "worse",
+      "50": "worse"
+    }
+  },
+  {
+    "delta_vs_base": {
+      "100": 3,
+      "25": 5,
+      "50": 7
+    },
+    "edits": {
+      "100": 5,
+      "25": 7,
+      "50": 9,
+      "base": 2
+    },
+    "id": "8842-304647-0006",
+    "reference_words": 66,
+    "speaker_id": "8842",
+    "state_vs_base": {
+      "100": "worse",
+      "25": "worse",
+      "50": "worse"
+    }
+  }
+]

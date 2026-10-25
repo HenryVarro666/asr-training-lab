@@ -1,8 +1,8 @@
-# 单句逐token概率诊断：准备完成，GPU占用阻断
+# 单句逐token概率诊断：A尝试在worker前被资源门槛拦截
 
-2026-10-23（America/Chicago）恢复中断任务。本轮状态为 **ready_blocked_gpu_busy**：代码、预算、独立代码复核和两端CPU契约验证均已完成，**没有启动本轮GPU推理或训练，因此没有新的逐token概率结论或结果图片**。
+2026-10-25（America/Chicago）当前状态为 **failed_pre_gpu_resource_gate**：GPU1最初空闲，已按授权派发一次campaign；base权重SHA校验后发现其他任务新占用，原始campaign以failed退出。**worker未启动，实际0 generate / 0显式TF / 0更新、0概率矩阵、0结果图。** 未重试、未进入B。6份小型partial文件已跨机SHA核对；[执行总结](execution-summary.json)、[失败同步收据](validation/failed-pre-gpu-sync.json)及[改进建议](../../docs/EXPERIMENT_REVIEW_2026-10-25.md)记录详情。
 
-## 已完成与阻断
+## 准备阶段历史（下列资源快照不是当前状态）
 
 - 原始模型、50步、100步的固定输入和三条旧token轨迹已冻结，正确自然大小写27个token、正确全大写37个、循环512个；同一句`652-129742-0006`、同137-token prompt。
 - Sol完成独立worker/supervisor及概率取证：完整词表raw logits/processed scores、实际token/EOS/解析前后文本；三个固定轨迹按`P-1+j`评分，保存完整条件前缀和逐行候选/EOS指标。修正了产物重新哈希可能越过240秒后错误重置期限的问题，汇总也逐行检查总期限。
@@ -34,7 +34,7 @@ GPU必须先空闲。身份、输入、有效生成决策、旧生成轨迹漂�
 
 ## 恢复入口与记录
 
-以后明确恢复本阶段时，先刷新GPU1/锁/磁盘/源码校验，再执行[保存的单次命令](validation/launch-command.sh)。目前没有任何后台队列。完成真实run后才能同步矩阵、执行[独立审计](validation/audit_saved_evidence.py)及[绘图](validation/plot_evidence.py)；准备性日志不能升级为实验结果。
+当前旧run已存在且failed，不能直接重放[旧单次命令](validation/launch-command.sh)。以后明确恢复时，先取得稳定GPU窗口、核验空闲/锁/磁盘/源码，并为同预算建立新的run路径，保留本次partial；没有后台队列。完成真实run后才能同步矩阵、执行[独立审计](validation/audit_saved_evidence.py)及[绘图](validation/plot_evidence.py)；准备性日志不能升级为实验结果。
 
 - [机器可读当前状态](execution-summary.json)
 - [最终主机快照](validation/final-host.json)
@@ -59,3 +59,7 @@ GPU必须先空闲。身份、输入、有效生成决策、旧生成轨迹漂�
 2026-10-24 20:20:33 CDT 再次核查任一可用卡：GPU0仍有PersonaPlex及两个其他任务（2583428、2586966），利用率85%、空闲34198MiB（33.40GiB）；GPU1有三个其他任务（2581010、2586318、2587684），利用率100%、空闲31505MiB（30.77GiB）。两卡均未空闲，因此不启动、不停止其他任务。用户已授权任一空闲卡；若以后只有GPU0可用，先审查现有GPU1-only worker的必要设备参数改动，其他科学设置及预算不变。本次实际0生成／0评分forward／0训练更新，run不存在，旧Early100 SHA未变。[此次两卡快照](validation/gpu-recheck-20261025T012032Z.json)。
 
 2026-10-24 20:26:29 CDT 用户明确继续A阶段、结果汇报后再决定B。实查两卡均100%利用率：GPU0含PersonaPlex和两个其他任务（2586966、2597576），GPU1含三个其他任务（2581010、2587684、2591635）。GPU0空闲23342MiB、GPU1空闲29776MiB，但均有其他计算任务，故A仍未启动。实际0生成／0显式评分forward／0训练更新；保留512-token与3+9／1200秒／240秒／2GiB合同，不进入B、不停止其他任务、不建自动等待队列。run不存在，原Early100 SHA未变。[本次A启动门槛快照](validation/gpu-recheck-20261025T012628Z.json)。
+
+2026-10-25 00:03 CDT GPU1空闲，已按此前授权和冻结源码SHA启动唯一A阶段，budget保持3生成＋9显式TF、512 token、1200秒总/240秒stage/2GiB。GPU0仍有既有PersonaPlex及其他任务，未触碰；不新增训练、不自动进入B。启动与当时资源详见[launch receipt](validation/launch-receipt.json)，结果尚待终态及独立审计。
+
+2026-10-25 00:04:42 CDT 终态更新：base SHA校验后，GPU1新外来任务PID2801775触发pre-worker空闲门槛；campaign failed，未进入execute，0模型调用。00:05:11退出核查：本项目进程已退出，锁可用，PersonaPlex仍在，旧Early100 SHA未变；[6份partial同步收据](validation/failed-pre-gpu-sync.json)。**原始run/REPORT.md中“rows are archived”是固定模板，本次实际没有矩阵**，原件保留，不能据此声称概率采集或连续worker监控完成。

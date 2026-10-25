@@ -1,0 +1,22 @@
+{
+  "recorded_utc": "2026-10-25T05:03:41.038134+00:00",
+  "local_source_commit": "737b652c55269fba03021bdab9bdc2dcace68d0d",
+  "command": [
+    "ssh",
+    "-o",
+    "BatchMode=yes",
+    "-o",
+    "PasswordAuthentication=no",
+    "-o",
+    "ConnectTimeout=10",
+    "-o",
+    "ControlPath=/tmp/codex-asr-tensorboard-%C",
+    "exx@100.70.230.73",
+    "/mnt/raid/asr-lab/venv/bin/python",
+    "-"
+  ],
+  "stdin_python": "import json,hashlib,subprocess,fcntl,time\nfrom pathlib import Path\nfrom datetime import datetime,timezone\nroot=Path('/mnt/raid/asr-lab');repo=root/'repo';run=root/'runs/qwen-token-probability-20261023-a'\nexpected={'src/asr_lab/token_probability.py': 'd7deb7ea0d65cb9ef10a6e66ff5c9eca5207068c4397a1fa27a687dfa111c4f6', 'scripts/run_token_probability.py': 'e0eff6b1a9560576c69fdb039277e1085a86b7adc1028dfba22b3e1ac5538400', 'tests/test_token_probability.py': '8390ef0c7a118d7f5acbe4c6d5f3e474c4316c1cf737f5b1f951e0b95d47784f', 'reports/token-probability/validation/launch-command.sh': '8f1f15c3ee5a9495eb176b004ceda0276ffaf97b720ecf9af6de29d575623aba'}\nfor p,h in expected.items():\n assert hashlib.sha256((repo/p).read_bytes()).hexdigest()==h,p\nassert not run.exists(),'run already exists'\nassert not Path(str(run)+'.exit-code.txt').exists(),'prior exit receipt exists'\nassert not Path(str(run)+'.stdout.log').exists(),'prior stdout exists'\nsession='asr-token-probability'\nassert subprocess.run(['tmux','has-session','-t',session],capture_output=True).returncode!=0,'session already exists'\ngpus=subprocess.check_output(['nvidia-smi','--query-gpu=index,uuid,memory.used,memory.free,utilization.gpu','--format=csv,noheader,nounits'],text=True)\napps=subprocess.check_output(['nvidia-smi','--query-compute-apps=gpu_uuid,pid,process_name,used_gpu_memory','--format=csv,noheader,nounits'],text=True)\ngpu1='GPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c'\nassert all(not line.startswith(gpu1+',') for line in apps.splitlines()),'GPU1 became busy'\nwith (root/'campaign.lock').open('rb') as f:\n fcntl.flock(f,fcntl.LOCK_EX|fcntl.LOCK_NB);fcntl.flock(f,fcntl.LOCK_UN)\nlaunched_utc=datetime.now(timezone.utc).isoformat()\nsubprocess.run(['tmux','new-session','-d','-s',session,'bash '+str(repo/'reports/token-probability/validation/launch-command.sh')],check=True)\nprint(json.dumps(dict(status='launch_dispatched',launched_utc=launched_utc,session=session,remote_run=str(run),reviewed_source_sha256=expected,gpu_before=gpus,compute_apps_before=apps,budget=dict(generate=3,teacher_forward=9,updates=0,max_new_tokens=512,total_seconds=1200,stage_seconds=240,max_incremental_bytes=2147483648),stage_b_authorized=False)))\n",
+  "returncode": 0,
+  "stdout": "{\"status\": \"launch_dispatched\", \"launched_utc\": \"2026-10-25T05:03:41.012794+00:00\", \"session\": \"asr-token-probability\", \"remote_run\": \"/mnt/raid/asr-lab/runs/qwen-token-probability-20261023-a\", \"reviewed_source_sha256\": {\"src/asr_lab/token_probability.py\": \"d7deb7ea0d65cb9ef10a6e66ff5c9eca5207068c4397a1fa27a687dfa111c4f6\", \"scripts/run_token_probability.py\": \"e0eff6b1a9560576c69fdb039277e1085a86b7adc1028dfba22b3e1ac5538400\", \"tests/test_token_probability.py\": \"8390ef0c7a118d7f5acbe4c6d5f3e474c4316c1cf737f5b1f951e0b95d47784f\", \"reports/token-probability/validation/launch-command.sh\": \"8f1f15c3ee5a9495eb176b004ceda0276ffaf97b720ecf9af6de29d575623aba\"}, \"gpu_before\": \"0, GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c, 41788, 53532, 100\\n1, GPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c, 14, 95306, 0\\n\", \"compute_apps_before\": \"GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c, 2154793, .venv/bin/python, 22674\\nGPU-eed83181-48a7-e9f3-cb49-e851dfaf647c, 2801273, /home/huaqinzhao/miniconda3/envs/loopvlm-h100/bin/python, 19086\\n\", \"budget\": {\"generate\": 3, \"teacher_forward\": 9, \"updates\": 0, \"max_new_tokens\": 512, \"total_seconds\": 1200, \"stage_seconds\": 240, \"max_incremental_bytes\": 2147483648}, \"stage_b_authorized\": false}\n",
+  "stderr": ""
+}

@@ -1,0 +1,160 @@
+{
+  "definitions": {
+    "newly_worse": "tied or improved versus base at start, worse at end",
+    "persistent": "worse versus base at both endpoints; all-three set also provided",
+    "recovered": "worse versus base at start, tied or improved versus base at end; not necessarily error-free",
+    "state": "sign of edit count difference versus base; same state need not mean same edit count or hypothesis"
+  },
+  "elapsed_seconds": 0.005496541038155556,
+  "errors": {
+    "base": 46,
+    "step100": 93,
+    "step25": 122,
+    "step50": 108
+  },
+  "generate_calls": 0,
+  "limitations": [
+    "Exploratory repeatedly inspected fixed development subset; no significance or population/causal claims.",
+    "Leave-one-speaker-out is a descriptive sensitivity calculation, not a confidence interval.",
+    "No audio, model, GPU, SSH or training calls; prior references and normalization unchanged."
+  ],
+  "loso_delta_pp_ranges": {
+    "100": {
+      "max": 1.694915254237288,
+      "min": 1.5140845070422535
+    },
+    "25": {
+      "max": 2.7113806635747415,
+      "min": 2.462875769648678
+    },
+    "50": {
+      "max": 2.2598870056497176,
+      "min": 1.9195943498732344
+    }
+  },
+  "persistently_worse_all_three_ids": [
+    "1673-143397-0000",
+    "1919-142785-0061",
+    "2078-142845-0034",
+    "2086-149220-0019",
+    "2412-153947-0011",
+    "2902-9008-0000",
+    "3000-15664-0035",
+    "3170-137482-0038",
+    "3536-8226-0012",
+    "3576-138058-0003",
+    "3853-163249-0046",
+    "422-122949-0011",
+    "5338-24615-0014",
+    "5895-34622-0017",
+    "6241-61943-0006",
+    "6241-66616-0001",
+    "6295-64301-0008",
+    "6313-66129-0026",
+    "652-130737-0002",
+    "7976-110523-0015",
+    "84-121123-0020",
+    "8842-302201-0001",
+    "8842-304647-0006"
+  ],
+  "reference_words": 2905,
+  "speakers": 40,
+  "status": "complete_cpu_only",
+  "teacher_forward_calls": 0,
+  "training_updates": 0,
+  "transitions": {
+    "25->100": {
+      "actual_error_change_counts": {
+        "decreased": 31,
+        "increased": 16,
+        "unchanged": 81
+      },
+      "net_error_change": -29,
+      "state_counts": {
+        "improved": {
+          "improved": 1,
+          "tied": 1,
+          "worse": 0
+        },
+        "tied": {
+          "improved": 5,
+          "tied": 67,
+          "worse": 7
+        },
+        "worse": {
+          "improved": 1,
+          "tied": 19,
+          "worse": 27
+        }
+      }
+    },
+    "25->50": {
+      "actual_error_change_counts": {
+        "decreased": 23,
+        "increased": 17,
+        "unchanged": 88
+      },
+      "net_error_change": -14,
+      "state_counts": {
+        "improved": {
+          "improved": 1,
+          "tied": 1,
+          "worse": 0
+        },
+        "tied": {
+          "improved": 2,
+          "tied": 67,
+          "worse": 10
+        },
+        "worse": {
+          "improved": 1,
+          "tied": 11,
+          "worse": 35
+        }
+      }
+    },
+    "50->100": {
+      "actual_error_change_counts": {
+        "decreased": 26,
+        "increased": 15,
+        "unchanged": 87
+      },
+      "net_error_change": -15,
+      "state_counts": {
+        "improved": {
+          "improved": 4,
+          "tied": 0,
+          "worse": 0
+        },
+        "tied": {
+          "improved": 3,
+          "tied": 69,
+          "worse": 7
+        },
+        "worse": {
+          "improved": 0,
+          "tied": 18,
+          "worse": 27
+        }
+      }
+    }
+  },
+  "unique_ids": 128,
+  "worse_sets": {
+    "25->100": {
+      "newly_worse_ids": 7,
+      "persistent_worse_ids": 27,
+      "recovered_from_worse_ids": 20
+    },
+    "25->50": {
+      "newly_worse_ids": 10,
+      "persistent_worse_ids": 35,
+      "recovered_from_worse_ids": 12
+    },
+    "50->100": {
+      "newly_worse_ids": 7,
+      "persistent_worse_ids": 27,
+      "recovered_from_worse_ids": 18
+    }
+  }
+}

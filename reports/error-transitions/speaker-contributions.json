@@ -1,0 +1,642 @@
+[
+  {
+    "errors": {
+      "100": 0,
+      "25": 0,
+      "50": 1,
+      "base": 0
+    },
+    "examples": 3,
+    "extra_errors_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 1
+    },
+    "reference_words": 37,
+    "speaker_id": "1272"
+  },
+  {
+    "errors": {
+      "100": 1,
+      "25": 1,
+      "50": 2,
+      "base": 1
+    },
+    "examples": 3,
+    "extra_errors_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 1
+    },
+    "reference_words": 35,
+    "speaker_id": "1462"
+  },
+  {
+    "errors": {
+      "100": 2,
+      "25": 5,
+      "50": 4,
+      "base": 1
+    },
+    "examples": 3,
+    "extra_errors_vs_base": {
+      "100": 1,
+      "25": 4,
+      "50": 3
+    },
+    "reference_words": 119,
+    "speaker_id": "1673"
+  },
+  {
+    "errors": {
+      "100": 2,
+      "25": 2,
+      "50": 2,
+      "base": 2
+    },
+    "examples": 4,
+    "extra_errors_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "reference_words": 26,
+    "speaker_id": "174"
+  },
+  {
+    "errors": {
+      "100": 3,
+      "25": 3,
+      "50": 3,
+      "base": 0
+    },
+    "examples": 3,
+    "extra_errors_vs_base": {
+      "100": 3,
+      "25": 3,
+      "50": 3
+    },
+    "reference_words": 84,
+    "speaker_id": "1919"
+  },
+  {
+    "errors": {
+      "100": 2,
+      "25": 2,
+      "50": 1,
+      "base": 1
+    },
+    "examples": 3,
+    "extra_errors_vs_base": {
+      "100": 1,
+      "25": 1,
+      "50": 0
+    },
+    "reference_words": 46,
+    "speaker_id": "1988"
+  },
+  {
+    "errors": {
+      "100": 2,
+      "25": 5,
+      "50": 1,
+      "base": 3
+    },
+    "examples": 3,
+    "extra_errors_vs_base": {
+      "100": -1,
+      "25": 2,
+      "50": -2
+    },
+    "reference_words": 73,
+    "speaker_id": "1993"
+  },
+  {
+    "errors": {
+      "100": 1,
+      "25": 1,
+      "50": 2,
+      "base": 1
+    },
+    "examples": 3,
+    "extra_errors_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 1
+    },
+    "reference_words": 51,
+    "speaker_id": "2035"
+  },
+  {
+    "errors": {
+      "100": 3,
+      "25": 1,
+      "50": 2,
+      "base": 0
+    },
+    "examples": 3,
+    "extra_errors_vs_base": {
+      "100": 3,
+      "25": 1,
+      "50": 2
+    },
+    "reference_words": 100,
+    "speaker_id": "2078"
+  },
+  {
+    "errors": {
+      "100": 5,
+      "25": 5,
+      "50": 9,
+      "base": 1
+    },
+    "examples": 4,
+    "extra_errors_vs_base": {
+      "100": 4,
+      "25": 4,
+      "50": 8
+    },
+    "reference_words": 103,
+    "speaker_id": "2086"
+  },
+  {
+    "errors": {
+      "100": 0,
+      "25": 0,
+      "50": 0,
+      "base": 0
+    },
+    "examples": 4,
+    "extra_errors_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "reference_words": 54,
+    "speaker_id": "2277"
+  },
+  {
+    "errors": {
+      "100": 3,
+      "25": 3,
+      "50": 3,
+      "base": 0
+    },
+    "examples": 4,
+    "extra_errors_vs_base": {
+      "100": 3,
+      "25": 3,
+      "50": 3
+    },
+    "reference_words": 120,
+    "speaker_id": "2412"
+  },
+  {
+    "errors": {
+      "100": 0,
+      "25": 1,
+      "50": 1,
+      "base": 1
+    },
+    "examples": 3,
+    "extra_errors_vs_base": {
+      "100": -1,
+      "25": 0,
+      "50": 0
+    },
+    "reference_words": 44,
+    "speaker_id": "2428"
+  },
+  {
+    "errors": {
+      "100": 4,
+      "25": 5,
+      "50": 3,
+      "base": 2
+    },
+    "examples": 3,
+    "extra_errors_vs_base": {
+      "100": 2,
+      "25": 3,
+      "50": 1
+    },
+    "reference_words": 44,
+    "speaker_id": "251"
+  },
+  {
+    "errors": {
+      "100": 2,
+      "25": 2,
+      "50": 2,
+      "base": 2
+    },
+    "examples": 3,
+    "extra_errors_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 0
+    },
+    "reference_words": 70,
+    "speaker_id": "2803"
+  },
+  {
+    "errors": {
+      "100": 3,
+      "25": 3,
+      "50": 2,
+      "base": 1
+    },
+    "examples": 3,
+    "extra_errors_vs_base": {
+      "100": 2,
+      "25": 2,
+      "50": 1
+    },
+    "reference_words": 47,
+    "speaker_id": "2902"
+  },
+  {
+    "errors": {
+      "100": 3,
+      "25": 4,
+      "50": 3,
+      "base": 2
+    },
+    "examples": 3,
+    "extra_errors_vs_base": {
+      "100": 1,
+      "25": 2,
+      "50": 1
+    },
+    "reference_words": 144,
+    "speaker_id": "3000"
+  },
+  {
+    "errors": {
+      "100": 0,
+      "25": 2,
+      "50": 0,
+      "base": 0
+    },
+    "examples": 3,
+    "extra_errors_vs_base": {
+      "100": 0,
+      "25": 2,
+      "50": 0
+    },
+    "reference_words": 35,
+    "speaker_id": "3081"
+  },
+  {
+    "errors": {
+      "100": 5,
+      "25": 6,
+      "50": 5,
+      "base": 4
+    },
+    "examples": 3,
+    "extra_errors_vs_base": {
+      "100": 1,
+      "25": 2,
+      "50": 1
+    },
+    "reference_words": 97,
+    "speaker_id": "3170"
+  },
+  {
+    "errors": {
+      "100": 3,
+      "25": 2,
+      "50": 4,
+      "base": 0
+    },
+    "examples": 3,
+    "extra_errors_vs_base": {
+      "100": 3,
+      "25": 2,
+      "50": 4
+    },
+    "reference_words": 60,
+    "speaker_id": "3536"
+  },
+  {
+    "errors": {
+      "100": 1,
+      "25": 5,
+      "50": 1,
+      "base": 2
+    },
+    "examples": 3,
+    "extra_errors_vs_base": {
+      "100": -1,
+      "25": 3,
+      "50": -1
+    },
+    "reference_words": 73,
+    "speaker_id": "3576"
+  },
+  {
+    "errors": {
+      "100": 0,
+      "25": 3,
+      "50": 2,
+      "base": 1
+    },
+    "examples": 3,
+    "extra_errors_vs_base": {
+      "100": -1,
+      "25": 2,
+      "50": 1
+    },
+    "reference_words": 41,
+    "speaker_id": "3752"
+  },
+  {
+    "errors": {
+      "100": 3,
+      "25": 5,
+      "50": 3,
+      "base": 2
+    },
+    "examples": 3,
+    "extra_errors_vs_base": {
+      "100": 1,
+      "25": 3,
+      "50": 1
+    },
+    "reference_words": 91,
+    "speaker_id": "3853"
+  },
+  {
+    "errors": {
+      "100": 1,
+      "25": 2,
+      "50": 1,
+      "base": 0
+    },
+    "examples": 3,
+    "extra_errors_vs_base": {
+      "100": 1,
+      "25": 2,
+      "50": 1
+    },
+    "reference_words": 118,
+    "speaker_id": "422"
+  },
+  {
+    "errors": {
+      "100": 3,
+      "25": 1,
+      "50": 3,
+      "base": 1
+    },
+    "examples": 4,
+    "extra_errors_vs_base": {
+      "100": 2,
+      "25": 0,
+      "50": 2
+    },
+    "reference_words": 66,
+    "speaker_id": "5338"
+  },
+  {
+    "errors": {
+      "100": 1,
+      "25": 0,
+      "50": 1,
+      "base": 0
+    },
+    "examples": 4,
+    "extra_errors_vs_base": {
+      "100": 1,
+      "25": 0,
+      "50": 1
+    },
+    "reference_words": 102,
+    "speaker_id": "5536"
+  },
+  {
+    "errors": {
+      "100": 0,
+      "25": 0,
+      "50": 1,
+      "base": 0
+    },
+    "examples": 3,
+    "extra_errors_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 1
+    },
+    "reference_words": 60,
+    "speaker_id": "5694"
+  },
+  {
+    "errors": {
+      "100": 4,
+      "25": 8,
+      "50": 4,
+      "base": 3
+    },
+    "examples": 3,
+    "extra_errors_vs_base": {
+      "100": 1,
+      "25": 5,
+      "50": 1
+    },
+    "reference_words": 59,
+    "speaker_id": "5895"
+  },
+  {
+    "errors": {
+      "100": 2,
+      "25": 2,
+      "50": 2,
+      "base": 0
+    },
+    "examples": 3,
+    "extra_errors_vs_base": {
+      "100": 2,
+      "25": 2,
+      "50": 2
+    },
+    "reference_words": 57,
+    "speaker_id": "6241"
+  },
+  {
+    "errors": {
+      "100": 2,
+      "25": 2,
+      "50": 2,
+      "base": 0
+    },
+    "examples": 3,
+    "extra_errors_vs_base": {
+      "100": 2,
+      "25": 2,
+      "50": 2
+    },
+    "reference_words": 37,
+    "speaker_id": "6295"
+  },
+  {
+    "errors": {
+      "100": 7,
+      "25": 9,
+      "50": 5,
+      "base": 3
+    },
+    "examples": 4,
+    "extra_errors_vs_base": {
+      "100": 4,
+      "25": 6,
+      "50": 2
+    },
+    "reference_words": 89,
+    "speaker_id": "6313"
+  },
+  {
+    "errors": {
+      "100": 0,
+      "25": 1,
+      "50": 1,
+      "base": 0
+    },
+    "examples": 3,
+    "extra_errors_vs_base": {
+      "100": 0,
+      "25": 1,
+      "50": 1
+    },
+    "reference_words": 99,
+    "speaker_id": "6319"
+  },
+  {
+    "errors": {
+      "100": 0,
+      "25": 1,
+      "50": 3,
+      "base": 0
+    },
+    "examples": 3,
+    "extra_errors_vs_base": {
+      "100": 0,
+      "25": 1,
+      "50": 3
+    },
+    "reference_words": 52,
+    "speaker_id": "6345"
+  },
+  {
+    "errors": {
+      "100": 5,
+      "25": 2,
+      "50": 3,
+      "base": 1
+    },
+    "examples": 3,
+    "extra_errors_vs_base": {
+      "100": 4,
+      "25": 1,
+      "50": 2
+    },
+    "reference_words": 65,
+    "speaker_id": "652"
+  },
+  {
+    "errors": {
+      "100": 2,
+      "25": 3,
+      "50": 1,
+      "base": 1
+    },
+    "examples": 3,
+    "extra_errors_vs_base": {
+      "100": 1,
+      "25": 2,
+      "50": 0
+    },
+    "reference_words": 85,
+    "speaker_id": "777"
+  },
+  {
+    "errors": {
+      "100": 1,
+      "25": 1,
+      "50": 2,
+      "base": 1
+    },
+    "examples": 3,
+    "extra_errors_vs_base": {
+      "100": 0,
+      "25": 0,
+      "50": 1
+    },
+    "reference_words": 47,
+    "speaker_id": "7850"
+  },
+  {
+    "errors": {
+      "100": 8,
+      "25": 10,
+      "50": 9,
+      "base": 6
+    },
+    "examples": 4,
+    "extra_errors_vs_base": {
+      "100": 2,
+      "25": 4,
+      "50": 3
+    },
+    "reference_words": 116,
+    "speaker_id": "7976"
+  },
+  {
+    "errors": {
+      "100": 1,
+      "25": 2,
+      "50": 2,
+      "base": 1
+    },
+    "examples": 3,
+    "extra_errors_vs_base": {
+      "100": 0,
+      "25": 1,
+      "50": 1
+    },
+    "reference_words": 68,
+    "speaker_id": "8297"
+  },
+  {
+    "errors": {
+      "100": 2,
+      "25": 2,
+      "50": 1,
+      "base": 0
+    },
+    "examples": 3,
+    "extra_errors_vs_base": {
+      "100": 2,
+      "25": 2,
+      "50": 1
+    },
+    "reference_words": 47,
+    "speaker_id": "84"
+  },
+  {
+    "errors": {
+      "100": 6,
+      "25": 10,
+      "50": 11,
+      "base": 2
+    },
+    "examples": 3,
+    "extra_errors_vs_base": {
+      "100": 4,
+      "25": 8,
+      "50": 9
+    },
+    "reference_words": 144,
+    "speaker_id": "8842"
+  }
+]

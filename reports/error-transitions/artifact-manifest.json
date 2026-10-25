@@ -1,0 +1,39 @@
+{
+  "elapsed_seconds": 0.006336165999528021,
+  "inputs": {
+    "reports/early100/analysis/step100-fixed128.edits.jsonl": "cadbab334381900217c289888e28d65ebff7bbb501a8ff7f8da9f9b78b3a9014",
+    "reports/early100/analysis/step25-fixed128.edits.jsonl": "bf2ff4b448f3c7cf5d22d24192593c419175c65f3dae51760ff00bd66d7e03ca",
+    "reports/early100/analysis/step50-fixed128.edits.jsonl": "edb3d128df76954ad5ffdec34136bbfb633a1bfe4a0aa5e98c8d24eefa35c64b",
+    "reports/early100/inputs/dev-clean-fixed128.jsonl": "1c657340c27cdc1f4b025ba5731da07fc7fd2f505e9dddbfc8fffc9cc59df999"
+  },
+  "outputs": {
+    "README.md": {
+      "bytes": 1540,
+      "sha256": "a7fbedf9f8b8205748b5fca0727c71ce20dad3d2d0c7fd8d5d7cbdfa160eb61e"
+    },
+    "leave-one-speaker-out.json": {
+      "bytes": 18964,
+      "sha256": "54c10d391d40ac6eb4a9053252414593e14d21141714d4263366a6c16c23763e"
+    },
+    "per-id.json": {
+      "bytes": 43591,
+      "sha256": "2750a02453cdf44d0a4389c7c5f449f807fc5ca806adbe49fdb540f880129e1c"
+    },
+    "speaker-contributions.json": {
+      "bytes": 9894,
+      "sha256": "a1de15b5363cc85c8fc7ca4682951b21642674f79cd04e81517847ce5dbf9888"
+    },
+    "summary.json": {
+      "bytes": 3840,
+      "sha256": "7b1dec8cd95905914b7ff4d862e50270fa01d185d564278e47e389e9626752ec"
+    },
+    "transitions.json": {
+      "bytes": 29095,
+      "sha256": "606ec8086c134e8a5ffcb2adee51f36ce6171aedc03fdb13397fffec2bd64204"
+    }
+  },
+  "script": {
+    "path": "reports/error-transitions/analyze.py",
+    "sha256": "3bab614bfed259c093e810b1b4af8fb0f036507658357ba40695855d6e56fce2"
+  }
+}

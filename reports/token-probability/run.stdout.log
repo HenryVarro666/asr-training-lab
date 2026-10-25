@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/mnt/raid/asr-lab/repo/scripts/run_token_probability.py", line 183, in <module>
+    if __name__=='__main__':main()
+  File "/mnt/raid/asr-lab/repo/scripts/run_token_probability.py", line 176, in main
+    try:campaign.run()
+  File "/mnt/raid/asr-lab/repo/scripts/run_token_probability.py", line 149, in run
+    verify_stats(model,verification);self.state['gpu_preflight']=require_gpu1_idle();self.write_state()
+  File "/mnt/raid/asr-lab/repo/src/asr_lab/qwen_truncation_probe.py", line 38, in require_gpu1_idle
+    if busy:raise RuntimeError(f'Physical GPU1 has other compute applications; no launch: {busy}')
+RuntimeError: Physical GPU1 has other compute applications; no launch: [['GPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c', '2801775', '/home/huaqinzhao/miniconda3/envs/loopvlm-h100/bin/python']]

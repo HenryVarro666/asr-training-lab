@@ -1,0 +1,40 @@
+{
+  "captured_utc": "2026-10-25T05:05:11.791442+00:00",
+  "files": {
+    "campaign.lock": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "campaign.json": {
+      "bytes": 14482,
+      "sha256": "89716058726fa5c7d0cab1cb5adc645002669aab9c03f30e8efb6f2fd63e9a31"
+    },
+    "experiment_results.json": {
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "REPORT.md": {
+      "bytes": 754,
+      "sha256": "d3b31f1b346d5f15119f1b241700c07155bb2af1fa3c53035b28e7e24debfa4f"
+    },
+    "base/model-verification.json": {
+      "bytes": 21446,
+      "sha256": "5d3696449b28dded77bbc98d5983e22ee05dc0300ed0c16c6046a3123243777b"
+    },
+    "base/identity.json": {
+      "bytes": 35817,
+      "sha256": "af103fc6bb99576e4c9c41bd53343f9bd658fc6aa6867b751c44638c1722250a"
+    }
+  },
+  "total_bytes": 72502,
+  "global_lock_available": true,
+  "exit_code": "1",
+  "workers": [],
+  "owned_process_check": "",
+  "compute_apps": "GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c, 2154793, .venv/bin/python, 22674\nGPU-eed83181-48a7-e9f3-cb49-e851dfaf647c, 2801273, /home/huaqinzhao/miniconda3/envs/loopvlm-h100/bin/python, 19302\nGPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c, 2801775, /home/huaqinzhao/miniconda3/envs/loopvlm-h100/bin/python, 19494\n",
+  "old_campaign_sha256": "f6be4d5322fba1fb03d89b311017220506fff83ffa238d22614fb1e97ea1c279",
+  "sync_status": "all_partial_run_files_sha256_matched",
+  "local_mirror": "/Users/caochao/Documents/ChatGPT/train/reports/token-probability/run",
+  "mirrored_files": 6,
+  "elapsed_seconds": 2.0683675420004874
+}

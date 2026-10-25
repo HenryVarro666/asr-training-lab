@@ -1,0 +1,15 @@
+{
+  "status": "passed_cpu_and_partial_receipt_review",
+  "verified_utc": "2026-10-25T05:07:40.430438+00:00",
+  "partial_run_files_sha256_matched": 6,
+  "error_transition_input_and_output_hashes_matched": true,
+  "transition_count_recomputation": "all three intervals matched",
+  "leave_one_speaker_out": "all 40 denominators and 3 deltas matched",
+  "workers_launched": 0,
+  "actual_model_calls": 0,
+  "training_updates": 0,
+  "probability_matrices": 0,
+  "probability_rows_audited": 0,
+  "raw_report_preserved": true,
+  "limitations": "CPU derived-data and pre-worker failure audit only; not completed probability evidence or training validation."
+}
