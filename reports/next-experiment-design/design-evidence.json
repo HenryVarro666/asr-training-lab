@@ -1,0 +1,101 @@
+{
+  "status": "cpu_design_only_no_new_model_calls",
+  "sources": {
+    "reports/early100/analysis/step25-fixed128.edits.jsonl": "bf2ff4b448f3c7cf5d22d24192593c419175c65f3dae51760ff00bd66d7e03ca",
+    "reports/early100/analysis/step50-fixed128.edits.jsonl": "edb3d128df76954ad5ffdec34136bbfb633a1bfe4a0aa5e98c8d24eefa35c64b",
+    "reports/early100/analysis/step100-fixed128.edits.jsonl": "cadbab334381900217c289888e28d65ebff7bbb501a8ff7f8da9f9b78b3a9014",
+    "reports/early100/inputs/dev-clean-fixed128.jsonl": "1c657340c27cdc1f4b025ba5731da07fc7fd2f505e9dddbfc8fffc9cc59df999",
+    "reports/token-probability/inputs/trajectory-reference.json": "6753b127d40288a558761c6b8e79964f07af7e96f4e85964a0a8b66c26b03f49"
+  },
+  "fixed128": {
+    "25": {
+      "examples": 128,
+      "reference_words": 2905,
+      "baseline_errors": 46,
+      "candidate_errors": 122,
+      "improved": 2,
+      "edit_count_tied": 79,
+      "worse": 47
+    },
+    "50": {
+      "examples": 128,
+      "reference_words": 2905,
+      "baseline_errors": 46,
+      "candidate_errors": 108,
+      "improved": 4,
+      "edit_count_tied": 79,
+      "worse": 45
+    },
+    "100": {
+      "examples": 128,
+      "reference_words": 2905,
+      "baseline_errors": 46,
+      "candidate_errors": 93,
+      "improved": 7,
+      "edit_count_tied": 87,
+      "worse": 34
+    }
+  },
+  "target_in_fixed128": false,
+  "seed": 20261024,
+  "selection_source": "Only existing base-versus-step25 edit deltas; step50/100 never used to select IDs.",
+  "selection_algorithm": "Sort IDs within each stratum; random.Random(20261024), sample5 worse then8 tied; include both improved IDs and sentinel; final batch sorted by ID.",
+  "group_counts": {
+    "sentinel": 1,
+    "worse": 5,
+    "edit_count_tied": 8,
+    "improved": 2
+  },
+  "selected_ids_by_group": {
+    "sentinel": [
+      "652-129742-0006"
+    ],
+    "worse": [
+      "1993-147149-0002",
+      "251-136532-0012",
+      "3576-138058-0003",
+      "652-130737-0002",
+      "8842-304647-0006"
+    ],
+    "edit_count_tied": [
+      "1272-141231-0005",
+      "174-168635-0006",
+      "1919-142785-0003",
+      "2277-149874-0006",
+      "3536-23268-0023",
+      "6345-64257-0020",
+      "652-129742-0015",
+      "7850-281318-0009"
+    ],
+    "improved": [
+      "5338-284437-0024",
+      "5895-34622-0005"
+    ]
+  },
+  "batch_order": [
+    "1272-141231-0005",
+    "174-168635-0006",
+    "1919-142785-0003",
+    "1993-147149-0002",
+    "2277-149874-0006",
+    "251-136532-0012",
+    "3536-23268-0023",
+    "3576-138058-0003",
+    "5338-284437-0024",
+    "5895-34622-0005",
+    "6345-64257-0020",
+    "652-129742-0006",
+    "652-129742-0015",
+    "652-130737-0002",
+    "7850-281318-0009",
+    "8842-304647-0006"
+  ],
+  "panel_sha256": "d62bb111b9a79734bfc7066ae543bdae84f5c9473197851cdf4f62d8efa03753",
+  "new_gpu_calls": 0,
+  "new_updates": 0,
+  "limitations": [
+    "Outcome-stratified exploratory panel, not a representative WER or loop-prevalence estimate.",
+    "Edit-count tie need not mean unchanged hypothesis or error-free recognition.",
+    "Selection is frozen before any new probability/panel GPU output, but uses already observed development results."
+  ]
+}
