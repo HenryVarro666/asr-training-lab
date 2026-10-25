@@ -1,0 +1,37 @@
+{
+  "status": "planned_not_executed",
+  "authorization": "User explicitly authorized supervision/report/monitor fixes and one fresh stage-A attempt if either GPU is idle; no training, B, foreign stops or retries.",
+  "remote_run": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261025-a2",
+  "local_mirror": "/Users/caochao/Documents/ChatGPT/train/reports/token-probability/attempts/qwen-token-probability-20261025-a2",
+  "model_order": [
+    "base",
+    "step050",
+    "step100"
+  ],
+  "target_id": "652-129742-0006",
+  "limits": {
+    "generate_calls": 3,
+    "explicit_teacher_forwards": 9,
+    "optimizer_updates": 0,
+    "max_new_tokens": 512,
+    "total_seconds": 1200,
+    "per_model_stage_seconds": 240,
+    "incremental_bytes": 2147483648,
+    "project_gib": 300,
+    "filesystem_free_reserve_gib": 500,
+    "post_cpu_audit_seconds": 600
+  },
+  "source_identity_status": "local_cpu130_and_independent_review_passed_not_executed",
+  "pinned_references": {
+    "inputs/trajectory-reference.json": "6753b127d40288a558761c6b8e79964f07af7e96f4e85964a0a8b66c26b03f49",
+    "inputs/upstream-probability-source.json": "d8dfc1cb079b5d58994aa6ca345a7cddff9e13cc7f8b8fcc34ffd3c14d1f1f40"
+  },
+  "prior_partial_receipt_sha256": "67707ebdc00129532f46b4710ddd42380a97c0d8734856c7e3501edbb865b805",
+  "next_steps": [
+    "independent code review and final CPU tests",
+    "allowlisted remote deploy and CPU tests",
+    "fresh GPU0/1, global lock and disk gate",
+    "one launch only if selected GPU has no other compute tasks",
+    "preserve all evidence, audit completed output, report and stop"
+  ]
+}

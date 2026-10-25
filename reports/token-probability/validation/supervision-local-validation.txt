@@ -1,0 +1,32 @@
+A supervision implementation handoff — final candidate, 2026-10-25
+
+Scope: assigned source/tests only; no SSH, hardware GPU queries, model invocation, training, commit, or old reports/token-probability/run edits. Test nvidia-smi responses were mocked or supplied by a temporary fake executable. These are CPU unit/lifecycle results, not a hardware/scientific run receipt.
+
+FINAL VALIDATION (same frozen source below)
+1. CUDA_VISIBLE_DEVICES='' PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -p 'test_token_probability.py'
+   exit 0; 24 tests, 11.368 s, OK.
+2. CUDA_VISIBLE_DEVICES='' PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -p 'test_probe_supervision.py'
+   exit 0; 6 tests, 0.377 s, OK.
+3. CUDA_VISIBLE_DEVICES='' PYTHONPATH=src .venv/bin/python -m unittest discover -s tests
+   exit 0; 130 tests, 15.966 s, OK. Existing transformers generation/tokenizer warnings appeared.
+4. git diff --check
+   exit 0.
+Frozen inherited files compared byte-for-byte with HEAD: run_qwen_campaign.py, run_repetition_onset.py, qwen_truncation_probe.py all UNCHANGED.
+
+RED/GREEN SUMMARY (intermediate failed runs retained here explicitly)
+- Before implementation, probability focused suite ran 13 tests with 4 failures: pre-worker false archive/count report, partial report evidence, mutation of an existing run directory, and a 2 s constructor tree walk ignoring a 0.4 s cap. Same focused command as #1. Initial helper suite also failed because the new helper was absent; no scientific model was invoked.
+- New sampler-terminal test caught exit 3 being overwritten with stopped; fixed terminal error/continuous_observation handling.
+- New owned-cleanup observation-error test failed because a ps/observation exception skipped kill/reap; fixed teardown finally path.
+- Intermediate focused 19-test run: test_real_readonly_sampler_starts_before_tree_and_samples_each_ten_seconds errored with PermissionError: [Errno 1] Operation not permitted. Exact command was #1. An isolated rerun with added '-k real_readonly' passed. A standalone reproduction located macOS EPERM at os.killpg(SIGKILL) after SIGTERM plus poll had already reaped the last process (poll=-15). Fixed by avoiding a redundant signal to a proven empty group; active owned groups still receive bounded kill/reap. The final 24-test and 130-test runs include this real ten-second fake-resource sampler test and pass.
+- Review import blocker: subprocess fake dependency slept 5 s and an old-candidate test observed 5.212 s despite --max-wall-seconds .3. Now stdlib early argument parsing arms SIGALRM before dependency imports, retains one entry deadline, and emits an importing_dependencies/budget_stopped/0-call receipt. Boundary command: #1 with '-k ProbabilityAbsoluteBoundaryRegressions'. Final boundary run: 4 tests, exit 0.
+- Review completion blocker: model completion now persists models_complete_pending_cleanup. Owned cleanup, terminal observation, reporting and result writes precede the final atomic campaign complete commit. Regression also denies both complete commit and failure rewrite; durable state remains pending, never complete.
+- Intermediate focused 24-test run failed test_initial_resource_deadline_keeps_budget_status_without_starting_worker (expected budget_stopped, got failed). Finalization's secondary monitor error had overwritten the primary budget category. Fixed by preserving primary error status and recording finalization_error separately. The boundary 4, final focused 24 and final full 130 pass.
+
+Behavior: fixed 3-model/3+9 calls/scientific gates retained; report separates planned budgets, present payloads, SHA-backed archives, validated workers, and unknown invocation counts. Fresh run paths and foreign global lock ownership are preserved. Selected GPU0/1 UUID is pinned; all foreign compute processes, including PersonaPlex, reject launch. Only runtime.physical_gpu is a selected-resource identity exception; all other runtime fields and raw trajectory equality remain strict. New helper SHA is part of shared identity. Monitor is stdlib-only, initial-before-tree, every ten seconds, terminal, and stops only owned sessions. Total cap includes initialization/imports and cleanup, with reserved failure-receipt time inside the same cap; stage 240 s still covers hash/worker/validation.
+
+FROZEN SHA256
+82f7f95d91b7ae39044899cf12870c3cbc9aa58723baab3a59a118e4e10f7b43  scripts/run_token_probability.py
+2b6db25983f1d7a81feb902f793dbadb436b6afd4b1e5c166c64785256b8723b  src/asr_lab/probe_supervision.py
+acc34e309468c950b02e930ee7be7d45a0394b092ad0b0a35e07f83016f3a43b  src/asr_lab/token_probability.py
+2eef00dd0e354a1c1698247a53566f4d304a20279a8104328d72a20265f86cc9  tests/test_token_probability.py
+9a46efb0f3a187edf91a8f37a32008522a290e25df4c25be09fc36d213cd11b6  tests/test_probe_supervision.py

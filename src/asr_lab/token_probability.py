@@ -17,6 +17,7 @@ from .qwen_roundtrip_control import tensor_fingerprint,runtime_info,json_value
 from .qwen_data import load_audio,prompt_text
 from .training_utils import atomic_json,sha256_file
 from .prepare_data import tree_size,check_space
+from .probe_supervision import worker_gpu_preflight
 
 ORDER=('base','step050','step100')
 FLAGS=dict(output_logits=True,output_scores=True)
@@ -145,7 +146,7 @@ def reserve(identity,bytes_needed):
     check_space(root,500,300,bytes_needed+1024**2)
 
 
-def input_gate(inputs,metadata,reference):
+def input_gate(inputs,metadata,reference,physical_gpu=1):
     common=reference['common_input']
     for key in ('input_ids','attention_mask','prompt_padded_width','effective_prompt_tokens','tensors'):
         if inputs[key]!=common[key]:raise ValueError('Frozen singleton preprocessing identity drift')
@@ -158,6 +159,10 @@ def input_gate(inputs,metadata,reference):
             for name in FLAGS:
                 if actual.pop(name,None) is not True:raise ValueError('Missing explicit observation flags')
             if actual!=value:raise ValueError('Decision kwargs changed')
+        elif key=='runtime':
+            if physical_gpu not in (0,1):raise ValueError('Unsupported physical GPU identity')
+            resource_expected=dict(value,physical_gpu=str(physical_gpu))
+            if metadata.get(key)!=resource_expected:raise ValueError('Runtime/model input identity drift:runtime')
         elif metadata.get(key)!=value:raise ValueError(f'Runtime/model input identity drift:{key}')
 
 
@@ -200,8 +205,8 @@ def difference_rows(teacher,generation,teacher_stats,generation_stats):
 
 @torch.inference_mode()
 def worker(args):
-    if os.environ.get('CUDA_VISIBLE_DEVICES')!='1':raise ValueError('Physical GPU1 only')
-    identity=json.loads(args.identity.read_text());probe.verify_identity(identity)
+    identity=json.loads(args.identity.read_text())
+    worker_gpu_preflight(identity);probe.verify_identity(identity)
     reference=json.loads(Path(identity['trajectory_reference']).read_text());stage=identity['stage']
     row=reference['target']['manifest_row'];audio=load_audio(row)
     pcm=hashlib.sha256(np.asarray(audio,dtype='<f4').tobytes()).hexdigest()
@@ -209,7 +214,7 @@ def worker(args):
     from qwen_asr import Qwen3ASRModel
     from qwen_asr.inference.utils import parse_asr_output,detect_and_fix_repetitions
     wrapper=Qwen3ASRModel.from_pretrained(identity['checkpoint'],dtype=torch.bfloat16,device_map=None,attn_implementation='sdpa',token=False)
-    atomic_json(args.output/'gpu-preflight.json',probe.require_gpu1_idle(ignore_own=True))
+    atomic_json(args.output/'gpu-preflight.json',worker_gpu_preflight(identity))
     model=wrapper.model.to('cuda:0').eval();processor=wrapper.processor;processor.tokenizer.padding_side='left'
     if model.__class__.forward.__module__=='asr_lab.qwen_train':raise ValueError('Training forward leaked')
     for label,component in (('model',model),('processor',processor)):
@@ -232,7 +237,7 @@ def worker(args):
         model_class=str(type(model)),processor_class=str(type(processor)),inference_mode=torch.is_inference_mode_enabled(),model_training=model.training,
         logits_collected=True,seed_reset=False,generate_calls=0,teacher_forward_calls=0,vocab_size=vocab)
     def phase(name):metadata['phase']=name;atomic_json(args.output/'metadata.json',metadata)
-    phase('input_gate');input_gate(input_record,metadata,reference)
+    phase('input_gate');input_gate(input_record,metadata,reference,physical_gpu=identity.get('physical_gpu',1))
     forks=trajectory_forks({name:reference['trajectories'][name]['token_ids'] for name in ORDER})
     for fork in forks:
         prefix=input_record['input_ids'][0]+fork['shared_continuation_prefix']

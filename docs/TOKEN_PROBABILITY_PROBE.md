@@ -113,3 +113,15 @@ CPU测试至少覆盖：3模型×固定调用顺序/预算；轨迹与共享输�
 Astra已完成本合同及代码核心路径的部分审阅，指出stage内产物校验也须受240秒deadline约束；它在最终代码签字前遇到usage限制而中断。恢复后由独立Sol reviewer核验修正、测试及最终源码SHA，结果保存于`reports/token-probability/validation/final-code-review.md`。本说明优先于上文必须取得Astra最终代码签字的执行顺序措辞；不把部分审阅记录为Astra最终通过。实验的调用、时间、磁盘、输入及空闲GPU门槛均不变。
 
 恢复时GPU1已有其他用户任务，探针run尚不存在。先完成CPU准备和远端CPU契约验证；若最终资源快照仍占用，则本轮以`ready_blocked_gpu_busy`归档，不建立GPU等待队列，不自动重试，不伪造概率、审计结果或结果图。
+
+## 2026-10-25已授权的编排修正与新attempt
+
+本段优先于上文GPU1-only、仅worker启动后监控及旧run入口的执行措辞；科学问题、输入、轨迹、调用计数、512-token和数值容差均不变。用户已明确授权先修正报告、总时限、预检监控，再检查GPU0/GPU1，有真正空闲卡时启动一次新的A目录；0新增训练、0自动B、0自动重试。
+
+- 总时限从进程入口起计，覆盖初始化/project扫描、锁、SHA、模型加载、调用、保存、验证、汇总及拥有进程的清理；原1200秒与每stage240秒上限不变。初始化失败也保存partial生命周期收据，不在构造时重置期限。
+- 预检前立即启动只读资源采样，10秒周期，覆盖SHA及模型加载阶段；保留GPU0/GPU1的UUID、显存/利用率、compute PID、盘空闲、phase/elapsed及实际终态。不得将预检资源记录当作训练或推理进展。sampler故障、失败或超时须结束本次attempt并回收自己的采样进程。
+- 报告分开计划与实际调用、存在/已验证/缺失的矩阵；pre-worker失败不得宣称完整词表矩阵已归档，已进入worker但缺计数的情况不得把未知填为0。
+- `--physical-gpu {0,1}`选择一张真正无其他compute进程的物理卡，全程固定UUID；parent及worker迁入CUDA前均复查。GPU0的PersonaPlex同样属于占用，不能忽略或停止。资源竞态触发停止，不切换GPU补跑。
+- 原固定runtime记录的`physical_gpu='1'`仅作为资源身份例外按本次选择卡比较，显式记录差异，不改原reference；包版本、dtype、attention、TF32等其他runtime字段仍严格相等。GPU0也必须逐token匹配旧同模型轨迹，若漂移按原合同保存并停止，不放宽数值或轨迹门槛。
+- 原`qwen-token-probability-20261023-a`在worker前资源失败，6份partial已保留；本次必须新run，不修改旧原件。新attempt镜像到`reports/token-probability/attempts/<run-name>/`；独立审计与图亦显式输出到该attempt，不覆盖此前prepared记录。
+- 实现按[修正计划](superpowers/plans/2026-10-25-a-supervision.md)测试先行、独立复核并以最终源码SHA重新冻结，再部署/远端CPU验证。此前旧版review只证明旧版，不能自动覆盖本次修改。
