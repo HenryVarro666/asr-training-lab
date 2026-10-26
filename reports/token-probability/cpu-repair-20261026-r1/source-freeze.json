@@ -1,0 +1,38 @@
+{
+  "src/asr_lab/token_probability.py": {
+    "sha256": "ed37de4ccf052f85ed330fedc4da115fe5cd32cf9f0f7eb3023699f45f681441",
+    "bytes": 23086
+  },
+  "scripts/recompute_saved_probability.py": {
+    "sha256": "c66c09fb46bb7814c50e9550cfb5cdc862cf26d079bcdbf2c57e24cb7b7507f0",
+    "bytes": 11572
+  },
+  "scripts/run_cpu_evidence_stage.py": {
+    "sha256": "53db112e632687c06baf5f26ba4f4953c3d29c2768981a84bdb0addde3e8fb20",
+    "bytes": 10417
+  },
+  "reports/token-probability/validation/diagnose_saved_probability.py": {
+    "sha256": "325c0b36baddd11302327307e932841cf0f9c97de2de7ef7e0682e82637cba8f",
+    "bytes": 5000
+  },
+  "reports/token-probability/validation/audit_recomputed_evidence.py": {
+    "sha256": "0df9b31cfe04e3c134591e64ffaa8f81c1c578689e57f7fe403a3dc280c1fbbb",
+    "bytes": 16520
+  },
+  "reports/token-probability/validation/audit_saved_evidence.py": {
+    "sha256": "ebc8db219efce0f05db3859976cf0d41834d4cfac2160837cb6418fe8b6e921d",
+    "bytes": 29967
+  },
+  "tests/test_token_probability.py": {
+    "sha256": "a99732f65949cf2c0c5c861368317c8e503588f30ccb06aeb90bd3b2d83c7fbd",
+    "bytes": 33440
+  },
+  "tests/test_token_probability_overlay_audit.py": {
+    "sha256": "f74e1d4628d461af898ba9183f80e95cf353ce5408644e9d2f07ee96fb006369",
+    "bytes": 10530
+  },
+  "tests/test_cpu_evidence_stage.py": {
+    "sha256": "47a423360a854a5e29df872ec5f39db35af3e2567af64e10695b46d6902f2a50",
+    "bytes": 5269
+  }
+}

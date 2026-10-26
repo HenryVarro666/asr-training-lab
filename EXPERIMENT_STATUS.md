@@ -6,9 +6,9 @@
 
 ## 后续诊断进展
 
-**当前：[GPU0 A取证完成，但独立数值验收失败](reports/token-probability/GPU0_EXECUTION_2026-10-26.md)**（2026-10-26）：经授权暂停Demo后，原3生成＋9TF/512/0更新完成，514.432秒、12矩阵、130原始文件双端SHA一致；base/50正常EOS、100复现512无EOS。监控及9TF收据审核通过；独立CPU数值审计唯一尝试在j2 target.prob超原容差（1.116753e-6>1e-6）后停止，不能称全2304行通过，图0。Demo恢复方式保留但未自动恢复，网关与其他任务未停，无B/训练/重试。
+**当前：[CPU数值精度修复与全2304行验收通过](reports/token-probability/cpu-repair-20261026-r1/REPORT.md)**（2026-10-26）：先规划后执行，仅复用12份原矩阵，确认FP32绝对logsumexp相减丢失精度。改为FP64派生统计后，原容差独立审计全部通过；目标概率最大误差1.52434e-13，原门槛1e-6。三阶段CPU累计129.004秒，50专项测试通过、130原文件SHA保持，三图与完整新旧证据已保存；新增模型／GPU／训练调用0，没有进入B。原GPU0 A执行完成和原数值审计失败记录均保持历史原貌，未自动恢复Demo。此修复没有解决或定位训练导致重复的原因。
 
-**最新：[四检查点重复对照已完成](reports/repetition-onset/README.md)**（2026-10-23）：同一句音频、同137-token输入、同512-token生成预算，base/25/50/100各一次，共4次调用／0更新／99.16秒。base/25/50正常EOS结束且原normalizer下16词全对；100生成170次`CULINARY`加`CUL`，512无EOS，parser压成两词。最早受测阳性为100，上个受测阴性为50；不能定位精确首发更新或训练原因。独立CPU审计通过，85份run产物跨机一致，GPU1退出、Plex保留，旧Early100 failed未改，无追加训练。
+**此前：[四检查点重复对照已完成](reports/repetition-onset/README.md)**（2026-10-23）：同一句音频、同137-token输入、同512-token生成预算，base/25/50/100各一次，共4次调用／0更新／99.16秒。base/25/50正常EOS结束且原normalizer下16词全对；100生成170次`CULINARY`加`CUL`，512无EOS，parser压成两词。最早受测阳性为100，上个受测阴性为50；不能定位精确首发更新或训练原因。独立CPU审计通过，85份run产物跨机一致，GPU1退出、Plex保留，旧Early100 failed未改，无追加训练。
 
 **此前：[512-token截断探针已完成](reports/truncation-probe/README.md)**（2026-10-23）：固定checkpoint100与原生成规则，GPU1上原batch16两次、单句一次，共3次调用／33条消费／0次更新，用时130.69秒。三次目标raw token完全一致，均512个且无EOS；解码为170次`CULINARY`加`CUL`，随后官方parser压成`CULINARY CUL`。单句同样复现，原batch组成不是必要条件；训练根因尚未确定。raw tokens、EOS、解析前后文本、指纹、监控及独立审计已保存，旧Early100 failed状态不变，没有扩大训练。
 

@@ -1,0 +1,15 @@
+{
+  "derived_sha256": {
+    "reports/token-probability/cpu-repair-20261026-r1/recomputed/base/worker/teacher/base/derived.json": "052e6cb3fb5011933f371fc76c35aa88073046d9af68d2b905bf03ed753521dc",
+    "reports/token-probability/cpu-repair-20261026-r1/recomputed/base/worker/teacher/step050/derived.json": "a8f9ecc7b17cfe097ad77c34fca95f267490545788917eaa84114267191b9852",
+    "reports/token-probability/cpu-repair-20261026-r1/recomputed/base/worker/teacher/step100/derived.json": "52042bb154afdc8cf3ccb1b6b2d21b707a0fbef385a1bba5b9c3139a363a01d3",
+    "reports/token-probability/cpu-repair-20261026-r1/recomputed/step050/worker/teacher/base/derived.json": "84d45b8e4f6e23586fdf46be084f4d35f3c454949065fb669af31c6ad2f113da",
+    "reports/token-probability/cpu-repair-20261026-r1/recomputed/step050/worker/teacher/step050/derived.json": "b7565324bc59cece79043bc2e8ae03984e248d81b955d6eabd6f2b7d8b78e564",
+    "reports/token-probability/cpu-repair-20261026-r1/recomputed/step050/worker/teacher/step100/derived.json": "dfe8d133a6b96917d1ca559afecb6df5a63431d237478dce18ab884bb7923c62",
+    "reports/token-probability/cpu-repair-20261026-r1/recomputed/step100/worker/teacher/base/derived.json": "ad0b42bd25fc61635e12d8b6b775ff151832eb331b906f9208305d2cbc6ce42e",
+    "reports/token-probability/cpu-repair-20261026-r1/recomputed/step100/worker/teacher/step050/derived.json": "3b99461bceb34a680a8a914ee6324108e3ecd1e45fdb85060541fe423264ef34",
+    "reports/token-probability/cpu-repair-20261026-r1/recomputed/step100/worker/teacher/step100/derived.json": "a1e6240b1101476a74c069faced006e75da0ae53ffb246e87b32c8592d9670a7"
+  },
+  "reference_sha256": "6753b127d40288a558761c6b8e79964f07af7e96f4e85964a0a8b66c26b03f49",
+  "interpretation": "Natural log probabilities preserve underflowed events. Candidate pieces are single next-token events. Each comparison fixes trajectory, j and prefix. No training-cause claim."
+}

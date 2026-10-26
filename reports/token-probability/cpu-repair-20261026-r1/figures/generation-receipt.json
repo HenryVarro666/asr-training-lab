@@ -1,0 +1,47 @@
+{
+  "status": "complete_after_independent_audit_pass",
+  "figures": 3,
+  "exports": 9,
+  "visually_inspected_pngs": true,
+  "source_matches_corrected_manifest": true,
+  "plot_tool_sha256": "ea95eef4e86ff98fb2d7fb1f54150ba13a2080bda7481847b2ffa8c371410621",
+  "accepted_audit_sha256": "9282a6d0962a809f5a0a0bfa314b0fe8e64131ef3f9445fc17de06837ae857b5",
+  "files": {
+    "correct-endings-eos.svg": {
+      "sha256": "1e5574ebd3e53393280daf4d4902a7c6b4a3a18e81151d25420f0b7035fc222b",
+      "bytes": 17973
+    },
+    "correct-endings-eos.png": {
+      "sha256": "24c8c00b87580c022353931d1a8222c38119c334334ea65c5644ec1359e02f2d",
+      "bytes": 70663
+    },
+    "correct-endings-eos.pdf": {
+      "sha256": "99671f99f748b663ba4688bc2b86804886561742a7d1bf126c95977128bb7e5c",
+      "bytes": 16444
+    },
+    "fixed-prefix-branches.svg": {
+      "sha256": "7d3bdf438f653fa659a13080d06e4e40f7f32813a9139a0b68a4a4d5f6f20d52",
+      "bytes": 24219
+    },
+    "full-loop-traces.pdf": {
+      "sha256": "4219bd2bce9f754e6f61eaa73a13da5ac4dda41b160d96586816a02ba241e35f",
+      "bytes": 43313
+    },
+    "full-loop-traces.png": {
+      "sha256": "123c965c54741dd899cadb7f3a49c7d83a33e047f53f6643db593a3c8406f2b0",
+      "bytes": 418847
+    },
+    "fixed-prefix-branches.pdf": {
+      "sha256": "82e07a38e4808377bda53a2684cb29c6614e4a56b1c6f68761ba310207a79114",
+      "bytes": 19134
+    },
+    "full-loop-traces.svg": {
+      "sha256": "919477a90900ba31ff26eb262f8c7c0f1c490c0af5e3ad330040c5ebc2db4aa3",
+      "bytes": 115951
+    },
+    "fixed-prefix-branches.png": {
+      "sha256": "3482a274df232bcc27b356e9a3d1053bce236f4c0b7db66765b392126b8ea807",
+      "bytes": 84201
+    }
+  }
+}

@@ -5,6 +5,27 @@ from asr_lab.token_probability import (teacher_inputs,aligned_teacher_logits,che
 
 
 class ProbabilityContracts(unittest.TestCase):
+    def test_large_common_offset_preserves_original_probability_tolerance(self):
+        # All increments are exactly representable: only arithmetic, not input
+        # quantization, may change when adding this realistic large common offset.
+        row=torch.tensor([0.,-.25,-.5]+[-32.]*10,dtype=torch.float32)
+        expected=torch.softmax(row.double(),dim=0)
+        baseline=row_statistics(row,0,list(range(13)),[1,2],lambda ids:[str(i) for i in ids])
+        shifted=row_statistics(row+1024.,0,list(range(13)),[1,2],lambda ids:[str(i) for i in ids])
+        self.assertLessEqual(abs(shifted['target']['prob']-float(expected[0])),1e-6)
+        self.assertLessEqual(abs(shifted['entropy']-baseline['entropy']),5e-5)
+        self.assertLessEqual(abs(shifted['eos']['total_prob']-float(expected[1:3].sum())),1e-6)
+        self.assertEqual([i['id'] for i in baseline['top10']],[i['id'] for i in shifted['top10']])
+        self.assertEqual(shifted['target']['rank'],baseline['target']['rank'])
+    def test_finite_fp32_extremes_preserve_finite_derived_values(self):
+        import math
+        limit=torch.finfo(torch.float32).max
+        row=torch.tensor([limit,-limit]+[0.]*10,dtype=torch.float32)
+        result=row_statistics(row,1,[0,1,2],[1,2],lambda ids:[str(i) for i in ids])
+        self.assertEqual(result['target']['prob'],0.)
+        self.assertTrue(math.isfinite(result['target']['logprob']))
+        self.assertTrue(math.isfinite(result['eos']['total_logprob']))
+        self.assertTrue(math.isfinite(result['entropy']))
     def test_shift_first_last_and_single_eos_without_retokenization(self):
         original=dict(input_ids=torch.tensor([[10,11,12]]),attention_mask=torch.ones(1,3,dtype=torch.long),input_features=torch.zeros(1,2,3),feature_attention_mask=torch.ones(1,3))
         for targets in ([20,21,99],[99]):

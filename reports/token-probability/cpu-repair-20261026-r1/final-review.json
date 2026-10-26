@@ -1,0 +1,14 @@
+{
+  "status": "passed_after_machine_summary_scope_clarifications",
+  "reviewer": "/root/probability_review",
+  "recorded_utc": "2026-10-26T07:03:41.780374+00:00",
+  "checks": [
+    "2304rows/12matrices/unchangedtolerances",
+    "original_failure_and_corrected_pass_separated",
+    "zero_model_gpu_training_B",
+    "nine_figure_source_bindings_match_corrected_manifest",
+    "source_and_results_review_no_blocker",
+    "resource_and_timing_scope_clarified"
+  ],
+  "full_numeric_recomputation_performed_by_reviewer": false
+}

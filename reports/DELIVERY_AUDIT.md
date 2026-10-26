@@ -1,6 +1,6 @@
 # 本轮交付验收
 
-最新准备阶段：[逐token概率诊断](token-probability/README.md)已保存合同、代码、固定轨迹/官方来源、CPU测试、独立最终审阅、部署SHA和资源快照。GPU1占用导致`ready_blocked_gpu_busy`；0模型调用/0更新/0真实概率行/0结果图，无自动队列。现有实验结果和历史归档保持原记录。
+最新阶段：[已有矩阵CPU数值修复与全量审计](token-probability/cpu-repair-20261026-r1/REPORT.md)已完成。原GPU0 A完成3生成＋9TF，其原数值审计失败保留；FP64派生统计修复后12矩阵／2304行以原容差独立通过。CPU三阶段129.004秒、0新增模型／训练调用，50专项测试通过，130原文件SHA不变；新旧证据、监控与三图完整保存。无B或新增训练，原微调退化结论保持。此前GPU占用阻断仅为历史，详见分阶段记录。
 
 本页按当前goal和主计划第9、11节核对实际交付；不把待执行计划、代码或GPU显存占用作为完成证据。用户已取消耗尽token/usage，后续采用单阶段有界实验。2026-10-23归档：零更新控制已通过；新增Early100训练完成，但完整clean截断导致评测门槛失败，other未执行。以下将完成与未验收部分分开；研究质量结论仍为微调退化。
 
@@ -21,7 +21,7 @@
 | 固定512-token截断探针 | `truncation-probe/README.md`、`run/`、`execution-summary.json`、独立CPU审计 | 3次生成／33条消费／0更新／130.69秒；3次目标raw一致且无EOS，生成重复至512后由parser压短；旧failed不变，未确定训练根因 |
 | 四检查点重复出现对照 | `repetition-onset/README.md`、`run/`、`independent-audit.json` | 4次调用／0更新／99.16秒；base/25/50正常、100首次已测强循环及512无EOS；非精确首发更新或训练根因；100本地/14远端CPU tests通过 |
 | 独立可复算图片 | `figures/figure_manifest.json`、`figures/early100/figure_manifest.json` | 原三组+新增两组，每组PNG/SVG/PDF；输入与导出SHA、重复渲染、视觉检查；没有虚构full-dev图 |
-| 监控与原服务保护 | 各run的`monitor/`、`early100/final-host-snapshot.json` | 已保存过程采样和完成快照；GPU0 PersonaPlex保留；全部ASR进程已退出；既有告警原样保留 |
+| 监控与原服务保护 | 各run的`monitor/`、`early100/final-host-snapshot.json` | 已保存过程采样和完成快照；原GPU0 PersonaPlex经用户明确授权暂停并保存恢复，网关和其他任务保留；本轮CPU自有进程已退出；历史告警原样保留 |
 | 可查看训练曲线 | `monitoring/main-epoch1-tensorboard/`、`monitoring/tensorboard-verification.json` | 事件实际解析出892条train loss/grad/lr、8条eval loss；非仅空TensorBoard目录 |
 | 可复现仓库 | README、配置、CLI、许可、CI、环境冻结、测试和上述收据 | Early100前本地72项、远端专属12项通过；本地Git交付与跨机bundle备份，未发布GitHub、未公开模型或音频 |
 

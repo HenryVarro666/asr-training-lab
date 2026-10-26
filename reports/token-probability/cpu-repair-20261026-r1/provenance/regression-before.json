@@ -1,0 +1,12 @@
+{
+  "status": "failed_as_expected_before_fix",
+  "command": "CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4 MKL_NUM_THREADS=4 PYTHONPATH=src .venv/bin/python -m unittest tests.test_token_probability.ProbabilityContracts.test_large_common_offset_preserves_original_probability_tolerance tests.test_token_probability.ProbabilityContracts.test_finite_fp32_extremes_preserve_finite_derived_values",
+  "exit_code": 1,
+  "tests_run": 2,
+  "failures": 1,
+  "errors": 1,
+  "offset_probability_error": 1.9560730998124942e-05,
+  "original_probability_tolerance": 1e-06,
+  "finite_extreme_error": "FloatingPointError: Invalid normalized distribution",
+  "model_calls": 0
+}

@@ -22,3 +22,9 @@ cache/
 reports/token-probability/attempts/*/comparisons.json
 reports/token-probability/attempts/*/*/worker/generation/derived.json
 reports/token-probability/attempts/*/*/worker/teacher/*/derived.json
+# Corrected CPU overlays are mirrored locally and on RAID; keep their manifests
+# and summaries in Git while the complete per-token JSON remains in those mirrors.
+reports/token-probability/cpu-repair-*/recomputed/*/worker/generation/derived.json
+reports/token-probability/cpu-repair-*/recomputed/*/worker/teacher/*/derived.json
+reports/token-probability/cpu-repair-*/recomputed/comparisons.json
+reports/token-probability/cpu-repair-*/.supervisor.lock

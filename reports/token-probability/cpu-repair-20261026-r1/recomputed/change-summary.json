@@ -1,0 +1,38 @@
+{
+  "total_distribution_rows": 2304,
+  "maximum_absolute_old_vs_corrected_changes": {
+    "target.prob": 2.1629275639423184e-06,
+    "target.logprob": 2.1663120551532216e-06,
+    "eos.total_prob": 9.548202081210988e-07,
+    "eos.total_logprob": 2.63274689160653e-06,
+    "entropy": 4.3876558475375305e-06
+  },
+  "rows_exceeding_old_tolerance_vs_corrected": {
+    "target.prob": 395,
+    "target.logprob": 0,
+    "eos.total_prob": 0,
+    "eos.total_logprob": 0,
+    "entropy": 0
+  },
+  "own_trajectory_comparison": {
+    "base": {
+      "argmax_equal_rows": 27,
+      "total_rows": 27,
+      "max_absolute_logit_difference": 0.625,
+      "max_absolute_target_logprob_difference": 0.0267237968899056
+    },
+    "step050": {
+      "argmax_equal_rows": 37,
+      "total_rows": 37,
+      "max_absolute_logit_difference": 0.5,
+      "max_absolute_target_logprob_difference": 0.009840027420202332
+    },
+    "step100": {
+      "argmax_equal_rows": 512,
+      "total_rows": 512,
+      "max_absolute_logit_difference": 0.375,
+      "max_absolute_target_logprob_difference": 0.060014346726432244
+    }
+  },
+  "boundary": "Old-vs-corrected changes become numerical error estimates only after the independent overlay audit passes."
+}

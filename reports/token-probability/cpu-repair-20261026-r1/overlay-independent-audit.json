@@ -1,0 +1,747 @@
+{
+  "status": "passed",
+  "audited_at": "2026-10-26T06:57:29.193550+00:00",
+  "run": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a",
+  "reference_sha256": "6753b127d40288a558761c6b8e79964f07af7e96f4e85964a0a8b66c26b03f49",
+  "arithmetic": "Independent FP64 max-shift normalization; exhaustive stable sorting and ranks",
+  "tolerances": {
+    "abs_logprob_entropy_margin": 5e-05,
+    "abs_probability": 1e-06,
+    "abs_difference_of_two_logprobs": 0.0001,
+    "nll_sum_error_per_row": 5e-05,
+    "fp64_normalization": 2e-12,
+    "rank_ties_argmax_top10_ids": "exact"
+  },
+  "total_distribution_rows": 2304,
+  "full_vocabulary_matrices": 12,
+  "model_calls": 0,
+  "weight_content_reads": 0,
+  "matrix_disk_read_policy": "Each PT read/hash/load once from identical bytes",
+  "max_observed_absolute_errors": {
+    "target.logprob": 1.5259950421342428e-13,
+    "target.prob": 1.52433621281034e-13,
+    "candidate.logprob": 1.5631940186722204e-13,
+    "candidate.prob": 1.52433621281034e-13,
+    "top10.logprob": 1.5276668818842154e-13,
+    "top10.prob": 1.52433621281034e-13,
+    "eos.logprob": 1.5631940186722204e-13,
+    "eos.prob": 5.551115123125783e-15,
+    "eos.total_prob": 5.551115123125783e-15,
+    "eos.total_logprob": 1.5276668818842154e-13,
+    "margin": 0.0,
+    "entropy": 1.5105972028806036e-13,
+    "total_target_nll": 1.5493384353248985e-11,
+    "mean_target_nll": 7.495393195000588e-14,
+    "own.max_delta": 0.0,
+    "own.mean_delta": 1.1383986586732675e-08,
+    "own.target_logprob_difference": 7.735500608119228e-14,
+    "own.eos_total_logprob_difference": 7.638334409421077e-14,
+    "own.teacher_margin": 0.0,
+    "own.generation_margin": 0.0
+  },
+  "nll": {
+    "base": {
+      "generation": {
+        "total": 0.8641997966758637,
+        "mean": 0.03200739987688384
+      },
+      "base": {
+        "total": 0.840427150849289,
+        "mean": 0.03112693151293663
+      },
+      "step050": {
+        "total": 31.259958588167088,
+        "mean": 0.8448637456261375
+      },
+      "step100": {
+        "total": 47.061546196330525,
+        "mean": 0.09191708241470806
+      }
+    },
+    "step050": {
+      "generation": {
+        "total": 1.1328919853011812,
+        "mean": 0.03061870230543733
+      },
+      "base": {
+        "total": 82.09894444348568,
+        "mean": 3.040701646055025
+      },
+      "step050": {
+        "total": 1.1224538640811519,
+        "mean": 0.030336590921112214
+      },
+      "step100": {
+        "total": 14.5361373033662,
+        "mean": 0.02839089317063711
+      }
+    },
+    "step100": {
+      "generation": {
+        "total": 11.157641292643213,
+        "mean": 0.021792268149693775
+      },
+      "base": {
+        "total": 46.0566383043827,
+        "mean": 1.7058014186808408
+      },
+      "step050": {
+        "total": 2.8109056954943,
+        "mean": 0.07597042420254865
+      },
+      "step100": {
+        "total": 11.25923279466018,
+        "mean": 0.021990689052070665
+      }
+    }
+  },
+  "free_trajectory_forks": [
+    {
+      "left": "base",
+      "right": "step050",
+      "lcp_length": 0,
+      "first_difference_index": 0,
+      "shared_continuation_prefix": [],
+      "left_next_id": 34,
+      "right_next_id": 5049
+    },
+    {
+      "left": "base",
+      "right": "step100",
+      "lcp_length": 1,
+      "first_difference_index": 1,
+      "shared_continuation_prefix": [
+        34
+      ],
+      "left_next_id": 4943,
+      "right_next_id": 1094
+    },
+    {
+      "left": "step050",
+      "right": "step100",
+      "lcp_length": 0,
+      "first_difference_index": 0,
+      "shared_continuation_prefix": [],
+      "left_next_id": 5049,
+      "right_next_id": 34
+    }
+  ],
+  "artifact_records": [
+    {
+      "path": "/mnt/raid/asr-lab/repo/reports/token-probability/inputs/trajectory-reference.json",
+      "sha256": "6753b127d40288a558761c6b8e79964f07af7e96f4e85964a0a8b66c26b03f49",
+      "bytes": 104933
+    },
+    {
+      "path": "/mnt/raid/asr-lab/cache/huggingface/hub/models--Qwen--Qwen3-ASR-1.7B/blobs/4783fe10ac3adce15ac8f358ef5462739852c569",
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "bytes": 2776833
+    },
+    {
+      "path": "/mnt/raid/asr-lab/cache/huggingface/hub/models--Qwen--Qwen3-ASR-1.7B/blobs/b93109843922a40c6654c5449d3bf95372267c66",
+      "sha256": "4942d005604266809309cabc9f4e9cb89ce855d59b14681fdc0e1cc62ea26c4c",
+      "bytes": 12487
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker/result.json",
+      "sha256": "ede9b10958c894e48b8a8e5e25eb557c97976d1fa94d0c1053696ae78addd788",
+      "bytes": 9207
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker/metadata.json",
+      "sha256": "33b6bb9725622f655d479ea4e1c6ff210ff2de7d65be645ac7772be7964d8a46",
+      "bytes": 1409
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker/own-trajectory-comparison.json",
+      "sha256": "94130e4cdab5768ee738434fadb69e77aa643c54ba4d0fd41c6abed7e1607681",
+      "bytes": 8879
+    },
+    {
+      "path": "/mnt/raid/asr-lab/analyses/token-probability-cpu-20261026-r1/recomputed/base/worker/own-trajectory-comparison.json",
+      "sha256": "b0c36075c52b0cb6ba340b9991b3cfcb95e8c52f6bfe3e23896f65b432be3b7f",
+      "bytes": 9445
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker/inputs.json",
+      "sha256": "8a1f22f38189bc92dae9aed37790d09e7f4f60119a3378ddadac6de2f864c21d",
+      "bytes": 12630
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker/gpu-preflight.json",
+      "sha256": "5b6133e48e144faea7d54546e107ba3836ea7d61bb529d0d9f03ed3bd5b0b60e",
+      "bytes": 442
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker/inputs.pt",
+      "sha256": "51d83aa165fe0da91d006fdedbe3e0deb0e90fba47cf8db2c8288f35df8e13ea",
+      "bytes": 241457
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker/prefix-forks.json",
+      "sha256": "3d1e7a1001301565795516f53530ba3cd66bc7e1f39d906b4b42b440a85e0c11",
+      "bytes": 11944
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker/teacher/step100/derived.json",
+      "sha256": "9a29c558bbb801be2c568e968481a6330ae2fe2c91d53b006c82b313c75af974",
+      "bytes": 8559338
+    },
+    {
+      "path": "/mnt/raid/asr-lab/analyses/token-probability-cpu-20261026-r1/recomputed/base/worker/teacher/step100/derived.json",
+      "sha256": "52042bb154afdc8cf3ccb1b6b2d21b707a0fbef385a1bba5b9c3139a363a01d3",
+      "bytes": 8629612
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker/teacher/step100/distribution-manifest.json",
+      "sha256": "2d7ff570584661d1ca7d637ce7391369da2a37ffa7cede2efb2f3a09bbad37a2",
+      "bytes": 450
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker/teacher/step100/inputs.json",
+      "sha256": "bb73c6f1d1b8fcab72a82143c66f998cb926d8beda741829ee2bbc47cf11e17e",
+      "bytes": 27995
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker/teacher/step100/distributions.pt",
+      "sha256": "26931e811e0b20bd7cab508790ccf0b85196332717968eb30313639e3b52bc9c",
+      "bytes": 311166632
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker/teacher/step100/forward-receipt.json",
+      "sha256": "f8ab47b50a72cf7ff967968710c0205bc0d1102d06e65548a8ac76e3c916bce4",
+      "bytes": 754
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker/teacher/step100/inputs.pt",
+      "sha256": "6c7a2965ebc0f7974ac896b5ca2800715a3fcb580a2f78681a63948d191b9166",
+      "bytes": 249649
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker/teacher/base/derived.json",
+      "sha256": "9027d2173a51c94dea5325ecc9b17607b0b30d1d6e8f16a1f82b29fe970e4758",
+      "bytes": 450381
+    },
+    {
+      "path": "/mnt/raid/asr-lab/analyses/token-probability-cpu-20261026-r1/recomputed/base/worker/teacher/base/derived.json",
+      "sha256": "052e6cb3fb5011933f371fc76c35aa88073046d9af68d2b905bf03ed753521dc",
+      "bytes": 458842
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker/teacher/base/distribution-manifest.json",
+      "sha256": "7fde47ba9c7a6394bd3820a6c40fe577f4d08f91cd13e5af335eb129e2ffcf2e",
+      "bytes": 445
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker/teacher/base/inputs.json",
+      "sha256": "9ebe535eb701491b7a30a3fceb8d78f48617959e6f14249108b9a5f99e8805e0",
+      "bytes": 8522
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker/teacher/base/distributions.pt",
+      "sha256": "9494b60be2da3a15b51a613236eb72c003e681e5fb05ac7a52dec9f079ef4d86",
+      "bytes": 16410792
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker/teacher/base/forward-receipt.json",
+      "sha256": "66af4043edf225ea3da6be5c220c64ab37877d977d628690c4a9fc3a52a9f9a3",
+      "bytes": 749
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker/teacher/base/inputs.pt",
+      "sha256": "ba57dd9724137755f572181cf2414a0e75f8e7474aedd29f8fdd9325076ed279",
+      "bytes": 241841
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker/teacher/step050/derived.json",
+      "sha256": "82af37227fbce4baabd0abda4ea4ab796cb369361e548b62ad6d7dda525262ec",
+      "bytes": 618924
+    },
+    {
+      "path": "/mnt/raid/asr-lab/analyses/token-probability-cpu-20261026-r1/recomputed/base/worker/teacher/step050/derived.json",
+      "sha256": "a8f9ecc7b17cfe097ad77c34fca95f267490545788917eaa84114267191b9852",
+      "bytes": 625487
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker/teacher/step050/distribution-manifest.json",
+      "sha256": "dd7804694398109434cdbb2eb98eb5ccd58cdc448a83f9e01acf9b4c9916152b",
+      "bytes": 448
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker/teacher/step050/inputs.json",
+      "sha256": "90b204dba6c6dbab7041a91536bc275e02a33742773f8b202033bdcd84b7b72d",
+      "bytes": 9013
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker/teacher/step050/distributions.pt",
+      "sha256": "30f700cf77b451f0b88020da29d86331b0adf7cd319ca51d6fa24ab499c1c177",
+      "bytes": 22488232
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker/teacher/step050/forward-receipt.json",
+      "sha256": "efb3bde788624b0d7042c2d9559d3cf31320f268282369f44419478b6106f11d",
+      "bytes": 752
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker/teacher/step050/inputs.pt",
+      "sha256": "9baca9e640491984d5ee3b887cba7693f15117afea2cd382267f7f38da339256",
+      "bytes": 241969
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker/generation/derived.json",
+      "sha256": "6b1ca7bc0df2cb9371ff5f347e8452e4b658fcba6e9c97706104d1f8d06666a4",
+      "bytes": 450373
+    },
+    {
+      "path": "/mnt/raid/asr-lab/analyses/token-probability-cpu-20261026-r1/recomputed/base/worker/generation/derived.json",
+      "sha256": "6dd77226b8f689da98ca1b4685a24e92618ca39c300bd471893b3e7a33f0c426",
+      "bytes": 458840
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker/generation/raw-tokens.pt",
+      "sha256": "b47bc6e126d6c317156dec9cff5aab8b3f8c6c9ac13d121182e1987c28fd53ad",
+      "bytes": 2899
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker/generation/distribution-manifest.json",
+      "sha256": "ec989c14d5a9d82f9fe700a1fe6504012f48e6774a7a9180ee87d041b5fc00ed",
+      "bytes": 1820
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker/generation/raw-tokens.json",
+      "sha256": "73953e0f94ea48721ad02eb5eb614bbff0417278e0d7656863d7b7ae75a20b9e",
+      "bytes": 2649
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker/generation/distributions.pt",
+      "sha256": "5a55f1f905aca28250809888277f9caeed50372c45e97b4d5bac630def68ddf3",
+      "bytes": 16410792
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker/generation/decoded.json",
+      "sha256": "307de5ca7581b6ae637078e08ddb8e13439e519c7b00bef9adaf8ff70afc450a",
+      "bytes": 3298
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker/generation/effective-generation.json",
+      "sha256": "8c84b3083b62dd93ea203625e742a1a2026762841bc68f5d84685045a8aa4b16",
+      "bytes": 4727
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step050/worker/result.json",
+      "sha256": "b02833844784d61443bd67f8ccbae7f2d7ee80e8312feeb903898622f982b48a",
+      "bytes": 9763
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step050/worker/metadata.json",
+      "sha256": "0f18b20e92f354c74db91a802d66f49d61747876922b49b472e27856d04add3c",
+      "bytes": 1412
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step050/worker/own-trajectory-comparison.json",
+      "sha256": "3c4ae4e1e11ac145caa21bedce17848459086e5e4e5dc9169f7f6279511ef8e3",
+      "bytes": 12680
+    },
+    {
+      "path": "/mnt/raid/asr-lab/analyses/token-probability-cpu-20261026-r1/recomputed/step050/worker/own-trajectory-comparison.json",
+      "sha256": "94bdf2021561c7a77dd46b1bc30fa754d6203fb227a894a49c36ae9582283bf1",
+      "bytes": 12892
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step050/worker/inputs.json",
+      "sha256": "8a1f22f38189bc92dae9aed37790d09e7f4f60119a3378ddadac6de2f864c21d",
+      "bytes": 12630
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step050/worker/gpu-preflight.json",
+      "sha256": "96aa6e56dd98274c099fa30d1ce81c9f1b9ef360498c78db99d32261b786cdaa",
+      "bytes": 442
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step050/worker/inputs.pt",
+      "sha256": "51d83aa165fe0da91d006fdedbe3e0deb0e90fba47cf8db2c8288f35df8e13ea",
+      "bytes": 241457
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step050/worker/prefix-forks.json",
+      "sha256": "3d1e7a1001301565795516f53530ba3cd66bc7e1f39d906b4b42b440a85e0c11",
+      "bytes": 11944
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step050/worker/teacher/step100/derived.json",
+      "sha256": "a909366db837bd3c6fde796fd4f1c59d81186e7c70de0ad44573073b0a79adda",
+      "bytes": 8555414
+    },
+    {
+      "path": "/mnt/raid/asr-lab/analyses/token-probability-cpu-20261026-r1/recomputed/step050/worker/teacher/step100/derived.json",
+      "sha256": "dfe8d133a6b96917d1ca559afecb6df5a63431d237478dce18ab884bb7923c62",
+      "bytes": 8626353
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step050/worker/teacher/step100/distribution-manifest.json",
+      "sha256": "1b693253c7837b85e1702b2abcc1d3bae37e20124f96134fb24df1f4b2337c95",
+      "bytes": 453
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step050/worker/teacher/step100/inputs.json",
+      "sha256": "bb73c6f1d1b8fcab72a82143c66f998cb926d8beda741829ee2bbc47cf11e17e",
+      "bytes": 27995
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step050/worker/teacher/step100/distributions.pt",
+      "sha256": "03069bf936119d54b6d606db5bc2cb2e93d50d83033c4d5da29595a3de5d6a8c",
+      "bytes": 311166632
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step050/worker/teacher/step100/forward-receipt.json",
+      "sha256": "f8ab47b50a72cf7ff967968710c0205bc0d1102d06e65548a8ac76e3c916bce4",
+      "bytes": 754
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step050/worker/teacher/step100/inputs.pt",
+      "sha256": "6c7a2965ebc0f7974ac896b5ca2800715a3fcb580a2f78681a63948d191b9166",
+      "bytes": 249649
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step050/worker/teacher/base/derived.json",
+      "sha256": "b4a1d9e3e9f47ffb6b6193533a5b6c03d88e8d59e4285e9f919a63c02eef2896",
+      "bytes": 452430
+    },
+    {
+      "path": "/mnt/raid/asr-lab/analyses/token-probability-cpu-20261026-r1/recomputed/step050/worker/teacher/base/derived.json",
+      "sha256": "84d45b8e4f6e23586fdf46be084f4d35f3c454949065fb669af31c6ad2f113da",
+      "bytes": 456393
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step050/worker/teacher/base/distribution-manifest.json",
+      "sha256": "54e44834dd0167dbba5d4a12e367041a4e04f8849141a9855b718e5efd57e174",
+      "bytes": 448
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step050/worker/teacher/base/inputs.json",
+      "sha256": "9ebe535eb701491b7a30a3fceb8d78f48617959e6f14249108b9a5f99e8805e0",
+      "bytes": 8522
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step050/worker/teacher/base/distributions.pt",
+      "sha256": "93ad1dd279d4aa1d595ce75129c93a9cb5425a4972c40358c21b296b0f470786",
+      "bytes": 16410792
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step050/worker/teacher/base/forward-receipt.json",
+      "sha256": "66af4043edf225ea3da6be5c220c64ab37877d977d628690c4a9fc3a52a9f9a3",
+      "bytes": 749
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step050/worker/teacher/base/inputs.pt",
+      "sha256": "ba57dd9724137755f572181cf2414a0e75f8e7474aedd29f8fdd9325076ed279",
+      "bytes": 241841
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step050/worker/teacher/step050/derived.json",
+      "sha256": "6b2d1c1eafeadfd6fdbca0ad4f1e8ad0d7137390015909ea75754e4b9152a473",
+      "bytes": 619601
+    },
+    {
+      "path": "/mnt/raid/asr-lab/analyses/token-probability-cpu-20261026-r1/recomputed/step050/worker/teacher/step050/derived.json",
+      "sha256": "b7565324bc59cece79043bc2e8ae03984e248d81b955d6eabd6f2b7d8b78e564",
+      "bytes": 624938
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step050/worker/teacher/step050/distribution-manifest.json",
+      "sha256": "e919d0c697a6db5fbed9d8390f08f34c0b1835735f02badea5a70bcf46624c50",
+      "bytes": 451
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step050/worker/teacher/step050/inputs.json",
+      "sha256": "90b204dba6c6dbab7041a91536bc275e02a33742773f8b202033bdcd84b7b72d",
+      "bytes": 9013
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step050/worker/teacher/step050/distributions.pt",
+      "sha256": "580e831d620525d74c055ce5d07419c9c6dd67ee29861854d04b264dace9765e",
+      "bytes": 22488232
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step050/worker/teacher/step050/forward-receipt.json",
+      "sha256": "efb3bde788624b0d7042c2d9559d3cf31320f268282369f44419478b6106f11d",
+      "bytes": 752
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step050/worker/teacher/step050/inputs.pt",
+      "sha256": "9baca9e640491984d5ee3b887cba7693f15117afea2cd382267f7f38da339256",
+      "bytes": 241969
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step050/worker/generation/derived.json",
+      "sha256": "cba0b6597cc805e9d7d0881cf08311dce973e294a635eb50882dcee2e95d4946",
+      "bytes": 619929
+    },
+    {
+      "path": "/mnt/raid/asr-lab/analyses/token-probability-cpu-20261026-r1/recomputed/step050/worker/generation/derived.json",
+      "sha256": "aef00bf2c3d5b844e9668de77dd360d7b80a5d3741905aceae492d3b7788e6c5",
+      "bytes": 625180
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step050/worker/generation/raw-tokens.pt",
+      "sha256": "380dc89d478309a8fc71c237e66423ff0b15253678ed368c188a331a8fec5646",
+      "bytes": 2963
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step050/worker/generation/distribution-manifest.json",
+      "sha256": "d944d7668cc478de4768206db484250d370606a39b3fceb03d2942199fc08840",
+      "bytes": 2283
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step050/worker/generation/raw-tokens.json",
+      "sha256": "21bc9fe5e3523d4574f6aaef47a197d9fe81c93b4c189d80c855704825f5862e",
+      "bytes": 2917
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step050/worker/generation/distributions.pt",
+      "sha256": "8738de453389052c44c46315fb5d317c30468a8f5d4e2b99cda7c3fe95da8f2d",
+      "bytes": 22488232
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step050/worker/generation/decoded.json",
+      "sha256": "63bdaf564933504fecc090927b9d733571376a26f78a62050f238e228658a663",
+      "bytes": 3490
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step050/worker/generation/effective-generation.json",
+      "sha256": "8c84b3083b62dd93ea203625e742a1a2026762841bc68f5d84685045a8aa4b16",
+      "bytes": 4727
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step100/worker/result.json",
+      "sha256": "56b9393c72755999a2a38115f874c2268eaffc2957d1518d75a6428057ff11ec",
+      "bytes": 35422
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step100/worker/metadata.json",
+      "sha256": "38437ccb19d2d59abcfb3860b4a90ff07a3a7fffd10aeab9014f5d8f3cf33fa6",
+      "bytes": 1412
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step100/worker/own-trajectory-comparison.json",
+      "sha256": "f8cd1561d053dd9dfeeed9e7a38497a15b420a40cd1c72efc19a81240eefe239",
+      "bytes": 174407
+    },
+    {
+      "path": "/mnt/raid/asr-lab/analyses/token-probability-cpu-20261026-r1/recomputed/step100/worker/own-trajectory-comparison.json",
+      "sha256": "ffdb7fc847ffa43267f3d3830cc191e79a57710d392d30144786c86fe7a0ad21",
+      "bytes": 177989
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step100/worker/inputs.json",
+      "sha256": "8a1f22f38189bc92dae9aed37790d09e7f4f60119a3378ddadac6de2f864c21d",
+      "bytes": 12630
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step100/worker/gpu-preflight.json",
+      "sha256": "668c86466d0ced5ed6005a1e41e98c775fba3122f5b96d234a362ca62ab958a8",
+      "bytes": 442
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step100/worker/inputs.pt",
+      "sha256": "51d83aa165fe0da91d006fdedbe3e0deb0e90fba47cf8db2c8288f35df8e13ea",
+      "bytes": 241457
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step100/worker/prefix-forks.json",
+      "sha256": "3d1e7a1001301565795516f53530ba3cd66bc7e1f39d906b4b42b440a85e0c11",
+      "bytes": 11944
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step100/worker/teacher/step100/derived.json",
+      "sha256": "7b8c578250fb4e32dae6c577f3cecab0201522a48bfae9683dea7ead27a711f1",
+      "bytes": 8557717
+    },
+    {
+      "path": "/mnt/raid/asr-lab/analyses/token-probability-cpu-20261026-r1/recomputed/step100/worker/teacher/step100/derived.json",
+      "sha256": "a1e6240b1101476a74c069faced006e75da0ae53ffb246e87b32c8592d9670a7",
+      "bytes": 8627939
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step100/worker/teacher/step100/distribution-manifest.json",
+      "sha256": "ac1fb29f0102017d8f21b3900866d3571532e9d32f816b125b6f44469928165d",
+      "bytes": 453
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step100/worker/teacher/step100/inputs.json",
+      "sha256": "bb73c6f1d1b8fcab72a82143c66f998cb926d8beda741829ee2bbc47cf11e17e",
+      "bytes": 27995
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step100/worker/teacher/step100/distributions.pt",
+      "sha256": "c5717fbd6badae025756ed31aa0c95b8aaf32c71d0eec75e0ee36065cc9946ce",
+      "bytes": 311166632
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step100/worker/teacher/step100/forward-receipt.json",
+      "sha256": "f8ab47b50a72cf7ff967968710c0205bc0d1102d06e65548a8ac76e3c916bce4",
+      "bytes": 754
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step100/worker/teacher/step100/inputs.pt",
+      "sha256": "6c7a2965ebc0f7974ac896b5ca2800715a3fcb580a2f78681a63948d191b9166",
+      "bytes": 249649
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step100/worker/teacher/base/derived.json",
+      "sha256": "278a5482886f2e4b313323cafb0b68877500d030aa5fbee58b073704aa63e54e",
+      "bytes": 451981
+    },
+    {
+      "path": "/mnt/raid/asr-lab/analyses/token-probability-cpu-20261026-r1/recomputed/step100/worker/teacher/base/derived.json",
+      "sha256": "ad0b42bd25fc61635e12d8b6b775ff151832eb331b906f9208305d2cbc6ce42e",
+      "bytes": 456462
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step100/worker/teacher/base/distribution-manifest.json",
+      "sha256": "9377477d770b7937e4aeadd29f1a071cb75f94845a6cf35a8c6eee14438f4239",
+      "bytes": 448
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step100/worker/teacher/base/inputs.json",
+      "sha256": "9ebe535eb701491b7a30a3fceb8d78f48617959e6f14249108b9a5f99e8805e0",
+      "bytes": 8522
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step100/worker/teacher/base/distributions.pt",
+      "sha256": "ba6b1999278a8ae082caf9c43693d293924d09e50098044a946e8f5a126c38c4",
+      "bytes": 16410792
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step100/worker/teacher/base/forward-receipt.json",
+      "sha256": "66af4043edf225ea3da6be5c220c64ab37877d977d628690c4a9fc3a52a9f9a3",
+      "bytes": 749
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step100/worker/teacher/base/inputs.pt",
+      "sha256": "ba57dd9724137755f572181cf2414a0e75f8e7474aedd29f8fdd9325076ed279",
+      "bytes": 241841
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step100/worker/teacher/step050/derived.json",
+      "sha256": "70a7efb3cff7e608df72f99da013eb69bc879a403b4981c56136292025ad8ac2",
+      "bytes": 619761
+    },
+    {
+      "path": "/mnt/raid/asr-lab/analyses/token-probability-cpu-20261026-r1/recomputed/step100/worker/teacher/step050/derived.json",
+      "sha256": "3b99461bceb34a680a8a914ee6324108e3ecd1e45fdb85060541fe423264ef34",
+      "bytes": 624920
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step100/worker/teacher/step050/distribution-manifest.json",
+      "sha256": "2ef469c6e070060fb04c72056478737cae138f3ca9dce7d11e5042a99c493683",
+      "bytes": 451
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step100/worker/teacher/step050/inputs.json",
+      "sha256": "90b204dba6c6dbab7041a91536bc275e02a33742773f8b202033bdcd84b7b72d",
+      "bytes": 9013
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step100/worker/teacher/step050/distributions.pt",
+      "sha256": "bd712a00b2de2a1b7dd3b459ed9cc9f2b92e5ab28c7afbdec2a1f4deae7cdce5",
+      "bytes": 22488232
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step100/worker/teacher/step050/forward-receipt.json",
+      "sha256": "efb3bde788624b0d7042c2d9559d3cf31320f268282369f44419478b6106f11d",
+      "bytes": 752
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step100/worker/teacher/step050/inputs.pt",
+      "sha256": "9baca9e640491984d5ee3b887cba7693f15117afea2cd382267f7f38da339256",
+      "bytes": 241969
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step100/worker/generation/derived.json",
+      "sha256": "398e7f2057eb9b4410175e4b730986847993b1ae5d2666989546ba9b017a1a9c",
+      "bytes": 8558533
+    },
+    {
+      "path": "/mnt/raid/asr-lab/analyses/token-probability-cpu-20261026-r1/recomputed/step100/worker/generation/derived.json",
+      "sha256": "52e104045f685eb9d982cbe0070736e711b2b0fdeb77b5fc141a39bf0a5f1399",
+      "bytes": 8628395
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step100/worker/generation/raw-tokens.pt",
+      "sha256": "e9fff707df11afc9d0b3b221e2fceaa2038314ce4cdf9f1bb5de06e76bbec356",
+      "bytes": 6803
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step100/worker/generation/distribution-manifest.json",
+      "sha256": "b7035468f80f0c591376f5192420fb393c555e68ff8ab44b854ccaad70fa2d29",
+      "bytes": 24136
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step100/worker/generation/raw-tokens.json",
+      "sha256": "00d0e2150835b3d12c8e07055e98b254c78f902c9bd438e83ca512e5038e34d6",
+      "bytes": 14295
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step100/worker/generation/distributions.pt",
+      "sha256": "130bb2d5920d7e74679c9f15f8f22b996d391185cddca57cd547d12e51679d1c",
+      "bytes": 311166632
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step100/worker/generation/decoded.json",
+      "sha256": "f28c6838dfd18117aa4f0fdf235e8f01f44a15782d985d67825e7286a7ed8cf0",
+      "bytes": 20756
+    },
+    {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step100/worker/generation/effective-generation.json",
+      "sha256": "8c84b3083b62dd93ea203625e742a1a2026762841bc68f5d84685045a8aa4b16",
+      "bytes": 4727
+    }
+  ],
+  "elapsed_seconds": 14.970738005824387,
+  "boundary": "Saved evidence audit; saved model SHA/stat receipts are not a new weight rehash. Fixed abnormal prefixes change conditioning; low EOS is not a training cause. Finite cached-generation/full-forward differences are observations.",
+  "audited_evidence": "corrected_derived_overlay_against_immutable_original_matrices",
+  "original_auditor_sha256": "ebc8db219efce0f05db3859976cf0d41834d4cfac2160837cb6418fe8b6e921d",
+  "overlay_manifest": {
+    "path": "/mnt/raid/asr-lab/analyses/token-probability-cpu-20261026-r1/recomputed/manifest.json",
+    "sha256": "d6eb550d4f25891f4935a624df4c0e6e08a7ca34544db53a615f9b4640882e88",
+    "bytes": 11943
+  },
+  "original_campaign_sha256": "d289840923d02cbbca1a9542d3da951eedd3c3ef867b305852e8ec52696d3e0c",
+  "original_source_sha256": {
+    "src/asr_lab/token_probability.py": "acc34e309468c950b02e930ee7be7d45a0394b092ad0b0a35e07f83016f3a43b"
+  },
+  "corrected_source_sha256": {
+    "src/asr_lab/token_probability.py": "ed37de4ccf052f85ed330fedc4da115fe5cd32cf9f0f7eb3023699f45f681441",
+    "scripts/recompute_saved_probability.py": "c66c09fb46bb7814c50e9550cfb5cdc862cf26d079bcdbf2c57e24cb7b7507f0"
+  },
+  "overlay_corrected_artifacts": 15,
+  "original_artifacts_verified_before_overlay": true,
+  "comparisons_independently_validated": true,
+  "comparison_max_absolute_errors": {
+    "comparisons.target_logprob": 0.0,
+    "comparisons.target_prob": 0.0,
+    "comparisons.target_logprob_delta_vs_base": 0.0,
+    "comparisons.eos_total_prob": 0.0,
+    "comparisons.eos_total_logprob": 0.0,
+    "comparisons.eos_total_logprob_delta_vs_base": 0.0,
+    "comparisons.candidate_logprob_delta": 0.0,
+    "comparisons.nll_total": 0.0,
+    "comparisons.nll_mean": 0.0
+  },
+  "auxiliary_artifacts": {
+    "comparisons.json": {
+      "path": "comparisons.json",
+      "sha256": "00a39fa4fe9c53292402e9bf4b8f82d3ac7e5c5319c812e85ed4590b37bfa301",
+      "bytes": 19812624
+    },
+    "change-summary.json": {
+      "path": "change-summary.json",
+      "sha256": "00d679f086275cba9fb7fd1b3860d3ea3d23f1374c9858737cdc998dccb007d8",
+      "bytes": 1222
+    }
+  },
+  "change_summary_boundary": "Artifact SHA verified only; diagnostic counts are not independently certified.",
+  "original_failed_audit_preserved": true,
+  "whole_overlay_audit_elapsed_seconds": 16.5297608114779
+}

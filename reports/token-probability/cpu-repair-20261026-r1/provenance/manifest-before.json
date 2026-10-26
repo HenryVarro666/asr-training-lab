@@ -1,0 +1,22 @@
+{
+  "provenance/original_token_probability.py": {
+    "bytes": 22697,
+    "sha256": "acc34e309468c950b02e930ee7be7d45a0394b092ad0b0a35e07f83016f3a43b"
+  },
+  "provenance/original-failed-audit-stderr.log": {
+    "bytes": 1889,
+    "sha256": "4970417369bb5e734c1b074998c172c2a5dced097c7a1b6aee3eec1309ac6993"
+  },
+  "provenance/original_audit_saved_evidence.py": {
+    "bytes": 29967,
+    "sha256": "ebc8db219efce0f05db3859976cf0d41834d4cfac2160837cb6418fe8b6e921d"
+  },
+  "provenance/PLAN.md": {
+    "bytes": 3525,
+    "sha256": "af29ce9de9d263749490fde6fcaae31e9f3ac3ee0145d7b97cb705c4a6bff948"
+  },
+  "provenance/original-failed-audit.json": {
+    "bytes": 1155,
+    "sha256": "6f4b53cea84c8defdcafb6068c7965cddc72fc11536451cd7baee3de678052fd"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "arithmetic": "Independent Python comparison of immutable old JSON versus independently accepted corrected JSON; no raw matrix recalculation",
+  "rows": 2304,
+  "maxima": {
+    "target.prob": 2.1629275639423184e-06,
+    "target.logprob": 2.1663120551532216e-06,
+    "eos.total_prob": 9.548202081210988e-07,
+    "eos.total_logprob": 2.63274689160653e-06,
+    "entropy": 4.3876558475375305e-06
+  },
+  "rows_exceeding_original_tolerances": {
+    "target.prob": 395,
+    "target.logprob": 0,
+    "eos.total_prob": 0,
+    "eos.total_logprob": 0,
+    "entropy": 0
+  },
+  "original_failure_preserved": true
+}

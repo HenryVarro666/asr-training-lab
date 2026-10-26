@@ -1,0 +1,71 @@
+{
+  "status": "complete_original_failure_preserved_corrected_overlay_passed",
+  "recorded_utc": "2026-10-26T06:59:51.510771+00:00",
+  "original_run": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a",
+  "remote_analysis_root": "/mnt/raid/asr-lab/analyses/token-probability-cpu-20261026-r1",
+  "original_audit_status": "failed_predeclared_tolerance",
+  "original_audit_accepted_rows": null,
+  "corrected_audit_status": "passed",
+  "corrected_audit_accepted_rows": 2304,
+  "matrices": 12,
+  "model_calls_this_phase": 0,
+  "gpu_calls_this_phase": 0,
+  "new_training_updates": 0,
+  "weight_content_reads": 0,
+  "entered_b": false,
+  "tolerances": {
+    "abs_logprob_entropy_margin": 5e-05,
+    "abs_probability": 1e-06,
+    "abs_difference_of_two_logprobs": 0.0001,
+    "nll_sum_error_per_row": 5e-05,
+    "fp64_normalization": 2e-12,
+    "rank_ties_argmax_top10_ids": "exact"
+  },
+  "tolerances_changed": false,
+  "diagnostic_attempts": 1,
+  "full_recompute_attempts": 1,
+  "corrected_full_audit_attempts": 1,
+  "cumulative_remote_cpu_stage_wall_seconds": 129.00386985763907,
+  "cumulative_cap_seconds": 1500,
+  "source_files_sha_unchanged_after_run": true,
+  "immutable_original_files_verified": 130,
+  "immutable_original_bytes_verified": 1462218349,
+  "resources": {
+    "diagnostic": {
+      "elapsed_seconds": 2.3332631159573793,
+      "resource_samples": 5,
+      "peak_sampled_rss_bytes": 15577088,
+      "minimum_observed_free_bytes": 2697762992128,
+      "max_sample_gap_seconds": 1.675105799920857,
+      "terminal_owned_pids": []
+    },
+    "recompute": {
+      "elapsed_seconds": 109.13380511756986,
+      "resource_samples": 26,
+      "peak_sampled_rss_bytes": 1674256384,
+      "minimum_observed_free_bytes": 2688457953280,
+      "max_sample_gap_seconds": 5.082587823271751,
+      "terminal_owned_pids": []
+    },
+    "audit": {
+      "elapsed_seconds": 17.53680162411183,
+      "resource_samples": 8,
+      "peak_sampled_rss_bytes": 2441666560,
+      "minimum_observed_free_bytes": 2688457891840,
+      "max_sample_gap_seconds": 5.085533684119582,
+      "terminal_owned_pids": []
+    }
+  },
+  "regression_tests_passed": 50,
+  "figures": 3,
+  "figure_formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "max_probability_error": 1.52433621281034e-13,
+  "maximum_sampled_rss_bytes": 2441666560,
+  "sampled_monitoring_boundary": "Five-second discrete process-tree observations cannot prove instantaneous RSS peaks; short diagnostic completed between scheduled5s samples.",
+  "original_numerical_failure_is_not_training_failure": true,
+  "next_gate": "Stop; report CPU repair results. No model rerun, training, B or Demo service change authorized in this CPU phase."
+}

@@ -1,6 +1,6 @@
 # ASR training lab
 
-Current stage: the [token-probability diagnostic](reports/token-probability/README.md) is ready but blocked by other tasks on GPU1. Local109 / remote9 CPU tests passed, source hashes were verified, and independent final code review passed. This stage has **0 actual model calls and 0 updates**; no probability results or result figures exist, and no waiting/retry queue is running.
+Current stage: [saved-matrix CPU numerical repair](reports/token-probability/cpu-repair-20261026-r1/REPORT.md) is complete. The original GPU0 diagnostic completed3 generation +9 teacher-forward calls; its original numeric audit failed and is preserved. FP64 derived statistics now pass the unchanged independent tolerances over all2,304 rows/12 matrices. This CPU phase added **0 model calls and0 training updates**; original130 artifact hashes are unchanged, with monitoring and three figures archived. Stop here; no B stage or new training.
 
 Latest stage: the [four-checkpoint repetition comparison](reports/repetition-onset/README.md) completed in99.16seconds: four singleton calls, identical512-token settings, zero training updates. Base/step25/step50 ended normally with EOS and correctly transcribed this16-word sample; step100 repeated `CULINARY` to512tokens without EOS. Step100 is the earliest observed positive saved checkpoint in this comparison; the exact first update and training cause remain unknown. Raw tokens, EOS, decoder/parser evidence and independent audit are archived. The old Early100 gate remains failed; no next experiment is queued.
 
@@ -14,7 +14,7 @@ Model weights are pinned to `7278e1e70fe206f11671096ffdd38061171dd6e5`. The prom
 
 ## Run the controlled campaign
 
-Use the existing Python environment under `/mnt/raid/asr-lab/venv`. All data, caches, temporary files, logs and checkpoints live under `/mnt/raid/asr-lab`; preserve the unrelated GPU0 service. Dependency versions are in [requirements-qwen.txt](requirements-qwen.txt). Start only after target-host training, checkpoint and resume smoke checks pass.
+Use the existing Python environment under `/mnt/raid/asr-lab/venv`. All data, caches, temporary files, logs and checkpoints live under `/mnt/raid/asr-lab`; preserve other services; the PersonaPlex Demo is paused under explicit user authorization, with its [recovery procedure](reports/token-probability/demo-recovery-20261026/README.md) retained. Dependency versions are in [requirements-qwen.txt](requirements-qwen.txt). Start only after target-host training, checkpoint and resume smoke checks pass.
 
 The [campaign supervisor](docs/CAMPAIGN.md) executes single-GPU and dual-GPU controls at global batch32, measures 30 updates after ten warmup updates, selects a dual-GPU configuration with verified memory headroom, and starts **one fresh full-data epoch** at learning rate `1e-5`. It then validates original/final generation WER on identical fixed128 and complete eligible-development manifests. A second learning-rate experiment stays pending analysis.
 

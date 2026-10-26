@@ -1,0 +1,43 @@
+{
+  "stage": "diagnostic",
+  "status": "complete",
+  "command": [
+    "/mnt/raid/asr-lab/venv/bin/python",
+    "reports/token-probability/validation/diagnose_saved_probability.py",
+    "--run",
+    "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a",
+    "--inventory",
+    "reports/token-probability/validation/gpu0-remote-final-inventory-20261026.json",
+    "--output",
+    "/mnt/raid/asr-lab/analyses/token-probability-cpu-20261026-r1/diagnosis.json"
+  ],
+  "started_utc": "2026-10-26T06:53:04.578584+00:00",
+  "seconds": 120.0,
+  "prior_elapsed_seconds": 0.0,
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "",
+    "OMP_NUM_THREADS": "4",
+    "MKL_NUM_THREADS": "4",
+    "OPENBLAS_NUM_THREADS": "4",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "attestation": {
+    "supervisor_gpu_queries": 0,
+    "supervisor_model_calls": 0,
+    "authorized_generate_calls": 0,
+    "authorized_optimizer_updates": 0,
+    "child_call_counts_independently_observed": false
+  },
+  "exit_code": 0,
+  "owned_cleanup": "complete",
+  "source_sha256": {
+    "/mnt/raid/asr-lab/repo/scripts/run_cpu_evidence_stage.py": "53db112e632687c06baf5f26ba4f4953c3d29c2768981a84bdb0addde3e8fb20",
+    "/mnt/raid/asr-lab/repo/reports/token-probability/validation/diagnose_saved_probability.py": "325c0b36baddd11302327307e932841cf0f9c97de2de7ef7e0682e82637cba8f"
+  },
+  "pid": 4049007,
+  "pgid": 4049007,
+  "final_project_bytes": 252359039097,
+  "ended_utc": "2026-10-26T06:53:06.897562+00:00",
+  "elapsed_seconds": 2.3332631159573793,
+  "cumulative_elapsed_seconds": 2.3332633581012487
+}

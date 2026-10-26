@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "original_files": 130,
+  "bytes": 1462218349,
+  "all_local_originals_sha_matched": true,
+  "original_failure_wrappers_exactly_match_snapshots": true,
+  "old_source_snapshot_sha": "acc34e309468c950b02e930ee7be7d45a0394b092ad0b0a35e07f83016f3a43b"
+}

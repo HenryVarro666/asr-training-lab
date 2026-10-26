@@ -1,0 +1,47 @@
+{
+  "stage": "recompute",
+  "status": "complete",
+  "command": [
+    "/mnt/raid/asr-lab/venv/bin/python",
+    "scripts/recompute_saved_probability.py",
+    "--run",
+    "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a",
+    "--inventory",
+    "reports/token-probability/validation/gpu0-remote-final-inventory-20261026.json",
+    "--reference",
+    "reports/token-probability/inputs/trajectory-reference.json",
+    "--tokenizer-dir",
+    "/mnt/raid/asr-lab/cache/huggingface/hub/models--Qwen--Qwen3-ASR-1.7B/snapshots/7278e1e70fe206f11671096ffdd38061171dd6e5",
+    "--output",
+    "/mnt/raid/asr-lab/analyses/token-probability-cpu-20261026-r1/recomputed"
+  ],
+  "started_utc": "2026-10-26T06:54:58.694131+00:00",
+  "seconds": 600.0,
+  "prior_elapsed_seconds": 2.3332631159573793,
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "",
+    "OMP_NUM_THREADS": "4",
+    "MKL_NUM_THREADS": "4",
+    "OPENBLAS_NUM_THREADS": "4",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "attestation": {
+    "supervisor_gpu_queries": 0,
+    "supervisor_model_calls": 0,
+    "authorized_generate_calls": 0,
+    "authorized_optimizer_updates": 0,
+    "child_call_counts_independently_observed": false
+  },
+  "exit_code": 0,
+  "owned_cleanup": "complete",
+  "source_sha256": {
+    "/mnt/raid/asr-lab/repo/scripts/run_cpu_evidence_stage.py": "53db112e632687c06baf5f26ba4f4953c3d29c2768981a84bdb0addde3e8fb20",
+    "/mnt/raid/asr-lab/repo/scripts/recompute_saved_probability.py": "c66c09fb46bb7814c50e9550cfb5cdc862cf26d079bcdbf2c57e24cb7b7507f0"
+  },
+  "pid": 4050889,
+  "pgid": 4050889,
+  "final_project_bytes": 252418088149,
+  "ended_utc": "2026-10-26T06:56:47.786953+00:00",
+  "elapsed_seconds": 109.13380511756986,
+  "cumulative_elapsed_seconds": 111.46706856321543
+}

@@ -1,6 +1,8 @@
-# 单句逐token概率诊断：GPU0模型取证完成，数值验收失败
+# 单句逐token概率诊断：CPU数值修复与全量验收通过
 
-2026-10-26当前为 **model_run_complete_numeric_audit_failed**。按用户授权暂停PersonaPlex并保存恢复方式后，GPU0新run完成原3生成＋9TF/512-token/0更新，远端514.432秒，12分布文件；原始130文件已双端SHA匹配。独立CPU审计唯一一次15.597秒后因target.prob绝对误差1.116753e-6超过原1e-6容差而失败，未放宽、未重试、未出概率结论图。Demo保持暂停，网关保留。[本次执行与失败报告](GPU0_EXECUTION_2026-10-26.md)及[当前状态](execution-summary.json)为最新入口；旧资源阻断与失败历史保留。
+2026-10-26当前为 **model_run_complete_cpu_reanalysis_passed**。原GPU0 A取证完成后，原独立审计曾因FP32派生概率超容差失败；该记录完整保留。现按用户另行授权，仅用原12矩阵完成CPU诊断／修复／2304行复算及原容差独立验收，新增模型／GPU／训练调用均为0，无B。根因是FP32绝对logsumexp相减的精度损失；FP64 fused log_softmax修复后目标概率最大误差1.52434e-13，原门槛仍1e-6。三阶段累计129.004秒，130原文件SHA均未变，三张图及PNG／SVG／PDF、资源监控、源码和原新证据已双端保存。
+
+最新入口：[CPU修复报告](cpu-repair-20261026-r1/REPORT.md)、[机器状态](execution-summary.json)、[先行预算计划](CPU_NUMERIC_REPAIR_PLAN_2026-10-26.md)。[原GPU执行与失败报告](GPU0_EXECUTION_2026-10-26.md)保持历史身份，不能将原失败回写成通过。模型重复与WER退化的训练根因仍未确定。
 
 ## 准备阶段历史（下列资源快照不是当前状态）
 
@@ -24,11 +26,11 @@
 
 GPU必须先空闲。身份、输入、有效生成决策、旧生成轨迹漂移、OOM、超时、非有限值、I/O或证据缺失均停止剩余调用；保存已产物，不重试或扩大预算。概率高低、重复本身及有限的cached/teacher-forced数值差异是观察。详见[实验合同](../../docs/TOKEN_PROBABILITY_PROBE.md)。
 
-## 就绪的证据工具
+## 准备阶段的证据工具（历史）
 
 执行时比较同前缀的`C`与`CA`、固定`C`后`UL`与`aul`；分别检查两种正确转录句尾EOS，再检查完整512-token循环各位置的继续概率和两个distinct EOS总概率。不能拿不同大小写或不同前缀下的单token概率当成完整词的概率，不能仅凭EOS变化断言训练根因。
 
-独立CPU审计工具会由保存的完整词表矩阵以FP64重算全部行，检查token位移、排名、ties、top10、EOS和数值容差；绘图工具从已审计的保存数据导出PNG/SVG/PDF。目前[审计状态](independent-audit.json)为`prepared_not_run`，实际审计0行、图0张。合成CPU计时只测统计运算，不能证明GPU阶段会在240秒内完成。
+独立CPU审计工具会由保存的完整词表矩阵以FP64重算全部行，检查token位移、排名、ties、top10、EOS和数值容差；绘图工具从已审计的保存数据导出PNG/SVG/PDF。准备时的[审计状态](independent-audit.json)为`prepared_not_run`，实际审计0行、图0张。合成CPU计时只测统计运算，不能证明GPU阶段会在240秒内完成。
 
 本地tokenizer小文件缓存位于`.git/asr-cache/token-probability-tokenizer/`，已匹配旧模型SHA；它不含权重，远端固定snapshot仍是权威来源。正式运行才会保存并镜像大型PT；这些矩阵不入Git，也不在远端repo重复保存。
 
@@ -42,7 +44,7 @@ GPU必须先空闲。身份、输入、有效生成决策、旧生成轨迹漂�
 - [本地测试](validation/local-unit-tests.log)、[远端CPU测试](validation/remote-unit-tests.log)
 - [固定轨迹与来源](inputs/trajectory-reference.json)、[官方forward/generate来源核查](inputs/upstream-probability-source.json)
 
-此前已执行的单句对照结论仍见[repetition-onset报告](../repetition-onset/README.md)：base/25/50正常，100在512窗口内重复。当前阶段尚未提供逐token概率来解释该现象。
+此前已执行的单句对照结论仍见[repetition-onset报告](../repetition-onset/README.md)：base/25/50正常，100在512窗口内重复。当时尚未提供逐token概率；最新验收数据与解释边界见本文顶部CPU修复报告。
 
 准备包已提交为`484acae752e23513fc00b3b8180c1e27184016df`，31份允许文件已跨机逐一匹配SHA；Git bundle在本地与远端均verify且SHA一致。见[归档收据](validation/archive-sync.json)。该bundle覆盖准备代码/文档/小型收据，未包含任何尚不存在的本轮概率矩阵；本段与归档收据在payload提交后另行提交、同步。
 

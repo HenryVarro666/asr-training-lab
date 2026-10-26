@@ -1,2 +1,5 @@
 # Preserve original csv.writer CRLF resource evidence byte-for-byte.
 reports/token-probability/attempts/*/*/worker/monitor/resources.csv -text whitespace=cr-at-eol
+# Matplotlib SVG path data uses line-ending spaces. Preserve generated export
+# bytes and their receipt hashes; retain ordinary whitespace checks for code.
+reports/token-probability/cpu-repair-*/figures/*.svg -text whitespace=-blank-at-eol

@@ -1,0 +1,272 @@
+{
+  "schema_version": 1,
+  "original_run": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a",
+  "reference_sha256": "6753b127d40288a558761c6b8e79964f07af7e96f4e85964a0a8b66c26b03f49",
+  "original_source_sha256": {
+    "src/asr_lab/token_probability.py": "acc34e309468c950b02e930ee7be7d45a0394b092ad0b0a35e07f83016f3a43b"
+  },
+  "corrected_source_sha256": {
+    "src/asr_lab/token_probability.py": "ed37de4ccf052f85ed330fedc4da115fe5cd32cf9f0f7eb3023699f45f681441",
+    "scripts/recompute_saved_probability.py": "c66c09fb46bb7814c50e9550cfb5cdc862cf26d079bcdbf2c57e24cb7b7507f0"
+  },
+  "corrected_artifacts": {
+    "base/worker/generation/derived.json": {
+      "path": "base/worker/generation/derived.json",
+      "sha256": "6dd77226b8f689da98ca1b4685a24e92618ca39c300bd471893b3e7a33f0c426",
+      "bytes": 458840,
+      "original_sha256": "6b1ca7bc0df2cb9371ff5f347e8452e4b658fcba6e9c97706104d1f8d06666a4",
+      "original_bytes": 450373
+    },
+    "base/worker/teacher/base/derived.json": {
+      "path": "base/worker/teacher/base/derived.json",
+      "sha256": "052e6cb3fb5011933f371fc76c35aa88073046d9af68d2b905bf03ed753521dc",
+      "bytes": 458842,
+      "original_sha256": "9027d2173a51c94dea5325ecc9b17607b0b30d1d6e8f16a1f82b29fe970e4758",
+      "original_bytes": 450381
+    },
+    "base/worker/teacher/step050/derived.json": {
+      "path": "base/worker/teacher/step050/derived.json",
+      "sha256": "a8f9ecc7b17cfe097ad77c34fca95f267490545788917eaa84114267191b9852",
+      "bytes": 625487,
+      "original_sha256": "82af37227fbce4baabd0abda4ea4ab796cb369361e548b62ad6d7dda525262ec",
+      "original_bytes": 618924
+    },
+    "base/worker/teacher/step100/derived.json": {
+      "path": "base/worker/teacher/step100/derived.json",
+      "sha256": "52042bb154afdc8cf3ccb1b6b2d21b707a0fbef385a1bba5b9c3139a363a01d3",
+      "bytes": 8629612,
+      "original_sha256": "9a29c558bbb801be2c568e968481a6330ae2fe2c91d53b006c82b313c75af974",
+      "original_bytes": 8559338
+    },
+    "base/worker/own-trajectory-comparison.json": {
+      "path": "base/worker/own-trajectory-comparison.json",
+      "sha256": "b0c36075c52b0cb6ba340b9991b3cfcb95e8c52f6bfe3e23896f65b432be3b7f",
+      "bytes": 9445,
+      "original_sha256": "94130e4cdab5768ee738434fadb69e77aa643c54ba4d0fd41c6abed7e1607681",
+      "original_bytes": 8879
+    },
+    "step050/worker/generation/derived.json": {
+      "path": "step050/worker/generation/derived.json",
+      "sha256": "aef00bf2c3d5b844e9668de77dd360d7b80a5d3741905aceae492d3b7788e6c5",
+      "bytes": 625180,
+      "original_sha256": "cba0b6597cc805e9d7d0881cf08311dce973e294a635eb50882dcee2e95d4946",
+      "original_bytes": 619929
+    },
+    "step050/worker/teacher/base/derived.json": {
+      "path": "step050/worker/teacher/base/derived.json",
+      "sha256": "84d45b8e4f6e23586fdf46be084f4d35f3c454949065fb669af31c6ad2f113da",
+      "bytes": 456393,
+      "original_sha256": "b4a1d9e3e9f47ffb6b6193533a5b6c03d88e8d59e4285e9f919a63c02eef2896",
+      "original_bytes": 452430
+    },
+    "step050/worker/teacher/step050/derived.json": {
+      "path": "step050/worker/teacher/step050/derived.json",
+      "sha256": "b7565324bc59cece79043bc2e8ae03984e248d81b955d6eabd6f2b7d8b78e564",
+      "bytes": 624938,
+      "original_sha256": "6b2d1c1eafeadfd6fdbca0ad4f1e8ad0d7137390015909ea75754e4b9152a473",
+      "original_bytes": 619601
+    },
+    "step050/worker/teacher/step100/derived.json": {
+      "path": "step050/worker/teacher/step100/derived.json",
+      "sha256": "dfe8d133a6b96917d1ca559afecb6df5a63431d237478dce18ab884bb7923c62",
+      "bytes": 8626353,
+      "original_sha256": "a909366db837bd3c6fde796fd4f1c59d81186e7c70de0ad44573073b0a79adda",
+      "original_bytes": 8555414
+    },
+    "step050/worker/own-trajectory-comparison.json": {
+      "path": "step050/worker/own-trajectory-comparison.json",
+      "sha256": "94bdf2021561c7a77dd46b1bc30fa754d6203fb227a894a49c36ae9582283bf1",
+      "bytes": 12892,
+      "original_sha256": "3c4ae4e1e11ac145caa21bedce17848459086e5e4e5dc9169f7f6279511ef8e3",
+      "original_bytes": 12680
+    },
+    "step100/worker/generation/derived.json": {
+      "path": "step100/worker/generation/derived.json",
+      "sha256": "52e104045f685eb9d982cbe0070736e711b2b0fdeb77b5fc141a39bf0a5f1399",
+      "bytes": 8628395,
+      "original_sha256": "398e7f2057eb9b4410175e4b730986847993b1ae5d2666989546ba9b017a1a9c",
+      "original_bytes": 8558533
+    },
+    "step100/worker/teacher/base/derived.json": {
+      "path": "step100/worker/teacher/base/derived.json",
+      "sha256": "ad0b42bd25fc61635e12d8b6b775ff151832eb331b906f9208305d2cbc6ce42e",
+      "bytes": 456462,
+      "original_sha256": "278a5482886f2e4b313323cafb0b68877500d030aa5fbee58b073704aa63e54e",
+      "original_bytes": 451981
+    },
+    "step100/worker/teacher/step050/derived.json": {
+      "path": "step100/worker/teacher/step050/derived.json",
+      "sha256": "3b99461bceb34a680a8a914ee6324108e3ecd1e45fdb85060541fe423264ef34",
+      "bytes": 624920,
+      "original_sha256": "70a7efb3cff7e608df72f99da013eb69bc879a403b4981c56136292025ad8ac2",
+      "original_bytes": 619761
+    },
+    "step100/worker/teacher/step100/derived.json": {
+      "path": "step100/worker/teacher/step100/derived.json",
+      "sha256": "a1e6240b1101476a74c069faced006e75da0ae53ffb246e87b32c8592d9670a7",
+      "bytes": 8627939,
+      "original_sha256": "7b8c578250fb4e32dae6c577f3cecab0201522a48bfae9683dea7ead27a711f1",
+      "original_bytes": 8557717
+    },
+    "step100/worker/own-trajectory-comparison.json": {
+      "path": "step100/worker/own-trajectory-comparison.json",
+      "sha256": "ffdb7fc847ffa43267f3d3830cc191e79a57710d392d30144786c86fe7a0ad21",
+      "bytes": 177989,
+      "original_sha256": "f8cd1561d053dd9dfeeed9e7a38497a15b420a40cd1c72efc19a81240eefe239",
+      "original_bytes": 174407
+    }
+  },
+  "input_artifacts": {
+    "base/worker/result.json": {
+      "bytes": 9207,
+      "sha256": "ede9b10958c894e48b8a8e5e25eb557c97976d1fa94d0c1053696ae78addd788"
+    },
+    "base/worker/generation/distributions.pt": {
+      "bytes": 16410792,
+      "sha256": "5a55f1f905aca28250809888277f9caeed50372c45e97b4d5bac630def68ddf3"
+    },
+    "base/worker/generation/raw-tokens.json": {
+      "bytes": 2649,
+      "sha256": "73953e0f94ea48721ad02eb5eb614bbff0417278e0d7656863d7b7ae75a20b9e"
+    },
+    "base/worker/generation/derived.json": {
+      "bytes": 450373,
+      "sha256": "6b1ca7bc0df2cb9371ff5f347e8452e4b658fcba6e9c97706104d1f8d06666a4"
+    },
+    "base/worker/teacher/base/distributions.pt": {
+      "bytes": 16410792,
+      "sha256": "9494b60be2da3a15b51a613236eb72c003e681e5fb05ac7a52dec9f079ef4d86"
+    },
+    "base/worker/teacher/base/derived.json": {
+      "bytes": 450381,
+      "sha256": "9027d2173a51c94dea5325ecc9b17607b0b30d1d6e8f16a1f82b29fe970e4758"
+    },
+    "base/worker/teacher/step050/distributions.pt": {
+      "bytes": 22488232,
+      "sha256": "30f700cf77b451f0b88020da29d86331b0adf7cd319ca51d6fa24ab499c1c177"
+    },
+    "base/worker/teacher/step050/derived.json": {
+      "bytes": 618924,
+      "sha256": "82af37227fbce4baabd0abda4ea4ab796cb369361e548b62ad6d7dda525262ec"
+    },
+    "base/worker/teacher/step100/distributions.pt": {
+      "bytes": 311166632,
+      "sha256": "26931e811e0b20bd7cab508790ccf0b85196332717968eb30313639e3b52bc9c"
+    },
+    "base/worker/teacher/step100/derived.json": {
+      "bytes": 8559338,
+      "sha256": "9a29c558bbb801be2c568e968481a6330ae2fe2c91d53b006c82b313c75af974"
+    },
+    "base/worker/own-trajectory-comparison.json": {
+      "bytes": 8879,
+      "sha256": "94130e4cdab5768ee738434fadb69e77aa643c54ba4d0fd41c6abed7e1607681"
+    },
+    "step050/worker/result.json": {
+      "bytes": 9763,
+      "sha256": "b02833844784d61443bd67f8ccbae7f2d7ee80e8312feeb903898622f982b48a"
+    },
+    "step050/worker/generation/distributions.pt": {
+      "bytes": 22488232,
+      "sha256": "8738de453389052c44c46315fb5d317c30468a8f5d4e2b99cda7c3fe95da8f2d"
+    },
+    "step050/worker/generation/raw-tokens.json": {
+      "bytes": 2917,
+      "sha256": "21bc9fe5e3523d4574f6aaef47a197d9fe81c93b4c189d80c855704825f5862e"
+    },
+    "step050/worker/generation/derived.json": {
+      "bytes": 619929,
+      "sha256": "cba0b6597cc805e9d7d0881cf08311dce973e294a635eb50882dcee2e95d4946"
+    },
+    "step050/worker/teacher/base/distributions.pt": {
+      "bytes": 16410792,
+      "sha256": "93ad1dd279d4aa1d595ce75129c93a9cb5425a4972c40358c21b296b0f470786"
+    },
+    "step050/worker/teacher/base/derived.json": {
+      "bytes": 452430,
+      "sha256": "b4a1d9e3e9f47ffb6b6193533a5b6c03d88e8d59e4285e9f919a63c02eef2896"
+    },
+    "step050/worker/teacher/step050/distributions.pt": {
+      "bytes": 22488232,
+      "sha256": "580e831d620525d74c055ce5d07419c9c6dd67ee29861854d04b264dace9765e"
+    },
+    "step050/worker/teacher/step050/derived.json": {
+      "bytes": 619601,
+      "sha256": "6b2d1c1eafeadfd6fdbca0ad4f1e8ad0d7137390015909ea75754e4b9152a473"
+    },
+    "step050/worker/teacher/step100/distributions.pt": {
+      "bytes": 311166632,
+      "sha256": "03069bf936119d54b6d606db5bc2cb2e93d50d83033c4d5da29595a3de5d6a8c"
+    },
+    "step050/worker/teacher/step100/derived.json": {
+      "bytes": 8555414,
+      "sha256": "a909366db837bd3c6fde796fd4f1c59d81186e7c70de0ad44573073b0a79adda"
+    },
+    "step050/worker/own-trajectory-comparison.json": {
+      "bytes": 12680,
+      "sha256": "3c4ae4e1e11ac145caa21bedce17848459086e5e4e5dc9169f7f6279511ef8e3"
+    },
+    "step100/worker/result.json": {
+      "bytes": 35422,
+      "sha256": "56b9393c72755999a2a38115f874c2268eaffc2957d1518d75a6428057ff11ec"
+    },
+    "step100/worker/generation/distributions.pt": {
+      "bytes": 311166632,
+      "sha256": "130bb2d5920d7e74679c9f15f8f22b996d391185cddca57cd547d12e51679d1c"
+    },
+    "step100/worker/generation/raw-tokens.json": {
+      "bytes": 14295,
+      "sha256": "00d0e2150835b3d12c8e07055e98b254c78f902c9bd438e83ca512e5038e34d6"
+    },
+    "step100/worker/generation/derived.json": {
+      "bytes": 8558533,
+      "sha256": "398e7f2057eb9b4410175e4b730986847993b1ae5d2666989546ba9b017a1a9c"
+    },
+    "step100/worker/teacher/base/distributions.pt": {
+      "bytes": 16410792,
+      "sha256": "ba6b1999278a8ae082caf9c43693d293924d09e50098044a946e8f5a126c38c4"
+    },
+    "step100/worker/teacher/base/derived.json": {
+      "bytes": 451981,
+      "sha256": "278a5482886f2e4b313323cafb0b68877500d030aa5fbee58b073704aa63e54e"
+    },
+    "step100/worker/teacher/step050/distributions.pt": {
+      "bytes": 22488232,
+      "sha256": "bd712a00b2de2a1b7dd3b459ed9cc9f2b92e5ab28c7afbdec2a1f4deae7cdce5"
+    },
+    "step100/worker/teacher/step050/derived.json": {
+      "bytes": 619761,
+      "sha256": "70a7efb3cff7e608df72f99da013eb69bc879a403b4981c56136292025ad8ac2"
+    },
+    "step100/worker/teacher/step100/distributions.pt": {
+      "bytes": 311166632,
+      "sha256": "c5717fbd6badae025756ed31aa0c95b8aaf32c71d0eec75e0ee36065cc9946ce"
+    },
+    "step100/worker/teacher/step100/derived.json": {
+      "bytes": 8557717,
+      "sha256": "7b8c578250fb4e32dae6c577f3cecab0201522a48bfae9683dea7ead27a711f1"
+    },
+    "step100/worker/own-trajectory-comparison.json": {
+      "bytes": 174407,
+      "sha256": "f8cd1561d053dd9dfeeed9e7a38497a15b420a40cd1c72efc19a81240eefe239"
+    }
+  },
+  "auxiliary_artifacts": {
+    "comparisons.json": {
+      "path": "comparisons.json",
+      "sha256": "00a39fa4fe9c53292402e9bf4b8f82d3ac7e5c5319c812e85ed4590b37bfa301",
+      "bytes": 19812624
+    },
+    "change-summary.json": {
+      "path": "change-summary.json",
+      "sha256": "00d679f086275cba9fb7fd1b3860d3ea3d23f1374c9858737cdc998dccb007d8",
+      "bytes": 1222
+    }
+  },
+  "arithmetic": "torch.log_softmax on FP64-promoted original FP32 logits; raw storage unchanged",
+  "total_distribution_rows": 2304,
+  "full_vocabulary_matrices": 12,
+  "model_calls": 0,
+  "weight_content_reads": 0,
+  "gpu_calls": 0,
+  "elapsed_seconds": 107.42796284984797
+}

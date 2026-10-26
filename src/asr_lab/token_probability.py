@@ -83,7 +83,10 @@ def row_statistics(row,target,candidates,eos_ids,pieces):
     eos=sorted(set(eos_ids));candidates=sorted(set(candidates))
     wanted=sorted(set(candidates+eos+[int(target)]))
     if min(wanted)<0 or max(wanted)>=len(row):raise ValueError('Candidate outside vocabulary')
-    logp=row-torch.logsumexp(row,dim=0);p=torch.exp(logp)
+    # Stored logits remain FP32. Computing an absolute FP32 logsumexp and then
+    # subtracting it loses small normalization terms at large common offsets.
+    # Fused FP64 log_softmax preserves those terms and finite log probabilities.
+    logp=torch.log_softmax(row.to(torch.float64),dim=0);p=torch.exp(logp)
     if not bool(torch.isfinite(logp).all()) or abs(float(p.sum())-1.)>1e-4:raise FloatingPointError('Invalid normalized distribution')
     rank={};ties={}
     for offset in range(0,len(wanted),8):
@@ -105,7 +108,7 @@ def row_statistics(row,target,candidates,eos_ids,pieces):
     if not math.isfinite(entropy):raise FloatingPointError('Nonfinite entropy')
     eos_items=[item(identifier) for identifier in eos]
     return dict(target=item(int(target)),candidates=[item(identifier) for identifier in candidates],top10=top_items,
-        top1_minus_top2_margin=float(top2[0]-top2[1]) if len(top2)>1 else None,
+        top1_minus_top2_margin=float(top2[0].double()-top2[1].double()) if len(top2)>1 else None,
         top1_tie_count=int((row==row.max()).sum()),entropy=entropy,
         eos=dict(ids=eos,individual=eos_items,total_prob=float(p[eos].sum()),total_logprob=float(torch.logsumexp(logp[eos],0))))
 
@@ -135,6 +138,7 @@ def matrix_statistics(matrix,targets,prompt,candidates,eos,pieces):
         rows.append(row)
     nll=-sum(row['target']['logprob'] for row in rows)
     return dict(rows=rows,total_target_nll=nll,mean_target_nll=nll/len(rows),candidate_ids=candidates,
+        arithmetic='FP64 fused log_softmax and derived probability/entropy/EOS arithmetic on unchanged FP32 logits',
         prefix_hash_format="sha256(json.dumps(full_prefix_ids,separators=(',',':')).encode())",audit_tolerances=TOLERANCES,
         ranking='1 + count(logit > candidate_logit); tie_count counts equal logits; top10 ordered by logit descending then token ID ascending')
 
