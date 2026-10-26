@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "reviewer": "/root/github_export_review",
+  "payload_commit": "9f5e95c0536bf2476f306de14147ff6c58f0cba6",
+  "recorded_utc": "2026-10-26T07:10:41.270330+00:00",
+  "tracked_files": 818,
+  "tracked_bytes_approx": 49440000,
+  "largest_history_blob_bytes": 4380343,
+  "history_blobs_checked": 880,
+  "common_credential_patterns_found": 0,
+  "raw_weights_matrices_audio_tracked": false,
+  "latest_reports_and_nine_figure_exports_present": true,
+  "unrelated_untracked_drafts_excluded": true,
+  "model_calls": 0,
+  "new_training_updates": 0
+}

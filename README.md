@@ -2,7 +2,7 @@
 
 Current stage: [saved-matrix CPU numerical repair](reports/token-probability/cpu-repair-20261026-r1/REPORT.md) is complete. The original GPU0 diagnostic completed3 generation +9 teacher-forward calls; its original numeric audit failed and is preserved. FP64 derived statistics now pass the unchanged independent tolerances over all2,304 rows/12 matrices. This CPU phase added **0 model calls and0 training updates**; original130 artifact hashes are unchanged, with monitoring and three figures archived. Stop here; no B stage or new training.
 
-Latest stage: the [four-checkpoint repetition comparison](reports/repetition-onset/README.md) completed in99.16seconds: four singleton calls, identical512-token settings, zero training updates. Base/step25/step50 ended normally with EOS and correctly transcribed this16-word sample; step100 repeated `CULINARY` to512tokens without EOS. Step100 is the earliest observed positive saved checkpoint in this comparison; the exact first update and training cause remain unknown. Raw tokens, EOS, decoder/parser evidence and independent audit are archived. The old Early100 gate remains failed; no next experiment is queued.
+Earlier stage: the [four-checkpoint repetition comparison](reports/repetition-onset/README.md) completed in99.16seconds: four singleton calls, identical512-token settings, zero training updates. Base/step25/step50 ended normally with EOS and correctly transcribed this16-word sample; step100 repeated `CULINARY` to512tokens without EOS. Step100 is the earliest observed positive saved checkpoint in this comparison; the exact first update and training cause remain unknown. Raw tokens, EOS, decoder/parser evidence and independent audit are archived. The old Early100 gate remains failed; no next experiment is queued.
 
 Current workflow: the first campaign completed with worse development WER. Follow the [staged diagnosis plan](docs/NEXT_STEPS.md) and [diagnosis evidence](reports/diagnosis/README.md) before any new training. The user has replaced continuous autonomous experimentation with step-by-step planning and review of each stage's evidence. The commands below document the completed campaign workflow; they are not a queued next run. See the [measured results](EXPERIMENT_STATUS.md).
 
@@ -11,6 +11,10 @@ The subsequent [zero-update save/reload control](reports/zero-update-control/REA
 The primary experiment trains the official **Qwen3-ASR-1.7B** architecture on LibriSpeech `train-clean-100` with both H100 GPUs. The loaded model contains about 2.038 billion unique parameters, measured after loading (2,038,052,480), including its acoustic components. Whisper-small remains a separately measured reference. This is supervised finetuning of pretrained ASR models; source code alone does not establish a completed training run or improved WER.
 
 Model weights are pinned to `7278e1e70fe206f11671096ffdd38061171dd6e5`. The prompt, collator and forward adaptation follow official Qwen source `7c6daf77a2421100f5fb066495372c00129d39ff`. See the [Qwen implementation and experiment contract](docs/QWEN_EXPERIMENT.md), [training plan](ASR_TRAINING_PLAN.md), and [upstream license](docs/QWEN_UPSTREAM_LICENSE.txt).
+
+## Repository and evidence storage
+
+GitHub: [HenryVarro666/train](https://github.com/HenryVarro666/train). Code, experiment reports, failure records, monitoring receipts, figures and SHA manifests are versioned here. Complete matrices, weights, audio and large per-token JSON remain in the local/RAID mirrors; see the [archive and restore map](docs/GITHUB_ARCHIVE.md). A fresh GitHub clone contains the documented summaries and identities rather than every raw experiment artifact.
 
 ## Run the controlled campaign
 
