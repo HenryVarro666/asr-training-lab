@@ -1,0 +1,23 @@
+{
+  "captured_utc": "2026-10-26T06:33:38.173322+00:00",
+  "gpu": {
+    "returncode": 0,
+    "stdout": "0, GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c, 14, 95306, 0\n1, GPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c, 14, 95306, 0\n",
+    "stderr": ""
+  },
+  "compute_apps": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "listeners": {
+    "returncode": 0,
+    "stdout": "State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess\nLISTEN 0      128        127.0.0.1:8768      0.0.0.0:*    users:((\"python\",pid=2184143,fd=7))\n",
+    "stderr": ""
+  },
+  "global_lock_available": true,
+  "probe_pids_still_exist": [],
+  "personaplex_old_pid_exists": false,
+  "gateway_pid_exists": true,
+  "old_early100_sha256": "f6be4d5322fba1fb03d89b311017220506fff83ffa238d22614fb1e97ea1c279"
+}

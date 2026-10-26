@@ -1,0 +1,38 @@
+{
+  "observed_utc": "2026-10-26T06:07:26.298829+00:00",
+  "campaign": {
+    "status": "running",
+    "stage": "step050",
+    "error": null,
+    "elapsed_seconds": 168.68963843770325,
+    "actual_generate_calls": 1,
+    "actual_teacher_forward_calls": 3,
+    "observed_evidence": {
+      "generate_calls": 1,
+      "teacher_forward_calls": 3,
+      "generation_matrices": 1,
+      "teacher_matrices": 3,
+      "present_generation_matrices": 1,
+      "present_teacher_matrices": 3,
+      "unknown_invocation_workers": [],
+      "validated_workers": [
+        "base"
+      ]
+    }
+  },
+  "workers": {
+    "base": {
+      "phase": "complete",
+      "generate_calls": 1,
+      "teacher_forward_calls": 3,
+      "optimizer_updates": 0,
+      "status": {
+        "status": "complete",
+        "elapsed_seconds": 48.3791291648522
+      }
+    }
+  },
+  "base_tail": "\nLoading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]\nLoading checkpoint shards: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 2/2 [00:00<00:00, 55.48it/s]\nThe following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.\nSetting `pad_token_id` to `eos_token_id`:151645 for open-end generation.\n",
+  "outer_tail": "",
+  "matrix_file_count": 4
+}

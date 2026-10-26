@@ -1,0 +1,319 @@
+{
+  "status": "complete",
+  "stage": "base",
+  "generate_calls": 1,
+  "teacher_forward_calls": 3,
+  "optimizer_updates": 0,
+  "candidate_ids": [
+    11,
+    13,
+    25,
+    34,
+    38,
+    311,
+    323,
+    328,
+    356,
+    647,
+    711,
+    934,
+    1064,
+    1094,
+    1119,
+    1231,
+    1438,
+    1570,
+    1718,
+    2773,
+    3200,
+    3567,
+    3981,
+    4943,
+    5049,
+    5052,
+    5146,
+    7326,
+    7811,
+    7842,
+    7863,
+    9133,
+    9183,
+    9255,
+    11778,
+    12021,
+    12496,
+    13459,
+    14531,
+    15814,
+    18803,
+    21804,
+    23091,
+    24353,
+    32593,
+    35304,
+    35830,
+    39230,
+    41933,
+    46105,
+    65085,
+    69647,
+    75684,
+    76773,
+    85139,
+    93780,
+    95870,
+    151643,
+    151645
+  ],
+  "manifests": {
+    "generation": {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker/generation/distributions.pt",
+      "sha256": "5a55f1f905aca28250809888277f9caeed50372c45e97b4d5bac630def68ddf3",
+      "bytes": 16410792,
+      "shape": [
+        27,
+        151936
+      ],
+      "dtype": "torch.float32",
+      "raw_scores_equal": true,
+      "shared_storage_roles": [
+        "raw_logits",
+        "scores"
+      ],
+      "interpretation": "Roles share storage only after full exact value comparison.",
+      "scores_shape": [
+        27,
+        151936
+      ],
+      "original_return_dtypes": {
+        "raw": [
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32"
+        ],
+        "scores": [
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32",
+          "torch.float32"
+        ]
+      }
+    },
+    "base": {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker/teacher/base/distributions.pt",
+      "sha256": "9494b60be2da3a15b51a613236eb72c003e681e5fb05ac7a52dec9f079ef4d86",
+      "bytes": 16410792,
+      "shape": [
+        27,
+        151936
+      ],
+      "dtype": "torch.float32",
+      "raw_scores_equal": null,
+      "shared_storage_roles": [],
+      "interpretation": "Distinct distributions retained.",
+      "original_return_dtype": "torch.bfloat16"
+    },
+    "step050": {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker/teacher/step050/distributions.pt",
+      "sha256": "30f700cf77b451f0b88020da29d86331b0adf7cd319ca51d6fa24ab499c1c177",
+      "bytes": 22488232,
+      "shape": [
+        37,
+        151936
+      ],
+      "dtype": "torch.float32",
+      "raw_scores_equal": null,
+      "shared_storage_roles": [],
+      "interpretation": "Distinct distributions retained.",
+      "original_return_dtype": "torch.bfloat16"
+    },
+    "step100": {
+      "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker/teacher/step100/distributions.pt",
+      "sha256": "26931e811e0b20bd7cab508790ccf0b85196332717968eb30313639e3b52bc9c",
+      "bytes": 311166632,
+      "shape": [
+        512,
+        151936
+      ],
+      "dtype": "torch.float32",
+      "raw_scores_equal": null,
+      "shared_storage_roles": [],
+      "interpretation": "Distinct distributions retained.",
+      "original_return_dtype": "torch.bfloat16"
+    }
+  },
+  "artifacts": {
+    "metadata.json": {
+      "bytes": 1409,
+      "sha256": "33b6bb9725622f655d479ea4e1c6ff210ff2de7d65be645ac7772be7964d8a46"
+    },
+    "own-trajectory-comparison.json": {
+      "bytes": 8879,
+      "sha256": "94130e4cdab5768ee738434fadb69e77aa643c54ba4d0fd41c6abed7e1607681"
+    },
+    "inputs.json": {
+      "bytes": 12630,
+      "sha256": "8a1f22f38189bc92dae9aed37790d09e7f4f60119a3378ddadac6de2f864c21d"
+    },
+    "gpu-preflight.json": {
+      "bytes": 442,
+      "sha256": "5b6133e48e144faea7d54546e107ba3836ea7d61bb529d0d9f03ed3bd5b0b60e"
+    },
+    "inputs.pt": {
+      "bytes": 241457,
+      "sha256": "51d83aa165fe0da91d006fdedbe3e0deb0e90fba47cf8db2c8288f35df8e13ea"
+    },
+    "prefix-forks.json": {
+      "bytes": 11944,
+      "sha256": "3d1e7a1001301565795516f53530ba3cd66bc7e1f39d906b4b42b440a85e0c11"
+    },
+    "teacher/step100/derived.json": {
+      "bytes": 8559338,
+      "sha256": "9a29c558bbb801be2c568e968481a6330ae2fe2c91d53b006c82b313c75af974"
+    },
+    "teacher/step100/distribution-manifest.json": {
+      "bytes": 450,
+      "sha256": "2d7ff570584661d1ca7d637ce7391369da2a37ffa7cede2efb2f3a09bbad37a2"
+    },
+    "teacher/step100/inputs.json": {
+      "bytes": 27995,
+      "sha256": "bb73c6f1d1b8fcab72a82143c66f998cb926d8beda741829ee2bbc47cf11e17e"
+    },
+    "teacher/step100/distributions.pt": {
+      "bytes": 311166632,
+      "sha256": "26931e811e0b20bd7cab508790ccf0b85196332717968eb30313639e3b52bc9c"
+    },
+    "teacher/step100/forward-receipt.json": {
+      "bytes": 754,
+      "sha256": "f8ab47b50a72cf7ff967968710c0205bc0d1102d06e65548a8ac76e3c916bce4"
+    },
+    "teacher/step100/inputs.pt": {
+      "bytes": 249649,
+      "sha256": "6c7a2965ebc0f7974ac896b5ca2800715a3fcb580a2f78681a63948d191b9166"
+    },
+    "teacher/base/derived.json": {
+      "bytes": 450381,
+      "sha256": "9027d2173a51c94dea5325ecc9b17607b0b30d1d6e8f16a1f82b29fe970e4758"
+    },
+    "teacher/base/distribution-manifest.json": {
+      "bytes": 445,
+      "sha256": "7fde47ba9c7a6394bd3820a6c40fe577f4d08f91cd13e5af335eb129e2ffcf2e"
+    },
+    "teacher/base/inputs.json": {
+      "bytes": 8522,
+      "sha256": "9ebe535eb701491b7a30a3fceb8d78f48617959e6f14249108b9a5f99e8805e0"
+    },
+    "teacher/base/distributions.pt": {
+      "bytes": 16410792,
+      "sha256": "9494b60be2da3a15b51a613236eb72c003e681e5fb05ac7a52dec9f079ef4d86"
+    },
+    "teacher/base/forward-receipt.json": {
+      "bytes": 749,
+      "sha256": "66af4043edf225ea3da6be5c220c64ab37877d977d628690c4a9fc3a52a9f9a3"
+    },
+    "teacher/base/inputs.pt": {
+      "bytes": 241841,
+      "sha256": "ba57dd9724137755f572181cf2414a0e75f8e7474aedd29f8fdd9325076ed279"
+    },
+    "teacher/step050/derived.json": {
+      "bytes": 618924,
+      "sha256": "82af37227fbce4baabd0abda4ea4ab796cb369361e548b62ad6d7dda525262ec"
+    },
+    "teacher/step050/distribution-manifest.json": {
+      "bytes": 448,
+      "sha256": "dd7804694398109434cdbb2eb98eb5ccd58cdc448a83f9e01acf9b4c9916152b"
+    },
+    "teacher/step050/inputs.json": {
+      "bytes": 9013,
+      "sha256": "90b204dba6c6dbab7041a91536bc275e02a33742773f8b202033bdcd84b7b72d"
+    },
+    "teacher/step050/distributions.pt": {
+      "bytes": 22488232,
+      "sha256": "30f700cf77b451f0b88020da29d86331b0adf7cd319ca51d6fa24ab499c1c177"
+    },
+    "teacher/step050/forward-receipt.json": {
+      "bytes": 752,
+      "sha256": "efb3bde788624b0d7042c2d9559d3cf31320f268282369f44419478b6106f11d"
+    },
+    "teacher/step050/inputs.pt": {
+      "bytes": 241969,
+      "sha256": "9baca9e640491984d5ee3b887cba7693f15117afea2cd382267f7f38da339256"
+    },
+    "generation/derived.json": {
+      "bytes": 450373,
+      "sha256": "6b1ca7bc0df2cb9371ff5f347e8452e4b658fcba6e9c97706104d1f8d06666a4"
+    },
+    "generation/raw-tokens.pt": {
+      "bytes": 2899,
+      "sha256": "b47bc6e126d6c317156dec9cff5aab8b3f8c6c9ac13d121182e1987c28fd53ad"
+    },
+    "generation/distribution-manifest.json": {
+      "bytes": 1820,
+      "sha256": "ec989c14d5a9d82f9fe700a1fe6504012f48e6774a7a9180ee87d041b5fc00ed"
+    },
+    "generation/raw-tokens.json": {
+      "bytes": 2649,
+      "sha256": "73953e0f94ea48721ad02eb5eb614bbff0417278e0d7656863d7b7ae75a20b9e"
+    },
+    "generation/distributions.pt": {
+      "bytes": 16410792,
+      "sha256": "5a55f1f905aca28250809888277f9caeed50372c45e97b4d5bac630def68ddf3"
+    },
+    "generation/decoded.json": {
+      "bytes": 3298,
+      "sha256": "307de5ca7581b6ae637078e08ddb8e13439e519c7b00bef9adaf8ff70afc450a"
+    },
+    "generation/effective-generation.json": {
+      "bytes": 4727,
+      "sha256": "8c84b3083b62dd93ea203625e742a1a2026762841bc68f5d84685045a8aa4b16"
+    }
+  },
+  "identity_sha256": "776f1afaf22f7ca91c96f20e2c5dce9048aa08c4f554f644514662de8abd1f28"
+}

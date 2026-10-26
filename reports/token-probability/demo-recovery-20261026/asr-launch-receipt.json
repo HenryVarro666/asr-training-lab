@@ -1,0 +1,39 @@
+{
+  "status": "dispatched",
+  "launched_utc": "2026-10-26T06:03:31.000880+00:00",
+  "session": "asr-prob-gpu0-20261026",
+  "command": [
+    "bash",
+    "/mnt/raid/asr-lab/repo/reports/token-probability/validation/supervision-launch.sh",
+    "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a",
+    "0"
+  ],
+  "physical_gpu": 0,
+  "uuid": "GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c",
+  "run": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a",
+  "prelaunch_gpu": "0, GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c, 14, 95306, 0\n1, GPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c, 56222, 39098, 100\n",
+  "prelaunch_apps": "GPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c, 3975474, /home/huaqinzhao/miniconda3/envs/loopvlm-h100/bin/python, 25820\nGPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c, 3976136, /home/huaqinzhao/miniconda3/envs/loopvlm-h100/bin/python, 25688\nGPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c, 4000521, /mnt/raid/speech-workbench-20261026-phase10-proof01/venv/bin/python, 4680\n",
+  "source_sha256": {
+    "scripts/run_token_probability.py": "ea10ddfe07cbc40b751dc088d0b3927d7f1e09ac0a828d4ca720932140b16c6e",
+    "src/asr_lab/probe_supervision.py": "2b6db25983f1d7a81feb902f793dbadb436b6afd4b1e5c166c64785256b8723b",
+    "src/asr_lab/token_probability.py": "acc34e309468c950b02e930ee7be7d45a0394b092ad0b0a35e07f83016f3a43b",
+    "tests/test_token_probability.py": "6a6427c0d37171d6c3a53871b500a78169c3019712fd289c437bafbec278df46",
+    "tests/test_probe_supervision.py": "9a46efb0f3a187edf91a8f37a32008522a290e25df4c25be09fc36d213cd11b6",
+    "docs/TOKEN_PROBABILITY_PROBE.md": "58b5f23c1f529ee7e72cf0f8a3a7122ae72684d44d8e84a4428bb64af932c9d8",
+    "docs/superpowers/plans/2026-10-25-a-supervision.md": "0793e2aa805d20628255b540ffdfddd3205f2f1b557be8381f24d8cbe0a3ce30",
+    "reports/token-probability/validation/supervision-launch.sh": "f99cec787abb3699d7f36d3296bddbf7f7c7f0c9d3c657b26872ea8f64cfb8d8",
+    "reports/token-probability/validation/supervision-execution-intent.json": "14a418de0815d24fb598172027fc6debf61f16a75c8f0b96e771befce90820fc",
+    "reports/token-probability/validation/supervision-code-review.md": "d98536f64f4e58a010b4276011cdd1547115ed56d78ac9fbe0b9a08d3cf209bc",
+    "reports/token-probability/validation/supervision-local-validation-v2.txt": "796086ff9df3fca1efca288b8e81f659046ef356996500d5cbcfd1a3d2c80f63",
+    "reports/token-probability/validation/supervision-freeze.json": "ec187ce03c5e4bf19205f9914f28507158f44c195e11c5b47d9d691927b1a6a6"
+  },
+  "budget": {
+    "generate": 3,
+    "teacher_forward": 9,
+    "updates": 0,
+    "max_new_tokens": 512,
+    "total_seconds": 1200,
+    "stage_seconds": 240,
+    "incremental_bytes": 2147483648
+  }
+}

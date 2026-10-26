@@ -1,0 +1,41 @@
+{
+  "gpus": [
+    {
+      "index": 0,
+      "uuid": "GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c",
+      "utilization_percent": 0.0,
+      "memory_used_mib": 14.0,
+      "memory_total_mib": 95830.0
+    },
+    {
+      "index": 1,
+      "uuid": "GPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c",
+      "utilization_percent": 94.0,
+      "memory_used_mib": 30528.0,
+      "memory_total_mib": 95830.0
+    }
+  ],
+  "compute_apps": [
+    {
+      "gpu_uuid": "GPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c",
+      "pid": 3975474,
+      "process_name": "/home/huaqinzhao/miniconda3/envs/loopvlm-h100/bin/python"
+    },
+    {
+      "gpu_uuid": "GPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c",
+      "pid": 4000521,
+      "process_name": "/mnt/raid/speech-workbench-20261026-phase10-proof01/venv/bin/python"
+    }
+  ],
+  "disk_free_bytes": 2697991225344,
+  "observed_unix": 1792995125.491767,
+  "phase": "three_models_nine_teacher_forwards_complete",
+  "campaign_status": "complete",
+  "elapsed_seconds": 514.4277736581862,
+  "terminal": true,
+  "status": "stopped",
+  "error": null,
+  "continuous_observation": true,
+  "observation_kind": "read_only_resources",
+  "training_progress_claim": false
+}

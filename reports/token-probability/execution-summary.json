@@ -1,16 +1,16 @@
 {
-  "status": "ready_blocked_gpu0_busy",
-  "recorded_utc": "2026-10-26T05:50:05.323760+00:00",
+  "status": "model_run_complete_numeric_audit_failed",
+  "recorded_utc": "2026-10-26T06:34:43.931845+00:00",
   "intended_remote_run": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a",
-  "remote_run_exists": false,
-  "campaign_launch_dispatched": false,
-  "gpu_run_launched": false,
-  "model_worker_launched": false,
-  "actual_generate_calls": 0,
-  "actual_explicit_teacher_forward_calls": 0,
+  "remote_run_exists": true,
+  "campaign_launch_dispatched": true,
+  "gpu_run_launched": true,
+  "model_worker_launched": true,
+  "actual_generate_calls": 3,
+  "actual_explicit_teacher_forward_calls": 9,
   "actual_optimizer_updates": 0,
-  "evidence_matrices_created": 0,
-  "actual_probability_rows_audited": 0,
+  "evidence_matrices_created": 12,
+  "actual_probability_rows_audited": null,
   "result_figures_created": 0,
   "source_commit": "6acd9dab4d6a8d8a8cd2aea23d7ea28484ca319e",
   "code_review": "passed_ready_not_executed_v2",
@@ -39,34 +39,24 @@
     ],
     "max_new_tokens": 512
   },
-  "resource_observation": "validation/gpu0-request-recheck-20261026T054841Z.json",
-  "last_resource_check_utc": "2026-10-26T05:48:41.043098+00:00",
-  "blocked_device_indices": [
-    0
-  ],
+  "resource_observation": "validation/gpu0-post-a-host-20261026.json",
+  "last_resource_check_utc": "2026-10-26T06:33:38.173322+00:00",
   "candidate_device_observations": [
     {
       "index": 0,
       "uuid": "GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c",
-      "memory_used_mib": 48618,
-      "memory_free_mib": 46702,
-      "utilization_percent": 92,
-      "compute_pids": [
-        2154793,
-        3984680
-      ]
+      "memory_used_mib": 14,
+      "memory_free_mib": 95306,
+      "utilization_percent": 0,
+      "compute_pids": []
     },
     {
       "index": 1,
       "uuid": "GPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c",
-      "memory_used_mib": 77024,
-      "memory_free_mib": 18296,
-      "utilization_percent": 100,
-      "compute_pids": [
-        3975474,
-        3975625,
-        3976136
-      ]
+      "memory_used_mib": 14,
+      "memory_free_mib": 95306,
+      "utilization_percent": 0,
+      "compute_pids": []
     }
   ],
   "authorized_candidate_devices": [
@@ -77,7 +67,6 @@
   "automatic_wait_queue": false,
   "automatic_retry": false,
   "training_queue": false,
-  "personaplex_pid2154793_preserved": true,
   "old_early100_campaign_sha256": "f6be4d5322fba1fb03d89b311017220506fff83ffa238d22614fb1e97ea1c279",
   "prior_attempt": {
     "intended_remote_run": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261023-a",
@@ -88,14 +77,10 @@
     "partial_sync_receipt": "validation/failed-pre-gpu-sync.json",
     "error": "RuntimeError: Physical GPU1 has other compute applications; no launch: [['GPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c', '2801775', '/home/huaqinzhao/miniconda3/envs/loopvlm-h100/bin/python']]"
   },
-  "readiness_report": "GPU0_REQUEST_2026-10-26.md",
+  "readiness_report": "GPU0_EXECUTION_2026-10-26.md",
   "deployment_receipt": "validation/supervision-deployment.json",
-  "next_gate": "On resume fresh-check requested physical GPU0 UUID/foreign PIDs, source SHA, global lock and storage. Only start the reviewed single bounded stage-A command when GPU0 passes its existing idle gate; no GPU1 fallback or automatic queue.",
-  "resource_recheck_outcome": "Verified GPU0-capable reviewed deployment; GPU0 utilization92% with PersonaPlex and another foreign compute job. Selected GPU0 idle gate fails, new run remains absent; zero model calls, no foreign process stop, no fallback/retry/training/B.",
-  "blocked_gpu0_pids": [
-    2154793,
-    3984680
-  ],
+  "next_gate": "Stop after this completed model run and failed numerical acceptance. Preserve all raw data and original failure. A future separately scoped CPU-only statistics investigation can reuse saved matrices; no model rerun, training, B or automatic Demo restart in this task.",
+  "resource_recheck_outcome": "Explicitly authorized PersonaPlex backend pause freed GPU0; one new GPU0 A run completed3generations+9TF/0updates in514.432s. All130 original file SHAs match. Sole numeric audit failed fixed tolerance; no retry/model call/B. Final host shows no compute apps, no probe PIDs, Demo backend stopped and gateway preserved.",
   "requested_physical_gpu": 0,
   "source_files_reverified": 12,
   "previous_request": {
@@ -103,5 +88,68 @@
     "intended_remote_run": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261025-a2",
     "resource_observation": "validation/supervision-gpu-recheck-20261025T053307Z.json",
     "last_resource_check_utc": "2026-10-25T05:33:07.707540+00:00"
-  }
+  },
+  "launch_receipt": "validation/gpu0-launch-after-pause-20261026.json",
+  "launched_utc": "2026-10-26T06:03:31.000880+00:00",
+  "personaplex_service_state": "paused_by_explicit_user_authorization",
+  "personaplex_pause_receipt": "validation/gpu0-pause-launch-20261026.json",
+  "personaplex_restore_script": "/mnt/raid/asr-lab/operations/personaplex-pause-20261026/restore_personaplex.py",
+  "remote_campaign_status": "complete",
+  "remote_campaign_seconds": 514.4321742644534,
+  "remote_artifact_inventory": "validation/gpu0-remote-final-inventory-20261026.json",
+  "monitor_samples": 52,
+  "all_original_artifact_hashes_matched": true,
+  "original_artifact_files": 130,
+  "original_artifact_bytes": 1462218349,
+  "numerical_audit_status": "failed_no_retry",
+  "numerical_audit_attempts": 1,
+  "numerical_audit_seconds": 15.596763665962499,
+  "numerical_audit_failure": {
+    "row": 2,
+    "metric": "target.prob",
+    "absolute_difference": 1.1167530824529592e-06,
+    "tolerance": 1e-06
+  },
+  "probability_conclusions_accepted": false,
+  "monitor_audit_status": "passed_monitor_semantics",
+  "artifact_verification": "attempts/qwen-token-probability-20261026-gpu0-a/artifact-verification.json",
+  "audit_report": "attempts/qwen-token-probability-20261026-gpu0-a/analysis/independent-audit.md",
+  "historical_pre_pause_resource_gate": {
+    "resource_observation": "validation/gpu0-request-recheck-20261026T054841Z.json",
+    "last_resource_check_utc": "2026-10-26T05:48:41.043098+00:00",
+    "candidate_device_observations": [
+      {
+        "index": 0,
+        "uuid": "GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c",
+        "memory_used_mib": 48618,
+        "memory_free_mib": 46702,
+        "utilization_percent": 92,
+        "compute_pids": [
+          2154793,
+          3984680
+        ]
+      },
+      {
+        "index": 1,
+        "uuid": "GPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c",
+        "memory_used_mib": 77024,
+        "memory_free_mib": 18296,
+        "utilization_percent": 100,
+        "compute_pids": [
+          3975474,
+          3975625,
+          3976136
+        ]
+      }
+    ],
+    "resource_recheck_outcome": "Verified GPU0-capable reviewed deployment; GPU0 utilization92% with PersonaPlex and another foreign compute job. Selected GPU0 idle gate fails, new run remains absent; zero model calls, no foreign process stop, no fallback/retry/training/B."
+  },
+  "numerical_audit_executed": true,
+  "complete_numeric_audit_passed": false,
+  "accepted_probability_row_count_reported_by_auditor": null,
+  "numerical_audit_row_count_note": "Audit executed and aborted at first reported mismatch; no reliable completed/accepted full-row count was emitted.",
+  "probe_processes_exited": true,
+  "global_lock_released": true,
+  "personaplex_gateway_preserved": true,
+  "personaplex_backend_stopped": true
 }

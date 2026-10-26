@@ -1,0 +1,54 @@
+{
+  "status": "failed_no_retry",
+  "started_utc": "2026-10-26T06:24:29.700318+00:00",
+  "argv": [
+    "ssh",
+    "-o",
+    "BatchMode=yes",
+    "-o",
+    "PasswordAuthentication=no",
+    "-o",
+    "ConnectTimeout=10",
+    "-o",
+    "ControlPath=/tmp/codex-asr-tensorboard-%C",
+    "exx@100.70.230.73",
+    "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=4 PYTHONPATH=/mnt/raid/asr-lab/repo/src /mnt/raid/asr-lab/venv/bin/python /mnt/raid/asr-lab/repo/reports/token-probability/validation/audit_saved_evidence.py --run /mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a --reference /mnt/raid/asr-lab/repo/reports/token-probability/inputs/trajectory-reference.json --tokenizer-dir /mnt/raid/asr-lab/cache/huggingface/hub/models--Qwen--Qwen3-ASR-1.7B/snapshots/7278e1e70fe206f11671096ffdd38061171dd6e5 --output /mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/analysis/independent-audit.json --seconds 600 --threads 4"
+  ],
+  "remote_argv": [
+    "env",
+    "CUDA_VISIBLE_DEVICES=",
+    "OMP_NUM_THREADS=4",
+    "PYTHONPATH=/mnt/raid/asr-lab/repo/src",
+    "/mnt/raid/asr-lab/venv/bin/python",
+    "/mnt/raid/asr-lab/repo/reports/token-probability/validation/audit_saved_evidence.py",
+    "--run",
+    "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a",
+    "--reference",
+    "/mnt/raid/asr-lab/repo/reports/token-probability/inputs/trajectory-reference.json",
+    "--tokenizer-dir",
+    "/mnt/raid/asr-lab/cache/huggingface/hub/models--Qwen--Qwen3-ASR-1.7B/snapshots/7278e1e70fe206f11671096ffdd38061171dd6e5",
+    "--output",
+    "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/analysis/independent-audit.json",
+    "--seconds",
+    "600",
+    "--threads",
+    "4"
+  ],
+  "tool_sha256": "ebc8db219efce0f05db3859976cf0d41834d4cfac2160837cb6418fe8b6e921d",
+  "attempt_count": 1,
+  "model_calls": 0,
+  "weight_content_reads": 0,
+  "cpu_budget_seconds": 600,
+  "no_automatic_retry": true,
+  "exit_code": 1,
+  "ended_utc": "2026-10-26T06:24:45.296875+00:00",
+  "elapsed_seconds": 15.596763665962499,
+  "audit-stdout.log": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  "audit-stderr.log": {
+    "sha256": "4970417369bb5e734c1b074998c172c2a5dced097c7a1b6aee3eec1309ac6993",
+    "bytes": 1889
+  }
+}

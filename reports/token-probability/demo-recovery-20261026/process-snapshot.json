@@ -1,0 +1,66 @@
+{
+  "captured_utc": "2026-10-26T05:58:25.080725+00:00",
+  "pid": 2154793,
+  "uid": 1000,
+  "owner": "exx",
+  "cwd": "/mnt/data2/exx/voice-ai-personaplex-demo",
+  "argv": [
+    ".venv/bin/python",
+    "-u",
+    "-m",
+    "moshi.server_prefix_paced",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "8998",
+    "--static",
+    "none"
+  ],
+  "exe": "/mnt/data2/exx/voice-ai-personaplex-demo/.migration-20261023-retained/cache/python/cpython-3.12.13-linux-x86_64-gnu/bin/python3.12",
+  "start_ticks": "457573890",
+  "allowed_environment": {
+    "PYTHONPATH": "/mnt/data2/exx/voice-ai-personaplex-demo/src",
+    "HF_HOME": "/mnt/data2/exx/voice-ai-personaplex-demo/hf-home",
+    "HF_HUB_CACHE": "/mnt/data2/exx/voice-ai-personaplex-demo/models/hub",
+    "HF_HUB_OFFLINE": "1",
+    "CUDA_VISIBLE_DEVICES": "0"
+  },
+  "source_candidates": [
+    {
+      "path": "/mnt/data2/exx/voice-ai-personaplex-demo/upstream/personaplex/moshi/moshi/server_prefix_paced.py",
+      "bytes": 27335,
+      "sha256": "331578aa28761cf34c966d1edc71fd5349d94762d23536d758313846a6739238"
+    }
+  ],
+  "checks": {
+    "gpu": {
+      "returncode": 0,
+      "stdout": "0, GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c, 22697, 72624, 0\n1, GPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c, 51314, 44006, 100\n",
+      "stderr": ""
+    },
+    "apps": {
+      "returncode": 0,
+      "stdout": "GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c, 2154793, .venv/bin/python, 22674\nGPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c, 3975474, /home/huaqinzhao/miniconda3/envs/loopvlm-h100/bin/python, 25352\nGPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c, 3976136, /home/huaqinzhao/miniconda3/envs/loopvlm-h100/bin/python, 25934\n",
+      "stderr": ""
+    },
+    "connections": {
+      "returncode": 0,
+      "stdout": "Recv-Q Send-Q Local Address:Port Peer Address:PortProcess\n",
+      "stderr": ""
+    }
+  },
+  "restoration_interpreter_preflight": {
+    "version": "3.12.13 (main, Jun 23 2026, 15:18:55) [Clang 22.1.3 ]",
+    "executable": "/mnt/data2/exx/voice-ai-personaplex-demo/.venv/bin/python",
+    "module": "/mnt/data2/exx/voice-ai-personaplex-demo/upstream/personaplex/moshi/moshi/server_prefix_paced.py",
+    "packages": {
+      "torch": "2.4.1",
+      "sphn": "0.1.12",
+      "huggingface-hub": "0.24.7"
+    },
+    "module_sha256": "331578aa28761cf34c966d1edc71fd5349d94762d23536d758313846a6739238"
+  },
+  "preflight_note": "First optional metadata lookup for distribution moshi failed; its importable module exists. Corrected check uses torch/sphn/huggingface-hub; no dependency installation or model load.",
+  "recovery_root": "/mnt/raid/asr-lab/operations/personaplex-pause-20261026",
+  "scope": "Stop only verified backend2154793; leave gateway2184143 and other jobs. Manual restoration, no auto-restart after A."
+}

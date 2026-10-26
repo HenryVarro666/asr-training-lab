@@ -1,0 +1,15 @@
+{
+  "physical_gpu": 0,
+  "uuid": "GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c",
+  "other_compute_apps": [],
+  "ignored_own_pid": 4012113,
+  "checked_unix": 1792995032.9508836,
+  "gpu": {
+    "index": 0,
+    "uuid": "GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c",
+    "utilization_percent": 0.0,
+    "memory_used_mib": 14.0,
+    "memory_total_mib": 95830.0
+  },
+  "limitation": "Point-in-time check cannot reserve a GPU against another scheduler."
+}

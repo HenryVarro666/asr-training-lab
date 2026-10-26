@@ -1,0 +1,341 @@
+{
+  "status": "passed_monitor_semantics",
+  "audited_utc": "2026-10-26T06:21:46.824875+00:00",
+  "scope": "Inventory-SHA-matched small lifecycle/resource receipts only",
+  "campaign_seconds": 514.4321742644534,
+  "stage_budget_seconds": 240,
+  "total_budget_seconds": 1200,
+  "stages": {
+    "base": {
+      "worker_seconds": 53.27236199378967,
+      "whole_stage_conservative_upper_seconds": 160.1338438913226,
+      "first_weight_sha_unix": 1792994629.5214171,
+      "worker_pid": 4006345,
+      "exit_code": 0
+    },
+    "step050": {
+      "worker_seconds": 62.33703899383545,
+      "whole_stage_conservative_upper_seconds": 199.9670735085383,
+      "first_weight_sha_unix": 1792994779.8899014,
+      "worker_pid": 4009827,
+      "exit_code": 0
+    },
+    "step100": {
+      "worker_seconds": 95.91652631759644,
+      "whole_stage_conservative_upper_seconds": 164.81543257273734,
+      "first_weight_sha_unix": 1792994963.7643523,
+      "worker_pid": 4012113,
+      "exit_code": 0
+    }
+  },
+  "selected_gpu": 0,
+  "gpu_uuid": "GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c",
+  "generate_calls": 3,
+  "teacher_forward_calls": 9,
+  "updates": 0,
+  "owned_processes_remaining": [],
+  "cleanup_pending": false,
+  "monitor": {
+    "samples": 52,
+    "first_elapsed_seconds": 9.50318693742156,
+    "first_phase": "initial_resource_observation",
+    "all_weight_sha_after_first_observation": true,
+    "gaps_seconds": {
+      "min": 4.81486105453223,
+      "median": 9.9982146974653,
+      "max": 10.139924469403923
+    },
+    "terminal_elapsed_seconds": 514.4277736581862,
+    "terminal_status": "stopped",
+    "terminal_gpu0_compute_apps": []
+  },
+  "pending_local_forward_receipts": [],
+  "source_records": {
+    "campaign.json": {
+      "bytes": 18397,
+      "sha256": "d289840923d02cbbca1a9542d3da951eedd3c3ef867b305852e8ec52696d3e0c"
+    },
+    "preflight-monitor/metrics.jsonl": {
+      "bytes": 56194,
+      "sha256": "74476c3f53dfcefabd0a5f5e3901ed31552fdc8603d0d1b082cbdabeb877021d"
+    },
+    "preflight-monitor/status.json": {
+      "bytes": 1170,
+      "sha256": "439aabdfb21c24be2ac7df12ce7005a9473c9c1d52d6a1898f63ee8f35b672ad"
+    },
+    "base/worker/stage.json": {
+      "bytes": 651,
+      "sha256": "fcb993507bd1326e552813c734e1e737f39b116aa175d83cb62242ebcca2b477"
+    },
+    "base/worker/result.json": {
+      "bytes": 9207,
+      "sha256": "ede9b10958c894e48b8a8e5e25eb557c97976d1fa94d0c1053696ae78addd788"
+    },
+    "base/worker/metadata.json": {
+      "bytes": 1409,
+      "sha256": "33b6bb9725622f655d479ea4e1c6ff210ff2de7d65be645ac7772be7964d8a46"
+    },
+    "base/worker/gpu-preflight.json": {
+      "bytes": 442,
+      "sha256": "5b6133e48e144faea7d54546e107ba3836ea7d61bb529d0d9f03ed3bd5b0b60e"
+    },
+    "base/model-verification.json": {
+      "bytes": 29400,
+      "sha256": "562944e1ec874b8ff61e8da67aef248cd842fb54b55746ed8965d92ec87aaf31"
+    },
+    "base/worker/teacher/base/forward-receipt.json": {
+      "bytes": 749,
+      "sha256": "66af4043edf225ea3da6be5c220c64ab37877d977d628690c4a9fc3a52a9f9a3"
+    },
+    "base/worker/teacher/step050/forward-receipt.json": {
+      "bytes": 752,
+      "sha256": "efb3bde788624b0d7042c2d9559d3cf31320f268282369f44419478b6106f11d"
+    },
+    "base/worker/teacher/step100/forward-receipt.json": {
+      "bytes": 754,
+      "sha256": "f8ab47b50a72cf7ff967968710c0205bc0d1102d06e65548a8ac76e3c916bce4"
+    },
+    "step050/worker/stage.json": {
+      "bytes": 663,
+      "sha256": "0041540b04b920a7f791e07ead7032b2cc199f54be4906dcbbdea8756c223a64"
+    },
+    "step050/worker/result.json": {
+      "bytes": 9763,
+      "sha256": "b02833844784d61443bd67f8ccbae7f2d7ee80e8312feeb903898622f982b48a"
+    },
+    "step050/worker/metadata.json": {
+      "bytes": 1412,
+      "sha256": "0f18b20e92f354c74db91a802d66f49d61747876922b49b472e27856d04add3c"
+    },
+    "step050/worker/gpu-preflight.json": {
+      "bytes": 442,
+      "sha256": "96aa6e56dd98274c099fa30d1ce81c9f1b9ef360498c78db99d32261b786cdaa"
+    },
+    "step050/model-verification.json": {
+      "bytes": 27419,
+      "sha256": "de3c711a1f7fd323cdf12aa66369194bf9d8e076c56b13a031b9a8453bf1fcc4"
+    },
+    "step050/worker/teacher/base/forward-receipt.json": {
+      "bytes": 749,
+      "sha256": "66af4043edf225ea3da6be5c220c64ab37877d977d628690c4a9fc3a52a9f9a3"
+    },
+    "step050/worker/teacher/step050/forward-receipt.json": {
+      "bytes": 752,
+      "sha256": "efb3bde788624b0d7042c2d9559d3cf31320f268282369f44419478b6106f11d"
+    },
+    "step050/worker/teacher/step100/forward-receipt.json": {
+      "bytes": 754,
+      "sha256": "f8ab47b50a72cf7ff967968710c0205bc0d1102d06e65548a8ac76e3c916bce4"
+    },
+    "step100/worker/stage.json": {
+      "bytes": 662,
+      "sha256": "70af5598cb4e0841f7d4eb50f1013ef7ca663f15f3d1ab3691cfe0feb09399aa"
+    },
+    "step100/worker/result.json": {
+      "bytes": 35422,
+      "sha256": "56b9393c72755999a2a38115f874c2268eaffc2957d1518d75a6428057ff11ec"
+    },
+    "step100/worker/metadata.json": {
+      "bytes": 1412,
+      "sha256": "38437ccb19d2d59abcfb3860b4a90ff07a3a7fffd10aeab9014f5d8f3cf33fa6"
+    },
+    "step100/worker/gpu-preflight.json": {
+      "bytes": 442,
+      "sha256": "668c86466d0ced5ed6005a1e41e98c775fba3122f5b96d234a362ca62ab958a8"
+    },
+    "step100/model-verification.json": {
+      "bytes": 27502,
+      "sha256": "f7ebb41fb5fa9b16986bf6b5ccdb1988c67845c4167594ba9571827c87c30120"
+    },
+    "base/worker/inputs.json": {
+      "bytes": 12630,
+      "sha256": "8a1f22f38189bc92dae9aed37790d09e7f4f60119a3378ddadac6de2f864c21d"
+    },
+    "base/worker/teacher/base/inputs.json": {
+      "bytes": 8522,
+      "sha256": "9ebe535eb701491b7a30a3fceb8d78f48617959e6f14249108b9a5f99e8805e0"
+    },
+    "base/worker/teacher/base/distribution-manifest.json": {
+      "bytes": 445,
+      "sha256": "7fde47ba9c7a6394bd3820a6c40fe577f4d08f91cd13e5af335eb129e2ffcf2e"
+    },
+    "base/worker/teacher/step050/inputs.json": {
+      "bytes": 9013,
+      "sha256": "90b204dba6c6dbab7041a91536bc275e02a33742773f8b202033bdcd84b7b72d"
+    },
+    "base/worker/teacher/step050/distribution-manifest.json": {
+      "bytes": 448,
+      "sha256": "dd7804694398109434cdbb2eb98eb5ccd58cdc448a83f9e01acf9b4c9916152b"
+    },
+    "base/worker/teacher/step100/inputs.json": {
+      "bytes": 27995,
+      "sha256": "bb73c6f1d1b8fcab72a82143c66f998cb926d8beda741829ee2bbc47cf11e17e"
+    },
+    "base/worker/teacher/step100/distribution-manifest.json": {
+      "bytes": 450,
+      "sha256": "2d7ff570584661d1ca7d637ce7391369da2a37ffa7cede2efb2f3a09bbad37a2"
+    },
+    "step050/worker/inputs.json": {
+      "bytes": 12630,
+      "sha256": "8a1f22f38189bc92dae9aed37790d09e7f4f60119a3378ddadac6de2f864c21d"
+    },
+    "step050/worker/teacher/base/inputs.json": {
+      "bytes": 8522,
+      "sha256": "9ebe535eb701491b7a30a3fceb8d78f48617959e6f14249108b9a5f99e8805e0"
+    },
+    "step050/worker/teacher/base/distribution-manifest.json": {
+      "bytes": 448,
+      "sha256": "54e44834dd0167dbba5d4a12e367041a4e04f8849141a9855b718e5efd57e174"
+    },
+    "step050/worker/teacher/step050/inputs.json": {
+      "bytes": 9013,
+      "sha256": "90b204dba6c6dbab7041a91536bc275e02a33742773f8b202033bdcd84b7b72d"
+    },
+    "step050/worker/teacher/step050/distribution-manifest.json": {
+      "bytes": 451,
+      "sha256": "e919d0c697a6db5fbed9d8390f08f34c0b1835735f02badea5a70bcf46624c50"
+    },
+    "step050/worker/teacher/step100/inputs.json": {
+      "bytes": 27995,
+      "sha256": "bb73c6f1d1b8fcab72a82143c66f998cb926d8beda741829ee2bbc47cf11e17e"
+    },
+    "step050/worker/teacher/step100/distribution-manifest.json": {
+      "bytes": 453,
+      "sha256": "1b693253c7837b85e1702b2abcc1d3bae37e20124f96134fb24df1f4b2337c95"
+    },
+    "step100/worker/inputs.json": {
+      "bytes": 12630,
+      "sha256": "8a1f22f38189bc92dae9aed37790d09e7f4f60119a3378ddadac6de2f864c21d"
+    },
+    "step100/worker/teacher/base/forward-receipt.json": {
+      "bytes": 749,
+      "sha256": "66af4043edf225ea3da6be5c220c64ab37877d977d628690c4a9fc3a52a9f9a3"
+    },
+    "step100/worker/teacher/base/inputs.json": {
+      "bytes": 8522,
+      "sha256": "9ebe535eb701491b7a30a3fceb8d78f48617959e6f14249108b9a5f99e8805e0"
+    },
+    "step100/worker/teacher/base/distribution-manifest.json": {
+      "bytes": 448,
+      "sha256": "9377477d770b7937e4aeadd29f1a071cb75f94845a6cf35a8c6eee14438f4239"
+    },
+    "step100/worker/teacher/step050/forward-receipt.json": {
+      "bytes": 752,
+      "sha256": "efb3bde788624b0d7042c2d9559d3cf31320f268282369f44419478b6106f11d"
+    },
+    "step100/worker/teacher/step050/inputs.json": {
+      "bytes": 9013,
+      "sha256": "90b204dba6c6dbab7041a91536bc275e02a33742773f8b202033bdcd84b7b72d"
+    },
+    "step100/worker/teacher/step050/distribution-manifest.json": {
+      "bytes": 451,
+      "sha256": "2ef469c6e070060fb04c72056478737cae138f3ca9dce7d11e5042a99c493683"
+    },
+    "step100/worker/teacher/step100/forward-receipt.json": {
+      "bytes": 754,
+      "sha256": "f8ab47b50a72cf7ff967968710c0205bc0d1102d06e65548a8ac76e3c916bce4"
+    },
+    "step100/worker/teacher/step100/inputs.json": {
+      "bytes": 27995,
+      "sha256": "bb73c6f1d1b8fcab72a82143c66f998cb926d8beda741829ee2bbc47cf11e17e"
+    },
+    "step100/worker/teacher/step100/distribution-manifest.json": {
+      "bytes": 453,
+      "sha256": "ac1fb29f0102017d8f21b3900866d3571532e9d32f816b125b6f44469928165d"
+    }
+  },
+  "limitations": [
+    "First observation at9.503s after entry precedes tree traversal by signed source ordering; no independently timestamped tree-start event is saved.",
+    "Whole-stage conservative bounds bracket observed phase transitions, including SHA/worker/validation; worker durations alone exclude SHA.",
+    "Resource samples about10s apart cannot establish an absolute peak or exclude brief subinterval external GPU activity.",
+    "Legacy per-worker monitor fields say training/checkpoint and may end running/zombie; these names are generic monitor artifacts, not evidence of training. Final preflight stopped receipt and owned cleanup are authoritative.",
+    "No standalone lifecycle event log; campaign/stage/metadata receipts jointly provide lifecycle evidence.",
+    "No PT file read; complete mirror SHA and independent FP64 numerical audit remain separate."
+  ],
+  "updated_utc": "2026-10-26T06:29:12.440095+00:00",
+  "explicit_tf_receipts_verified": 9,
+  "teacher_forward_checks": [
+    {
+      "model": "base",
+      "trajectory": "base",
+      "target_count": 27,
+      "first_input_position": 136,
+      "last_input_position": 162,
+      "input_length": 163,
+      "status": "passed_empty_cache_and_exact_saved_json_alignment"
+    },
+    {
+      "model": "base",
+      "trajectory": "step050",
+      "target_count": 37,
+      "first_input_position": 136,
+      "last_input_position": 172,
+      "input_length": 173,
+      "status": "passed_empty_cache_and_exact_saved_json_alignment"
+    },
+    {
+      "model": "base",
+      "trajectory": "step100",
+      "target_count": 512,
+      "first_input_position": 136,
+      "last_input_position": 647,
+      "input_length": 648,
+      "status": "passed_empty_cache_and_exact_saved_json_alignment"
+    },
+    {
+      "model": "step050",
+      "trajectory": "base",
+      "target_count": 27,
+      "first_input_position": 136,
+      "last_input_position": 162,
+      "input_length": 163,
+      "status": "passed_empty_cache_and_exact_saved_json_alignment"
+    },
+    {
+      "model": "step050",
+      "trajectory": "step050",
+      "target_count": 37,
+      "first_input_position": 136,
+      "last_input_position": 172,
+      "input_length": 173,
+      "status": "passed_empty_cache_and_exact_saved_json_alignment"
+    },
+    {
+      "model": "step050",
+      "trajectory": "step100",
+      "target_count": 512,
+      "first_input_position": 136,
+      "last_input_position": 647,
+      "input_length": 648,
+      "status": "passed_empty_cache_and_exact_saved_json_alignment"
+    },
+    {
+      "model": "step100",
+      "trajectory": "base",
+      "target_count": 27,
+      "first_input_position": 136,
+      "last_input_position": 162,
+      "input_length": 163,
+      "status": "passed_empty_cache_and_exact_saved_json_alignment"
+    },
+    {
+      "model": "step100",
+      "trajectory": "step050",
+      "target_count": 37,
+      "first_input_position": 136,
+      "last_input_position": 172,
+      "input_length": 173,
+      "status": "passed_empty_cache_and_exact_saved_json_alignment"
+    },
+    {
+      "model": "step100",
+      "trajectory": "step100",
+      "target_count": 512,
+      "first_input_position": 136,
+      "last_input_position": 647,
+      "input_length": 648,
+      "status": "passed_empty_cache_and_exact_saved_json_alignment"
+    }
+  ],
+  "closure": "All nine inventory-SHA-matched explicit TF receipts and JSON row mappings verified after complete mirror. No PT reads or repeat numerical audit. Numerical audit remains failed_no_retry; result figures remain0."
+}

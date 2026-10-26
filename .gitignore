@@ -17,3 +17,8 @@ cache/
 *.safetensors
 *.flac
 *.tar.gz
+# Full per-row probability evidence remains in local/RAID attempt mirrors.
+# Git retains small receipts, summaries, and SHA manifests.
+reports/token-probability/attempts/*/comparisons.json
+reports/token-probability/attempts/*/*/worker/generation/derived.json
+reports/token-probability/attempts/*/*/worker/teacher/*/derived.json

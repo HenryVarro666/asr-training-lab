@@ -1,0 +1,5 @@
+{
+  "status": "not_accepted_numeric_audit_failed",
+  "summary_sha256": "e0791787ee52fa922bc9e43553547821c9d892b9d0e9383d5bb1f5b93e77d77f",
+  "note": "Selected worker FP32 values are retained as initial/unaccepted derived evidence; the full original-tolerance FP64 audit failed. No quantitative conclusion figure was produced."
+}

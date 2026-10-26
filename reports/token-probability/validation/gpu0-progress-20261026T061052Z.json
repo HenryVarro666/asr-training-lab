@@ -1,0 +1,67 @@
+{
+  "observed_utc": "2026-10-26T06:10:52.471107+00:00",
+  "campaign": {
+    "status": "running",
+    "stage": "step100",
+    "error": null,
+    "elapsed_seconds": 413.3118828954175,
+    "actual_generate_calls": null,
+    "actual_teacher_forward_calls": null,
+    "observed_evidence": {
+      "generate_calls": 2,
+      "teacher_forward_calls": 6,
+      "generation_matrices": 2,
+      "teacher_matrices": 6,
+      "present_generation_matrices": 2,
+      "present_teacher_matrices": 6,
+      "unknown_invocation_workers": [
+        "step100"
+      ],
+      "validated_workers": [
+        "base",
+        "step050"
+      ]
+    }
+  },
+  "workers": {
+    "step100": {
+      "phase": "generation_cpu_statistics",
+      "generate_calls": 1,
+      "teacher_forward_calls": 0,
+      "optimizer_updates": 0,
+      "status": {
+        "status": "running",
+        "phase": "starting"
+      }
+    },
+    "base": {
+      "phase": "complete",
+      "generate_calls": 1,
+      "teacher_forward_calls": 3,
+      "optimizer_updates": 0,
+      "status": {
+        "status": "complete",
+        "elapsed_seconds": 48.3791291648522
+      }
+    },
+    "step050": {
+      "phase": "complete",
+      "generate_calls": 1,
+      "teacher_forward_calls": 3,
+      "optimizer_updates": 0,
+      "status": {
+        "status": "complete",
+        "elapsed_seconds": 55.03415346611291
+      }
+    }
+  },
+  "monitor": {
+    "status": "running",
+    "phase": "step100",
+    "terminal": false,
+    "error": null,
+    "observed_unix": 1792995050.7027795,
+    "elapsed_seconds": 439.63874204456806
+  },
+  "outer_tail": ""
+}

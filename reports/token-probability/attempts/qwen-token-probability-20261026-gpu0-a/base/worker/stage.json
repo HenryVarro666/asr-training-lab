@@ -1,0 +1,21 @@
+{
+  "name": "base",
+  "command": [
+    "/mnt/raid/asr-lab/venv/bin/python",
+    "-m",
+    "asr_lab.token_probability",
+    "--identity",
+    "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/identity.json",
+    "--output",
+    "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker"
+  ],
+  "physical_gpus": "0",
+  "run_dir": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker",
+  "started_unix": 1792994723.2080312,
+  "status": "complete",
+  "worker_started": true,
+  "pid": 4006345,
+  "exit_code": 0,
+  "ended_unix": 1792994776.4803932,
+  "cleanup_elapsed_seconds": 0.08309916034340858
+}

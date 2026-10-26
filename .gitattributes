@@ -1,0 +1,2 @@
+# Preserve original csv.writer CRLF resource evidence byte-for-byte.
+reports/token-probability/attempts/*/*/worker/monitor/resources.csv -text whitespace=cr-at-eol

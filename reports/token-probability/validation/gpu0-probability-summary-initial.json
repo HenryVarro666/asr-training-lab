@@ -1,0 +1,369 @@
+{
+  "base": {
+    "generation_tokens": 27,
+    "eos_positions": [
+      26
+    ],
+    "first_tokens": [
+      34,
+      4943,
+      76773,
+      1231,
+      13459,
+      1064
+    ],
+    "fixed_loop_j0": {
+      "34": {
+        "id": 34,
+        "piece": "C",
+        "logit": 31.125,
+        "logprob": -0.0061187744140625,
+        "prob": 0.9938998818397522,
+        "rank": 1,
+        "tie_count": 1
+      },
+      "5049": {
+        "id": 5049,
+        "piece": "CA",
+        "logit": 18.25,
+        "logprob": -12.881118774414062,
+        "prob": 2.545664756326005e-06,
+        "rank": 27,
+        "tie_count": 7
+      }
+    },
+    "fixed_C_j1": {
+      "1094": {
+        "id": 1094,
+        "piece": "UL",
+        "logit": 8.5,
+        "logprob": -21.000389099121094,
+        "prob": 7.579610827868066e-10,
+        "rank": 564,
+        "tie_count": 22
+      },
+      "4943": {
+        "id": 4943,
+        "piece": "aul",
+        "logit": 29.5,
+        "logprob": -0.00038909912109375,
+        "prob": 0.999610960483551,
+        "rank": 1,
+        "tie_count": 1
+      }
+    },
+    "natural_EOS": {
+      "ids": [
+        151643,
+        151645
+      ],
+      "individual": [
+        {
+          "id": 151643,
+          "piece": "<|endoftext|>",
+          "logit": 18.875,
+          "logprob": -11.625011444091797,
+          "prob": 8.9396735347691e-06,
+          "rank": 2,
+          "tie_count": 1
+        },
+        {
+          "id": 151645,
+          "piece": "<|im_end|>",
+          "logit": 30.5,
+          "logprob": -1.1444091796875e-05,
+          "prob": 0.9999885559082031,
+          "rank": 1,
+          "tie_count": 1
+        }
+      ],
+      "total_prob": 0.9999974966049194,
+      "total_logprob": -2.5034350983332843e-06
+    },
+    "upper_EOS": {
+      "ids": [
+        151643,
+        151645
+      ],
+      "individual": [
+        {
+          "id": 151643,
+          "piece": "<|endoftext|>",
+          "logit": 19.0,
+          "logprob": -13.00649642944336,
+          "prob": 2.2456929400505032e-06,
+          "rank": 6,
+          "tie_count": 2
+        },
+        {
+          "id": 151645,
+          "piece": "<|im_end|>",
+          "logit": 26.75,
+          "logprob": -5.256496429443359,
+          "prob": 0.005213538650423288,
+          "rank": 2,
+          "tie_count": 1
+        }
+      ],
+      "total_prob": 0.005215784534811974,
+      "total_logprob": -5.256065845489502
+    },
+    "loop_summary": {
+      "rows": 512,
+      "target_rank1_count": 509,
+      "eos_prob_min": 4.865818858945659e-10,
+      "eos_prob_median": 0.00017054694035323337,
+      "eos_prob_max": 0.18199492990970612
+    },
+    "own_path": {
+      "rows": 27,
+      "argmax_equal_count": 27,
+      "max_abs_logit_difference": 0.625,
+      "max_abs_target_logprob_difference": 0.02672576904296875
+    }
+  },
+  "step050": {
+    "generation_tokens": 37,
+    "eos_positions": [
+      36
+    ],
+    "first_tokens": [
+      5049,
+      1094,
+      2773,
+      93780,
+      39230,
+      711
+    ],
+    "fixed_loop_j0": {
+      "34": {
+        "id": 34,
+        "piece": "C",
+        "logit": 31.5,
+        "logprob": -0.8932647705078125,
+        "prob": 0.4093172550201416,
+        "rank": 2,
+        "tie_count": 1
+      },
+      "5049": {
+        "id": 5049,
+        "piece": "CA",
+        "logit": 31.625,
+        "logprob": -0.7682647705078125,
+        "prob": 0.46381720900535583,
+        "rank": 1,
+        "tie_count": 1
+      }
+    },
+    "fixed_C_j1": {
+      "1094": {
+        "id": 1094,
+        "piece": "UL",
+        "logit": 20.375,
+        "logprob": -2.6114234924316406,
+        "prob": 0.07342994213104248,
+        "rank": 4,
+        "tie_count": 1
+      },
+      "4943": {
+        "id": 4943,
+        "piece": "aul",
+        "logit": 21.5,
+        "logprob": -1.4864234924316406,
+        "prob": 0.22618015110492706,
+        "rank": 2,
+        "tie_count": 1
+      }
+    },
+    "natural_EOS": {
+      "ids": [
+        151643,
+        151645
+      ],
+      "individual": [
+        {
+          "id": 151643,
+          "piece": "<|endoftext|>",
+          "logit": 12.3125,
+          "logprob": -12.687713623046875,
+          "prob": 3.0888440960552543e-06,
+          "rank": 7,
+          "tie_count": 1
+        },
+        {
+          "id": 151645,
+          "piece": "<|im_end|>",
+          "logit": 25.0,
+          "logprob": -0.000213623046875,
+          "prob": 0.999786376953125,
+          "rank": 1,
+          "tie_count": 1
+        }
+      ],
+      "total_prob": 0.9997894763946533,
+      "total_logprob": -0.0002105236053466797
+    },
+    "upper_EOS": {
+      "ids": [
+        151643,
+        151645
+      ],
+      "individual": [
+        {
+          "id": 151643,
+          "piece": "<|endoftext|>",
+          "logit": 16.125,
+          "logprob": -12.875543594360352,
+          "prob": 2.559896756793023e-06,
+          "rank": 19,
+          "tie_count": 3
+        },
+        {
+          "id": 151645,
+          "piece": "<|im_end|>",
+          "logit": 29.0,
+          "logprob": -0.0005435943603515625,
+          "prob": 0.999456524848938,
+          "rank": 1,
+          "tie_count": 1
+        }
+      ],
+      "total_prob": 0.9994590878486633,
+      "total_logprob": -0.0005410909652709961
+    },
+    "loop_summary": {
+      "rows": 512,
+      "target_rank1_count": 509,
+      "eos_prob_min": 7.445434824226993e-10,
+      "eos_prob_median": 2.9006724844293785e-06,
+      "eos_prob_max": 0.022743867710232735
+    },
+    "own_path": {
+      "rows": 37,
+      "argmax_equal_count": 37,
+      "max_abs_logit_difference": 0.5,
+      "max_abs_target_logprob_difference": 0.009840011596679688
+    }
+  },
+  "step100": {
+    "generation_tokens": 512,
+    "eos_positions": [],
+    "first_tokens": [
+      34,
+      1094,
+      32593,
+      356,
+      1094,
+      32593
+    ],
+    "fixed_loop_j0": {
+      "34": {
+        "id": 34,
+        "piece": "C",
+        "logit": 32.25,
+        "logprob": -0.3992881774902344,
+        "prob": 0.6707973480224609,
+        "rank": 1,
+        "tie_count": 1
+      },
+      "5049": {
+        "id": 5049,
+        "piece": "CA",
+        "logit": 30.5,
+        "logprob": -2.1492881774902344,
+        "prob": 0.11656710505485535,
+        "rank": 2,
+        "tie_count": 2
+      }
+    },
+    "fixed_C_j1": {
+      "1094": {
+        "id": 1094,
+        "piece": "UL",
+        "logit": 23.25,
+        "logprob": -1.1099777221679688,
+        "prob": 0.3295662999153137,
+        "rank": 1,
+        "tie_count": 1
+      },
+      "4943": {
+        "id": 4943,
+        "piece": "aul",
+        "logit": 21.875,
+        "logprob": -2.4849777221679688,
+        "prob": 0.08332741260528564,
+        "rank": 4,
+        "tie_count": 2
+      }
+    },
+    "natural_EOS": {
+      "ids": [
+        151643,
+        151645
+      ],
+      "individual": [
+        {
+          "id": 151643,
+          "piece": "<|endoftext|>",
+          "logit": 18.25,
+          "logprob": -11.625099182128906,
+          "prob": 8.938889550336171e-06,
+          "rank": 2,
+          "tie_count": 1
+        },
+        {
+          "id": 151645,
+          "piece": "<|im_end|>",
+          "logit": 29.875,
+          "logprob": -9.918212890625e-05,
+          "prob": 0.9999008178710938,
+          "rank": 1,
+          "tie_count": 1
+        }
+      ],
+      "total_prob": 0.9999097585678101,
+      "total_logprob": -9.024147584568709e-05
+    },
+    "upper_EOS": {
+      "ids": [
+        151643,
+        151645
+      ],
+      "individual": [
+        {
+          "id": 151643,
+          "piece": "<|endoftext|>",
+          "logit": 18.25,
+          "logprob": -10.001272201538086,
+          "prob": 4.534220715868287e-05,
+          "rank": 2,
+          "tie_count": 1
+        },
+        {
+          "id": 151645,
+          "piece": "<|im_end|>",
+          "logit": 28.25,
+          "logprob": -0.0012722015380859375,
+          "prob": 0.9987286329269409,
+          "rank": 1,
+          "tie_count": 1
+        }
+      ],
+      "total_prob": 0.998773992061615,
+      "total_logprob": -0.0012267838465049863
+    },
+    "loop_summary": {
+      "rows": 512,
+      "target_rank1_count": 512,
+      "eos_prob_min": 6.531448715207944e-10,
+      "eos_prob_median": 6.871240429973113e-06,
+      "eos_prob_max": 0.029171491041779518
+    },
+    "own_path": {
+      "rows": 512,
+      "argmax_equal_count": 512,
+      "max_abs_logit_difference": 0.375,
+      "max_abs_target_logprob_difference": 0.06001472473144531
+    }
+  }
+}

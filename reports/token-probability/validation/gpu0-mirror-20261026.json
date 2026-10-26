@@ -1,0 +1,14 @@
+{
+  "status": "transfer_completed_awaiting_sha_audit",
+  "recorded_utc": "2026-10-26T06:25:33.051876+00:00",
+  "remote": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a",
+  "local": "/Users/caochao/Documents/ChatGPT/train/reports/token-probability/attempts/qwen-token-probability-20261026-gpu0-a",
+  "elapsed_seconds": 367.4997303329874,
+  "returncode": 0,
+  "stderr": "",
+  "method": "lossless rsync compression and partial-file resume",
+  "previous_plain_transfer": "timed out after300seconds; remote experiment complete and unchanged",
+  "new_model_calls": 0,
+  "files": 138,
+  "bytes": 1561061260
+}

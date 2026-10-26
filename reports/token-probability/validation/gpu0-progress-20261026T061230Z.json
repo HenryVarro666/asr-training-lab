@@ -1,0 +1,69 @@
+{
+  "observed_utc": "2026-10-26T06:12:30.855537+00:00",
+  "campaign": {
+    "status": "complete",
+    "stage": "three_models_nine_teacher_forwards_complete",
+    "error": null,
+    "elapsed_seconds": 514.4321742644534,
+    "actual_generate_calls": 3,
+    "actual_teacher_forward_calls": 9,
+    "observed_evidence": {
+      "generate_calls": 3,
+      "teacher_forward_calls": 9,
+      "generation_matrices": 3,
+      "teacher_matrices": 9,
+      "present_generation_matrices": 3,
+      "present_teacher_matrices": 9,
+      "unknown_invocation_workers": [],
+      "validated_workers": [
+        "base",
+        "step050",
+        "step100"
+      ]
+    },
+    "cleanup_elapsed_seconds": 0.24053563177585602,
+    "owned_processes_remaining": []
+  },
+  "workers": {
+    "step100": {
+      "phase": "complete",
+      "generate_calls": 1,
+      "teacher_forward_calls": 3,
+      "optimizer_updates": 0,
+      "status": {
+        "status": "complete",
+        "elapsed_seconds": 89.5921395579353
+      }
+    },
+    "base": {
+      "phase": "complete",
+      "generate_calls": 1,
+      "teacher_forward_calls": 3,
+      "optimizer_updates": 0,
+      "status": {
+        "status": "complete",
+        "elapsed_seconds": 48.3791291648522
+      }
+    },
+    "step050": {
+      "phase": "complete",
+      "generate_calls": 1,
+      "teacher_forward_calls": 3,
+      "optimizer_updates": 0,
+      "status": {
+        "status": "complete",
+        "elapsed_seconds": 55.03415346611291
+      }
+    }
+  },
+  "monitor": {
+    "status": "stopped",
+    "phase": "three_models_nine_teacher_forwards_complete",
+    "terminal": true,
+    "error": null,
+    "observed_unix": 1792995125.491767,
+    "elapsed_seconds": 514.4277736581862
+  },
+  "outer_tail": "",
+  "exit_code": "0"
+}

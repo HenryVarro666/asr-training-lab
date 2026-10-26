@@ -1,0 +1,36 @@
+{
+  "status": "backend_stopped",
+  "captured_utc": "2026-10-26T06:02:28.503915+00:00",
+  "stopped_pid": 2154793,
+  "events": [
+    {
+      "signal": "SIGTERM",
+      "unix": 1792994537.6739652
+    }
+  ],
+  "identity_start_ticks": "457573890",
+  "restoration_check": {
+    "source_sha_matched": true,
+    "cwd": "/mnt/data2/exx/voice-ai-personaplex-demo",
+    "argv": [
+      ".venv/bin/python",
+      "-u",
+      "-m",
+      "moshi.server_prefix_paced",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "8998",
+      "--static",
+      "none"
+    ],
+    "check_only": true
+  },
+  "restoration_root": "/mnt/raid/asr-lab/operations/personaplex-pause-20261026",
+  "gateway_preserved": true,
+  "post_stop_gpu": "0, GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c, 17, 95303, 1\n1, GPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c, 52108, 43212, 100\n",
+  "post_stop_apps": "GPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c, 3975474, /home/huaqinzhao/miniconda3/envs/loopvlm-h100/bin/python, 25446\nGPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c, 3976136, /home/huaqinzhao/miniconda3/envs/loopvlm-h100/bin/python, 25744\nGPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c, 4000521, /mnt/raid/speech-workbench-20261026-phase10-proof01/venv/bin/python, 884\n",
+  "gpu0_foreign_apps": [],
+  "model_calls": 0,
+  "other_process_signals": 0
+}

@@ -1,0 +1,58 @@
+{
+  "observed_utc": "2026-10-26T06:09:10.013016+00:00",
+  "campaign": {
+    "status": "running",
+    "stage": "step050",
+    "error": null,
+    "elapsed_seconds": 289.5718535101041,
+    "actual_generate_calls": null,
+    "actual_teacher_forward_calls": null,
+    "observed_evidence": {
+      "generate_calls": 1,
+      "teacher_forward_calls": 3,
+      "generation_matrices": 1,
+      "teacher_matrices": 3,
+      "present_generation_matrices": 1,
+      "present_teacher_matrices": 3,
+      "unknown_invocation_workers": [
+        "step050"
+      ],
+      "validated_workers": [
+        "base"
+      ]
+    }
+  },
+  "workers": {
+    "base": {
+      "phase": "complete",
+      "generate_calls": 1,
+      "teacher_forward_calls": 3,
+      "optimizer_updates": 0,
+      "status": {
+        "status": "complete",
+        "elapsed_seconds": 48.3791291648522
+      }
+    },
+    "step050": {
+      "phase": "teacher_cpu_statistics_step100",
+      "generate_calls": 1,
+      "teacher_forward_calls": 3,
+      "optimizer_updates": 0,
+      "status": {
+        "status": "running",
+        "phase": "starting"
+      }
+    }
+  },
+  "base_tail": "\nLoading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]\nLoading checkpoint shards: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 2/2 [00:00<00:00, 55.48it/s]\nThe following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.\nSetting `pad_token_id` to `eos_token_id`:151645 for open-end generation.\n",
+  "step050_tail": "\nLoading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]\nLoading checkpoint shards:  50%|\u2588\u2588\u2588\u2588\u2588     | 1/2 [00:01<00:01,  1.40s/it]\nLoading checkpoint shards: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 2/2 [00:02<00:00,  1.07s/it]\nLoading checkpoint shards: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 2/2 [00:02<00:00,  1.12s/it]\nSetting `pad_token_id` to `eos_token_id`:151645 for open-end generation.\n",
+  "monitor": {
+    "status": "running",
+    "phase": "step050",
+    "terminal": false,
+    "error": null,
+    "observed_unix": 1792994940.7085798,
+    "elapsed_seconds": 329.64455143362284
+  },
+  "outer_tail": ""
+}

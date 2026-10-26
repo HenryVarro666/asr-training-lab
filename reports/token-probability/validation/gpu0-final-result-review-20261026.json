@@ -1,0 +1,18 @@
+{
+  "status": "passed_final_report_with_numeric_gate_failed",
+  "reviewed_utc": "2026-10-26T06:36:12.742985+00:00",
+  "reviewer": "probability_review",
+  "model_run": "complete",
+  "calls": {
+    "generate": 3,
+    "teacher_forward": 9,
+    "optimizer_updates": 0
+  },
+  "model_wall_seconds": 514.4321742644534,
+  "numeric_audit": "failed_no_retry",
+  "accepted_full_row_count": null,
+  "report_current_resources": "post-a06:33:38Z, no compute apps, owned PIDs exited, lock released",
+  "demo": "backend stopped by explicit user authorization; manual restore saved; gateway retained",
+  "source_report": "GPU0_EXECUTION_2026-10-26.md",
+  "new_model_or_numeric_calls_by_review": 0
+}

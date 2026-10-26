@@ -1,0 +1,49 @@
+{
+  "stage": "step050",
+  "phase": "complete",
+  "optimizer_updates": 0,
+  "backward_calls": 0,
+  "train_called": false,
+  "runtime": {
+    "packages": {
+      "torch": "2.8.0+cu128",
+      "transformers": "4.57.6",
+      "accelerate": "1.12.0",
+      "qwen-asr": "0.0.6"
+    },
+    "python": "3.10.12 (main, Aug 15 2025, 14:32:43) [GCC 11.4.0]",
+    "cuda": "12.8",
+    "cudnn": 91002,
+    "physical_gpu": "0",
+    "eval_dtype": "torch.bfloat16",
+    "attention": "sdpa",
+    "tf32_matmul": false,
+    "tf32_cudnn": true,
+    "deterministic_algorithms": false
+  },
+  "generation_kwargs": {
+    "max_new_tokens": 512,
+    "do_sample": false,
+    "num_beams": 1,
+    "use_cache": true,
+    "output_logits": true,
+    "output_scores": true
+  },
+  "audio": [
+    {
+      "id": "652-129742-0006",
+      "file_sha256": "081f8aed018bb8324cf490f95df9efbeab37e002d81b4400a66e3166c4b6c21c",
+      "pcm_sha256": "0ced52d5cbb692c5c8c36aa84f5d3d283934a9f9055d6c0e689ca3ebb6be54a1",
+      "duration": 9.115
+    }
+  ],
+  "model_class": "<class 'qwen_asr.core.transformers_backend.modeling_qwen3_asr.Qwen3ASRForConditionalGeneration'>",
+  "processor_class": "<class 'qwen_asr.core.transformers_backend.processing_qwen3_asr.Qwen3ASRProcessor'>",
+  "inference_mode": true,
+  "model_training": false,
+  "logits_collected": true,
+  "seed_reset": false,
+  "generate_calls": 1,
+  "teacher_forward_calls": 3,
+  "vocab_size": 151936
+}

@@ -1,0 +1,13 @@
+{
+  "status": "raw_complete_numeric_gate_failed",
+  "raw_remote": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a",
+  "raw_local": "/Users/caochao/Documents/ChatGPT/train/reports/token-probability/attempts/qwen-token-probability-20261026-gpu0-a",
+  "raw_inventory": "validation/gpu0-remote-final-inventory-20261026.json",
+  "original_files": 130,
+  "original_bytes": 1462218349,
+  "all_original_sha256_match": true,
+  "git_policy": "Small metadata/source/report/SHA records versioned; all PT and full per-row derived/comparisons JSON remain in local+RAID mirrors and are ignored by Git.",
+  "numeric_audit": "failed_no_retry",
+  "plots": 0,
+  "restore": "demo-recovery-20261026/README.md"
+}

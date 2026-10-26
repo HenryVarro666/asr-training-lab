@@ -1,0 +1,22 @@
+{
+  "returncode": 0,
+  "elapsed_seconds": 6.063393666991033,
+  "recorded_utc": "2026-10-26T06:24:16.699517+00:00",
+  "command": [
+    "rsync",
+    "-az",
+    "--include=*/",
+    "--include=*.json",
+    "--include=*.jsonl",
+    "--include=*.csv",
+    "--include=*.md",
+    "--include=*.log",
+    "--exclude=*",
+    "-e",
+    "ssh -o BatchMode=yes -o PasswordAuthentication=no -o ConnectTimeout=10 -o ControlPath=/tmp/codex-asr-tensorboard-%C",
+    "exx@100.70.230.73:/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/",
+    "reports/token-probability/attempts/qwen-token-probability-20261026-gpu0-a/"
+  ],
+  "stderr": "",
+  "scope": "Small metadata priority transfer only; no model call or raw matrix modification"
+}

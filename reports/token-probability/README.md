@@ -1,6 +1,6 @@
-# 单句逐token概率诊断：GPU0请求受资源门槛阻断
+# 单句逐token概率诊断：GPU0模型取证完成，数值验收失败
 
-2026-10-26当前为 **ready_blocked_gpu0_busy**。按用户指定核对GPU0修正版，两端12份部署文件SHA一致；00:48:41 CDT实查GPU0利用率92%，有PersonaPlex及另一个计算任务。新run未创建、未启动，实际0生成/0TF/0更新/0矩阵/图，未停止其他任务或切卡；512-token及原预算保持，无自动队列。[本次GPU0证据](GPU0_REQUEST_2026-10-26.md)和[当前状态](execution-summary.json)为最新入口；此前[监督修正及测试](SUPERVISION_UPDATE_2026-10-25.md)和旧失败历史保留。
+2026-10-26当前为 **model_run_complete_numeric_audit_failed**。按用户授权暂停PersonaPlex并保存恢复方式后，GPU0新run完成原3生成＋9TF/512-token/0更新，远端514.432秒，12分布文件；原始130文件已双端SHA匹配。独立CPU审计唯一一次15.597秒后因target.prob绝对误差1.116753e-6超过原1e-6容差而失败，未放宽、未重试、未出概率结论图。Demo保持暂停，网关保留。[本次执行与失败报告](GPU0_EXECUTION_2026-10-26.md)及[当前状态](execution-summary.json)为最新入口；旧资源阻断与失败历史保留。
 
 ## 准备阶段历史（下列资源快照不是当前状态）
 

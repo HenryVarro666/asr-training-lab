@@ -1,0 +1,80 @@
+{
+  "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/base/worker/generation/distributions.pt",
+  "sha256": "5a55f1f905aca28250809888277f9caeed50372c45e97b4d5bac630def68ddf3",
+  "bytes": 16410792,
+  "shape": [
+    27,
+    151936
+  ],
+  "dtype": "torch.float32",
+  "raw_scores_equal": true,
+  "shared_storage_roles": [
+    "raw_logits",
+    "scores"
+  ],
+  "interpretation": "Roles share storage only after full exact value comparison.",
+  "scores_shape": [
+    27,
+    151936
+  ],
+  "original_return_dtypes": {
+    "raw": [
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32"
+    ],
+    "scores": [
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32",
+      "torch.float32"
+    ]
+  }
+}

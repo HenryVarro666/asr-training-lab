@@ -1,0 +1,48 @@
+{
+  "status": "all_original_artifact_hashes_passed_numeric_audit_failed",
+  "verified_utc": "2026-10-26T06:27:44.866526+00:00",
+  "original_files": 130,
+  "original_bytes": 1462218349,
+  "original_sha256_all_matched": true,
+  "full_vocab_distribution_files": 12,
+  "raw_trajectories": {
+    "base": {
+      "raw_trajectory_matches_frozen": true,
+      "returned_token_count": 27,
+      "eos_positions": [
+        26
+      ],
+      "generate_calls": 1,
+      "teacher_forward_calls": 3,
+      "optimizer_updates": 0
+    },
+    "step050": {
+      "raw_trajectory_matches_frozen": true,
+      "returned_token_count": 37,
+      "eos_positions": [
+        36
+      ],
+      "generate_calls": 1,
+      "teacher_forward_calls": 3,
+      "optimizer_updates": 0
+    },
+    "step100": {
+      "raw_trajectory_matches_frozen": true,
+      "returned_token_count": 512,
+      "eos_positions": [],
+      "generate_calls": 1,
+      "teacher_forward_calls": 3,
+      "optimizer_updates": 0
+    }
+  },
+  "removed_orphan_transfer_fragments": [
+    {
+      "path": "step100/worker/generation/.distributions.pt.jttIay",
+      "bytes": 98828288
+    }
+  ],
+  "numeric_audit": "failed fixed target.prob tolerance; no retry or tolerance change",
+  "model_calls_added_by_verification": 0,
+  "complete_numeric_audit_passed": false,
+  "accepted_probability_row_count_reported_by_auditor": null
+}

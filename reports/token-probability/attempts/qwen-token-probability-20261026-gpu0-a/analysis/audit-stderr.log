@@ -1,0 +1,25 @@
+Traceback (most recent call last):
+  File "/mnt/raid/asr-lab/repo/reports/token-probability/validation/audit_saved_evidence.py", line 319, in derived_check
+    compare_row(actual, expected, maxima)
+  File "/mnt/raid/asr-lab/repo/reports/token-probability/validation/audit_saved_evidence.py", line 179, in compare_row
+    compare_token(actual['target'], expected['target'], 'target', maxima)
+  File "/mnt/raid/asr-lab/repo/reports/token-probability/validation/audit_saved_evidence.py", line 174, in compare_token
+    close(actual['prob'], expected['prob'], TOLERANCES['abs_probability'],
+  File "/mnt/raid/asr-lab/repo/reports/token-probability/validation/audit_saved_evidence.py", line 164, in close
+    require(delta <= tolerance, f'Derived statistic mismatch {label}: error={delta}, tolerance={tolerance}')
+  File "/mnt/raid/asr-lab/repo/reports/token-probability/validation/audit_saved_evidence.py", line 38, in require
+    raise ValueError(message)
+ValueError: Derived statistic mismatch target.prob: error=1.1167530824529592e-06, tolerance=1e-06
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/raid/asr-lab/repo/reports/token-probability/validation/audit_saved_evidence.py", line 527, in <module>
+    main()
+  File "/mnt/raid/asr-lab/repo/reports/token-probability/validation/audit_saved_evidence.py", line 523, in main
+    audit(args)
+  File "/mnt/raid/asr-lab/repo/reports/token-probability/validation/audit_saved_evidence.py", line 460, in audit
+    summaries[stage][role] = derived_check(saved, calculated, prompt, targets,
+  File "/mnt/raid/asr-lab/repo/reports/token-probability/validation/audit_saved_evidence.py", line 321, in derived_check
+    raise ValueError(f'At row {j}: {error}') from error
+ValueError: At row 2: Derived statistic mismatch target.prob: error=1.1167530824529592e-06, tolerance=1e-06

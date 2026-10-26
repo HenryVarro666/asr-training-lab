@@ -1,0 +1,14 @@
+{
+  "path": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step100/worker/teacher/step050/distributions.pt",
+  "sha256": "bd712a00b2de2a1b7dd3b459ed9cc9f2b92e5ab28c7afbdec2a1f4deae7cdce5",
+  "bytes": 22488232,
+  "shape": [
+    37,
+    151936
+  ],
+  "dtype": "torch.float32",
+  "raw_scores_equal": null,
+  "shared_storage_roles": [],
+  "interpretation": "Distinct distributions retained.",
+  "original_return_dtype": "torch.bfloat16"
+}

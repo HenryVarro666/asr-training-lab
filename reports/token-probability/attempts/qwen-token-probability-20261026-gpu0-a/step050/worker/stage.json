@@ -1,0 +1,21 @@
+{
+  "name": "step050",
+  "command": [
+    "/mnt/raid/asr-lab/venv/bin/python",
+    "-m",
+    "asr_lab.token_probability",
+    "--identity",
+    "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step050/identity.json",
+    "--output",
+    "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step050/worker"
+  ],
+  "physical_gpus": "0",
+  "run_dir": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a/step050/worker",
+  "started_unix": 1792994900.5035841,
+  "status": "complete",
+  "worker_started": true,
+  "pid": 4009827,
+  "exit_code": 0,
+  "ended_unix": 1792994962.8406231,
+  "cleanup_elapsed_seconds": 0.06560940947383642
+}
