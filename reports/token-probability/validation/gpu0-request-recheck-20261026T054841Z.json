@@ -1,0 +1,93 @@
+{
+  "verified_source_files": 12,
+  "probe_run_exists": false,
+  "old_early100_campaign_sha256": "f6be4d5322fba1fb03d89b311017220506fff83ffa238d22614fb1e97ea1c279",
+  "captured_utc": "2026-10-26T05:48:41.043098+00:00",
+  "root": "/mnt/raid/asr-lab",
+  "mode": "Read-only host observation; no model/torch imports, no remote writes or weight reads.",
+  "gpu": {
+    "returncode": 0,
+    "stdout": "0, GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c, NVIDIA H100 NVL, 48618, 46702, 92\n1, GPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c, NVIDIA H100 NVL, 77024, 18296, 100\n",
+    "stderr": ""
+  },
+  "compute_apps": {
+    "returncode": 0,
+    "stdout": "GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c, 2154793, .venv/bin/python, 22674\nGPU-eed83181-48a7-e9f3-cb49-e851dfaf647c, 3984680, /home/huaqinzhao/miniconda3/envs/loopvlm-h100/bin/python, 25916\nGPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c, 3975474, /home/huaqinzhao/miniconda3/envs/loopvlm-h100/bin/python, 25864\nGPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c, 3975625, /home/huaqinzhao/miniconda3/envs/loopvlm-h100/bin/python, 25774\nGPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c, 3976136, /home/huaqinzhao/miniconda3/envs/loopvlm-h100/bin/python, 25352\n",
+    "stderr": ""
+  },
+  "gpu1_compute_apps": [
+    [
+      "GPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c",
+      "3975474",
+      "/home/huaqinzhao/miniconda3/envs/loopvlm-h100/bin/python",
+      "25864"
+    ],
+    [
+      "GPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c",
+      "3975625",
+      "/home/huaqinzhao/miniconda3/envs/loopvlm-h100/bin/python",
+      "25774"
+    ],
+    [
+      "GPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c",
+      "3976136",
+      "/home/huaqinzhao/miniconda3/envs/loopvlm-h100/bin/python",
+      "25352"
+    ]
+  ],
+  "gpu0_compute_apps": [
+    [
+      "GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c",
+      "2154793",
+      ".venv/bin/python",
+      "22674"
+    ],
+    [
+      "GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c",
+      "3984680",
+      "/home/huaqinzhao/miniconda3/envs/loopvlm-h100/bin/python",
+      "25916"
+    ]
+  ],
+  "gpu0_service_checks": [
+    {
+      "pid": 2154793,
+      "is_moshi_server_prefix_paced": true,
+      "gpu_uuid": "GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c"
+    },
+    {
+      "pid": 3984680,
+      "is_moshi_server_prefix_paced": false,
+      "gpu_uuid": "GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c"
+    }
+  ],
+  "global_lock_path": "/mnt/raid/asr-lab/campaign.lock",
+  "global_lock_available": true,
+  "lock_file_open_mode": "rb; nonblocking exclusive lock attempt immediately released; size/mtime/ctime unchanged",
+  "disk": {
+    "total_bytes": 47808184197120,
+    "available_bytes": 2708959596544,
+    "available_gib": 2522.915225982666,
+    "reserve500gib_available": true
+  },
+  "limitation": "Timestamped snapshot only; does not reserve GPU or disk for a future stage.",
+  "command": [
+    "ssh",
+    "-o",
+    "BatchMode=yes",
+    "-o",
+    "PasswordAuthentication=no",
+    "-o",
+    "PreferredAuthentications=publickey",
+    "-o",
+    "ConnectTimeout=10",
+    "-o",
+    "ControlPath=/tmp/codex-asr-tensorboard-%C",
+    "exx@100.70.230.73",
+    "/mnt/raid/asr-lab/venv/bin/python -"
+  ],
+  "stdin_python": "import os,json,subprocess,fcntl,csv\nfrom datetime import datetime,timezone\nfrom pathlib import Path\nroot=Path('/mnt/raid/asr-lab')\ndef query(args):\n p=subprocess.run(args,text=True,capture_output=True,timeout=15);return {'returncode':p.returncode,'stdout':p.stdout,'stderr':p.stderr}\ngpu=query(['nvidia-smi','--query-gpu=index,uuid,name,memory.used,memory.free,utilization.gpu','--format=csv,noheader,nounits']);apps=query(['nvidia-smi','--query-compute-apps=gpu_uuid,pid,process_name,used_gpu_memory','--format=csv,noheader,nounits'])\nassert gpu['returncode']==apps['returncode']==0\nrows=list(csv.reader(gpu['stdout'].splitlines(),skipinitialspace=True));processes=list(csv.reader(apps['stdout'].splitlines(),skipinitialspace=True));uuid1=next(r[1] for r in rows if r[0]=='1');uuid0=next(r[1] for r in rows if r[0]=='0')\ngpu1_processes=[r for r in processes if r[0]==uuid1];gpu0_processes=[r for r in processes if r[0]==uuid0]\nplex_checks=[]\nfor row in gpu0_processes:\n args=subprocess.check_output(['ps','-p',row[1],'-o','args='],text=True)\n plex_checks.append({'pid':int(row[1]),'is_moshi_server_prefix_paced':'-m moshi.server_prefix_paced' in args,'gpu_uuid':row[0]})\nlock_path=root/'campaign.lock';before=lock_path.stat();available=False\nwith lock_path.open('rb') as handle:\n try:fcntl.flock(handle,fcntl.LOCK_EX|fcntl.LOCK_NB);available=True;fcntl.flock(handle,fcntl.LOCK_UN)\n except BlockingIOError:pass\nafter=lock_path.stat();assert (before.st_size,before.st_mtime_ns,before.st_ctime_ns)==(after.st_size,after.st_mtime_ns,after.st_ctime_ns)\nv=os.statvfs(root);free=v.f_bavail*v.f_frsize\nprobe_run=root/'runs/qwen-token-probability-20261026-gpu0-a'\nold_campaign=root/'runs/qwen-early100-20261022-a/campaign.json'\nimport hashlib\nold_hash=hashlib.sha256(old_campaign.read_bytes()).hexdigest()\nexpected_sources={'scripts/run_token_probability.py': {'bytes': 35882, 'sha256': 'ea10ddfe07cbc40b751dc088d0b3927d7f1e09ac0a828d4ca720932140b16c6e'}, 'src/asr_lab/probe_supervision.py': {'bytes': 6840, 'sha256': '2b6db25983f1d7a81feb902f793dbadb436b6afd4b1e5c166c64785256b8723b'}, 'src/asr_lab/token_probability.py': {'bytes': 22697, 'sha256': 'acc34e309468c950b02e930ee7be7d45a0394b092ad0b0a35e07f83016f3a43b'}, 'tests/test_token_probability.py': {'bytes': 31904, 'sha256': '6a6427c0d37171d6c3a53871b500a78169c3019712fd289c437bafbec278df46'}, 'tests/test_probe_supervision.py': {'bytes': 5343, 'sha256': '9a46efb0f3a187edf91a8f37a32008522a290e25df4c25be09fc36d213cd11b6'}, 'docs/TOKEN_PROBABILITY_PROBE.md': {'bytes': 17918, 'sha256': '58b5f23c1f529ee7e72cf0f8a3a7122ae72684d44d8e84a4428bb64af932c9d8'}, 'docs/superpowers/plans/2026-10-25-a-supervision.md': {'bytes': 4633, 'sha256': '0793e2aa805d20628255b540ffdfddd3205f2f1b557be8381f24d8cbe0a3ce30'}, 'reports/token-probability/validation/supervision-launch.sh': {'bytes': 1526, 'sha256': 'f99cec787abb3699d7f36d3296bddbf7f7c7f0c9d3c657b26872ea8f64cfb8d8'}, 'reports/token-probability/validation/supervision-execution-intent.json': {'bytes': 1616, 'sha256': '14a418de0815d24fb598172027fc6debf61f16a75c8f0b96e771befce90820fc'}, 'reports/token-probability/validation/supervision-code-review.md': {'bytes': 3447, 'sha256': 'd98536f64f4e58a010b4276011cdd1547115ed56d78ac9fbe0b9a08d3cf209bc'}, 'reports/token-probability/validation/supervision-local-validation-v2.txt': {'bytes': 1534, 'sha256': '796086ff9df3fca1efca288b8e81f659046ef356996500d5cbcfd1a3d2c80f63'}, 'reports/token-probability/validation/supervision-freeze.json': {'bytes': 2189, 'sha256': 'ec187ce03c5e4bf19205f9914f28507158f44c195e11c5b47d9d691927b1a6a6'}}\nrepo=root/\"repo\"\nfor name,record in expected_sources.items():\n p=repo/name\n assert p.stat().st_size==record[\"bytes\"] and hashlib.sha256(p.read_bytes()).hexdigest()==record[\"sha256\"],name\nprint(json.dumps({\"verified_source_files\":len(expected_sources),'probe_run_exists':probe_run.exists(),'old_early100_campaign_sha256':old_hash,'captured_utc':datetime.now(timezone.utc).isoformat(),'root':str(root),'mode':'Read-only host observation; no model/torch imports, no remote writes or weight reads.','gpu':gpu,'compute_apps':apps,'gpu1_compute_apps':gpu1_processes,'gpu0_compute_apps':gpu0_processes,'gpu0_service_checks':plex_checks,'global_lock_path':str(lock_path),'global_lock_available':available,'lock_file_open_mode':'rb; nonblocking exclusive lock attempt immediately released; size/mtime/ctime unchanged','disk':{'total_bytes':v.f_blocks*v.f_frsize,'available_bytes':free,'available_gib':free/1024**3,'reserve500gib_available':free>=500*1024**3},'limitation':'Timestamped snapshot only; does not reserve GPU or disk for a future stage.'},allow_nan=False))\n",
+  "stderr": "",
+  "requested_physical_gpu": 0,
+  "planned_new_run": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a"
+}

@@ -1,7 +1,7 @@
 {
-  "status": "ready_blocked_gpu_busy",
-  "recorded_utc": "2026-10-25T05:34:07.057222+00:00",
-  "intended_remote_run": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261025-a2",
+  "status": "ready_blocked_gpu0_busy",
+  "recorded_utc": "2026-10-26T05:50:05.323760+00:00",
+  "intended_remote_run": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261026-gpu0-a",
   "remote_run_exists": false,
   "campaign_launch_dispatched": false,
   "gpu_run_launched": false,
@@ -39,37 +39,38 @@
     ],
     "max_new_tokens": 512
   },
-  "resource_observation": "validation/supervision-gpu-recheck-20261025T053307Z.json",
-  "last_resource_check_utc": "2026-10-25T05:33:07.707540+00:00",
+  "resource_observation": "validation/gpu0-request-recheck-20261026T054841Z.json",
+  "last_resource_check_utc": "2026-10-26T05:48:41.043098+00:00",
   "blocked_device_indices": [
-    0,
-    1
-  ],
-  "blocked_gpu1_pids": [
-    2836827
+    0
   ],
   "candidate_device_observations": [
     {
       "index": 0,
-      "utilization_percent": 100,
-      "memory_free_mib": 49626,
+      "uuid": "GPU-eed83181-48a7-e9f3-cb49-e851dfaf647c",
+      "memory_used_mib": 48618,
+      "memory_free_mib": 46702,
+      "utilization_percent": 92,
       "compute_pids": [
         2154793,
-        2836182
+        3984680
       ]
     },
     {
       "index": 1,
-      "utilization_percent": 91,
-      "memory_free_mib": 71882,
+      "uuid": "GPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c",
+      "memory_used_mib": 77024,
+      "memory_free_mib": 18296,
+      "utilization_percent": 100,
       "compute_pids": [
-        2836827
+        3975474,
+        3975625,
+        3976136
       ]
     }
   ],
   "authorized_candidate_devices": [
-    0,
-    1
+    0
   ],
   "authorized_current_stage": "A only; report before deciding B",
   "automatic_enter_stage_b": false,
@@ -87,8 +88,20 @@
     "partial_sync_receipt": "validation/failed-pre-gpu-sync.json",
     "error": "RuntimeError: Physical GPU1 has other compute applications; no launch: [['GPU-d8788c54-b9da-d038-e5bc-aa3b718ef62c', '2801775', '/home/huaqinzhao/miniconda3/envs/loopvlm-h100/bin/python']]"
   },
-  "readiness_report": "SUPERVISION_UPDATE_2026-10-25.md",
+  "readiness_report": "GPU0_REQUEST_2026-10-26.md",
   "deployment_receipt": "validation/supervision-deployment.json",
-  "next_gate": "On a later authorized resume recheck both GPUs, source SHA, lock and disk, then at most one attempt in the still-new A2 run directory under the original budget. Do not replay or overwrite the prior failed run.",
-  "resource_recheck_outcome": "After supervision fixes, code review, local131 and remote116 CPU passes, both GPUs have foreign compute applications. A2 was not created or launched; zero A2 model calls, no training/B, no task stopped."
+  "next_gate": "On resume fresh-check requested physical GPU0 UUID/foreign PIDs, source SHA, global lock and storage. Only start the reviewed single bounded stage-A command when GPU0 passes its existing idle gate; no GPU1 fallback or automatic queue.",
+  "resource_recheck_outcome": "Verified GPU0-capable reviewed deployment; GPU0 utilization92% with PersonaPlex and another foreign compute job. Selected GPU0 idle gate fails, new run remains absent; zero model calls, no foreign process stop, no fallback/retry/training/B.",
+  "blocked_gpu0_pids": [
+    2154793,
+    3984680
+  ],
+  "requested_physical_gpu": 0,
+  "source_files_reverified": 12,
+  "previous_request": {
+    "status": "ready_blocked_gpu_busy",
+    "intended_remote_run": "/mnt/raid/asr-lab/runs/qwen-token-probability-20261025-a2",
+    "resource_observation": "validation/supervision-gpu-recheck-20261025T053307Z.json",
+    "last_resource_check_utc": "2026-10-25T05:33:07.707540+00:00"
+  }
 }

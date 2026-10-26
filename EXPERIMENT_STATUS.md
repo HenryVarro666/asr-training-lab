@@ -6,7 +6,7 @@
 
 ## 后续诊断进展
 
-**当前：[A监督修正完成，新A2被两卡占用阻断](reports/token-probability/SUPERVISION_UPDATE_2026-10-25.md)**（2026-10-25）：报告按实际证据、总期限含导入/初始化/清理、预检立即/10秒/终态监控均已实现，CPU本地131/远端116、独立review及部署SHA通过。00:33 CDT查GPU0/1均有其他任务，利用率100%/91%，新A2未创建/启动，0生成/0TF/0训练、0矩阵/图；原3+9/512/1200秒/240秒/2GiB未扩大，无自动等待、重试或B。旧A failed和Early100 failed均保留。
+**当前：[GPU0请求未通过资源门槛](reports/token-probability/GPU0_REQUEST_2026-10-26.md)**（2026-10-26）：GPU0修正版12份部署SHA重新匹配，00:48 CDT实查GPU0利用率92%，有PersonaPlex和其他计算任务。新GPU0 run不存在，实际0生成/0TF/0训练/0矩阵/图；未停止任务、切换GPU1、重试、排队或进入B。原3+9/512/1200秒/240秒/2GiB未扩大；此前修正、本地131/远端116 CPU验证及旧failed均保留。
 
 **最新：[四检查点重复对照已完成](reports/repetition-onset/README.md)**（2026-10-23）：同一句音频、同137-token输入、同512-token生成预算，base/25/50/100各一次，共4次调用／0更新／99.16秒。base/25/50正常EOS结束且原normalizer下16词全对；100生成170次`CULINARY`加`CUL`，512无EOS，parser压成两词。最早受测阳性为100，上个受测阴性为50；不能定位精确首发更新或训练原因。独立CPU审计通过，85份run产物跨机一致，GPU1退出、Plex保留，旧Early100 failed未改，无追加训练。
 

@@ -1,0 +1,23 @@
+{
+  "status": "passed_resource_blocked_no_launch",
+  "recorded_utc": "2026-10-26T05:50:05.325100+00:00",
+  "reviewer": "probability_audit",
+  "resource_snapshot": "gpu0-request-recheck-20261026T054841Z.json",
+  "verified_deployed_files": 12,
+  "requested_gpu": 0,
+  "gpu0_utilization_percent": 92,
+  "foreign_compute_pids": [
+    2154793,
+    3984680
+  ],
+  "new_run_exists": false,
+  "model_calls": 0,
+  "teacher_forwards": 0,
+  "training_updates": 0,
+  "result_matrices": 0,
+  "figures": 0,
+  "stage_b": false,
+  "automatic_queue": false,
+  "old_early100_sha256_unchanged": true,
+  "scope": "Local readonly receipt/hash verification; no SSH, model or probability audit by reviewer."
+}
