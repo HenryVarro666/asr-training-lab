@@ -1,4 +1,21 @@
-# ASR training lab
+# ASR Training Lab
+
+Reproducible ASR fine-tuning, generation-based evaluation, and failure diagnosis with Qwen3-ASR and Whisper.
+
+## Experiment at a glance
+
+| Item | Verified scope |
+|---|---|
+| Main model | Qwen3-ASR-1.7B; 2,038,052,480 parameters measured after loading |
+| Training data | LibriSpeech train-clean-100: 28,539 recordings, 100.59 hours of English speech |
+| Training | Pretrained initialization, full-parameter SFT, two H100 GPUs, 892 optimizer updates |
+| Evaluation | Fixed generation settings, eligible dev-clean/dev-other manifests, per-utterance WER and error analysis |
+| Result | Development WER worsened; the fine-tuned checkpoint is not a replacement for the pretrained baseline |
+| Evidence | [Measured results](EXPERIMENT_STATUS.md), [delivery audit](reports/DELIVERY_AUDIT.md), and [artifact storage map](docs/GITHUB_ARCHIVE.md) |
+
+This repository records ASR experiments. It does not establish completed Translation LLM training or native streaming ASR training. The new [two-H100 training plans](docs/plans/README.md) are proposals and have not been executed.
+
+## Latest diagnostic status
 
 Current stage: [saved-matrix CPU numerical repair](reports/token-probability/cpu-repair-20261026-r1/REPORT.md) is complete. The original GPU0 diagnostic completed3 generation +9 teacher-forward calls; its original numeric audit failed and is preserved. FP64 derived statistics now pass the unchanged independent tolerances over all2,304 rows/12 matrices. This CPU phase added **0 model calls and0 training updates**; original130 artifact hashes are unchanged, with monitoring and three figures archived. Stop here; no B stage or new training.
 
@@ -14,7 +31,7 @@ Model weights are pinned to `7278e1e70fe206f11671096ffdd38061171dd6e5`. The prom
 
 ## Repository and evidence storage
 
-GitHub: [HenryVarro666/train](https://github.com/HenryVarro666/train). Code, experiment reports, failure records, monitoring receipts, figures and SHA manifests are versioned here. Complete matrices, weights, audio and large per-token JSON remain in the local/RAID mirrors; see the [archive and restore map](docs/GITHUB_ARCHIVE.md). A fresh GitHub clone contains the documented summaries and identities rather than every raw experiment artifact.
+GitHub: [HenryVarro666/asr-training-lab](https://github.com/HenryVarro666/asr-training-lab), renamed from `train` on 2026-10-27. Code, experiment reports, failure records, monitoring receipts, figures and SHA manifests are versioned here. Complete matrices, weights, audio and large per-token JSON remain in the local/RAID mirrors; see the [archive and restore map](docs/GITHUB_ARCHIVE.md). A fresh GitHub clone contains the documented summaries and identities rather than every raw experiment artifact. The Python import remains `asr_lab`; historical run paths and artifact identities retain their original names.
 
 ## Run the controlled campaign
 

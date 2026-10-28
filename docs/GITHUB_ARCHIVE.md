@@ -1,6 +1,6 @@
 # GitHub archive and complete experiment evidence
 
-User authorized this GitHub export on2026-10-26. Repository: [HenryVarro666/train](https://github.com/HenryVarro666/train). It was an empty **public** repository before this initial push; its visibility is preserved. The export uses the existing local Git history, without rewriting commits.
+User authorized this GitHub export on2026-10-26. Current repository: [HenryVarro666/asr-training-lab](https://github.com/HenryVarro666/asr-training-lab), renamed from `HenryVarro666/train` on2026-10-27. It was an empty **public** repository before the initial push; its visibility is preserved. The export uses the existing local Git history, without rewriting commits. The local checkout directory and historical server paths remain unchanged; the checkout's `origin` uses the new canonical URL.
 
 ## Latest verified experiment
 

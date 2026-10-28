@@ -13,6 +13,8 @@ reports/data/*
 cache/
 .env
 .env.*
+research_notes/
+.work/
 *.pt
 *.safetensors
 *.flac

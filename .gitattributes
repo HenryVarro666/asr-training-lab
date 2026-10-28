@@ -3,3 +3,6 @@ reports/token-probability/attempts/*/*/worker/monitor/resources.csv -text whites
 # Matplotlib SVG path data uses line-ending spaces. Preserve generated export
 # bytes and their receipt hashes; retain ordinary whitespace checks for code.
 reports/token-probability/cpu-repair-*/figures/*.svg -text whitespace=-blank-at-eol
+
+# Generated PDF byte offsets and whitespace are part of the binary format.
+*.pdf binary
