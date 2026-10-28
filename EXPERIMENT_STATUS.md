@@ -1,5 +1,7 @@
 # 双 H100 ASR 首轮实验结果
 
+> 2026-10-27 计划更新：新增 [115M级 FastConformer-CTC 双 H100、16天从零训练详细计划](docs/plans/asr-fastconformer-115m-16day.md)与 [VITS TTS 简版](docs/plans/tts-vits-brief.md)。16天是拟定项目时限，含准备、测速、训练和评测；尚未部署、下载或开始训练，以下既有实验状态未因计划撰写而改变。
+
 > 2026-10-27 仓库维护：项目名称更新为 **ASR Training Lab**，GitHub 地址为 [HenryVarro666/asr-training-lab](https://github.com/HenryVarro666/asr-training-lab)。本次核对了相关会话与保存结果，更新项目说明和后续计划；没有新增训练、模型调用或远程操作。以下实验数字与失败状态保持原样。新的[双 H100 计划书](docs/plans/README.md)均为待执行方案。
 
 > 执行方式更新（2026-10-22）：用户已取消耗尽token/usage的目标，并明确继续受控实验。后续采用[分阶段诊断与实验](docs/NEXT_STEPS.md)：每阶段限定问题、预算和验收条件，依据结果安排下一步。

@@ -13,7 +13,7 @@ Reproducible ASR fine-tuning, generation-based evaluation, and failure diagnosis
 | Result | Development WER worsened; the fine-tuned checkpoint is not a replacement for the pretrained baseline |
 | Evidence | [Measured results](EXPERIMENT_STATUS.md), [delivery audit](reports/DELIVERY_AUDIT.md), and [artifact storage map](docs/GITHUB_ARCHIVE.md) |
 
-This repository records ASR experiments. It does not establish completed Translation LLM training or native streaming ASR training. The new [two-H100 training plans](docs/plans/README.md) are proposals and have not been executed.
+This repository records ASR experiments. It does not establish completed Translation LLM training or native streaming ASR training. For a bounded next project, start with the [16-day, two-H100 FastConformer-CTC scratch-training plan](docs/plans/asr-fastconformer-115m-16day.md). A [brief VITS scratch-TTS alternative](docs/plans/tts-vits-brief.md) and the earlier [larger training plans](docs/plans/README.md) are also available. All are proposals and have not been executed.
 
 ## Latest diagnostic status
 
